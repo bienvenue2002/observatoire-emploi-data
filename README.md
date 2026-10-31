@@ -2,7 +2,7 @@
 
 Un projet web étudiant pour chercher un stage ou une alternance, quelle que soit sa formation, en France ou à l’international. La marque Élan MSI est conservée ; le moteur principal n’est plus limité au Master MSI.
 
-**Version 3.0.0, instantané du 31 octobre 2026 : 1 555 annonces, dont 229 stages/alternances, 19 pays ou territoires représentés et 13 catégories de domaines sélectionnables.** Le corpus contient 72 annonces hors France, dont 8 stages/alternances ; les autres contrats restent accessibles séparément. Ces volumes ne sont pas un décompte d’offres encore ouvertes.
+Cette documentation décrit le moteur international ouvert à toutes les formations, ainsi que les ressources pédagogiques MSI conservées.
 
 - **Site public :** [ouvrir Élan MSI](https://bienvenue2002.github.io/observatoire-emploi-data/).
 - **Dépôt public :** [bienvenue2002/observatoire-emploi-data](https://github.com/bienvenue2002/observatoire-emploi-data).
@@ -28,6 +28,8 @@ Les titres, descriptions, diplômes, compétences, régions issues des sources e
 Le choix de langue peut être mémorisé localement. Si le stockage est bloqué, le site fonctionne quand même en mémoire. Pas de compte, de CV envoyé ou de suivi publicitaire.
 
 ## D’où viennent les offres ?
+
+L’instantané du 31 octobre 2026 comprend 1 555 annonces, dont 229 stages/alternances, dans 19 pays ou territoires. Parmi les 72 annonces hors France, 8 sont des stages/alternances ; les autres contrats restent accessibles séparément. Ces volumes décrivent un corpus partiel, pas les offres encore ouvertes.
 
 | Origine | Annonces intégrées | Mode |
 |---|---:|---|
