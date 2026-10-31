@@ -1,5 +1,16 @@
 # Parcours à préserver et évolution MSI
 
+## International, toutes formations et six langues
+- Avant modification : site public Élan MSI chargé dans un navigateur, titre « Du master aux métiers », 81 annonces France et interface française.
+- Conserver la marque, les 81 références existantes et l'espace pédagogique MSI avec ses cinq vues, graphiques, filtres, détails et exports dans un accès « Ressources MSI » explicitement en français.
+- Ouvrir la recherche principale à tous les domaines du corpus BPCE, sans prétendre couvrir toutes les formations ou tous les pays. Conserver les catégories sans résultat et proposer des portails complémentaires clairement distincts des annonces intégrées.
+- Pays/territoires issus des champs explicites de la source ; pays absent = inconnu. Ne jamais déduire un pays de la langue demandée. VIE distinct de stage et d'alternance ; aucune équivalence automatique de contrat ou de diplôme entre pays.
+- Recherche libre, domaines, pays/territoires, contrat, études, source, compétence, région, tri, pagination, réinitialisation, raccourcis étudiant/international/ARA, détails et exports filtrés.
+- Interface complète en fr/en/es/de/ja/zh : navigation, filtres, compteurs, états vides/erreurs, détails, dates, pagination, accessibilité et messages d'export. Les annonces, preuves source et ressources MSI restent en langue d'origine avec avertissement traduit.
+- La langue ne change ni les filtres ni le corpus ; choix mémorisé si stockage autorisé, repli en mémoire si bloqué. Changer de langue pendant un détail ouvert.
+- Recette : six langues, conservation de la sélection, véritable stage hors France, alternance et VIE distincts, niveau/durée/preuves, formation sans annonce, recherche avec accents/apostrophes, export réel CSV/JSON et anti-formules, Échap et retour focus, lien externe activé, erreur réseau, texte malveillant échappé, ressources historiques et absence de débordement à 375/320 px.
+- Revoir README, sources, méthode, guide et version 3 ; publier sur le même dépôt public et le même lien, puis tester la version hébergée dans un contexte neuf.
+
 ## Durée, études et textes pour les étudiants
 - État observé : Élan MSI, 81 annonces ; CIO Advisory mentionne six mois seulement dans le point de vigilance ; la page Sources affiche encore « Pas de connexion imaginaire ».
 - Ajouter durée, niveau d’études et fin d’études aux résultats, détails et exports CSV/JSON ; afficher « Non précisé » en l’absence de donnée, sans durée estimée pour un CDI.

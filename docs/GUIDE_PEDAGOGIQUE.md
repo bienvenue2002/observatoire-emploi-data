@@ -2,6 +2,8 @@
 
 Ce projet est une base de travail à étudier, modifier et expliquer. Il ne faut pas présenter comme acquises des notions que l’on ne sait pas encore reproduire.
 
+La version 3 ouvre le moteur à toutes les formations et à l’international, avec six langues d’interface. Le corpus reste partiel ; l’espace pédagogique MSI historique est conservé séparément en français. Les traductions d’interface ne traduisent pas les annonces et n’établissent aucune équivalence de diplôme ou de contrat.
+
 ## Correspondance avec le cours
 
 | Partie du cours | Application dans Élan MSI |
@@ -17,14 +19,17 @@ JavaScript interactif, expressions régulières avancées, tests et GitHub Actio
 
 ## Lire les fichiers dans cet ordre
 
-1. `site/index.html` : repérer header, navigation, filtres, graphiques, tableau, footer.
-2. `site/style.css` : comprendre les variables, les grilles et la media query mobile.
-3. `site/data/meta.json` : expliquer pourquoi 1 888 lignes deviennent 74 références BPCE, puis 81 annonces avec les sept fiches éditoriales.
+1. `site/index.html` : repérer header, navigation, filtres, résultats, dialogue et footer.
+2. `site/style.css` et `site/global.css` : comprendre les variables, grilles et adaptations mobiles.
+3. `site/data/meta.json` : expliquer pourquoi 1 888 lignes deviennent 1 547 références BPCE après exclusion d’une entrée administrative, puis 1 555 annonces avec les huit fiches éditoriales.
 4. `scripts/collect.py` : suivre `main`, `transform`, puis `export`.
-5. `site/app.js` : comprendre `filterJobs`, `renderMetrics`, `renderTable`.
+5. `site/app.js` : comprendre `filterJobs`, `renderResults`, `renderDetail` et les exports.
 6. `tests/test_collect.py` : modifier une règle et observer les tests.
 7. `site/data/catalog.json` et `scripts/taxonomy.py` : vérifier la cohérence des familles métiers et des trois parcours.
-8. `data/curated.json` et `docs/SOURCES.md` : distinguer import éditorial, collecte automatisée et simple lien externe.
+8. `data/curated.json`, `data/international.json` et `docs/SOURCES.md` : distinguer import éditorial, collecte automatisée et lien externe.
+9. `site/i18n.js` et `tests/test_i18n.cjs` : comparer les six dictionnaires, les variables et les textes conservés en langue d’origine.
+10. `scripts/global_scope.py` : expliquer la classification indicative et les pays explicites.
+11. `site/msi.html`, `msi-app.js`, `data/msi-jobs.json` : retrouver les graphiques, cinq vues et 81 annonces historiques.
 
 ## Exercices pour t’approprier le projet
 

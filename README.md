@@ -1,133 +1,96 @@
-# Élan MSI · Du master aux métiers
+# Élan MSI · Stages et alternances sans frontières
 
-Un portail d’orientation et d’exploration des offres liées au Master Management des Systèmes d’Information de Grenoble IAE. Le projet couvre conseil, ERP, business analysis, produit, projets, cybersécurité, audit, données et recherche.
+Un projet web étudiant pour chercher un stage ou une alternance, quelle que soit sa formation, en France ou à l’international. La marque Élan MSI est conservée ; le moteur principal n’est plus limité au Master MSI.
 
-**Version actuelle, 31 octobre 2026 : Élan MSI, 81 annonces, 17 fiches métiers et trois parcours.** Cette documentation décrit le périmètre MSI élargi, et non l’ancien prototype limité à la data.
+**Version 3.0.0, instantané du 31 octobre 2026 : 1 555 annonces, dont 229 stages/alternances, 19 pays ou territoires représentés et 13 catégories de domaines sélectionnables.** Le corpus contient 72 annonces hors France, dont 8 stages/alternances ; les autres contrats restent accessibles séparément. Ces volumes ne sont pas un décompte d’offres encore ouvertes.
 
-Projet académique indépendant, non affilié à l’école ni aux recruteurs. Auteur : Abra-Bienvenue Tchakah, [bienvenue2002](https://github.com/bienvenue2002). Le nom historique du dépôt est conservé pour ne pas casser ses liens.
+- **Site public :** [ouvrir Élan MSI](https://bienvenue2002.github.io/observatoire-emploi-data/).
+- **Dépôt public :** [bienvenue2002/observatoire-emploi-data](https://github.com/bienvenue2002/observatoire-emploi-data).
+- **Auteur :** Abra-Bienvenue Tchakah, Grenoble IAE.
 
-Le dépôt est public, sur demande de son auteur. Le site est publié avec GitHub Pages : [ouvrir Élan MSI](https://bienvenue2002.github.io/observatoire-emploi-data/).
+Projet indépendant, non affilié à l’école ou aux recruteurs. Toute formation peut utiliser l’outil ; cela ne signifie pas que toutes les formations, tous les pays ou tous les niveaux sont représentés, ni qu’un étudiant est éligible à chaque poste. Le corpus est majoritairement bancaire.
 
-## Ce que l’on peut explorer
+## Recherche et fonctionnalités
 
-- **Trois parcours :** CMSI, Intelligence des données et ARAMIS, avec rattachements indicatifs aux métiers.
-- **Dix-sept fiches :** débouchés et perspectives des parcours MSI, complétés de deux métiers data connexes explicitement signalés.
-- **Des repères de niveau :** stage/junior, évolution avec expérience, ou poursuite en doctorat.
-- **Des offres sourcées :** recherche, parcours, métier, région, contrat, compétence et source. Durée, niveau d’études et fin d’études sont visibles dans les résultats et les détails lorsqu’ils sont précisés.
-- **Des interactions :** graphiques cliquables, raccourcis stage/région, tri, pagination et fiches détaillées.
-- **Des exports :** CSV et JSON de la sélection, avec parcours, profil étudiant, preuves textuelles, provenance, date et mode de collecte.
-- **Une méthode lisible :** déduplication, protection des coordonnées, limites du corpus et statut des sources.
+- **Domaines :** informatique/data, finance/comptabilité/assurance, commerce, RH, droit/risques/audit, marketing, gestion/conseil, ingénierie/logistique, santé/social, arts/design, enseignement/recherche, environnement/agriculture et autres. Une catégorie vide reste visible.
+- **International :** pays/territoires issus de champs explicites, villes regroupées par référence, raccourci « Hors France ». Un pays inconnu n’est pas déduit d’une ville ou de la langue demandée.
+- **Contrats :** stages/alternances affichés par défaut ; CDI, CDD et VIE accessibles en changeant le contrat ou le raccourci. VIE n’est assimilé ni à un stage ni à une alternance ; les catégories françaises ne valent pas équivalence juridique internationale.
+- **Profil :** durée, niveau d’études d’origine, avancement d’études si explicite, notes et preuves. Les inconnues sont signalées, jamais inventées.
+- **Filtres :** recherche libre, domaine, pays, contrat, études, source, région/zone, compétence et parcours MSI facultatif ; tri, pagination et réinitialisation.
+- **Exports :** CSV/JSON de toute la sélection, pas seulement de la page, avec provenance, dates et preuves. Le CSV protège les cellules interprétables comme formules.
 
-## Formation : le périmètre de référence
+## Six langues, sans modifier les annonces
 
-Références consultables : Grenoble IAE – INP, UGA, pages officielles des trois Master 2 ci-dessous, consultées le 31 octobre 2026. Voir notamment leurs rubriques « Débouchés professionnels » ou « Careers » :
+L’interface est disponible en français, anglais, espagnol, allemand, japonais et chinois simplifié. Navigation, filtres, domaines, compteurs, dates, pays, dialogues, erreurs et états vides sont traduits dans `site/i18n.js`, sans API externe.
 
-- [Conseil et Management des Systèmes d’Information](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-conseil-et-management-des-systemes-dinformation).
-- [Intelligence des Données](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-intelligence-des-donnees).
-- [Advanced Research in Management of Information Systems](https://iae.grenoble-inp.fr/en/our-programs/master-2-advanced-research-in-management-of-information-system).
+Les titres, descriptions, diplômes, compétences, régions issues des sources et preuves gardent leur langue d’origine, explicitement signalée. Les ressources pédagogiques MSI restent en français. La langue d’interface n’est ni un filtre géographique ni une langue de travail promise ; changer de langue conserve la sélection.
 
-Les missions et idées de projets sont des reformulations pédagogiques. Un rattachement ne garantit pas l’admission à un parcours ou l’éligibilité à une offre. Chief Data Officer est une perspective de direction, pas un premier emploi promis ; l’enseignement-recherche nécessite une poursuite en doctorat puis un recrutement.
+Le choix de langue peut être mémorisé localement. Si le stockage est bloqué, le site fonctionne quand même en mémoire. Pas de compte, de CV envoyé ou de suivi publicitaire.
 
 ## D’où viennent les offres ?
 
-L’instantané du 31 octobre 2026 contient **81 annonces** : 74 issues de l’export BPCE reclassé sur le périmètre MSI et 7 fiches éditoriales.
-
-| Origine | Fiches | Mode |
+| Origine | Annonces intégrées | Mode |
 |---|---:|---|
-| Groupe BPCE | 74 | Export Open Data, transformation Python |
-| Deloitte, via Welcome to the Jungle | 2 | Sélection éditoriale datée |
-| Capgemini, site carrières | 1 | Sélection éditoriale datée |
-| Welcome to the Jungle, autres employeurs | 2 | Sélection éditoriale datée |
-| JobTeaser, annonces publiques Capgemini | 2 | Sélection éditoriale datée |
+| Groupe BPCE | 1 547 | Export public, transformation Python |
+| Deloitte via Welcome to the Jungle | 2 | Fiches éditoriales |
+| Capgemini, site carrières | 2 | Fiches éditoriales, dont une en Pologne |
+| Welcome to the Jungle, autres employeurs | 2 | Fiches éditoriales |
+| JobTeaser | 2 | Fiches éditoriales |
 
-Ces comptes décrivent le corpus du projet, pas les volumes totaux des plateformes. Le détail factuel de chaque fiche et son URL se trouvent dans `data/curated.json` ; les pages effectivement consultées et les exclusions figurent dans [le journal des sources](docs/SOURCES.md).
+Le [catalogue BPCE](https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques) et son [export JSON](https://bpce.opendatasoft.com/api/explore/v2.1/catalog/datasets/groupe-bpce-offres-emploi/exports/json) fournissent la base automatisable. La Licence Ouverte 2.0 concerne BPCE, pas les autres plateformes.
 
-BPCE : 1 888 lignes initiales, 1 785 situées en France, 192 retenues par les règles MSI, puis 74 références uniques, auxquelles s’ajoutent les sept références éditoriales.
+La fiche internationale ajoutée est [Intern Application Consultant, Capgemini, Pologne, référence 506269](https://careers.capgemini.com/job/Wroc%C5%82aw-Intern-Application-Consultant-(with-German)/1406556233/), vérifiée le 31 octobre 2026 : contrat source Internship, deuxième année d’études IT/mathématiques/physique ou première pratique/cours IT, anglais et allemand B2 ; durée non précisée. L’allemand exigé ne signifie pas que le poste est situé en Allemagne.
 
-Seul [l’export public BPCE](https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques) est collecté automatiquement. Aucune API Deloitte, Capgemini, WTTJ ou JobTeaser n’est branchée ; aucun Career Center privé n’est consulté. Les fiches éditoriales utilisent des informations factuelles, un lien et une synthèse originale, pas les descriptions intégrales.
+Les liens complémentaires vers [Welcome to the Jungle](https://www.welcometothejungle.com/fr/jobs), [JobTeaser](https://www.jobteaser.com/en/job-offers), [Capgemini](https://www.capgemini.com/careers/join-capgemini/job-search/?keyword=Internship&size=30) et [ErasmusIntern](https://erasmusintern.org/) ouvrent des plateformes externes. Ils ne sont pas comptés comme annonces intégrées ; il faut y appliquer ses propres filtres et respecter leurs conditions d’accès.
 
-**Statistiques de compétences :** les résumés éditoriaux ne sont pas comparables aux descriptions complètes. Le graphique et le mot-clé dominant sont donc calculés uniquement sur les offres BPCE sélectionnées. Les tags éditoriaux restent filtrables.
+## Espace pédagogique MSI conservé
 
-## Durée et niveau d’études
+L’accès [Ressources MSI, en français](https://bienvenue2002.github.io/observatoire-emploi-data/msi.html) conserve les 17 fiches métiers, les trois parcours CMSI/ID/ARAMIS, les graphiques, les cinq vues et l’instantané historique de 81 annonces. Ses fichiers sont séparés du nouveau moteur ; toutes ses références restent aussi présentes dans le corpus élargi.
 
-Le niveau BPCE provient du champ `degree` ou, s’il est absent, d’une mention explicite de niveau dans le texte, avec preuve conservée. Les durées sont extraites seulement lorsqu’un passage explicite décrit le stage ou le contrat, sans transformer une durée d’expérience en durée de poste. Les fiches éditoriales sont relues sur leur page d’origine. Une information manquante reste « Non précisé » : aucune durée n’est inventée, notamment pour un CDI. La recherche inclut ces nouveaux champs : essayer `Bac+4`, `6 mois` ou `fin d’études`.
+Références académiques Grenoble IAE : [CMSI](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-conseil-et-management-des-systemes-dinformation), [Intelligence des données](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-intelligence-des-donnees), [ARAMIS](https://iae.grenoble-inp.fr/en/our-programs/master-2-advanced-research-in-management-of-information-system). Les rattachements sont indicatifs, jamais une garantie d’admission ou d’éligibilité.
 
-Les champs `duration`, `education_level` et `study_stage` sont accompagnés de preuves textuelles et d’un mode de vérification dans les données JSON et le CSV du pipeline. Les exports depuis le site utilisent leurs équivalents français `duree`, `niveau_etudes` et `avancement_etudes`. Une section dépliable de chaque fiche permet de vérifier les mentions d’origine.
+## Lancer et tester
 
-Exemples vérifiés : [CIO Advisory, Capgemini Invent](https://www.jobteaser.com/en/job-offers/3e24e59b-a298-48a0-b3da-2cbca1c6fa34-capgemini-invent-consultante-consultant-cio-advisory-stage) indique six mois, « Master level or equivalent » et un stage de fin d’études. [Business Analyst Supply Chain, Capgemini](https://www.jobteaser.com/en/job-offers/0f85b343-1448-464a-a59b-f8ea406dfa47-capgemini-business-analyst-supply-chain-stage) précise Bac+5 en cours et six mois dans son descriptif, alors que son encart affiche quatre à six mois ; cette divergence est conservée dans la fiche.
-
-## Lancer le site
-
-Python 3.10 ou plus ; aucune dépendance Python tierce.
+Python 3.10+ suffit pour servir le site et générer les données. Le frontend utilise HTML, CSS et JavaScript sans framework ; Node.js vérifie sa syntaxe et les dictionnaires.
 
 ```bash
-git clone https://github.com/bienvenue2002/observatoire-emploi-data.git
-cd observatoire-emploi-data
-python3 -m http.server 8000 --directory site
-```
-
-Ouvrir `http://localhost:8000`. Ce serveur suffit à un usage personnel local. Éviter le double-clic `file://`, qui empêche généralement `fetch()` de lire les données JSON.
-
-## Actualiser et tester
-
-```bash
-# Actualiser BPCE et importer la sélection éditoriale locale :
-python3 scripts/collect.py
-
-# Rejouer un export brut conservé localement :
-python3 scripts/collect.py --input data/raw/bpce.json \
-  --observed-at 2026-10-31T01:48:12+00:00
-
-# Utiliser une autre sélection éditoriale :
-python3 scripts/collect.py --curated data/curated.json
-
-python3 -m unittest discover -s tests -v
+python -m http.server 8000 --directory site
+# Ouvrir http://localhost:8000
+python -m unittest discover -s tests -v
 node --check site/app.js
+node --check site/msi-app.js
+node tests/test_i18n.cjs
 ```
 
-La date `--observed-at` doit correspondre au téléchargement réel du brut. Les fiches éditoriales conservent chacune leur propre date de consultation ; relancer le script ne revérifie pas leurs liens et ne modifie pas cette date.
+## Régénérer les données
 
-Le brut n’est pas versionné : il contient des contacts recruteurs et des offres hors périmètre. La collecte par défaut travaille en mémoire. Une source vide ou au schéma inattendu fait échouer la commande avant export. Les fiches éditoriales sont validées avant remplacement : identifiants/URLs uniques, HTTPS et domaines admis.
+```bash
+# Export public BPCE et import des fiches locales
+python scripts/collect.py
+# Rejouer un téléchargement en conservant sa vraie date
+python scripts/collect.py --input data/raw/bpce.json \
+  --observed-at 2026-10-31T01:48:12+00:00 --scope all
+# Ancien périmètre MSI France dans un autre dossier
+python scripts/collect.py --input data/raw/bpce.json --scope msi \
+  --output /tmp/elan-msi-controle
+```
 
-## Structure
+Le mode par défaut `all` prend tous les domaines et pays de la source. Une entrée administrative « Background Check » sans métier est écartée ; 1 887 lignes BPCE deviennent 1 547 références, puis 8 fiches éditoriales sont ajoutées. Relancer le pipeline ne revérifie pas automatiquement les pages éditoriales et ne collecte pas les portails complémentaires.
+
+Le brut, ignoré par Git, peut contenir des coordonnées de recruteurs et ne doit jamais être publié. Les fichiers nettoyés sont versionnés. Date source, date de collecte et date de vérification éditoriale restent distinctes.
+
+## Structure et documentation
 
 ```text
-scripts/collect.py          Collecte BPCE, nettoyage, classement et exports
-scripts/taxonomy.py         Rattachement familles / parcours
-data/curated.json           Sept références éditoriales, liens et dates
-tests/test_collect.py      Quinze tests unitaires hors réseau
-site/index.html            Les cinq vues du site
-site/style.css             Responsive, cartes métiers et sources
-site/app.js                Filtres, calculs, navigation, détails et exports
-site/data/catalog.json     Parcours, fiches métiers et statut des sources
-site/data/jobs.json        Corpus complet et métadonnées
-site/data/jobs.csv         Export complet
-site/data/meta.json        Audit du corpus
-docs/METHODOLOGIE.md        Règles, définitions et limites
-docs/SOURCES.md             Journal des sources et exclusions
-docs/GUIDE_PEDAGOGIQUE.md  Appropriation du projet et exercices
-site.FLOWS.md              Recette des parcours, hors déploiement
-QA.md                      Résultats des vérifications
+site/index.html, global.css, app.js, i18n.js   moteur international
+site/msi.html, msi-app.js, style.css          espace pédagogique conservé
+site/data/jobs.json, jobs.csv, meta.json      corpus élargi
+site/data/msi-jobs.*                         instantané MSI historique
+scripts/collect.py, global_scope.py          collecte, nettoyage et domaines
+scripts/taxonomy.py                         rattachements pédagogiques MSI
+data/curated.json, international.json        8 fiches éditoriales datées
+tests/                                      tests Python et traductions
+docs/                                       sources, méthode et guide de cours
 ```
 
-Héberger seulement `site/`. Les fiches métiers sont des données éditoriales : modifier `catalog.json` permet d’ajouter une fiche sans réécrire toute la page HTML.
-
-## Choix techniques et confidentialité
-
-HTML sémantique, CSS Grid/Flexbox, JavaScript natif et pipeline Python standard. Pas de framework, backend, clé API, stockage de candidature, cookies analytiques ou compte utilisateur. Les polices Manrope et IBM Plex Mono utilisent Google Fonts, avec fontes système de secours.
-
-Les descriptions BPCE sont nettoyées et les emails/numéros français détectés sont masqués. Ce traitement ne constitue pas une garantie exhaustive d’anonymisation du texte libre. Les offres et liens restent des instantanés dont la disponibilité doit être vérifiée.
-
-## Présenter le projet
-
-Une fois le code étudié et les choix compris :
-
-> Développement d’Élan MSI, portail web des débouchés du Master MSI : modélisation de parcours et familles métiers, pipeline Open Data Python, intégration de références éditoriales multi-sources, déduplication, filtres interactifs, exports CSV/JSON et tests unitaires. Documentation des biais, de la provenance et des limites d’accès aux postes.
-
-Ne pas revendiquer un partenariat avec les entreprises, une agrégation automatique des quatre plateformes ou une couverture représentative du marché.
-
-## Déploiement
-
-Le dossier `site/` est publié sur GitHub Pages par `.github/workflows/pages.yml`. Une modification des fichiers du site, des scripts, des tests ou de ce workflow sur `master` déclenche les tests puis le déploiement. Le workflow peut aussi être lancé manuellement dans l’onglet Actions. Seul `site/` est envoyé à l’hébergement : les fichiers de travail, les tests et les données brutes ne sont pas publiés comme pages web.
-
-Cette publication n’actualise pas les annonces : elles restent un instantané daté. Pour actualiser BPCE, exécuter le script localement, contrôler les résultats puis pousser les exports ; les sept références éditoriales nécessitent toujours une vérification manuelle.
+Voir [méthodologie](docs/METHODOLOGIE.md), [sources](docs/SOURCES.md), [guide pédagogique](docs/GUIDE_PEDAGOGIQUE.md) et [recette](QA.md). GitHub Actions vérifie le projet et publie uniquement `site/` ; aucune donnée brute ni clé privée n’est nécessaire au navigateur.

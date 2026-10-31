@@ -1,0 +1,42 @@
+{
+  "title": "Élan MSI · Débouchés et opportunités",
+  "edition": "Corpus MSI : Open Data BPCE + sélection éditoriale multi-source",
+  "observed_at": "2026-10-31T01:48:12+00:00",
+  "source_url": "https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques",
+  "api_url": "https://bpce.opendatasoft.com/api/explore/v2.1/catalog/datasets/groupe-bpce-offres-emploi/exports/json",
+  "license": "BPCE : Licence Ouverte 2.0 ; autres plateformes : liens factuels et synthèses originales, pas de licence ouverte présumée",
+  "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+  "raw_rows": 1888,
+  "france_rows": 1785,
+  "matched_location_rows": 192,
+  "unique_offers": 81,
+  "bpce_unique_offers": 74,
+  "editorial_offers": 7,
+  "sources": {
+    "Groupe BPCE · Open Data": 74,
+    "Deloitte · via Welcome to the Jungle": 2,
+    "Capgemini · site carrières": 1,
+    "Welcome to the Jungle": 2,
+    "JobTeaser · annonces publiques": 2
+  },
+  "competency_statistics": "Descriptions intégrales BPCE uniquement ; les fiches éditoriales sont exclues du dénominateur.",
+  "salary_available": 0,
+  "scope": "Offres France sélectionnées par métiers MSI. Corpus non exhaustif et non représentatif ; accès aux postes soumis au profil demandé.",
+  "deduplication": "Une annonce par référence source ; les villes multiples sont regroupées.",
+  "families": {
+    "Data Engineer / Architecture": 6,
+    "Business Analyst": 20,
+    "Data Scientist": 7,
+    "Chef de projet SI": 15,
+    "Data Analyst": 9,
+    "Autres métiers data": 3,
+    "Product Owner": 4,
+    "Conseil & transformation SI": 5,
+    "Auditeur SI": 3,
+    "Chief Data Officer / gouvernance": 3,
+    "Consultant cybersécurité": 3,
+    "Responsable Analytics": 2,
+    "Consultant ERP / solutions métier": 1
+  },
+  "pipeline_version": "2.1.0"
+}

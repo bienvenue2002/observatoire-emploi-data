@@ -1,6 +1,14 @@
 # Journal des sources · Élan MSI
 
-Pages consultées le 31 octobre 2026. La consultation confirme le contenu visible de la page, pas l’ouverture garantie du poste ni la compatibilité de tous les profils MSI.
+Pages consultées le 31 octobre 2026. La consultation confirme le contenu visible, pas l’ouverture garantie du poste ni la compatibilité de toutes les formations.
+
+## Édition internationale 3.0
+
+Le moteur inclut désormais tous les domaines et pays explicitement présents dans l’export BPCE conservé, plus huit fiches éditoriales. Les totaux, filtres et limites sont détaillés dans le README ; les sept références MSI historiques ci-dessous sont conservées.
+
+Une huitième référence est ajoutée : [Capgemini, Intern Application Consultant (with German), référence 506269](https://careers.capgemini.com/job/Wroc%C5%82aw-Intern-Application-Consultant-(with-German)/1406556233/). Page vérifiée le 31 octobre 2026, publication affichée le 13 octobre 2026, bouton de candidature visible. Pays explicite PL, villes Wrocław, Warszawa, Poznań et Opole. Contrat source Internship ; durée non précisée. Deuxième année d’études IT/mathématiques/physique ou première pratique/cours IT acceptés ; anglais et allemand B2 requis. Aucune équivalence Bac+N n’est inventée, et la demande d’allemand n’est pas une localisation en Allemagne.
+
+Les liens [Welcome to the Jungle](https://www.welcometothejungle.com/fr/jobs), [JobTeaser](https://www.jobteaser.com/en/job-offers), [Capgemini](https://www.capgemini.com/careers/join-capgemini/job-search/?keyword=Internship&size=30) et [ErasmusIntern](https://erasmusintern.org/) sont des pistes externes. Ils ne constituent ni une collecte ni des annonces intégrées. Les conditions d’accès, dont JavaScript, cookies ou éventuel compte, dépendent des plateformes.
 
 ## Formation
 

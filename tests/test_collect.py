@@ -77,8 +77,10 @@ class PipelineTests(unittest.TestCase):
 
     def test_elan_brand_consistency(self):
         html = (ROOT / "site/index.html").read_text(encoding="utf-8")
-        self.assertIn("<title>Élan MSI | Du master aux métiers</title>", html)
-        self.assertIn('aria-label="Élan MSI accueil"', html)
+        self.assertIn("<title>Élan MSI | Stages et alternances sans frontières</title>", html)
+        self.assertIn('aria-label="Élan MSI"', html)
+        legacy = (ROOT / "site/msi.html").read_text(encoding="utf-8")
+        self.assertIn("<title>Élan MSI | Du master aux métiers</title>", legacy)
         self.assertEqual(html.count("élan<span>msi</span>"), 2)
         self.assertNotIn("Horizon MSI", html)
         app = (ROOT / "site/app.js").read_text(encoding="utf-8")
@@ -86,7 +88,7 @@ class PipelineTests(unittest.TestCase):
         for filename in ("jobs.json", "meta.json"):
             payload = json.loads((ROOT / "site/data" / filename).read_text(encoding="utf-8"))
             meta = payload["meta"] if filename == "jobs.json" else payload
-            self.assertEqual(meta["title"], "Élan MSI · Débouchés et opportunités")
+            self.assertEqual(meta["title"], "Élan MSI · Stages et alternances sans frontières")
 
     def test_entities(self):
         self.assertEqual(clean("<p>Data &amp; IA</p>"), "Data & IA")

@@ -1,6 +1,18 @@
 # Méthodologie · Élan MSI
 
-Élan MSI sert à explorer les débouchés du Master MSI, pas à estimer le marché national. Les décisions d’orientation et de candidature restent soumises au programme officiel et au profil demandé par chaque employeur.
+Élan MSI ouvre désormais la recherche de stages et d’alternances à toutes les formations, en France et à l’international, sans prétendre représenter le marché mondial. Les décisions de candidature restent soumises aux exigences du recruteur, au droit local et aux autorisations de travail.
+
+## Édition internationale 3.0
+
+L’instantané du 31 octobre 2026 contient 1 555 références, dont 229 stages/alternances. Il représente 19 pays ou territoires ; 72 annonces sont hors France, dont 8 stages/alternances. Le filtrage étudiant est actif par défaut. Les 13 domaines de `scripts/global_scope.py` restent sélectionnables, même à zéro ; ils classent les intitulés, pas les étudiants ou les diplômes.
+
+Les champs `domain`, `source_contract` et `locations[].country`, `country_code`, `country_evidence` enrichissent le schéma. BPCE `country=France` donne FR ; `country=International` utilise uniquement le pays explicitement nommé dans `state`. Un pays manquant n’est pas deviné à partir d’une ville ou d’une langue.
+
+Les six dictionnaires `site/i18n.js` partagent les mêmes clés et variables, contrôlées par test. Pays et dates sont localisés avec `Intl`. Les annonces, preuves, diplômes et ressources MSI ne sont pas traduits automatiquement. Changer de langue conserve la sélection et la page. Le stockage facultatif de la langue est protégé contre les erreurs.
+
+Le corpus est fortement bancaire et partiel. « Toutes formations » signifie qu’aucune inscription MSI n’est imposée, pas que toutes les filières ou tous les pays sont représentés. Les portails complémentaires restent distincts des annonces intégrées ; aucun accès privé n’est simulé.
+
+`site/msi.html` conserve l’ancienne expérience française et ses 81 annonces dans `site/data/msi-jobs.json`. Les graphiques et l’analyse académique ci-dessous concernent cet espace historique, pas une étude représentative de tous les secteurs.
 
 ## Périmètre académique
 
@@ -18,7 +30,7 @@ Les [pages CMSI](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-conseil-
 
 ## Transformation BPCE
 
-Le script vérifie le schéma, conserve les lignes France, nettoie le HTML, normalise contrats/régions et classe les intitulés par règles ordonnées. Audit, cybersécurité, produit et business analysis précèdent les règles génériques data. Les domaines voisins ERP/PLM sont regroupés sous « solutions métier », sans assimiler PLM à ERP.
+Le script vérifie le schéma, nettoie le HTML et normalise contrats/régions. Le mode CLI par défaut `--scope all` inclut tous les domaines et pays ; une entrée administrative « Background Check » est exclue. `--scope msi` reproduit l’ancienne sélection France par métiers MSI. Les familles historiques sont conservées, avec un domaine général ajouté par des règles ordonnées sur l’intitulé.
 
 La référence est la clé de regroupement ; à défaut, une empreinte du titre et du lien sert de secours. Les localisations et compétences des variantes sont réunies, la description la plus longue conservée et la date de modification la plus récente retenue.
 
@@ -26,7 +38,7 @@ Les intitulés contenant « data » sans correspondance précise restent dans «
 
 ## Sélection éditoriale
 
-`data/curated.json` conserve les faits vérifiés et la date de consultation de chaque page. `load_curated()` valide le schéma, les doublons et les domaines HTTPS admis. La famille est choisie par lecture de l’annonce ; les parcours sont ajoutés via la même taxonomie que BPCE.
+`data/curated.json` conserve les sept fiches MSI et `data/international.json` ajoute une fiche Capgemini en Pologne, vérifiée sur [la page source](https://careers.capgemini.com/job/Wroc%C5%82aw-Intern-Application-Consultant-(with-German)/1406556233/) le 31 octobre 2026. `load_curated()` valide le schéma, les doublons et les domaines HTTPS admis. Les parcours sont indicatifs, jamais une garantie d’éligibilité.
 
 La sélection n’est ni exhaustive ni un échantillon aléatoire. Relancer le pipeline importe le fichier local, mais ne revérifie pas les pages. Les fiches anciennes comportent un avertissement ; une page affichant explicitement « poste pourvu » est écartée.
 
@@ -49,7 +61,7 @@ Le schéma initial est enrichi sans retrait de champ : `pathways`, `source_key`,
 
 `observed_at` est le moment du téléchargement BPCE ou la date de consultation éditoriale. `published_at` est une date de publication disponible sur certaines pages ; `modified_at` est une modification source, non une publication. Le champ BPCE ne fournit pas son fuseau ; le site n’en tire aucune analyse horaire.
 
-Le CSV complet et l’export filtré ont des colonnes adaptées à leur usage. Tous deux conservent provenance, parcours et date. Le JSON filtré contient des lignes aplaties et un bloc de métadonnées dont `filtered_count` est propre à l’export ; les autres volumes décrivent le corpus complet.
+Le CSV complet et le CSV filtré ont des colonnes anglaises stables adaptées à leur usage. Ils conservent provenance, domaines, pays, parcours, preuves et dates ; les cellules assimilables à des formules sont neutralisées. Le JSON filtré V3 conserve les objets d’origine, dont les localisations, et ajoute `selection_count`, `filters`, `interface_language` aux métadonnées. Les autres volumes décrivent le corpus entier. L’espace MSI garde son ancien format aplati et `filtered_count`.
 
 ## Profil étudiant
 
@@ -69,6 +81,6 @@ BPCE reste majoritaire : les chiffres ne décrivent pas la demande des recruteur
 
 ## Reproductibilité et tests
 
-Quinze tests unitaires couvrent règles de classification, familles/parcours, faux positifs de compétences, déduplication, sélection éditoriale, URLs et export multi-source. Ils ne certifient ni toutes les classifications ni la disponibilité d’une annonce.
+Les tests Python couvrent profils, durées, pays explicites, contrats, domaines, compatibilité des références, colonnes privées, déduplication et exports. Le contrôle Node valide les six dictionnaires, leurs variables et les clés HTML. Ces contrôles ne certifient ni toutes les classifications ni la disponibilité d’une annonce.
 
-Le brut BPCE initial n’est pas partagé ; une reproduction exacte nécessite le même export et sa date. Les fichiers nettoyés sont versionnés, de même que les sept fiches éditoriales et leurs dates. Les contrôles navigateur sont consignés dans `QA.md`.
+Le brut BPCE initial n’est pas partagé ; une reproduction exacte nécessite le même export et sa date. Les fichiers nettoyés sont versionnés, de même que les huit fiches éditoriales et leurs dates. Les contrôles navigateur sont consignés dans `QA.md`.

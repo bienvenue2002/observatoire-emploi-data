@@ -18,8 +18,10 @@ from urllib.request import Request, urlopen
 from urllib.parse import urlparse
 try:
     from .taxonomy import pathways
+    from .global_scope import DOMAINS, country_fields, domain_for
 except ImportError:
     from taxonomy import pathways
+    from global_scope import DOMAINS, country_fields, domain_for
 
 ROOT = Path(__file__).resolve().parents[1]
 API_URL = "https://bpce.opendatasoft.com/api/explore/v2.1/catalog/datasets/groupe-bpce-offres-emploi/exports/json"
@@ -185,6 +187,13 @@ def student_requirements(row):
                 break
             if duration:
                 break
+    # A duration explicitly in a non-permanent job title is also contract
+    # evidence, including English VIE/internship titles. Never reuse experience.
+    title = clean(row.get("title"))
+    if not duration and contract(row.get("jobtype")) in {"Stage", "Alternance", "CDD", "VIE"} and not re.search(r"exp[ée]rience", title, re.I):
+        match = re.search(r"\b(?P<value>\d{1,2}\s*(?:mois|months?|semaines?))\b", title, re.I)
+        if match:
+            duration, evidence = match.group("value"), title
     final_year = re.search(r"\b(?:stage|alternance)\s+de\s+fin\s+d[’']études\b", text, re.I) if contract(row.get("jobtype")) in {"Stage", "Alternance"} else None
     return {
         "duration": duration, "duration_evidence": evidence,
@@ -197,28 +206,35 @@ def student_requirements(row):
     }
 
 
-def transform(records, observed_at):
+def transform(records, observed_at, scope="msi"):
     """Une annonce par référence ; les localisations sont conservées en liste."""
     groups = {}
     matched_rows = 0
     for row in records:
-        if norm(row.get("country")) != "france":
+        if scope == "msi" and norm(row.get("country")) != "france":
             continue
         family = role(row.get("title"))
-        if not family:
+        if scope == "msi" and not family:
             continue
+        if scope == "all" and (not clean(row.get("title")) or norm(row.get("title")).startswith("background check")):
+            continue
+        family = family or "Autres métiers"
         matched_rows += 1
         ref = clean(row.get("referencenumber"))
         source_link = clean(row.get("url"))
         # Déduplication par référence, sinon empreinte du lien et du titre.
         key = ref or hashlib.sha256((source_link + clean(row.get("title"))).encode()).hexdigest()[:16]
-        location = {"city": clean(row.get("city")) or "Non renseignée", "region": region(row.get("state"))}
+        location = {"city": clean(row.get("city")) or "Non renseignée",
+                    "region": region(row.get("state")) if norm(row.get("country")) == "france" else clean(row.get("state")),
+                    **country_fields(row)}
         desc = redact(row.get("description"))
         detected = skills_in(clean(row.get("title")) + " " + desc)
         if key not in groups:
             groups[key] = {
                 "id": key, "title": clean(row.get("title")), "company": clean(row.get("organization")) or "Groupe BPCE",
                 "family": family, "contract": contract(row.get("jobtype")),
+                "source_contract": clean(row.get("jobtype")),
+                "domain": domain_for(row.get("title")),
                 **student_requirements(row),
                 "locations": [], "skills": [], "description": desc,
                 "source": "Groupe BPCE · Open Data", "source_url": source_link,
@@ -282,15 +298,23 @@ def load_curated(path):
     return result
 
 
-def export(records, output, observed_at, curated_path=None):
-    jobs, matched = transform(records, observed_at)
+def export(records, output, observed_at, curated_path=None, scope="msi"):
+    jobs, matched = transform(records, observed_at, scope=scope)
     bpce_count = len(jobs)
     editorial = load_curated(curated_path) if curated_path else []
+    if scope == "all" and curated_path:
+        editorial.extend(load_curated(ROOT / "data" / "international.json"))
+    for job in editorial:
+        job.setdefault("domain", domain_for(job["title"]))
+        job.setdefault("source_contract", job["contract"])
+        for location in job["locations"]:
+            if "country_code" not in location:
+                location.update(country_fields({"country": "France", "state": location["region"]}))
     jobs.extend(editorial)
     output.mkdir(parents=True, exist_ok=True)
     meta = {
-        "title": "Élan MSI · Débouchés et opportunités",
-        "edition": "Corpus MSI : Open Data BPCE + sélection éditoriale multi-source",
+        "title": "Élan MSI · Stages et alternances sans frontières" if scope == "all" else "Élan MSI · Débouchés et opportunités",
+        "edition": "International et toutes formations" if scope == "all" else "Corpus MSI : Open Data BPCE + sélection éditoriale multi-source",
         "observed_at": observed_at,
         "source_url": SOURCE_URL, "api_url": API_URL,
         "license": "BPCE : Licence Ouverte 2.0 ; autres plateformes : liens factuels et synthèses originales, pas de licence ouverte présumée",
@@ -302,22 +326,29 @@ def export(records, output, observed_at, curated_path=None):
         "sources": dict(Counter(j["source"] for j in jobs)),
         "competency_statistics": "Descriptions intégrales BPCE uniquement ; les fiches éditoriales sont exclues du dénominateur.",
         "salary_available": sum(j["salary_min"] is not None or j["salary_max"] is not None for j in jobs),
-        "scope": "Offres France sélectionnées par métiers MSI. Corpus non exhaustif et non représentatif ; accès aux postes soumis au profil demandé.",
+        "scope": "Tous domaines présents dans la source BPCE, France et international, avec complément éditorial. Corpus non exhaustif, fortement bancaire ; toutes les formations et tous les pays ne sont pas représentés. Aucun rattachement ne garantit l’éligibilité." if scope == "all" else "Offres France sélectionnées par métiers MSI. Corpus non exhaustif et non représentatif ; accès aux postes soumis au profil demandé.",
         "deduplication": "Une annonce par référence source ; les villes multiples sont regroupées.",
         "families": dict(Counter(j["family"] for j in jobs)),
-        "pipeline_version": "2.1.0",
+        "pipeline_version": "3.0.0" if scope == "all" else "2.1.0",
+        "domains": dict(Counter(j["domain"] for j in jobs)),
+        "domain_options": DOMAINS,
+        "countries": sorted({x["country_code"] for j in jobs for x in j["locations"] if x.get("country_code")}),
+        "international_offers": sum(any(x.get("country_code") and x["country_code"] != "FR" for x in j["locations"]) for j in jobs),
+        "student_offers": sum(j["contract"] in {"Stage", "Alternance"} for j in jobs),
     }
     payload = {"meta": meta, "jobs": jobs}
     (output / "jobs.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     (output / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
     with (output / "jobs.csv").open("w", encoding="utf-8-sig", newline="") as f:
-        fields = ["id", "title", "company", "family", "pathways", "contract", "duration", "education_level", "study_stage", "duration_evidence", "education_evidence", "study_stage_evidence", "duration_note", "education_note", "requirements_method", "cities", "regions", "skills", "source", "collection_method", "modified_at", "observed_at", "source_url"]
-        writer = csv.DictWriter(f, fieldnames=fields)
+        fields = ["id", "title", "company", "family", "domain", "pathways", "contract", "source_contract", "duration", "education_level", "study_stage", "duration_evidence", "education_evidence", "study_stage_evidence", "duration_note", "education_note", "requirements_method", "cities", "regions", "countries", "country_codes", "skills", "source", "collection_method", "modified_at", "observed_at", "source_url"]
+        writer = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         for j in jobs:
             row = {k: j.get(k, "") for k in fields}
             row.update(cities=" | ".join(sorted(set(x["city"] for x in j["locations"]))),
                        regions=" | ".join(sorted(set(x["region"] for x in j["locations"]))),
+                       countries=" | ".join(sorted(set(x.get("country") or "Non précisé" for x in j["locations"]))),
+                       country_codes=" | ".join(sorted(set(x.get("country_code") or "" for x in j["locations"]))),
                        skills=" | ".join(j["skills"]))
             row["pathways"] = " | ".join(j["pathways"])
             # Empêche l'interprétation de formules lors d'une ouverture dans Excel.
@@ -330,6 +361,7 @@ def main():
     parser.add_argument("--input", type=Path, help="JSON BPCE local, sans appel réseau")
     parser.add_argument("--output", type=Path, default=ROOT / "site" / "data")
     parser.add_argument("--observed-at", help="Date ISO du téléchargement local (reproductibilité)")
+    parser.add_argument("--scope", choices=["all", "msi"], default="all", help="Tous domaines et pays (défaut), ou ancien périmètre MSI France")
     parser.add_argument("--curated", type=Path, default=ROOT / "data" / "curated.json",
                         help="Sélection éditoriale vérifiée, importée sans appel aux plateformes")
     args = parser.parse_args()
@@ -346,10 +378,10 @@ def main():
     required = {"title", "country", "referencenumber"}
     if any(not isinstance(r, dict) or not required.issubset(r) for r in records):
         raise ValueError("Schéma source modifié ; ancien instantané conservé.")
-    jobs, _ = transform(records, observed)
+    jobs, _ = transform(records, observed, scope=args.scope)
     if not jobs:
         raise ValueError("Aucune offre pertinente ; ancien instantané conservé.")
-    print(json.dumps(export(records, args.output, observed, args.curated), ensure_ascii=False, indent=2))
+    print(json.dumps(export(records, args.output, observed, args.curated, scope=args.scope), ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":

@@ -1,5 +1,21 @@
 # Contrôles d’acceptation
 
+## International et six langues, version 3.0
+
+- Site public initial observé avant édition : Élan MSI, 81 annonces France. Les 81 identifiants restent dans le nouveau corpus et dans l’espace MSI français séparé.
+- 30 tests Python réussis ; six dictionnaires de 123 clés et 13 domaines chacun validés par Node, avec variables de substitution et clés HTML identiques. Syntaxe des deux applications et diff vérifiés.
+- Instantané : 1 555 références, 229 stages/alternances par défaut, 19 pays/territoires connus, 72 annonces hors France dont 8 stages/alternances. Les 28 annonces au pays inconnu ne sont pas géolocalisées par supposition.
+- Navigateur local : les quatre vues principales parcourues dans chacune des six langues ; sélection Pologne + international conservée. Détail ouvert lors d’un changement de langue, fermeture par bouton/Échap et retour focus vérifiés.
+- Recherche : stage Capgemini Pologne, alternance Luxembourg, Allemagne vide en mode étudiant puis VIE distinct avec 12 mois explicites ; le français/allemand demandé n’est pas transformé en pays.
+- Tous les filtres actionnés, dont études, source, région, compétence et parcours facultatif ; combinaisons vides honnêtes. Catégorie enseignement/recherche sans annonces sélectionnable, réinitialisation utilisable.
+- Pagination aller/retour, tri, raccourcis étudiant/international/ARA réversibles ; recherche « fin d'études » et recherche « China » conservée après passage anglais → français et nouveau tri.
+- Téléchargements réels : CSV/JSON de la fiche polonaise et JSON des 229 résultats sur toutes les pages, avec localisation PL, profil, preuves, filtres, langue d’interface et volume sélectionné.
+- Tests défensifs dans un contexte isolé : HTML malveillant échappé dans titre/entreprise/description ; URL javascript rejetée ; formule CSV neutralisée. Erreur HTTP 503 traduite, stockage local bloqué sans panne et bouton Réessayer restaurant les vraies données.
+- Ressources MSI : 81 annonces ; cinq vues, filtre graphique, raccourci, durée CIO Advisory, détails et pagination rejoués.
+- Rendu inspecté : desktop 1440 px ; allemand 375 px ; japonais en détail ; chinois 320 px. Aucun débordement horizontal lors du cycle desktop/mobile/desktop ; fermeture de dialogue conservée visible au défilement. Aucune erreur JavaScript.
+- README, méthode, sources et guide pédagogique alignés sur la V3 ; la couverture partielle, les sources bancaires, les annonces non traduites et la distinction VIE/stage/alternance sont explicites.
+- Publication et contrôle hébergé : consignés après déploiement ci-dessous.
+
 ## Profil étudiant et références publiques, version 2.1
 
 - 22 tests Python : degré structuré et repli textuel, durées explicites et intervalles, cas d’expérience à exclure, valeur inconnue, fiches éditoriales et colonnes CSV.
