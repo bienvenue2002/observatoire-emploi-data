@@ -1,0 +1,28 @@
+[
+  {
+    "id": "editorial-capgemini-pl-506269",
+    "title": "Intern Application Consultant (with German)",
+    "company": "Capgemini",
+    "family": "Conseil & transformation SI",
+    "domain": "it",
+    "contract": "Stage",
+    "source_contract": "Internship",
+    "locations": [
+      {"city": "Wrocław", "region": "Pologne", "country": "Pologne", "country_code": "PL"},
+      {"city": "Warszawa", "region": "Pologne", "country": "Pologne", "country_code": "PL"},
+      {"city": "Poznań", "region": "Pologne", "country": "Pologne", "country_code": "PL"},
+      {"city": "Opole", "region": "Pologne", "country": "Pologne", "country_code": "PL"}
+    ],
+    "skills": [],
+    "description": "Editorial summary: support the analysis and configuration of business applications in an international team. The employer accepts students from at least the second year in IT, mathematics or physics, or applicants with initial IT practice or completed courses. English and German at B2 are required. Duration is not specified.",
+    "education_level": "2nd year of studies or initial IT practice / courses",
+    "education_evidence": "You are a student in at least the second year of studies of specific subject areas (IT, mathematics, physics) or you have taken your first steps in IT (practice, completed courses)",
+    "education_note": "No French diploma equivalence inferred.",
+    "eligibility_note": "English and German B2 required. Located in Poland, not Germany. Check the employer’s page for eligibility and current availability.",
+    "source": "Capgemini · site carrières",
+    "source_key": "capgemini",
+    "source_url": "https://careers.capgemini.com/job/Wroc%C5%82aw-Intern-Application-Consultant-(with-German)/1406556233/",
+    "observed_at": "2026-10-31",
+    "published_at": "2026-10-13"
+  }
+]
