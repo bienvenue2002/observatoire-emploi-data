@@ -11,7 +11,8 @@ class GlobalScopeTests(unittest.TestCase):
     def row(self, **changes):
         return {"title": "Chargé de recrutement", "country": "France",
                 "referencenumber": "test-global", "organization": "BPCE",
-                "jobtype": "Stage", "description": "", **changes}
+                "jobtype": "Stage", "description": "Description de test.",
+                "url": "https://example.com/global-test", "lastmodifieddate": "2026-10-30", **changes}
 
     def test_non_msi_domains_are_included(self):
         jobs, count = transform([self.row()], "2026-10-31", scope="all")
@@ -60,7 +61,7 @@ class GlobalScopeTests(unittest.TestCase):
                           ROOT / "data/curated.json", scope="all")
             payload = json.loads((Path(folder) / "jobs.json").read_text())
             self.assertEqual(meta["unique_offers"], 9)
-            self.assertEqual(meta["pipeline_version"], "3.0.0")
+            self.assertEqual(meta["pipeline_version"], "4.0.0")
             international = next(j for j in payload["jobs"] if j["id"] == "editorial-capgemini-pl-506269")
             self.assertEqual(international["locations"][0]["country_code"], "PL")
             self.assertIsNone(international["duration"])

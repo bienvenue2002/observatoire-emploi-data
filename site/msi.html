@@ -10,11 +10,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./base.css">
-  <link rel="stylesheet" href="./style.css?v=2.1.0">
-  <script src="./msi-app.js?v=2.1.0" defer></script>
+  <link rel="stylesheet" href="./style.css?v=4.0.0">
+  <script src="./msi-app.js?v=4.0.0" defer></script>
 </head>
 <body>
-  <div style="padding:12px 24px;background:#182c3c;color:white;font-size:14px"><a href="./index.html" style="color:inherit">← Recherche internationale, toutes formations</a> · Ressources MSI en français · Instantané pédagogique : 81 annonces du 31 octobre 2026.</div>
+  <div style="padding:12px 24px;background:#182c3c;color:white;font-size:14px"><a href="./index.html" style="color:inherit">← Recherche MSI, France et international</a> · Ressources MSI en français · <a href="./index.html?status=archived#offers" style="color:inherit">Exemples fermés archivés</a><p id="refresh-info"></p></div>
   <a class="skip" href="#main">Aller au contenu</a>
   <header class="site-header">
     <a href="#overview" class="wordmark" aria-label="Élan MSI accueil">élan<span>msi</span><b>.</b></a>
@@ -86,7 +86,7 @@
         <aside class="reading-note"><p class="eyebrow">À GARDER EN TÊTE</p><h2>Des parcours qui se croisent.</h2><p>Business analysis, conseil ou audit peuvent mobiliser plusieurs parcours. Le rattachement proposé aide à explorer les offres ; il ne remplace ni le programme officiel ni l’analyse de ton profil.</p><a href="#sources" class="text-link">Où poursuivre la recherche ↗</a></aside>
       </section>
       <section id="sources-view" class="sources-view" hidden>
-        <div class="method-title"><p class="eyebrow">CHERCHER AU BON ENDROIT</p><h2>D’où viennent les offres ?</h2><p>Deloitte, Capgemini, Welcome to the Jungle et JobTeaser sont représentés par des fiches publiques consultées et des liens directs. Seul le complément BPCE utilise une collecte Open Data automatisée.</p></div>
+        <div class="method-title"><p class="eyebrow">CHERCHER AU BON ENDROIT</p><h2>D’où viennent les offres ?</h2><p>BPCE est la source principale, collectée quotidiennement en Open Data. Une sélection éditoriale Deloitte, Capgemini et JobTeaser enrichit ce corpus ; les deux exemples Welcome to the Jungle signalés comme fermés sont archivés.</p></div>
         <div id="source-grid" class="source-grid"></div>
         <aside class="reading-note"><p class="eyebrow">TES DONNÉES RESTENT CHEZ TOI</p><h2>La candidature se fait à la source.</h2><p>Aucun CV, mot de passe ou compte étudiant n’est demandé par Élan MSI. Les espaces privés et les offres réservées au Career Center ne sont pas importés.</p><a href="#method" class="text-link">Lire la méthode ↗</a></aside>
       </section>
@@ -95,7 +95,7 @@
         <div class="pipeline"><span>01 <b>Définir</b><small>Programmes officiels MSI</small></span><span>02 <b>Sourcer</b><small>Open Data + liens vérifiés</small></span><span>03 <b>Structurer</b><small>Familles, parcours, provenance</small></span><span>04 <b>Explorer</b><small>Fiches, filtres, exports</small></span></div>
         <div class="method-grid">
           <article><h3>Formation & rattachements</h3><p>Références : Grenoble IAE – INP, UGA, pages officielles du Master 2 Conseil et Management des Systèmes d’Information, du Master 2 Intelligence des Données et du Master 2 Advanced Research in Management of Information Systems (ARAMIS), consultées le 31 octobre 2026. Les liens ci-dessous permettent de consulter les programmes et leurs débouchés. Les missions, repères d’accès et idées de projets sont des reformulations pédagogiques, non des conditions universelles de recrutement.</p><div id="academic-links" class="academic-links"></div></article>
-          <article><h3>Deux modes de collecte</h3><p>Le script Python collecte et reclasse les offres BPCE situées en France. Les autres plateformes sont une sélection éditoriale locale : titre, entreprise, lieu, contrat, mots-clés vérifiés, lien et synthèse originale. Pas de scraping de masse ni de connecteur privé.</p><p id="audit-counts"></p><a href="https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques" target="_blank" rel="noopener noreferrer">Catalogue BPCE et licence ↗</a></article>
+          <article><h3>Source principale et sélection éditoriale</h3><p>Le script Python collecte chaque jour les offres BPCE liées au MSI, en France et à l’international. Les fiches éditoriales gardent leur date de consultation et ne sont pas revérifiées automatiquement. Les exemples signalés fermés sont exclus de cette recherche ; ils restent accessibles dans les archives du moteur principal.</p><p id="audit-counts"></p><a href="https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques" target="_blank" rel="noopener noreferrer">Catalogue BPCE et licence ↗</a></article>
           <article><h3>Déduplication & périmètre</h3><p>BPCE : une annonce par référence, avec toutes ses villes. Les fiches éditoriales sont dédupliquées par identifiant et URL ; la même offre peut néanmoins être diffusée sous des liens différents. Une région est comptée au plus une fois par offre ; les régions ne s’additionnent pas au total national.</p></article>
           <article><h3>Compétences comparables</h3><p>Le graphique et le mot-clé dominant portent uniquement sur les descriptions complètes BPCE, avec détection par expressions régulières. Les résumés éditoriaux ne sont pas comparables et sont exclus du dénominateur. Leurs tags restent filtrables et proviennent d’une lecture des pages sources.</p></article>
           <article><h3>Licence & vie privée</h3><p>BPCE : Licence Ouverte 2.0 avec attribution. Aucune licence ouverte n’est présumée pour Deloitte, Capgemini, WTTJ ou JobTeaser : pas de recopie de leurs descriptions complètes. Les champs recruteurs BPCE sont exclus et les coordonnées repérées dans les descriptions sont masquées. Aucune candidature n’est stockée.</p></article>

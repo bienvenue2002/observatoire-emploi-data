@@ -1,56 +1,34 @@
-# Journal des sources · Élan MSI
+# Sources · Élan MSI
 
-Pages consultées le 31 octobre 2026. La consultation confirme le contenu visible, pas l’ouverture garantie du poste ni la compatibilité de toutes les formations.
+Ce document distingue références académiques, source principale automatisée et fiches éditoriales. Les dates propres à chaque fiche figurent dans les données et l’interface ; une importation quotidienne ne remplace pas une consultation de la page d’origine.
 
-## Édition internationale 3.0
+## Références académiques consultables
 
-Le moteur inclut désormais tous les domaines et pays explicitement présents dans l’export BPCE conservé, plus huit fiches éditoriales. Les totaux, filtres et limites sont détaillés dans le README ; les sept références MSI historiques ci-dessous sont conservées.
+- **CMSI :** [Master 2 Conseil et management des systèmes d’information, Grenoble IAE](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-conseil-et-management-des-systemes-dinformation).
+- **Intelligence des données :** [Master 2 Intelligence des données, Grenoble IAE](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-intelligence-des-donnees).
+- **ARAMIS :** [Master 2 Advanced Research in Management of Information Systems, Grenoble IAE](https://iae.grenoble-inp.fr/en/our-programs/master-2-advanced-research-in-management-of-information-system).
 
-Une huitième référence est ajoutée : [Capgemini, Intern Application Consultant (with German), référence 506269](https://careers.capgemini.com/job/Wroc%C5%82aw-Intern-Application-Consultant-(with-German)/1406556233/). Page vérifiée le 31 octobre 2026, publication affichée le 13 octobre 2026, bouton de candidature visible. Pays explicite PL, villes Wrocław, Warszawa, Poznań et Opole. Contrat source Internship ; durée non précisée. Deuxième année d’études IT/mathématiques/physique ou première pratique/cours IT acceptés ; anglais et allemand B2 requis. Aucune équivalence Bac+N n’est inventée, et la demande d’allemand n’est pas une localisation en Allemagne.
+Ces pages publiques sont les références consultables pour les parcours. La brochure MSI fournie a aidé à cadrer le projet, mais une mention isolée de « page 3 » n’est pas utilisée comme justification publique.
 
-Les liens [Welcome to the Jungle](https://www.welcometothejungle.com/fr/jobs), [JobTeaser](https://www.jobteaser.com/en/job-offers), [Capgemini](https://www.capgemini.com/careers/join-capgemini/job-search/?keyword=Internship&size=30) et [ErasmusIntern](https://erasmusintern.org/) sont des pistes externes. Ils ne constituent ni une collecte ni des annonces intégrées. Les conditions d’accès, dont JavaScript, cookies ou éventuel compte, dépendent des plateformes.
+## BPCE, source principale
 
-## Formation
+Le [catalogue data.gouv.fr](https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques) décrit le jeu d’offres publiques du Groupe BPCE. Le pipeline utilise son [export JSON public](https://bpce.opendatasoft.com/api/explore/v2.1/catalog/datasets/groupe-bpce-offres-emploi/exports/json), filtre le périmètre MSI et regroupe les localisations.
 
-Références publiques, consultées le 31 octobre 2026 : Grenoble IAE – INP, UGA, [Master 2 Conseil et Management des Systèmes d’Information, Débouchés professionnels](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-conseil-et-management-des-systemes-dinformation), [Master 2 Intelligence des Données, Débouchés professionnels](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-intelligence-des-donnees) et [Master 2 Advanced ReseArch in Management of Information Systems, Careers](https://iae.grenoble-inp.fr/en/our-programs/master-2-advanced-research-in-management-of-information-system). Ces références remplacent le renvoi à une pièce jointe non accessible aux visiteurs.
+Le poids de BPCE est calculé dans `bpce_share_percent` et présenté comme celui de la source principale, non d’un complément marginal. La licence du jeu ouvert ne s’étend pas aux annonces des autres plateformes.
 
-Le programme ARAMIS distingue la poursuite en doctorat et l’accès ultérieur aux carrières académiques ; les fiches du site conservent cette distinction, conformément à la [page officielle ARAMIS](https://iae.grenoble-inp.fr/en/our-programs/master-2-advanced-research-in-management-of-information-system).
+## Fiches éditoriales
 
-## Sept références éditoriales
+- **Deloitte :** deux synthèses issues des [offres Deloitte sur Welcome to the Jungle](https://www.welcometothejungle.com/fr/companies/deloitte/jobs), consacrées à l’audit IT et à l’AMOA/transformation ; aucun flux Deloitte automatique.
+- **Capgemini :** fiches issues du [site carrières Capgemini](https://www.capgemini.com/careers/join-capgemini/job-search/), notamment [Intern Application Consultant, référence 506269, Pologne](https://careers.capgemini.com/job/Wroc%C5%82aw-Intern-Application-Consultant-(with-German)/1406556233/). L’allemand demandé ne signifie pas une localisation en Allemagne.
+- **JobTeaser :** deux fiches de conseil et recrutement fonctionnel SAP ; les URL exactes, preuves de profil et dates sont conservées dans `data/curated.json`. Le [portail JobTeaser](https://www.jobteaser.com/en/job-offers) reste un service externe, pas un flux connecté.
+- **Archives Welcome to the Jungle :** [Wiremind, Product Owner Data](https://www.welcometothejungle.com/fr/companies/wiremind/jobs/product-owner-data-m-f-internship-paris_paris) et [Navigacom, Consultant junior cybersécurité](https://www.welcometothejungle.com/en/companies/navigacom/jobs/consultant-junior-cybersecurite_puteaux).
 
-| Employeur | Intitulé et page consultée | Lieu / contrat relevés |
-|---|---|---|
-| Deloitte | [Consultant junior audit IT](https://www.welcometothejungle.com/fr/companies/deloitte/jobs/consultant-junior-audit-it-f-h_paris) | Paris / CDI, selon cette même page |
-| Deloitte | [Consultant Junior AMOA Transformation & Technologie IA/Data](https://www.welcometothejungle.com/fr/companies/deloitte/jobs/consultant-junior-amoa-transformation-technologie-ia-data-f-h_toulouse) | Toulouse / CDI, selon cette même page |
-| Capgemini Engineering | [Consultante / Consultant fonctionnel PLM - Stage](https://www.capgemini.com/fr-fr/jobs/549022-fr_FR+sap_btp/) | Toulouse / stage, selon cette même page |
-| Wiremind | [Product Owner Data - Internship - Paris](https://www.welcometothejungle.com/fr/companies/wiremind/jobs/product-owner-data-m-f-internship-paris_paris) | Paris / stage, selon cette même page |
-| Navigacom | [Consultant(e) Junior(e) Cybersécurité](https://www.welcometothejungle.com/en/companies/navigacom/jobs/consultant-junior-cybersecurite_puteaux) | Paris / CDI, selon cette même page ; le lieu affiché prévaut sur l’ancien segment « puteaux » de l’URL |
-| Capgemini Invent | [Consultante / Consultant CIO Advisory - Stage, sur JobTeaser](https://www.jobteaser.com/en/job-offers/3e24e59b-a298-48a0-b3da-2cbca1c6fa34-capgemini-invent-consultante-consultant-cio-advisory-stage) | Issy-les-Moulineaux / stage, selon cette même page |
-| Capgemini | [Business Analyst Supply Chain - Stage, sur JobTeaser](https://www.jobteaser.com/en/job-offers/0f85b343-1448-464a-a59b-f8ea406dfa47-capgemini-business-analyst-supply-chain-stage) | Toulouse / stage, selon cette même page |
+Pour ces deux archives, la fermeture a été signalée dans la revue transmise par la propriétaire le 31 octobre 2026. L’extraction des pages n’a pas fourni de confirmation indépendante ; le contrôle navigateur de Wiremind a rencontré un refus de chargement. Le statut archivé est une mesure prudente fondée sur ce signalement, pas une prétendue vérification indépendante.
 
-Les faits détaillés sont enregistrés dans `data/curated.json` avec l’URL exacte. Les descriptions du site sont des synthèses originales ; les tags sont des mots-clés lus dans les annonces, pas une liste exhaustive des exigences.
+Les fiches éditoriales sont des résumés originaux abrégés et ne constituent pas une republication intégrale. Leurs conditions d’utilisation et l’offre d’origine priment ; aucun partenariat avec les plateformes ou employeurs n’est revendiqué.
 
-Les pages Wiremind et Navigacom indiquent une publication ancienne ; les fiches affichent ce point de vigilance et ne prétendent pas qu’une nouvelle offre vient d’être publiée ([Wiremind](https://www.welcometothejungle.com/fr/companies/wiremind/jobs/product-owner-data-m-f-internship-paris_paris), [Navigacom](https://www.welcometothejungle.com/en/companies/navigacom/jobs/consultant-junior-cybersecurite_puteaux)).
+## Actualisation et preuves techniques
 
-## Durée et niveau d’études
+La [documentation GitHub sur les événements](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows) explique les contraintes des tâches programmées : branche par défaut, délais possibles et désactivation après inactivité d’un dépôt public. Le [workflow du projet](https://github.com/bienvenue2002/observatoire-emploi-data/actions/workflows/pages.yml) permet de contrôler chaque tentative et son résultat.
 
-Les sept pages éditoriales ont été relues le 31 octobre 2026 pour isoler la durée, le diplôme et l’avancement des études sans les déduire du seul intitulé de poste. Les courtes preuves et leurs URL sont conservées ensemble dans `data/curated.json`.
-
-- **CIO Advisory, Capgemini Invent :** six mois, Master ou équivalent et fin d’études, selon [la page JobTeaser](https://www.jobteaser.com/en/job-offers/3e24e59b-a298-48a0-b3da-2cbca1c6fa34-capgemini-invent-consultante-consultant-cio-advisory-stage).
-- **Business Analyst Supply Chain :** Bac+5 en cours ; six mois dans le descriptif contre quatre à six mois dans l’encart, selon [la page JobTeaser](https://www.jobteaser.com/en/job-offers/0f85b343-1448-464a-a59b-f8ea406dfa47-capgemini-business-analyst-supply-chain-stage). Les deux indications sont conservées, avec invitation à confirmer.
-- **Wiremind :** Master en cours ; durée et fin d’études non précisées, selon [la page Welcome to the Jungle](https://www.welcometothejungle.com/fr/companies/wiremind/jobs/product-owner-data-m-f-internship-paris_paris).
-
-Les autres valeurs vérifiées sont indiquées dans les lignes du tableau ci-dessus et les champs de preuve. Aucune durée fixe n’est inventée pour les CDI ni pour le stage PLM dont la durée n’est pas donnée.
-
-## Contrôles et exclusions
-
-- **Poste pourvu :** l’annonce [Stage SAP Supply chain, careers.capgemini.com](https://careers.capgemini.com/job/Issy-les-Moulineaux-Stage-Consultante-Consultant-SAP-Supply-chain/1253828901/) affiche explicitement « Désolé, ce poste est déjà pourvu » ; elle n’est pas intégrée.
-- **Deloitte dynamique :** le [site carrières officiel](https://www.deloitte.com/fr/fr/careers/content/job/results.html) fournit une enveloppe dynamique insuffisante pour vérifier les champs par lecture texte. Les deux fiches incluses sont donc attribuées à « Deloitte · via Welcome to the Jungle », pas à un connecteur officiel Deloitte.
-- **Rémunération ambiguë :** le champ de la [fiche Business Analyst Supply Chain](https://www.jobteaser.com/en/job-offers/0f85b343-1448-464a-a59b-f8ea406dfa47-capgemini-business-analyst-supply-chain-stage) n’est ni converti en zéro ni exploité dans une moyenne.
-- **Espace école :** la [page officielle Grenoble INP sur le Career Center](https://www.grenoble-inp.fr/fr/entreprises/informations-prealables-sur-vos-donnees-personnelles-depot-career-center-by-jobteaser) présente le service JobTeaser ; aucun espace authentifié n’a été consulté ni importé.
-
-## Complément BPCE
-
-Le [catalogue BPCE data.gouv.fr](https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques) décrit la source sous Licence Ouverte 2.0. L’export utilisé est [le JSON public documenté](https://bpce.opendatasoft.com/api/explore/v2.1/catalog/datasets/groupe-bpce-offres-emploi/exports/json).
-
-Le corpus V2 réutilise le téléchargement initial du 31 octobre 2026 à 01:48:12 UTC : pas de changement artificiel de sa date après reclassement. Les volumes 1 888 → 1 785 → 192 → 74 sont des résultats du pipeline local, pas des volumes annoncés par les plateformes.
+Les rapports navigateur sont des artefacts temporaires associés au commit testé. La suite et les commandes de reproduction restent versionnées dans le dépôt ; consulter [QA.md](../QA.md) pour distinguer tests exécutables et observations manuelles.

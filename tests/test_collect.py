@@ -10,7 +10,8 @@ from scripts.taxonomy import pathways
 
 def base(**changes):
     return {"title": "Data Analyst", "country": "France", "referencenumber": "profile-test",
-            "organization": "BPCE", "description": "", "jobtype": "CDI",
+            "organization": "BPCE", "description": "Description de test.", "jobtype": "CDI",
+            "lastmodifieddate": "30/10/2026 6:10:12 PM",
             "url": "https://example.com/profile-test", **changes}
 
 
@@ -77,7 +78,7 @@ class PipelineTests(unittest.TestCase):
 
     def test_elan_brand_consistency(self):
         html = (ROOT / "site/index.html").read_text(encoding="utf-8")
-        self.assertIn("<title>Élan MSI | Stages et alternances sans frontières</title>", html)
+        self.assertIn("<title>Élan MSI | Débouchés et opportunités</title>", html)
         self.assertIn('aria-label="Élan MSI"', html)
         legacy = (ROOT / "site/msi.html").read_text(encoding="utf-8")
         self.assertIn("<title>Élan MSI | Du master aux métiers</title>", legacy)
@@ -88,7 +89,7 @@ class PipelineTests(unittest.TestCase):
         for filename in ("jobs.json", "meta.json"):
             payload = json.loads((ROOT / "site/data" / filename).read_text(encoding="utf-8"))
             meta = payload["meta"] if filename == "jobs.json" else payload
-            self.assertEqual(meta["title"], "Élan MSI · Stages et alternances sans frontières")
+            self.assertEqual(meta["title"], "Élan MSI · Débouchés et opportunités")
 
     def test_entities(self):
         self.assertEqual(clean("<p>Data &amp; IA</p>"), "Data & IA")
@@ -115,7 +116,7 @@ class PipelineTests(unittest.TestCase):
             "Chef de projet SI": "Chef de projet SI",
             "Consultant AMOA Transformation": "Conseil & transformation SI",
             "Consultant Business Intelligence": "Consultant BI / décisionnel",
-            "Chief Data Officer": "Chief Data Officer / gouvernance",
+            "Chief Data Officer": "Gouvernance et qualité des données",
             "Responsable Analytics": "Responsable Analytics",
             "Webanalytics": "Webanalytics",
         }
@@ -158,7 +159,7 @@ class PipelineTests(unittest.TestCase):
 
     def test_multisource_export(self):
         with tempfile.TemporaryDirectory() as td:
-            meta = export([dict(title="Product Owner", country="France", referencenumber="X")],
+            meta = export([base(title="Product Owner", referencenumber="X")],
                           Path(td), "2026-10-31", ROOT / "data/curated.json")
             self.assertEqual(meta["bpce_unique_offers"], 1)
             self.assertEqual(meta["editorial_offers"], 7)

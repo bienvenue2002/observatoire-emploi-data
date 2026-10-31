@@ -11,7 +11,7 @@ FAMILY_PATHWAYS = {
     "Consultant BI / décisionnel": ["ID"],
     "Data Analyst": ["ID"],
     "Responsable Analytics": ["ID"],
-    "Chief Data Officer / gouvernance": ["ID"],
+    "Gouvernance et qualité des données": ["ID"],
     "Webanalytics": ["ID"],
     "Data Scientist": ["ID"],
     "Data Engineer / Architecture": ["ID"],

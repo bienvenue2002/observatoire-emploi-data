@@ -1,5 +1,18 @@
 # Parcours à préserver et évolution MSI
 
+## Recentrage MSI, fiabilité et actualisation quotidienne
+- Avant édition : site public international général, 1 555 annonces ; navigation, six langues et filtres fonctionnels. Ce périmètre général est désormais annulé par le propriétaire.
+- Accueil et moteur réservés aux métiers reliés au Master MSI, en France et à l'international ; six langues et liens officiels CMSI/ID/ARAMIS conservés. Pas de catégories d'autres formations.
+- Navigation vers les ressources françaises : même corpus MSI vivant, pas d'instantané parallèle divergent.
+- Offres Wiremind/Navigacom signalées fermées : statut explicite « Offre fermée — exemple archivé », provenance du signalement documentée, exclusion des résultats par défaut ; archives consultables volontairement et statut dans les exports.
+- Profils : variantes fin d'études / fin d'étude / Bac+5 / Fin d'études détectées sans confondre expérience passée ou CDI.
+- Validation complète avant écriture : URL HTTPS valide, description non vide, référence, intitulé et dates valides ; erreur explicite si fichier éditorial demandé absent. Échec préserve les fichiers de données précédents.
+- GitHub Actions quotidien + déclenchement manuel : collecte BPCE, génération temporaire, tests, publication même workflow (les commits GITHUB_TOKEN ne relancent pas d'autres workflows), date de dernière collecte réussie et état du dernier essai.
+- Échec d'actualisation : anciennes données et date réussie inchangées ; message d'échec public sans contenu technique sensible. Les fiches éditoriales ne sont pas présentées comme revérifiées par une collecte BPCE.
+- Famille gouvernance correctement nommée, CDO seulement perspective ; BPCE clairement source principale, proportion calculée.
+- Preuves reproductibles : suite navigateur versionnée, captures générées par la suite, rapports CI ; pas de nombre de contrôles ou de contraste non étayé.
+- README et guide : périmètre MSI, aide IA et travail réalisé dans cette conversation explicités, statut de travail évalué non inventé.
+
 ## International, toutes formations et six langues
 - Avant modification : site public Élan MSI chargé dans un navigateur, titre « Du master aux métiers », 81 annonces France et interface française.
 - Conserver la marque, les 81 références existantes et l'espace pédagogique MSI avec ses cinq vues, graphiques, filtres, détails et exports dans un accès « Ressources MSI » explicitement en français.

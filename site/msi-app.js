@@ -47,7 +47,7 @@ function filterJobs(){
   const sorting=$("#sort").value;
   state.filtered.sort((a,b)=>sorting==="title"?a.title.localeCompare(b.title,"fr"):sorting==="company"?a.company.localeCompare(b.company,"fr"):(b.modified_at||b.published_at||"").localeCompare(a.modified_at||a.published_at||""));
   const active=[q&&`Recherche : ${$("#search").value}`,pathway,family,region,contract,source,skill,state.student&&"Stages et alternance"].filter(Boolean);
-  $("#active-summary").textContent=`${state.filtered.length} annonces · ${active.join(" · ")||"Tous les parcours, toutes les sources."}`;
+  $("#active-summary").textContent=`${state.filtered.length} annonce${state.filtered.length===1?"":"s"} · ${active.join(" · ")||"Tous les parcours, toutes les sources."}`;
   $$("[data-quick]").forEach(el=>el.setAttribute("aria-pressed",String(el.dataset.quick==="student"?state.student:region==="Auvergne-Rhône-Alpes")));
   $$("[data-pathway]").forEach(el=>el.setAttribute("aria-pressed",String(el.dataset.pathway===pathway)));
   renderMetrics();renderCharts();renderTable();
@@ -69,7 +69,7 @@ function bars(target,entries,total,type){
   if(!entries.length){root.innerHTML='<p class="no-chart">Pas de données comparables pour cette sélection. Les fiches éditoriales ne sont pas incluses dans les statistiques de compétences.</p>';return;}
   root.innerHTML=entries.slice(0,7).map(([label,n])=>{
     const value=type==="skill"?`${Math.round(n/total*100)} %`:String(n),width=type==="skill"?n/total*100:n/entries[0][1]*100;
-    return `<button type="button" class="bar-row" data-chart="${type}" data-value="${esc(label)}" aria-label="${esc(label)} : ${n} annonces. Filtrer."><span class="bar-label">${esc(label)}</span><span class="bar-track" aria-hidden="true"><span class="bar-fill" style="--width:${width}%"></span></span><span class="bar-value">${esc(value)}</span></button>`;
+    return `<button type="button" class="bar-row" data-chart="${type}" data-value="${esc(label)}" aria-label="${esc(label)} : ${n} annonce${n>1?"s":""}. Filtrer."><span class="bar-label">${esc(label)}</span><span class="bar-track" aria-hidden="true"><span class="bar-fill" style="--width:${width}%"></span></span><span class="bar-value">${esc(value)}</span></button>`;
   }).join("");
   root.querySelectorAll("button").forEach(btn=>btn.addEventListener("click",()=>{$("#"+(btn.dataset.chart==="skill"?"skill":"region")).value=btn.dataset.value;state.page=1;filterJobs();}));
 }
@@ -140,7 +140,8 @@ function renderCareers(){
 function renderSources(){
   $("#source-grid").innerHTML=state.catalog.sources.map(s=>{
     const n=state.jobs.filter(j=>j.source_key===s.id).length;
-    return `<article class="source-card"><div class="career-kicker"><span>${esc(s.tag)}</span><span>${n} fiche${n>1?"s":""}</span></div><h3>${esc(s.name)}</h3><p class="source-mode">${esc(s.mode)}</p><p>${esc(s.text)}</p><p class="source-terms">${esc(s.use)}</p><div class="source-actions"><button type="button" class="secondary-btn" data-source-pick="${esc(s.id)}">${n===1?"Voir la fiche":`Voir les ${n} fiches`} →</button><a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener noreferrer">Ouvrir la source ↗</a><a href="${esc(safeUrl(s.secondary_url))}" target="_blank" rel="noopener noreferrer">${esc(s.secondary_label)} ↗</a></div><p class="selectable-url">${esc(s.url)}</p></article>`;
+    const action=n?`<button type="button" class="secondary-btn" data-source-pick="${esc(s.id)}">${n===1?"Voir la fiche":`Voir les ${n} fiches`} →</button>`:`<a class="secondary-btn" href="./?status=archived">Voir les exemples archivés →</a>`;
+    return `<article class="source-card"><div class="career-kicker"><span>${esc(s.tag)}</span><span>${n} fiche${n>1?"s":""} hors archives</span></div><h3>${esc(s.name)}</h3><p class="source-mode">${esc(s.mode)}</p><p>${esc(s.text)}</p><p class="source-terms">${esc(s.use)}</p><div class="source-actions">${action}<a href="${esc(safeUrl(s.url))}" target="_blank" rel="noopener noreferrer">Ouvrir la source ↗</a><a href="${esc(safeUrl(s.secondary_url))}" target="_blank" rel="noopener noreferrer">${esc(s.secondary_label)} ↗</a></div><p class="selectable-url">${esc(s.url)}</p></article>`;
   }).join("");
   $$("[data-source-pick]").forEach(btn=>btn.addEventListener("click",()=>{
     reset();const job=state.jobs.find(j=>j.source_key===btn.dataset.sourcePick);
@@ -149,7 +150,7 @@ function renderSources(){
 }
 function download(kind){
   const flat=state.filtered.map(j=>({
-    reference:j.id,intitule:j.title,entreprise:j.company,metier:j.family,parcours:j.pathways.join(" | "),contrat:j.contract,
+    reference:j.id,intitule:j.title,entreprise:j.company,metier:j.family,parcours:j.pathways.join(" | "),contrat:j.contract,statut:j.status,origine_statut:j.status_origin,
     duree:j.duration||"",niveau_etudes:j.education_level||"",avancement_etudes:j.study_stage||"",
     preuve_duree:j.duration_evidence||"",preuve_etudes:j.education_evidence||"",preuve_avancement:j.study_stage_evidence||"",
     precision_duree:j.duration_note||"",precision_etudes:j.education_note||"",verification_profil:j.requirements_method||"",
@@ -162,7 +163,7 @@ function download(kind){
     "\uFEFF"+[Object.keys(flat[0]).map(csvCell).join(";"),...flat.map(r=>Object.values(r).map(csvCell).join(";"))].join("\r\n");
   const url=URL.createObjectURL(new Blob([text],{type:kind==="json"?"application/json;charset=utf-8":"text/csv;charset=utf-8"})),a=document.createElement("a");
   a.href=url;a.download=`elan-msi-offres-${new Date().toISOString().slice(0,10)}.${kind}`;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),20000);
-  $("#export-status").textContent=`Export ${kind.toUpperCase()} préparé : ${flat.length} annonces sélectionnées, avec parcours, provenance et dates.`;
+  $("#export-status").textContent=`Export ${kind.toUpperCase()} préparé : ${flat.length} annonce${flat.length>1?"s":""} sélectionnée${flat.length>1?"s":""}, avec parcours, provenance et dates.`;
 }
 async function init(){
   try{
@@ -170,13 +171,14 @@ async function init(){
     if(responses.some(r=>!r.ok))throw new Error("Chargement des fichiers de données interrompu");
     const [data,catalog]=await Promise.all(responses.map(r=>r.json()));
     if(!data.meta||!Array.isArray(data.jobs)||!Array.isArray(catalog.careers)||!Array.isArray(catalog.pathways))throw new Error("Format inattendu");
-    state.jobs=data.jobs;state.meta=data.meta;state.catalog=catalog;
-    $("#nav-count").textContent=data.jobs.length;$("#snapshot-date").textContent=dateFR(data.meta.observed_at);
+    state.jobs=data.jobs.filter(j=>j.status!=="closed");state.meta=data.meta;state.catalog=catalog;
+    $("#nav-count").textContent=state.jobs.length;$("#snapshot-date").textContent=dateFR(data.meta.observed_at);
+    try{const response=await fetch("./data/update-status.json",{cache:"no-store"});const update=await response.json();$("#refresh-info").textContent=`Dernière collecte BPCE réussie : ${dateFR(data.meta.last_success_at)}. ${update.status==="failed"?"Dernière tentative échouée : corpus précédent conservé.":"Actualisation quotidienne BPCE ; fiches éditoriales non revérifiées automatiquement."}`;}catch{$("#refresh-info").textContent="État de collecte indisponible : consulter le suivi GitHub depuis le moteur principal.";}
     populate("pathway",catalog.pathways.map(p=>p.id));populate("family",unique([...data.jobs.map(j=>j.family),...catalog.careers.map(c=>c.family)]));
     populate("region",unique(data.jobs.flatMap(j=>j.locations.map(x=>x.region))));populate("contract",unique(data.jobs.map(j=>j.contract)));
     populate("source",unique(data.jobs.map(j=>j.source)));populate("skill",unique(data.jobs.flatMap(j=>j.skills)));
     $("#salary-note").textContent=`${data.meta.salary_available} sur ${data.jobs.length} annonces contiennent un champ salarial structuré exploitable. Aucun salaire moyen n’est calculé.`;
-    $("#audit-counts").textContent=`BPCE : ${data.meta.raw_rows} lignes → ${data.meta.france_rows} lignes France → ${data.meta.matched_location_rows} lignes MSI → ${data.meta.bpce_unique_offers} annonces uniques. Complément : ${data.meta.editorial_offers} fiches éditoriales. Total : ${data.jobs.length}.`;
+    $("#audit-counts").textContent=`Source principale BPCE : ${data.meta.raw_rows} lignes → ${data.meta.matched_location_rows} lignes MSI France + international → ${data.meta.bpce_unique_offers} références, soit ${data.meta.bpce_share_percent} % du corpus. Sélection éditoriale : ${data.meta.editorial_offers}. Archives exclues de cette vue : ${data.meta.archived_offers}.`;
     $("#audit-meta").textContent=JSON.stringify(data.meta,null,2);
     $("#academic-links").innerHTML=catalog.pathways.map(p=>`<a href="${esc(safeUrl(p.url))}" target="_blank" rel="noopener noreferrer">${esc(p.id)} : page officielle ↗</a>`).join("");
     renderPathways();renderCareers();renderSources();$("#loaded").hidden=false;

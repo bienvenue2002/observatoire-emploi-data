@@ -7,11 +7,21 @@ on:
       - "site/**"
       - "scripts/**"
       - "tests/**"
+      - "data/**"
+      - "package*.json"
+      - "playwright.config.cjs"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
+    inputs:
+      allow_large_drop:
+        description: "Autoriser une chute supérieure à 50 % après revue humaine"
+        type: boolean
+        default: false
+  schedule:
+    - cron: "17 4 * * *"
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -22,6 +32,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      refresh_failed: ${{ steps.refresh.outcome == 'failure' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -33,6 +45,52 @@ jobs:
           node --check site/app.js
           node --check site/msi-app.js
           node tests/test_i18n.cjs
+      - name: Actualiser BPCE, conserver les données si erreur
+        id: refresh
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        env:
+          ALLOW_DROP: ${{ inputs.allow_large_drop }}
+        run: |
+          if [ "$ALLOW_DROP" = "true" ]; then
+            python scripts/refresh.py --allow-large-drop
+          else
+            python scripts/refresh.py
+          fi
+      - name: Revérifier les données avant publication
+        run: python -m unittest discover -s tests -v
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Recette navigateur reproductible
+        run: npx playwright test
+      - name: Versionner le résultat ou le signalement d’échec
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data
+          if ! git diff --cached --quiet; then
+            git commit -m "Actualiser le corpus MSI et son état de collecte"
+            git push origin HEAD:master
+          fi
+      - name: Identifier la révision testée
+        id: revision
+        if: always()
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Conserver les preuves de recette
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: recette-navigateur-${{ steps.revision.outputs.sha || github.sha }}
+          path: |
+            playwright-report/
+            test-results/
+            site/data/meta.json
+            site/data/update-status.json
+          retention-days: 14
       - uses: actions/configure-pages@v5
       - name: Préparer uniquement les fichiers publics du site
         uses: actions/upload-pages-artifact@v3
@@ -48,3 +106,8 @@ jobs:
       - name: Publier le site
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Signaler l’échec de collecte après publication du dernier corpus valide
+        if: needs.build.outputs.refresh_failed == 'true'
+        run: |
+          echo "::error::Collecte BPCE refusée. Dernier corpus valide conservé et avertissement publié."
+          exit 1

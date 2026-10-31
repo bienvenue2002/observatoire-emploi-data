@@ -9,7 +9,11 @@ import csv
 import hashlib
 import html
 import json
+import io
+import os
 import re
+import shutil
+import tempfile
 import unicodedata
 from collections import Counter
 from datetime import datetime, timezone
@@ -17,10 +21,10 @@ from pathlib import Path
 from urllib.request import Request, urlopen
 from urllib.parse import urlparse
 try:
-    from .taxonomy import pathways
+    from .taxonomy import pathways, FAMILY_PATHWAYS
     from .global_scope import DOMAINS, country_fields, domain_for
 except ImportError:
-    from taxonomy import pathways
+    from taxonomy import pathways, FAMILY_PATHWAYS
     from global_scope import DOMAINS, country_fields, domain_for
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -85,7 +89,7 @@ def role(title):
     if re.search(r"\b(?:amoa|assistance a maitrise d.ouvrage|transformation digitale|consultant.*(?:transformation|systeme.*information|digital|\bsi\b))\b", t):
         return "Conseil & transformation SI"
     if re.search(r"chief data officer|\bcdo\b|data (?:governance|gouvernance|steward)|data quality|gouvernance.*donnee", t):
-        return "Chief Data Officer / gouvernance"
+        return "Gouvernance et qualité des données"
     if re.search(r"(?:responsable|head of).*analytics", t):
         return "Responsable Analytics"
     if re.search(r"web\s*analytics|webanalyst|digital analyst", t):
@@ -136,12 +140,55 @@ def redact(text):
 
 def modified(value):
     value = clean(value)
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00")).isoformat()
+    except ValueError:
+        pass
     for fmt in ("%d/%m/%Y %I:%M:%S %p", "%d/%m/%Y %H:%M:%S"):
         try:
             return datetime.strptime(value, fmt).isoformat()
         except ValueError:
             pass
     return None
+
+
+def validate_date(value, label):
+    parsed = modified(value)
+    if not parsed:
+        raise ValueError(f"{label} : date absente ou invalide.")
+    return parsed
+
+
+def valid_url(value):
+    if not isinstance(value, str) or re.search(r"\s", value):
+        return False
+    try:
+        url = urlparse(value)
+        _ = url.port
+        return url.scheme == "https" and bool(url.hostname) and not url.username and not url.password
+    except ValueError:
+        return False
+
+
+def validate_source(records, observed_at):
+    """Fail closed before any public file is written, including unselected rows."""
+    validate_date(observed_at, "Date de collecte")
+    if not isinstance(records, list) or not records:
+        raise ValueError("Source BPCE : liste non vide attendue ; ancien instantané conservé.")
+    required = {"title", "country", "referencenumber", "url", "description", "jobtype", "lastmodifieddate"}
+    for index, row in enumerate(records, 1):
+        if not isinstance(row, dict) or not required.issubset(row):
+            raise ValueError(f"Source BPCE ligne {index} : schéma incomplet ; ancien instantané conservé.")
+        if any(not isinstance(row[key], str) or not clean(row[key])
+               for key in ("title", "referencenumber", "description", "jobtype")):
+            raise ValueError(f"Source BPCE ligne {index} : champ indispensable vide.")
+        if row["country"] is not None and not isinstance(row["country"], str):
+            raise ValueError(f"Source BPCE ligne {index} : pays invalide.")
+        if not valid_url(row["url"]):
+            raise ValueError(f"Source BPCE ligne {index} : URL HTTPS absente ou invalide.")
+        validate_date(row["lastmodifieddate"], f"Source BPCE ligne {index}")
 
 
 def student_requirements(row):
@@ -194,7 +241,16 @@ def student_requirements(row):
         match = re.search(r"\b(?P<value>\d{1,2}\s*(?:mois|months?|semaines?))\b", title, re.I)
         if match:
             duration, evidence = match.group("value"), title
-    final_year = re.search(r"\b(?:stage|alternance)\s+de\s+fin\s+d[’']études\b", text, re.I) if contract(row.get("jobtype")) in {"Stage", "Alternance"} else None
+    final_year = None
+    if contract(row.get("jobtype")) in {"Stage", "Alternance"}:
+        for candidate in re.finditer(r"\bfin\s+d\s*[’']\s*[ée]tudes?\b", text, re.I):
+            before = re.split(r"[.!?;]", text[:candidate.start()])[-1][-140:]
+            after = text[candidate.end():candidate.end()+65]
+            past = r"(?:effectu[ée]|r[ée]alis[ée]|accompli|pr[ée]c[ée]dent|pass[ée]|avez\s+fait|exp[ée]rience.{0,35}(?:en|de|d.un)\s+stage)"
+            if re.search(past, before, re.I) or re.search(r"^\s*(?:d[ée]j[àa]\s+)?(?:effectu[ée]|r[ée]alis[ée]|pass[ée])", after, re.I):
+                continue
+            final_year = candidate
+            break
     return {
         "duration": duration, "duration_evidence": evidence,
         "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce." if duration else None,
@@ -214,7 +270,7 @@ def transform(records, observed_at, scope="msi"):
         if scope == "msi" and norm(row.get("country")) != "france":
             continue
         family = role(row.get("title"))
-        if scope == "msi" and not family:
+        if scope != "all" and not family:
             continue
         if scope == "all" and (not clean(row.get("title")) or norm(row.get("title")).startswith("background check")):
             continue
@@ -234,13 +290,14 @@ def transform(records, observed_at, scope="msi"):
                 "id": key, "title": clean(row.get("title")), "company": clean(row.get("organization")) or "Groupe BPCE",
                 "family": family, "contract": contract(row.get("jobtype")),
                 "source_contract": clean(row.get("jobtype")),
-                "domain": domain_for(row.get("title")),
+                "domain": domain_for(row.get("title")) if scope == "all" else family,
                 **student_requirements(row),
                 "locations": [], "skills": [], "description": desc,
                 "source": "Groupe BPCE · Open Data", "source_url": source_link,
                 "source_key": "bpce", "collection_method": "open_data",
                 "pathways": pathways(family),
-                "observed_at": observed_at, "status": "snapshot",
+                "observed_at": observed_at, "status": "source_present",
+                "status_origin": "bpce_export", "status_checked_at": observed_at,
                 "modified_at": modified(row.get("lastmodifieddate")),
                 "salary_min": row.get("salary_min"), "salary_max": row.get("salary_max"),
                 "remote_source": clean(row.get("teletravail")) or None,
@@ -268,7 +325,9 @@ def transform(records, observed_at, scope="msi"):
 
 def load_curated(path):
     """Import éditorial local ; pas de scraping non autorisé ni de faux connecteur."""
-    records = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
+    if not path.is_file():
+        raise ValueError(f"Fichier éditorial demandé introuvable : {path.name}")
+    records = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(records, list):
         raise ValueError("Sélection éditoriale : liste attendue.")
     ids, urls = set(), set()
@@ -286,6 +345,15 @@ def load_curated(path):
             raise ValueError("Source ou famille éditoriale non admise.")
         if not row["locations"] or any(not {"city", "region"}.issubset(x) for x in row["locations"]):
             raise ValueError("Localisation éditoriale manquante.")
+        if not clean(row["description"]) or not valid_url(row["source_url"]):
+            raise ValueError("Description ou URL éditoriale invalide.")
+        validate_date(row["observed_at"], "Date éditoriale")
+        if row.get("status_checked_at"):
+            validate_date(row["status_checked_at"], "Date du statut éditorial")
+        if row.get("published_at"):
+            validate_date(row["published_at"], "Publication éditoriale")
+        if row.get("status") not in {None, "unverified", "closed"}:
+            raise ValueError("Statut éditorial invalide.")
         ids.add(row["id"]); urls.add(row["source_url"].rstrip("/"))
         requirements = {key: clean(row.get(key)) or None for key in (
             "duration", "duration_evidence", "duration_note", "education_level",
@@ -293,28 +361,35 @@ def load_curated(path):
         result.append({**row, **requirements, "requirements_method": "editorial_verified",
                        "description": redact(row["description"]),
                        "pathways": pathways(row["family"]), "collection_method": "editorial",
-                       "status": "snapshot", "modified_at": None,
+                       "status": row.get("status", "unverified"),
+                       "status_origin": row.get("status_origin", "manual_snapshot"),
+                       "status_checked_at": row.get("status_checked_at", row["observed_at"]),
+                       "modified_at": None,
                        "salary_min": None, "salary_max": None, "remote_source": None})
     return result
 
 
 def export(records, output, observed_at, curated_path=None, scope="msi"):
+    validate_source(records, observed_at)
     jobs, matched = transform(records, observed_at, scope=scope)
     bpce_count = len(jobs)
     editorial = load_curated(curated_path) if curated_path else []
-    if scope == "all" and curated_path:
+    if scope in {"all", "msi-international"} and curated_path:
         editorial.extend(load_curated(ROOT / "data" / "international.json"))
     for job in editorial:
-        job.setdefault("domain", domain_for(job["title"]))
+        job["domain"] = domain_for(job["title"]) if scope == "all" else job["family"]
         job.setdefault("source_contract", job["contract"])
         for location in job["locations"]:
             if "country_code" not in location:
                 location.update(country_fields({"country": "France", "state": location["region"]}))
     jobs.extend(editorial)
-    output.mkdir(parents=True, exist_ok=True)
+    if not jobs or not bpce_count:
+        raise ValueError("Aucune offre BPCE pertinente ; ancien instantané conservé.")
     meta = {
-        "title": "Élan MSI · Stages et alternances sans frontières" if scope == "all" else "Élan MSI · Débouchés et opportunités",
-        "edition": "International et toutes formations" if scope == "all" else "Corpus MSI : Open Data BPCE + sélection éditoriale multi-source",
+        "title": "Élan MSI · Débouchés et opportunités",
+        "edition": "Master MSI, France et international : source principale BPCE enrichie d’une sélection éditoriale",
+        "scope_id": scope,
+        "last_success_at": observed_at,
         "observed_at": observed_at,
         "source_url": SOURCE_URL, "api_url": API_URL,
         "license": "BPCE : Licence Ouverte 2.0 ; autres plateformes : liens factuels et synthèses originales, pas de licence ouverte présumée",
@@ -326,21 +401,34 @@ def export(records, output, observed_at, curated_path=None, scope="msi"):
         "sources": dict(Counter(j["source"] for j in jobs)),
         "competency_statistics": "Descriptions intégrales BPCE uniquement ; les fiches éditoriales sont exclues du dénominateur.",
         "salary_available": sum(j["salary_min"] is not None or j["salary_max"] is not None for j in jobs),
-        "scope": "Tous domaines présents dans la source BPCE, France et international, avec complément éditorial. Corpus non exhaustif, fortement bancaire ; toutes les formations et tous les pays ne sont pas représentés. Aucun rattachement ne garantit l’éligibilité." if scope == "all" else "Offres France sélectionnées par métiers MSI. Corpus non exhaustif et non représentatif ; accès aux postes soumis au profil demandé.",
+        "scope": "Offres liées aux métiers du Master MSI, France et international. BPCE est la source principale ; corpus partiel et fortement bancaire. Rattachement pédagogique indicatif, sans garantie d’éligibilité ni d’ouverture actuelle.",
         "deduplication": "Une annonce par référence source ; les villes multiples sont regroupées.",
         "families": dict(Counter(j["family"] for j in jobs)),
-        "pipeline_version": "3.0.0" if scope == "all" else "2.1.0",
+        "pipeline_version": "4.0.0",
         "domains": dict(Counter(j["domain"] for j in jobs)),
-        "domain_options": DOMAINS,
+        "domain_options": DOMAINS if scope == "all" else list(FAMILY_PATHWAYS),
         "countries": sorted({x["country_code"] for j in jobs for x in j["locations"] if x.get("country_code")}),
         "international_offers": sum(any(x.get("country_code") and x["country_code"] != "FR" for x in j["locations"]) for j in jobs),
-        "student_offers": sum(j["contract"] in {"Stage", "Alternance"} for j in jobs),
+        "student_offers": sum(j["contract"] in {"Stage", "Alternance"} and j["status"] != "closed" for j in jobs),
+        "archived_offers": sum(j["status"] == "closed" for j in jobs),
+        "non_archived_offers": sum(j["status"] != "closed" for j in jobs),
+        "bpce_share_percent": round(100 * bpce_count / len(jobs), 1),
     }
     payload = {"meta": meta, "jobs": jobs}
-    (output / "jobs.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    (output / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
-    with (output / "jobs.csv").open("w", encoding="utf-8-sig", newline="") as f:
+    publish_payload(payload, output, mirror_msi=scope == "msi-international")
+    return meta
+
+
+def publish_payload(payload, output, mirror_msi=False):
+    """Build every byte in memory, stage on same filesystem, atomically replace files."""
+    jobs, meta = payload["jobs"], payload["meta"]
+    content = {
+        "jobs.json": json.dumps(payload, ensure_ascii=False, indent=2),
+        "meta.json": json.dumps(meta, ensure_ascii=False, indent=2),
+    }
+    with io.StringIO(newline="") as f:
         fields = ["id", "title", "company", "family", "domain", "pathways", "contract", "source_contract", "duration", "education_level", "study_stage", "duration_evidence", "education_evidence", "study_stage_evidence", "duration_note", "education_note", "requirements_method", "cities", "regions", "countries", "country_codes", "skills", "source", "collection_method", "modified_at", "observed_at", "source_url"]
+        fields += ["status", "status_origin", "status_checked_at", "status_note", "published_at"]
         writer = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         for j in jobs:
@@ -353,7 +441,37 @@ def export(records, output, observed_at, curated_path=None, scope="msi"):
             row["pathways"] = " | ".join(j["pathways"])
             # Empêche l'interprétation de formules lors d'une ouverture dans Excel.
             writer.writerow({k: "'" + str(v) if str(v).lstrip().startswith(("=", "+", "-", "@")) else v for k, v in row.items()})
-    return meta
+        content["jobs.csv"] = "\ufeff" + f.getvalue()
+    if mirror_msi:
+        content.update({f"msi-{name}": value for name, value in list(content.items())})
+    output = Path(output)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory(dir=output.parent) as folder:
+        staging = Path(folder)
+        for name, text in content.items():
+            (staging / name).write_text(text, encoding="utf-8", newline="")
+        output.mkdir(parents=True, exist_ok=True)
+        commit_files(staging, output, content.keys())
+
+
+def commit_files(staging, output, names):
+    """Rollback on replacement failures; previous files are backed up first."""
+    names = list(names)
+    backup = staging / "backup"
+    backup.mkdir()
+    existed = {name for name in names if (output / name).exists()}
+    for name in existed:
+        shutil.copy2(output / name, backup / name)
+    try:
+        for name in names:
+            os.replace(staging / name, output / name)
+    except Exception:
+        for name in names:
+            if name in existed:
+                os.replace(backup / name, output / name)
+            elif (output / name).exists():
+                (output / name).unlink()
+        raise
 
 
 def main():
@@ -361,7 +479,7 @@ def main():
     parser.add_argument("--input", type=Path, help="JSON BPCE local, sans appel réseau")
     parser.add_argument("--output", type=Path, default=ROOT / "site" / "data")
     parser.add_argument("--observed-at", help="Date ISO du téléchargement local (reproductibilité)")
-    parser.add_argument("--scope", choices=["all", "msi"], default="all", help="Tous domaines et pays (défaut), ou ancien périmètre MSI France")
+    parser.add_argument("--scope", choices=["msi-international", "msi", "all"], default="msi-international", help="MSI France + international par défaut ; all reste un mode technique non publié")
     parser.add_argument("--curated", type=Path, default=ROOT / "data" / "curated.json",
                         help="Sélection éditoriale vérifiée, importée sans appel aux plateformes")
     args = parser.parse_args()
@@ -375,9 +493,7 @@ def main():
             records = json.load(response)
     if not isinstance(records, list) or not records:
         raise ValueError("La source doit être une liste JSON non vide ; ancien instantané conservé.")
-    required = {"title", "country", "referencenumber"}
-    if any(not isinstance(r, dict) or not required.issubset(r) for r in records):
-        raise ValueError("Schéma source modifié ; ancien instantané conservé.")
+    validate_source(records, observed)
     jobs, _ = transform(records, observed, scope=args.scope)
     if not jobs:
         raise ValueError("Aucune offre pertinente ; ancien instantané conservé.")

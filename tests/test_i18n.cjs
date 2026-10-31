@@ -19,4 +19,4 @@ const html=fs.readFileSync(require("node:path").join(__dirname,"../site/index.ht
 for (const match of html.matchAll(/data-i18n(?:-aria|-placeholder)?="([^"]+)"/g)) {
   assert.ok(keys.includes(match[1]),`Unknown HTML translation key: ${match[1]}`);
 }
-console.log(`Six languages validated: ${keys.length} keys and 13 study fields each.`);
+console.log(`Six languages validated: ${keys.length} keys and ${Object.keys(dict.fr.domains).length} MSI career families each.`);

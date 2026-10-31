@@ -8,7 +8,7 @@ const unique = values => [...new Set(values)];
 const safeUrl = value => {try {const url=new URL(value);return url.protocol==="https:"?url.href:"";}catch{return "";}};
 const fieldNames = ["domain","country","contract","education","source","region","skill","pathway"];
 const locales = Object.keys(window.ELAN_I18N);
-const state = {jobs:[],meta:null,filtered:[],lang:"fr",page:1,pageSize:8,student:true,international:false,view:"offers",openJob:null,opener:null,ready:false};
+const state = {jobs:[],meta:null,catalog:null,update:null,filtered:[],lang:"fr",page:1,pageSize:8,student:true,international:false,view:"offers",openJob:null,opener:null,ready:false};
 try {const saved=localStorage.getItem("elan-msi-language");if(locales.includes(saved))state.lang=saved;}catch{/* Opaque preview origins and blocked storage are supported. */}
 const t = (key, values={}) => String(window.ELAN_I18N[state.lang][key] ?? key).replace(/\{(\w+)\}/g,(_,name)=>values[name]??"");
 const number = value => new Intl.NumberFormat(state.lang).format(value);
@@ -39,6 +39,7 @@ function valueLabel(value) {
   return value;
 }
 const isStudent = job => ["Stage","Alternance"].includes(job.contract);
+const statusLabel = job => t(job.status==="closed"?"closed":job.status==="source_present"?"sourcePresent":"unverified");
 const countriesOf = jobs => unique(jobs.flatMap(job=>job.locations.map(location=>location.country_code).filter(Boolean)));
 function translateInterface() {
   document.documentElement.lang=state.lang;document.title=t("title");
@@ -49,7 +50,7 @@ function translateInterface() {
   if(!state.ready)return;
   $("#snapshot-date").textContent=dateLabel(state.meta.observed_at);
   $("#global-summary").textContent=t("summary",{jobs:number(state.jobs.length),countries:number(countriesOf(state.jobs).length)});
-  populateFilters();renderDomains();renderSources();renderResults();
+  populateFilters();renderDomains();renderSources();renderRefresh();renderResults();
   $("#export-status").textContent="";
   if(state.openJob)renderDetail(state.openJob);
 }
@@ -86,6 +87,9 @@ function filterJobs() {
   const values=Object.fromEntries(fieldNames.map(id=>[id,$("#"+id).value]));
   const query=normal($("#search").value.trim()), terms=query.split(/\s+/).filter(Boolean);
   state.filtered=state.jobs.filter(job=>{
+    const availability=$("#availability").value;
+    if(availability==="current" && job.status==="closed")return false;
+    if(availability==="archived" && job.status!=="closed")return false;
     if(state.student && !isStudent(job))return false;
     if(state.international && !job.locations.some(x=>x.country_code && x.country_code!=="FR"))return false;
     if(values.domain && job.domain!==values.domain)return false;
@@ -106,24 +110,32 @@ function filterJobs() {
 function renderResults() {
   const count=state.filtered.length, pages=Math.max(1,Math.ceil(count/state.pageSize));state.page=Math.min(state.page,pages);
   $("#result-count").textContent=t("resultsCount",{n:number(count)});
-  $("#selection-note").textContent=t("selectionNote",{n:number(countriesOf(state.filtered).length)});
+  $("#selection-note").textContent=t("studentSummary",{selected:number(count),student:number(state.meta.student_offers),total:number(state.jobs.length)});
   $("#student").setAttribute("aria-pressed",String(state.student));$("#international").setAttribute("aria-pressed",String(state.international));
   $("#ara").setAttribute("aria-pressed",String($("#region").value==="Auvergne-Rhône-Alpes"));
   $("#empty").hidden=count>0;$("#job-list").hidden=count===0;
   $("#job-list").innerHTML=state.filtered.slice((state.page-1)*state.pageSize,state.page*state.pageSize).map(job=>{
     const places=unique(job.locations.map(x=>[x.city==="Non renseignée"?"":x.city,countryLabel(x.country_code)].filter(Boolean).join(", ")));
-    return `<article class="global-job"><div><p class="job-employer">${esc(job.company)}</p><h3><button class="job-open" type="button" data-job="${esc(job.id)}" aria-label="${esc(t("offerCard",{title:job.title}))}">${esc(job.title)}</button></h3><p class="job-location">${esc(places.join(" · "))}</p><div class="job-badges"><span class="job-badge contract-badge">${esc(contractLabel(job.contract))}</span><span class="job-badge">${esc(domainLabel(job.domain))}</span></div><p class="job-meta">${esc(job.source)} · ${esc(t(job.collection_method==="open_data"?"automatic":"editorial"))}<br>${esc(t("modified"))} : ${esc(dateLabel(job.modified_at||job.published_at))}</p></div><div class="job-profile"><div><span>${esc(t("duration"))}</span><strong>${esc(valueLabel(job.duration))}</strong></div><div><span>${esc(t("education"))}</span><strong>${esc(valueLabel(job.education_level))}</strong></div>${job.study_stage?`<div><span>${esc(t("studyStage"))}</span><strong>${esc(valueLabel(job.study_stage))}</strong></div>`:""}</div></article>`;
+    return `<article class="global-job"><div><p class="job-employer">${esc(job.company)}</p><h3><button class="job-open" type="button" data-job="${esc(job.id)}" aria-label="${esc(t("offerCard",{title:job.title}))}">${esc(job.title)}</button></h3><p class="job-location">${esc(places.join(" · "))}</p><div class="job-badges"><span class="job-badge contract-badge">${esc(contractLabel(job.contract))}</span><span class="job-badge">${esc(domainLabel(job.domain))}</span></div><p class="job-status ${job.status==="closed"?"archived-status":""}">${esc(statusLabel(job))}</p><p class="job-meta">${esc(job.source)} · ${esc(t(job.collection_method==="open_data"?"automatic":"editorial"))}<br>${esc(t("modified"))} : ${esc(dateLabel(job.modified_at||job.published_at))}</p></div><div class="job-profile"><div><span>${esc(t("duration"))}</span><strong>${esc(valueLabel(job.duration))}</strong></div><div><span>${esc(t("education"))}</span><strong>${esc(valueLabel(job.education_level))}</strong></div>${job.study_stage?`<div><span>${esc(t("studyStage"))}</span><strong>${esc(valueLabel(job.study_stage))}</strong></div>`:""}</div></article>`;
   }).join("");
   $("#page-status").textContent=t("page",{n:number(state.page),total:number(pages)});
   $("#prev").disabled=state.page<=1;$("#next").disabled=state.page>=pages;
   $("#export-csv").disabled=!count;$("#export-json").disabled=!count;
 }
 function resetFilters() {
-  fieldNames.forEach(id=>$("#"+id).value="");$("#search").value="";$("#sort").value="recent";
+  fieldNames.forEach(id=>$("#"+id).value="");$("#search").value="";$("#sort").value="recent";$("#availability").value="current";
   state.student=true;state.international=false;state.page=1;filterJobs();
 }
 function renderDomains() {
-  $("#domain-grid").innerHTML=state.meta.domain_options.map(domain=>`<button class="domain-card" type="button" data-domain="${esc(domain)}"><strong>${esc(domainLabel(domain))}</strong><span>${esc(t("domainCount",{n:number(state.jobs.filter(j=>j.domain===domain).length)}))} ↗</span></button>`).join("");
+  $("#domain-grid").innerHTML=state.catalog.pathways.map(pathway=>`<article class="domain-card"><strong>${esc(pathway.id)}</strong><p>${esc(pathway.name)}</p><button type="button" data-pathway="${esc(pathway.id)}">${esc(t("results"))} ↗</button><a href="${esc(safeUrl(pathway.url))}" target="_blank" rel="noopener noreferrer">${esc(t("pathwayOfficial"))}</a></article>`).join("");
+}
+function renderRefresh() {
+  const stamp=state.meta.last_success_at||state.meta.observed_at;
+  $("#last-success").dateTime=stamp;
+  $("#last-success").textContent=new Intl.DateTimeFormat(state.lang,{dateStyle:"long",timeStyle:"short",timeZone:"Europe/Paris"}).format(new Date(stamp))+" · Europe/Paris";
+  const status=state.update?.status;
+  $("#refresh-state").textContent=t(status==="failed"?"refreshFailed":status==="success"?"refreshSuccess":"refreshUnknown");
+  $("#refresh-panel").classList.toggle("update-failed",status==="failed");
 }
 const directories = [
   ["Welcome to the Jungle","https://www.welcometothejungle.com/fr/jobs"],
@@ -132,7 +144,7 @@ const directories = [
   ["ErasmusIntern","https://erasmusintern.org/"]
 ];
 function renderSources() {
-  $("#source-grid").innerHTML=`<article><h3>Groupe BPCE · Open Data</h3><p>${esc(t("sourceCount",{n:number(state.meta.bpce_unique_offers)}))}</p><p>${esc(t("bpceText"))}</p><a href="https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques" target="_blank" rel="noopener noreferrer">${esc(t("dataset"))}</a></article><article><h3>${esc(t("editorial"))}</h3><p>${esc(t("sourceCount",{n:number(state.meta.editorial_offers)}))}</p><p>${esc(t("editorialText"))}</p><a href="https://careers.capgemini.com/job/Wroc%C5%82aw-Intern-Application-Consultant-(with-German)/1406556233/" target="_blank" rel="noopener noreferrer">${esc(t("editorialExample"))}</a></article>`;
+  $("#source-grid").innerHTML=`<article><h3>Groupe BPCE · Open Data</h3><p>${esc(t("bpceShare",{n:number(state.meta.bpce_share_percent)}))}</p><p>${esc(t("sourceCount",{n:number(state.meta.bpce_unique_offers)}))}</p><p>${esc(t("methodScopeText"))}</p><a href="https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques" target="_blank" rel="noopener noreferrer">${esc(t("dataset"))}</a></article><article><h3>${esc(t("editorial"))}</h3><p>${esc(t("sourceCount",{n:number(state.meta.editorial_offers)}))}</p><p>${esc(t("sourcesIntro"))}</p><a href="https://careers.capgemini.com/job/Wroc%C5%82aw-Intern-Application-Consultant-(with-German)/1406556233/" target="_blank" rel="noopener noreferrer">${esc(t("editorialExample"))}</a></article>`;
   $("#directory-grid").innerHTML=directories.map(([name,url])=>`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer"><span>${esc(name)}</span><span aria-hidden="true">↗</span></a>`).join("");
 }
 function setView() {
@@ -151,6 +163,7 @@ function renderDetail(job) {
   const notes=[job.duration_note,job.education_note].filter(Boolean).map(note=>`<li>${esc(note)}</li>`).join("");
   $("#job-detail").innerHTML=`<p class="detail-company">${esc(job.company)} · ${esc(domainLabel(job.domain))}</p><h2 id="detail-heading">${esc(job.title)}</h2><p class="original-note">${esc(t("originalNote"))}</p><dl class="detail-grid">${detailPair("contract",contractLabel(job.contract))}${detailPair("sourceContract",job.source_contract||job.contract)}${detailPair("duration",valueLabel(job.duration))}${detailPair("education",valueLabel(job.education_level))}${detailPair("studyStage",valueLabel(job.study_stage))}${detailPair("locations",unique(job.locations.map(x=>[x.city==="Non renseignée"?"":x.city,countryLabel(x.country_code)].filter(Boolean).join(", "))).join(" · "))}${detailPair("source",job.source)}${detailPair("observed",dateLabel(job.observed_at))}${detailPair("modified",dateLabel(job.modified_at||job.published_at))}</dl><h3>${esc(t("description"))}</h3><p class="source-copy">${esc(job.description||t("unknown"))}</p>${job.eligibility_note?`<h3>${esc(t("eligibility"))}</h3><p class="source-copy">${esc(job.eligibility_note)}</p>`:""}<details><summary>${esc(t("evidence"))}</summary><p>${esc(t(job.collection_method==="open_data"?"automatic":"editorial"))}</p><ul>${evidence||`<li>${esc(t("unknown"))}</li>`}${notes}</ul></details><p class="original-note">${esc(t("methodContractsText"))}</p>${url?`<a class="source-visit" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(t("sourceVisit"))}</a><p>${esc(t("sourceFallback"))}</p><a class="source-url" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(url)}</a>`:""}`;
   $("#job-dialog").setAttribute("aria-labelledby","detail-heading");
+  $("#detail-heading").insertAdjacentHTML("afterend",`<p class="job-status ${job.status==="closed"?"archived-status":""}">${esc(statusLabel(job))}</p>${job.status_note?`<h3>${esc(t("statusEvidence"))}</h3><p>${esc(job.status_note)}</p>`:""}`);
 }
 function openDetail(id,opener) {
   const job=state.jobs.find(j=>j.id===id);if(!job)return;
@@ -160,12 +173,12 @@ function closeDetail() {$("#job-dialog").close();}
 const csvCell = value => {let text=String(value??"");if(/^\s*[=+\-@]/.test(text))text="'"+text;return '"'+text.replace(/"/g,'""')+'"';};
 function exportJobs(format) {
   try {
-    const filters={query:$("#search").value,...Object.fromEntries(fieldNames.map(id=>[id,$("#"+id).value])),student:state.student,international:state.international,sort:$("#sort").value};
+    const filters={query:$("#search").value,...Object.fromEntries(fieldNames.map(id=>[id,$("#"+id).value])),availability:$("#availability").value,student:state.student,international:state.international,sort:$("#sort").value};
     const rows=state.filtered.map(job=>({...job}));
     let content,mime;
     if(format==="json") {content=JSON.stringify({meta:{...state.meta,interface_language:state.lang,selection_count:rows.length,filters},jobs:rows},null,2);mime="application/json";}
     else {
-      const columns=["id","title","company","domain","contract","source_contract","duration","education_level","study_stage","countries","country_codes","cities","regions","pathways","skills","source","collection_method","duration_evidence","education_evidence","study_stage_evidence","duration_note","education_note","observed_at","modified_at","published_at","source_url"];
+      const columns=["id","title","company","domain","contract","source_contract","duration","education_level","study_stage","countries","country_codes","cities","regions","pathways","skills","source","collection_method","duration_evidence","education_evidence","study_stage_evidence","duration_note","education_note","observed_at","modified_at","published_at","source_url","status","status_origin","status_checked_at","status_note"];
       const flattened=rows.map(job=>({...job,countries:unique(job.locations.map(x=>x.country||"")).join(" | "),country_codes:unique(job.locations.map(x=>x.country_code||"")).join(" | "),cities:unique(job.locations.map(x=>x.city)).join(" | "),regions:unique(job.locations.map(x=>x.region)).join(" | "),pathways:(job.pathways||[]).join(" | "),skills:job.skills.join(" | ")}));
       content="\ufeff"+[columns,...flattened.map(row=>columns.map(key=>row[key]??""))].map(row=>row.map(csvCell).join(",")).join("\r\n");mime="text/csv;charset=utf-8";
     }
@@ -179,10 +192,15 @@ async function init() {
   try {
     const response=await fetch("./data/jobs.json");if(!response.ok)throw new Error("HTTP");
     const data=await response.json();
+    const catalogResponse=await fetch("./data/catalog.json");if(!catalogResponse.ok)throw new Error("catalog");
+    state.catalog=await catalogResponse.json();
+    try{const updateResponse=await fetch("./data/update-status.json",{cache:"no-store"});if(updateResponse.ok)state.update=await updateResponse.json();}catch{/* Dataset remains usable even if status is unavailable. */}
     if(!data.meta || !Array.isArray(data.meta.domain_options) || !Array.isArray(data.jobs) || !data.jobs.length)throw new Error("schema");
     if(data.jobs.some(job=>!Array.isArray(job.locations)||!Array.isArray(job.skills)))throw new Error("schema");
     state.jobs=data.jobs;state.meta=data.meta;state.ready=true;$("#loading").hidden=true;$("#load-error").hidden=true;$("#loaded").hidden=false;
-    translateInterface();filterJobs();
+    translateInterface();
+    if(new URLSearchParams(location.search).get("status")==="archived"){$("#availability").value="archived";state.student=false;}
+    filterJobs();
   }catch{state.ready=false;$("#loaded").hidden=true;$("#loading").hidden=true;$("#load-error").hidden=false;}
 }
 $("#language").addEventListener("change",event=>{
@@ -203,7 +221,8 @@ $("#ara").addEventListener("click",()=>{$("#region").value=$("#region").value===
 $("#prev").addEventListener("click",()=>{state.page--;renderResults();$("#result-count").scrollIntoView({block:"start"});});
 $("#next").addEventListener("click",()=>{state.page++;renderResults();$("#result-count").scrollIntoView({block:"start"});});
 $("#job-list").addEventListener("click",event=>{const button=event.target.closest("[data-job]");if(button)openDetail(button.dataset.job,button);});
-$("#domain-grid").addEventListener("click",event=>{const button=event.target.closest("[data-domain]");if(button){resetFilters();$("#domain").value=button.dataset.domain;filterJobs();location.hash="offers";}});
+$("#domain-grid").addEventListener("click",event=>{const button=event.target.closest("[data-pathway]");if(button){resetFilters();$("#pathway").value=button.dataset.pathway;$("#advanced").open=true;filterJobs();location.hash="offers";}});
+$("#availability").addEventListener("change",()=>{if($("#availability").value==="archived"){state.student=false;$("#contract").value="";}state.page=1;filterJobs();});
 $("#close-dialog").addEventListener("click",closeDetail);
 $("#job-dialog").addEventListener("close",()=>{
   state.openJob=null;

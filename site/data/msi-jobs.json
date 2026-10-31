@@ -1,45 +1,92 @@
 {
   "meta": {
     "title": "Élan MSI · Débouchés et opportunités",
-    "edition": "Corpus MSI : Open Data BPCE + sélection éditoriale multi-source",
-    "observed_at": "2026-10-31T01:48:12+00:00",
+    "edition": "Master MSI, France et international : source principale BPCE enrichie d’une sélection éditoriale",
+    "scope_id": "msi-international",
+    "last_success_at": "2026-10-31T03:24:05+00:00",
+    "observed_at": "2026-10-31T03:24:05+00:00",
     "source_url": "https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques",
     "api_url": "https://bpce.opendatasoft.com/api/explore/v2.1/catalog/datasets/groupe-bpce-offres-emploi/exports/json",
     "license": "BPCE : Licence Ouverte 2.0 ; autres plateformes : liens factuels et synthèses originales, pas de licence ouverte présumée",
     "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
     "raw_rows": 1888,
     "france_rows": 1785,
-    "matched_location_rows": 192,
-    "unique_offers": 81,
-    "bpce_unique_offers": 74,
-    "editorial_offers": 7,
+    "matched_location_rows": 195,
+    "unique_offers": 85,
+    "bpce_unique_offers": 77,
+    "editorial_offers": 8,
     "sources": {
-      "Groupe BPCE · Open Data": 74,
+      "Groupe BPCE · Open Data": 77,
       "Deloitte · via Welcome to the Jungle": 2,
-      "Capgemini · site carrières": 1,
+      "Capgemini · site carrières": 2,
       "Welcome to the Jungle": 2,
       "JobTeaser · annonces publiques": 2
     },
     "competency_statistics": "Descriptions intégrales BPCE uniquement ; les fiches éditoriales sont exclues du dénominateur.",
     "salary_available": 0,
-    "scope": "Offres France sélectionnées par métiers MSI. Corpus non exhaustif et non représentatif ; accès aux postes soumis au profil demandé.",
+    "scope": "Offres liées aux métiers du Master MSI, France et international. BPCE est la source principale ; corpus partiel et fortement bancaire. Rattachement pédagogique indicatif, sans garantie d’éligibilité ni d’ouverture actuelle.",
     "deduplication": "Une annonce par référence source ; les villes multiples sont regroupées.",
     "families": {
       "Data Engineer / Architecture": 6,
       "Business Analyst": 20,
       "Data Scientist": 7,
+      "Autres métiers data": 4,
       "Chef de projet SI": 15,
-      "Data Analyst": 9,
-      "Autres métiers data": 3,
+      "Data Analyst": 10,
+      "Consultant cybersécurité": 4,
       "Product Owner": 4,
-      "Conseil & transformation SI": 5,
+      "Conseil & transformation SI": 6,
       "Auditeur SI": 3,
-      "Chief Data Officer / gouvernance": 3,
-      "Consultant cybersécurité": 3,
+      "Gouvernance et qualité des données": 3,
       "Responsable Analytics": 2,
       "Consultant ERP / solutions métier": 1
     },
-    "pipeline_version": "2.1.0"
+    "pipeline_version": "4.0.0",
+    "domains": {
+      "Data Engineer / Architecture": 6,
+      "Business Analyst": 20,
+      "Data Scientist": 7,
+      "Autres métiers data": 4,
+      "Chef de projet SI": 15,
+      "Data Analyst": 10,
+      "Consultant cybersécurité": 4,
+      "Product Owner": 4,
+      "Conseil & transformation SI": 6,
+      "Auditeur SI": 3,
+      "Gouvernance et qualité des données": 3,
+      "Responsable Analytics": 2,
+      "Consultant ERP / solutions métier": 1
+    },
+    "domain_options": [
+      "Business Analyst",
+      "Consultant ERP / solutions métier",
+      "Conseil & transformation SI",
+      "Product Owner",
+      "Scrum Master",
+      "Chef de projet SI",
+      "Consultant cybersécurité",
+      "Auditeur SI",
+      "Consultant BI / décisionnel",
+      "Data Analyst",
+      "Responsable Analytics",
+      "Gouvernance et qualité des données",
+      "Webanalytics",
+      "Data Scientist",
+      "Data Engineer / Architecture",
+      "Autres métiers data",
+      "Doctorat en SI",
+      "Enseignement-recherche en SI"
+    ],
+    "countries": [
+      "FR",
+      "PL",
+      "US"
+    ],
+    "international_offers": 4,
+    "student_offers": 28,
+    "archived_offers": 2,
+    "non_archived_offers": 83,
+    "bpce_share_percent": 90.6
   },
   "jobs": [
     {
@@ -48,6 +95,8 @@
       "company": "Natixis CIB France",
       "family": "Data Engineer / Architecture",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Data Engineer / Architecture",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -60,7 +109,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -75,8 +130,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-30T18:10:06",
       "salary_min": null,
       "salary_max": null,
@@ -88,19 +145,27 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Business Analyst",
       "contract": "Stage",
+      "source_contract": "Stage sup à 2 mois",
+      "domain": "Business Analyst",
       "duration": "6 mois",
       "duration_evidence": "Durée du stage souhaitée : 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
       "education_level": "Bac+5",
       "education_evidence": "Bac +5",
       "education_note": "Champ degree de l’export BPCE.",
-      "study_stage": null,
-      "study_stage_evidence": null,
+      "study_stage": "Fin d’études",
+      "study_stage_evidence": "Fin d'études",
       "requirements_method": "bpce_structured_and_text",
       "locations": [
         {
           "city": "Aix-en-provence",
-          "region": "Provence-Alpes-Côte d'Azur"
+          "region": "Provence-Alpes-Côte d'Azur",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Provence-Alpes-Côte d'Azur"
+          }
         }
       ],
       "skills": [
@@ -116,8 +181,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-30T16:47:07",
       "salary_min": null,
       "salary_max": null,
@@ -129,6 +196,8 @@
       "company": "Natixis CIB France",
       "family": "Data Scientist",
       "contract": "CDD",
+      "source_contract": "CDD",
+      "domain": "Data Scientist",
       "duration": "6 mois",
       "duration_evidence": "CDD 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -141,7 +210,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -158,8 +233,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-28T07:10:13",
       "salary_min": null,
       "salary_max": null,
@@ -171,6 +248,8 @@
       "company": "Natixis CIB France",
       "family": "Data Scientist",
       "contract": "CDD",
+      "source_contract": "CDD",
+      "domain": "Data Scientist",
       "duration": "6 mois",
       "duration_evidence": "CDD 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -183,7 +262,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [],
@@ -195,9 +280,62 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-28T07:10:06",
+      "salary_min": null,
+      "salary_max": null,
+      "remote_source": null
+    },
+    {
+      "id": "22169",
+      "title": "Market Data & Access Support Engineer",
+      "company": "Natixis CIB North America",
+      "family": "Autres métiers data",
+      "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Autres métiers data",
+      "duration": null,
+      "duration_evidence": null,
+      "duration_note": null,
+      "education_level": null,
+      "education_evidence": null,
+      "education_note": null,
+      "study_stage": null,
+      "study_stage_evidence": null,
+      "requirements_method": "bpce_structured_and_text",
+      "locations": [
+        {
+          "city": "New York",
+          "region": "États-Unis",
+          "country_code": "US",
+          "country": "États-Unis",
+          "country_evidence": {
+            "country": "International",
+            "state": "États-Unis"
+          }
+        }
+      ],
+      "skills": [
+        "ITIL",
+        "Jira",
+        "Python"
+      ],
+      "description": "Poste et missions Market Data & Access Support Engineer — Associate or Vice PresidentNatixis is seeking a Market Data & Access Support Engineer to join the Global Market Risk (GMR) Business Support IT Monitoring team in New York. We are open to hiring at either the Associate level or the Vice President level, depending on the candidate’s experience and qualifications. This hands-on technical role focuses on proactive monitoring, maintenance, and Level 2 production support for our market data platforms, including LSEG RTDS/TREP and Bloomberg B-PIPE, as well as our market access and electronic trading connectivity infrastructure. You will help maintain the availability and performance of these platforms and contribute to upgrades in collaboration with Head Office and local network and infrastructure teams. Key ResponsibilitiesProactive Monitoring and Production Support Proactively monitor market data and access infrastructure using tools such as Geneos and Grafana to support high availability, low-latency connectivity, and reliability. Identify, investigate, and escalate performance and connectivity issues before they affect the business. Provide Level 2 support for market data and access platforms, resolving issues related to LSEG Refinitiv RTDS (formerly TREP), Bloomberg B-PIPE and Server APIs, and messaging systems such as TIBCO Rendezvous. Log, track, and manage production incidents and service requests in ServiceNow. Maintain clear, accurate support documentation, troubleshooting guides, and runbooks. Implementation, Maintenance, and Upgrades Plan and execute platform upgrades, routine maintenance, and requests to enable new business capabilities across market data and access platforms. Help align the Americas region’s platform configurations and environments with Head Office market data and access infrastructure. Coordinate technical upgrades and maintenance activities with local and global infrastructure and network teams. Maintain and prioritize the technical backlog in Jira, tracking work and communicating status. Maintain technical documentation, architecture diagrams, and procedures in Confluence. QualificationsBachelor’s degree in computer science, management information systems, or a related technical field. Relevant hands-on experience supporting market data and access platforms in a financial institution: typically 2–5 years for an Associate or 5–10 years for a Vice President. Strong understanding of leading market data technologies, including their design, engineering, and troubleshooting. Familiarity with ITIL concepts and practices. Experience with LSEG Refinitiv Real-Time Data Systems (RTDS, formerly TREP), TIBCO Rendezvous and Rendezvous Router, and Bloomberg systems, including the Terminal, APIs, Server APIs, and B-PIPE. Familiarity with market access systems such as Tradeweb, ION, or Fidessa. Experience with Windows 10 or 11, Windows Server, and Red Hat Linux. Knowledge of UNIX shell scripting; PowerShell and Python experience is a plus. General understanding of networking concepts, including basic firewall and routing principles, proxies, and multicast networking. Ability to prioritize and manage multiple tasks across critical applications in a fast-paced environment. Strong customer service skills when working with business stakeholders and support partners. Clear verbal and written communication skills, including the ability to produce thorough technical documentation. The salary range for this at the Associate -level will be between $110,000 - $140,000. Natixis is required by law to include a reasonable estimate of the compensation range for this role. Actual base salary will vary and will be based on several factors including, but not limited to, relevant experience, education, skills set, applicable licensure and certifications, and other business and organizational needs. Base salary is only one component of our total rewards package. Natixis also offers a generous benefits package, and you may be eligible for a discretionary incentive award depending on company and individual performance The salary range for this at the VP-level will be between $140,000 - $180,000. Natixis is required by law to include a reasonable estimate of the compensation range for this role. Actual base salary will vary and will be based on several factors including, but not limited to, relevant experience, education, skills set, applicable licensure and certifications, and other business and organizational needs. Base salary is only one component of our total rewards package. Natixis also offers a generous benefits package, and you may be eligible for a discretionary incentive award depending on company and individual performance. Profil et compétences requises Yourself & Beyond ...",
+      "source": "Groupe BPCE · Open Data",
+      "source_url": "https://recrutement.bpce.fr/job/market-data-access-support-engineer",
+      "source_key": "bpce",
+      "collection_method": "open_data",
+      "pathways": [
+        "ID"
+      ],
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
+      "modified_at": "2026-10-27T16:10:09",
       "salary_min": null,
       "salary_max": null,
       "remote_source": null
@@ -208,6 +346,8 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Chef de projet SI",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Chef de projet SI",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -220,43 +360,103 @@
       "locations": [
         {
           "city": "BALMA",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         },
         {
           "city": "Villeneuve-d'Ascq",
-          "region": "Hauts-de-France"
+          "region": "Hauts-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Hauts-de-France"
+          }
         },
         {
           "city": "Saint-Herblain",
-          "region": "Pays de la Loire"
+          "region": "Pays de la Loire",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Pays de la Loire"
+          }
         },
         {
           "city": "Strasbourg",
-          "region": "Grand Est"
+          "region": "Grand Est",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Grand Est"
+          }
         },
         {
           "city": "Aix-en-provence",
-          "region": "Provence-Alpes-Côte d'Azur"
+          "region": "Provence-Alpes-Côte d'Azur",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Provence-Alpes-Côte d'Azur"
+          }
         },
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "Saint-Jean-de-la-Ruelle",
-          "region": "Centre-Val de Loire"
+          "region": "Centre-Val de Loire",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Centre-Val de Loire"
+          }
         },
         {
           "city": "Bois-Guillaume",
-          "region": "Normandie"
+          "region": "Normandie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Normandie"
+          }
         },
         {
           "city": "Villeurbanne",
-          "region": "Auvergne-Rhône-Alpes"
+          "region": "Auvergne-Rhône-Alpes",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "AUVERGNE-RHÔNE-ALPES"
+          }
         },
         {
           "city": "Dijon",
-          "region": "Bourgogne-Franche-Comté"
+          "region": "Bourgogne-Franche-Comté",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Bourgogne-Franche-Comté"
+          }
         }
       ],
       "skills": [
@@ -271,8 +471,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-27T10:01:45",
       "salary_min": null,
       "salary_max": null,
@@ -284,6 +486,8 @@
       "company": "Banque BCP",
       "family": "Data Analyst",
       "contract": "Stage",
+      "source_contract": "Stage sup à 2 mois",
+      "domain": "Data Analyst",
       "duration": "6 mois",
       "duration_evidence": "à pourvoir à compter du mois de janvier 2027 pour une durée de 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -296,7 +500,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -310,8 +520,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-26T16:21:36",
       "salary_min": null,
       "salary_max": null,
@@ -323,6 +535,8 @@
       "company": "BPCE VIE",
       "family": "Data Scientist",
       "contract": "Stage",
+      "source_contract": "Stage sup à 2 mois",
+      "domain": "Data Scientist",
       "duration": "6 mois",
       "duration_evidence": "Stage - 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -335,7 +549,13 @@
       "locations": [
         {
           "city": "Saint-Grégoire",
-          "region": "Bretagne"
+          "region": "Bretagne",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Bretagne"
+          }
         }
       ],
       "skills": [
@@ -352,8 +572,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-26T10:15:02",
       "salary_min": null,
       "salary_max": null,
@@ -365,6 +587,8 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Data Scientist",
       "contract": "Stage",
+      "source_contract": "Stage sup à 2 mois",
+      "domain": "Data Scientist",
       "duration": "6 mois",
       "duration_evidence": "Durée du stage souhaitée : Idéalement 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -377,7 +601,13 @@
       "locations": [
         {
           "city": "Aix-en-provence",
-          "region": "Provence-Alpes-Côte d'Azur"
+          "region": "Provence-Alpes-Côte d'Azur",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Provence-Alpes-Côte d'Azur"
+          }
         }
       ],
       "skills": [
@@ -398,8 +628,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-24T11:18:52",
       "salary_min": null,
       "salary_max": null,
@@ -411,6 +643,8 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Chef de projet SI",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Chef de projet SI",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -423,47 +657,113 @@
       "locations": [
         {
           "city": "BALMA",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         },
         {
           "city": "Villeurbanne",
-          "region": "Auvergne-Rhône-Alpes"
+          "region": "Auvergne-Rhône-Alpes",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "AUVERGNE-RHÔNE-ALPES"
+          }
         },
         {
           "city": "Reims",
-          "region": "Grand Est"
+          "region": "Grand Est",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Grand Est"
+          }
         },
         {
           "city": "Saint-Jean-de-la-Ruelle",
-          "region": "Centre-Val de Loire"
+          "region": "Centre-Val de Loire",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Centre-Val de Loire"
+          }
         },
         {
           "city": "Aix-en-provence",
-          "region": "Provence-Alpes-Côte d'Azur"
+          "region": "Provence-Alpes-Côte d'Azur",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Provence-Alpes-Côte d'Azur"
+          }
         },
         {
           "city": "Bois-Guillaume",
-          "region": "Normandie"
+          "region": "Normandie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Normandie"
+          }
         },
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "Villeneuve-d'Ascq",
-          "region": "Hauts-de-France"
+          "region": "Hauts-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Hauts-de-France"
+          }
         },
         {
           "city": "Saint-Herblain",
-          "region": "Pays de la Loire"
+          "region": "Pays de la Loire",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Pays de la Loire"
+          }
         },
         {
           "city": "Caen",
-          "region": "Normandie"
+          "region": "Normandie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Normandie"
+          }
         },
         {
           "city": "Montigny-le-Bretonneux",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -478,8 +778,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-23T14:42:10",
       "salary_min": null,
       "salary_max": null,
@@ -491,6 +793,8 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Business Analyst",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Business Analyst",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -503,43 +807,103 @@
       "locations": [
         {
           "city": "Montigny-le-Bretonneux",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "Aix-en-provence",
-          "region": "Provence-Alpes-Côte d'Azur"
+          "region": "Provence-Alpes-Côte d'Azur",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Provence-Alpes-Côte d'Azur"
+          }
         },
         {
           "city": "Saint-Herblain",
-          "region": "Pays de la Loire"
+          "region": "Pays de la Loire",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Pays de la Loire"
+          }
         },
         {
           "city": "Bois-Guillaume",
-          "region": "Normandie"
+          "region": "Normandie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Normandie"
+          }
         },
         {
           "city": "Villeneuve-d'Ascq",
-          "region": "Hauts-de-France"
+          "region": "Hauts-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Hauts-de-France"
+          }
         },
         {
           "city": "Saint-Jean-de-la-Ruelle",
-          "region": "Centre-Val de Loire"
+          "region": "Centre-Val de Loire",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Centre-Val de Loire"
+          }
         },
         {
           "city": "Caen",
-          "region": "Normandie"
+          "region": "Normandie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Normandie"
+          }
         },
         {
           "city": "BALMA",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         },
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "Villeurbanne",
-          "region": "Auvergne-Rhône-Alpes"
+          "region": "Auvergne-Rhône-Alpes",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "AUVERGNE-RHÔNE-ALPES"
+          }
         }
       ],
       "skills": [
@@ -554,8 +918,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-23T14:17:37",
       "salary_min": null,
       "salary_max": null,
@@ -567,6 +933,8 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Chef de projet SI",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Chef de projet SI",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -579,7 +947,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -594,8 +968,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-22T17:04:24",
       "salary_min": null,
       "salary_max": null,
@@ -607,6 +983,8 @@
       "company": "Caisse d'Epargne Ile de France",
       "family": "Data Analyst",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Data Analyst",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -619,7 +997,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -634,9 +1018,58 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-22T14:01:34",
+      "salary_min": null,
+      "salary_max": null,
+      "remote_source": null
+    },
+    {
+      "id": "22064",
+      "title": "Cyber Security Vulnerability Management Specialist",
+      "company": "Natixis CIB North America",
+      "family": "Consultant cybersécurité",
+      "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Consultant cybersécurité",
+      "duration": null,
+      "duration_evidence": null,
+      "duration_note": null,
+      "education_level": null,
+      "education_evidence": null,
+      "education_note": null,
+      "study_stage": null,
+      "study_stage_evidence": null,
+      "requirements_method": "bpce_structured_and_text",
+      "locations": [
+        {
+          "city": "New York",
+          "region": "États-Unis",
+          "country_code": "US",
+          "country": "États-Unis",
+          "country_evidence": {
+            "country": "International",
+            "state": "États-Unis"
+          }
+        }
+      ],
+      "skills": [],
+      "description": "Poste et missions Natixis CIB Americas is seeking a skilled and experienced Vulnerability Patch Management Specialist (VP or Director level) to join our dynamic team. The successful candidate of the Vulnerability Patch Management Specialist includes managing and optimizing our vulnerability and patch management process. Your mission will include the proactive identification and efficient monitoring and remediation of security vulnerabilities across our entire IT landscape. You will collaborate closely with cross-functional teams across the Americas platform and with Head Office to develop and implement robust vulnerability and patch management strategies and processes. In this consulting engagement, you will drive daily operations, lead initiatives to enhance our Americas CIB Vulnerability Patch Management program and provide expert guidance. You will be responsible for developing and presenting key performance indicators (KPIs), adapting to key risk indicators (KRIs), and advancing the program through a sophisticated, risk-based approach. Your strategic recommendations and execution will be crucial in focusing remediation efforts and providing clear insights to key stakeholders. The candidate will track risk register, follow-ups, updates and oversee entries to it through the risk decisioning process (exception, risk acceptance) and the associated remediation actions. The candidate will also be responsible for assuring that all process and procedure documentation regarding all aspects of the VPM program are maintained. The role of the Vulnerability Patch Management Specialist will be performing the following actions: Collaborate extensively with IT stakeholders across the Americas, Head Office, and international platforms.Manage the vulnerability patch management process, including vulnerability identification, prioritization, and remediation on infrastructure systems (i.e. infrastructure, systems, applications, and SDLC development, etc.) Experience with vulnerability management and SIEM tools.Vulnerability Tool experience in conducting scan, treatment, and remediationApplication Security Tools (DevSecOps)SIEM experienced with creating dashboard and reportProvide strong and regular reporting for VPM related topics. Assess the impact of vulnerabilities and associated risk levels. Prioritize patch deployment and any SLA breaches with follow up action plans. Provide strong and regular reporting for VPM related topics. Develop/Enhance VPM procedures and processes. Participate in vulnerability assessments and remediation activities, track software and system. Updates, and strengthen compliance around the use of approved tools and best practices – secure coding guides. Liaise with Second line of defense (CISO and TRM, i.e. Technology Risk Management as well as Audit (internally and externally) Coordinate to develop and maintain a comprehensive patch management strategy and process to ensure timely and effective patching across all systems and infrastructure. Assist the IT teams with vendors and external partners to obtain and deploy patches in a timely manner. Monitor and report on patch management effectiveness, identifying areas for improvement and implementing best practices. Stay abreast of industry best practices, emerging threats, and security vulnerabilities to continuously improve the patch management process. Provide backup support for cyber security projects, incidents, action plans, remediation of findings, and audit points. Ad-hoc off-hour availability may be required to address emergent threats. Qualifications: Bachelor’s degree in computer science, Information Technology, or related field. Proven experience in vulnerability management, patch management, or related security roles with oversight of Plans of Action and Milestones (POAM). Strong understanding of common security vulnerabilities and the ability to assess their impact on systems and infrastructure. Experience with vulnerability management, application security and SIEM tools. Familiarity with security, IT Audit frameworks and standards (NIST. FFIEC handbooks etc.) The salary range for the VP-level position will be between $150,000 - $180,000. Natixis is required by law to include a reasonable estimate of the compensation range for this role. Actual base salary will vary and will be based on several factors including, but not limited to, relevant experience, education, skills set, applicable licensure and certifications, and other business and organizational needs. Base salary is only one component of our total rewards package. Natixis also offers a generous benefits package, and you may be eligible for a discretionary incentive award depending on company and individual performance. The salary range for the Director-level position will be between $180,000 - $210,000. Natixis is required by law to include a reasonable estimate of the compensation range for this role. Actual base salary will vary and will be based on several factors including, but not limited to, relevant experience, education, skills set, applicable licensure and certifications, and other business and organizational needs. Base salary is only one component of our total rewards package. Natixis also offers a generous benefits package, and you may be eligible for a discretionary incentive award depending on company and individual performance.",
+      "source": "Groupe BPCE · Open Data",
+      "source_url": "https://recrutement.bpce.fr/job/cyber-security-vulnerability-management-specialist",
+      "source_key": "bpce",
+      "collection_method": "open_data",
+      "pathways": [
+        "CMSI"
+      ],
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
+      "modified_at": "2026-10-21T14:10:11",
       "salary_min": null,
       "salary_max": null,
       "remote_source": null
@@ -647,6 +1080,8 @@
       "company": "Natixis CIB France",
       "family": "Data Analyst",
       "contract": "Stage",
+      "source_contract": "Stage",
+      "domain": "Data Analyst",
       "duration": "6 mois",
       "duration_evidence": "stage de 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -659,7 +1094,13 @@
       "locations": [
         {
           "city": "Charenton le pont",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -677,8 +1118,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-21T11:10:08",
       "salary_min": null,
       "salary_max": null,
@@ -690,6 +1133,8 @@
       "company": "Natixis CIB France",
       "family": "Business Analyst",
       "contract": "Stage",
+      "source_contract": "Stage",
+      "domain": "Business Analyst",
       "duration": "6 mois",
       "duration_evidence": "stage de 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -702,7 +1147,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -721,8 +1172,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-21T10:10:07",
       "salary_min": null,
       "salary_max": null,
@@ -734,6 +1187,8 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Autres métiers data",
       "contract": "Stage",
+      "source_contract": "Stage sup à 2 mois",
+      "domain": "Autres métiers data",
       "duration": "4 à 6 mois",
       "duration_evidence": "Durée du stage souhaitée : 4 à 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -746,7 +1201,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -763,8 +1224,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-20T17:44:25",
       "salary_min": null,
       "salary_max": null,
@@ -776,6 +1239,8 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Business Analyst",
       "contract": "Stage",
+      "source_contract": "Stage sup à 2 mois",
+      "domain": "Business Analyst",
       "duration": "6 mois",
       "duration_evidence": "Durée du stage souhaitée : 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -788,7 +1253,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -805,8 +1276,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-20T17:17:42",
       "salary_min": null,
       "salary_max": null,
@@ -818,6 +1291,8 @@
       "company": "Natixis CIB France",
       "family": "Data Scientist",
       "contract": "CDD",
+      "source_contract": "CDD",
+      "domain": "Data Scientist",
       "duration": "6 mois",
       "duration_evidence": "CDD 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -830,7 +1305,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -844,8 +1325,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-20T17:10:06",
       "salary_min": null,
       "salary_max": null,
@@ -857,19 +1340,27 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Business Analyst",
       "contract": "Stage",
+      "source_contract": "Stage sup à 2 mois",
+      "domain": "Business Analyst",
       "duration": "6 mois",
       "duration_evidence": "Durée du stage souhaitée : 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
       "education_level": "Bac+5",
       "education_evidence": "Bac +5",
       "education_note": "Champ degree de l’export BPCE.",
-      "study_stage": null,
-      "study_stage_evidence": null,
+      "study_stage": "Fin d’études",
+      "study_stage_evidence": "fin d'étude",
       "requirements_method": "bpce_structured_and_text",
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -885,8 +1376,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-20T15:07:16",
       "salary_min": null,
       "salary_max": null,
@@ -898,6 +1391,8 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Business Analyst",
       "contract": "Stage",
+      "source_contract": "Stage sup à 2 mois",
+      "domain": "Business Analyst",
       "duration": "6 mois ou plus",
       "duration_evidence": "Durée du stage souhaitée : 6 mois ou plus",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -910,7 +1405,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -926,8 +1427,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-20T13:57:01",
       "salary_min": null,
       "salary_max": null,
@@ -939,6 +1442,8 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Chef de projet SI",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Chef de projet SI",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -951,51 +1456,123 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "Saint-Herblain",
-          "region": "Pays de la Loire"
+          "region": "Pays de la Loire",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Pays de la Loire"
+          }
         },
         {
           "city": "Montigny-le-Bretonneux",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "Saint-Jacques-de-la-Lande",
-          "region": "Bretagne"
+          "region": "Bretagne",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Bretagne"
+          }
         },
         {
           "city": "Dijon",
-          "region": "Bourgogne-Franche-Comté"
+          "region": "Bourgogne-Franche-Comté",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Bourgogne-Franche-Comté"
+          }
         },
         {
           "city": "Bois-Guillaume",
-          "region": "Normandie"
+          "region": "Normandie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Normandie"
+          }
         },
         {
           "city": "Aix-en-provence",
-          "region": "Provence-Alpes-Côte d'Azur"
+          "region": "Provence-Alpes-Côte d'Azur",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Provence-Alpes-Côte d'Azur"
+          }
         },
         {
           "city": "Bruges",
-          "region": "Nouvelle-Aquitaine"
+          "region": "Nouvelle-Aquitaine",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Nouvelle-Aquitaine"
+          }
         },
         {
           "city": "Villeurbanne",
-          "region": "Auvergne-Rhône-Alpes"
+          "region": "Auvergne-Rhône-Alpes",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "AUVERGNE-RHÔNE-ALPES"
+          }
         },
         {
           "city": "Strasbourg",
-          "region": "Grand Est"
+          "region": "Grand Est",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Grand Est"
+          }
         },
         {
           "city": "Villeneuve-d'Ascq",
-          "region": "Hauts-de-France"
+          "region": "Hauts-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Hauts-de-France"
+          }
         },
         {
           "city": "BALMA",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         }
       ],
       "skills": [
@@ -1012,8 +1589,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-19T15:04:47",
       "salary_min": null,
       "salary_max": null,
@@ -1025,6 +1604,8 @@
       "company": "BPCE SA",
       "family": "Chef de projet SI",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Chef de projet SI",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -1037,7 +1618,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -1051,8 +1638,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-19T07:52:09",
       "salary_min": null,
       "salary_max": null,
@@ -1064,6 +1653,8 @@
       "company": "Casden - Banque Populaire",
       "family": "Product Owner",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Product Owner",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -1076,7 +1667,13 @@
       "locations": [
         {
           "city": "Champs sur Marne",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -1091,8 +1688,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-19T06:49:44",
       "salary_min": null,
       "salary_max": null,
@@ -1104,6 +1703,8 @@
       "company": "Casden - Banque Populaire",
       "family": "Business Analyst",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Business Analyst",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -1116,7 +1717,13 @@
       "locations": [
         {
           "city": "Champs-sur-Marne",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -1131,8 +1738,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-19T06:22:51",
       "salary_min": null,
       "salary_max": null,
@@ -1144,6 +1753,8 @@
       "company": "Caisse d'Epargne Loire Centre",
       "family": "Data Analyst",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Data Analyst",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -1156,7 +1767,13 @@
       "locations": [
         {
           "city": "St Jean de la Ruelle",
-          "region": "Centre-Val de Loire"
+          "region": "Centre-Val de Loire",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Centre-Val de Loire"
+          }
         }
       ],
       "skills": [
@@ -1176,9 +1793,60 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-16T14:30:43",
+      "salary_min": null,
+      "salary_max": null,
+      "remote_source": null
+    },
+    {
+      "id": "22359",
+      "title": "V.I.E. - 18 months - HRIS Data Analyst F/M - Boston",
+      "company": "Natixis Investment Managers, L",
+      "family": "Data Analyst",
+      "contract": "VIE",
+      "source_contract": "VIE",
+      "domain": "Data Analyst",
+      "duration": "18 months",
+      "duration_evidence": "V.I.E. - 18 months - HRIS Data Analyst F/M - Boston",
+      "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
+      "education_level": null,
+      "education_evidence": null,
+      "education_note": null,
+      "study_stage": null,
+      "study_stage_evidence": null,
+      "requirements_method": "bpce_structured_and_text",
+      "locations": [
+        {
+          "city": "Boston",
+          "region": "États-Unis",
+          "country_code": "US",
+          "country": "États-Unis",
+          "country_evidence": {
+            "country": "International",
+            "state": "États-Unis"
+          }
+        }
+      ],
+      "skills": [
+        "Excel"
+      ],
+      "description": "Description de l’entreprise Classée parmi les principaux gestionnaires d'actifs au monde avec plus de 1 300 milliards d’euros d'actifs sous gestion, Natixis Investment Managers (Natixis IM) propose une gamme de solutions diversifiées couvrant différents types de classes d'actifs, de styles de gestion et de véhicules, y compris des stratégies et des produits innovants répondant aux critères environnementaux, sociaux et de gouvernance (ESG) dédiés au développement de la finance durable. Les équipes de Natixis IM travaillent en partenariat avec leurs clients - investisseurs institutionnels, fonds d’investissement, entreprises et particuliers - afin de comprendre leurs besoins spécifiques et de leur fournir des informations et des solutions d'investissement adaptées à leurs objectifs à long terme. Grâce à l’approche multi-boutique de Natixis IM, les clients peuvent ainsi bénéficier de la réflexion et de l’expertise d’une vingtaine de sociétés de gestion active. Natixis Investment Managers International (Natixis IMI) est la principale société de gestion de Natixis IM en Europe. Elle réunit 2 activités : · Les activités de distribution en Europe et dans d'autres zones géographiques comme l'APAC, le Moyen Orient, et l'Amérique latine, de l’offre en gestion d’actifs de Natixis IM ; · Une plateforme de centres d’expertises (fonctions support) au service des activités de distribution et des affiliés. Natixis IMI poursuit son développement et renforce sa présence en France et à l’international, en s’appuyant sur l’expertise de ses équipes et sur le modèle multi-affiliés de Natixis IM. Poste et missions HR Reporting & Analytics (Production & Delivery): Produce and distribute scheduled and ad-hoc HR reports and dashboards;Provide accurate HR data for Finance, Compliance, business continuity, RFPs, and CSR needs;Evaluate process for report dissemination and recommend areas to improve efficiency, focused on integration and automation where possible. Data Entry and Administration: Enter and maintain international HR data in Workday and TGRH (Oracle);Process employee lifecycle changes, including hires, transfers, promotions, and terminations;Follow global data-entry standards and support international HR contacts. Data Quality, Audit & Reconciliation: Reconcile Workday and TGRH data regularly, investigate discrepancies, and ensure records remain accurate and aligned;Identify recurring issues and recommend corrective actions or process improvements. The selected candidate will begin their contract in Paris for one month before relocating to Boston. Profil et compétences requises Master’s degree in HR, Business Administration, Data Analysis, Information Systems, or a related field. Initial experience through an internship, apprenticeship, or first role in HRIS, HR data analysis, or a similar data-focused position. Advanced Excel skills are required. Experience with Workday and/or TGRH (Oracle), or similar software strongly preferred. Fluent or bilingual English and French is required. Strong analytical ability, attention to detail, independence, organization, with clear written and verbal communication skills. This position is only open to candidates who are eligible for the Business France V.I.E program: - French or European Union citizens - Between 18 and 28 years old - To be from a country other than the host country - Graduated",
+      "source": "Groupe BPCE · Open Data",
+      "source_url": "https://recrutement.bpce.fr/job/v-i-e-18-months-hris-data-analyst-f-m-boston",
+      "source_key": "bpce",
+      "collection_method": "open_data",
+      "pathways": [
+        "ID"
+      ],
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
+      "modified_at": "2026-10-16T13:10:06",
       "salary_min": null,
       "salary_max": null,
       "remote_source": null
@@ -1189,6 +1857,8 @@
       "company": "BPCE SA",
       "family": "Conseil & transformation SI",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Conseil & transformation SI",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -1201,7 +1871,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [],
@@ -1214,8 +1890,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-16T09:54:33",
       "salary_min": null,
       "salary_max": null,
@@ -1227,6 +1905,8 @@
       "company": "BPCE SA",
       "family": "Conseil & transformation SI",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Conseil & transformation SI",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -1239,7 +1919,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [],
@@ -1252,8 +1938,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-14T15:33:53",
       "salary_min": null,
       "salary_max": null,
@@ -1265,6 +1953,8 @@
       "company": "Natixis TradEx Solutions",
       "family": "Data Scientist",
       "contract": "CDD",
+      "source_contract": "CDD",
+      "domain": "Data Scientist",
       "duration": "8 mois à 1 ans",
       "duration_evidence": "CDD de 8 mois à 1 ans",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -1277,7 +1967,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -1295,8 +1991,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-14T10:10:05",
       "salary_min": null,
       "salary_max": null,
@@ -1308,6 +2006,8 @@
       "company": "Natixis CIB France",
       "family": "Business Analyst",
       "contract": "Stage",
+      "source_contract": "Stage",
+      "domain": "Business Analyst",
       "duration": "6 mois",
       "duration_evidence": "stage de 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -1320,7 +2020,13 @@
       "locations": [
         {
           "city": "Charenton le pont",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -1338,8 +2044,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-13T11:10:06",
       "salary_min": null,
       "salary_max": null,
@@ -1351,6 +2059,8 @@
       "company": "Natixis CIB France",
       "family": "Data Engineer / Architecture",
       "contract": "Stage",
+      "source_contract": "Stage",
+      "domain": "Data Engineer / Architecture",
       "duration": "6 mois",
       "duration_evidence": "stage de 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -1363,7 +2073,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -1379,8 +2095,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-13T10:10:11",
       "salary_min": null,
       "salary_max": null,
@@ -1392,6 +2110,8 @@
       "company": "Banque Populaire Rives de Paris",
       "family": "Product Owner",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Product Owner",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -1404,7 +2124,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -1418,8 +2144,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-12T15:47:19",
       "salary_min": null,
       "salary_max": null,
@@ -1431,6 +2159,8 @@
       "company": "BRED Banque Populaire",
       "family": "Data Analyst",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Data Analyst",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -1443,7 +2173,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -1457,8 +2193,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-12T14:38:45",
       "salary_min": null,
       "salary_max": null,
@@ -1470,6 +2208,8 @@
       "company": "BPCE IG",
       "family": "Auditeur SI",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Auditeur SI",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -1482,7 +2222,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -1498,8 +2244,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-12T12:04:34",
       "salary_min": null,
       "salary_max": null,
@@ -1511,6 +2259,8 @@
       "company": "Caisse d'Epargne Bourgogne Franche Comté",
       "family": "Conseil & transformation SI",
       "contract": "Stage",
+      "source_contract": "Stage sup à 2 mois",
+      "domain": "Conseil & transformation SI",
       "duration": "4 et 6 mois",
       "duration_evidence": "durée du stage est entre 4 et 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -1523,7 +2273,13 @@
       "locations": [
         {
           "city": "Dijon",
-          "region": "Bourgogne-Franche-Comté"
+          "region": "Bourgogne-Franche-Comté",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Bourgogne-Franche-Comté"
+          }
         }
       ],
       "skills": [
@@ -1538,8 +2294,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-12T07:50:42",
       "salary_min": null,
       "salary_max": null,
@@ -1551,6 +2309,8 @@
       "company": "BRED Banque Populaire",
       "family": "Data Engineer / Architecture",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Data Engineer / Architecture",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -1563,7 +2323,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -1579,8 +2345,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-09T15:06:14",
       "salary_min": null,
       "salary_max": null,
@@ -1592,6 +2360,8 @@
       "company": "SOCFIM",
       "family": "Data Analyst",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Data Analyst",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -1604,7 +2374,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -1621,8 +2397,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-09T13:17:15",
       "salary_min": null,
       "salary_max": null,
@@ -1634,6 +2412,8 @@
       "company": "Natixis CIB France",
       "family": "Data Engineer / Architecture",
       "contract": "Stage",
+      "source_contract": "Stage",
+      "domain": "Data Engineer / Architecture",
       "duration": "6 mois",
       "duration_evidence": "stage de 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -1646,7 +2426,13 @@
       "locations": [
         {
           "city": "Charenton le pont",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -1661,8 +2447,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-09T09:10:12",
       "salary_min": null,
       "salary_max": null,
@@ -1674,6 +2462,8 @@
       "company": "ONEY",
       "family": "Data Analyst",
       "contract": "Stage",
+      "source_contract": "Stage sup à 2 mois",
+      "domain": "Data Analyst",
       "duration": "6 mois",
       "duration_evidence": "à pourvoir à partir de janvier 2026 pour une durée de 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -1686,7 +2476,13 @@
       "locations": [
         {
           "city": "CROIX",
-          "region": "Hauts-de-France"
+          "region": "Hauts-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Hauts-de-France"
+          }
         }
       ],
       "skills": [
@@ -1704,8 +2500,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-08T07:58:52",
       "salary_min": null,
       "salary_max": null,
@@ -1717,6 +2515,8 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Business Analyst",
       "contract": "Stage",
+      "source_contract": "Stage sup à 2 mois",
+      "domain": "Business Analyst",
       "duration": "6 mois",
       "duration_evidence": "Durée du stage souhaitée : 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -1729,7 +2529,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -1746,8 +2552,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-07T15:11:57",
       "salary_min": null,
       "salary_max": null,
@@ -1757,8 +2565,10 @@
       "id": "21858",
       "title": "Stage - 6 mois - Market Risk FRTB Data Quality Analyst F/H",
       "company": "Natixis CIB France",
-      "family": "Chief Data Officer / gouvernance",
+      "family": "Gouvernance et qualité des données",
       "contract": "Stage",
+      "source_contract": "Stage",
+      "domain": "Gouvernance et qualité des données",
       "duration": "6 mois",
       "duration_evidence": "stage de 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -1771,7 +2581,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -1788,8 +2604,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-06T15:10:06",
       "salary_min": null,
       "salary_max": null,
@@ -1801,6 +2619,8 @@
       "company": "Natixis CIB France",
       "family": "Chef de projet SI",
       "contract": "Stage",
+      "source_contract": "Stage",
+      "domain": "Chef de projet SI",
       "duration": "6 mois",
       "duration_evidence": "stage de 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -1813,7 +2633,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -1828,8 +2654,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-06T11:10:10",
       "salary_min": null,
       "salary_max": null,
@@ -1839,8 +2667,10 @@
       "id": "ONEY00994",
       "title": "Data Steward F/H",
       "company": "ONEY",
-      "family": "Chief Data Officer / gouvernance",
+      "family": "Gouvernance et qualité des données",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Gouvernance et qualité des données",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -1853,7 +2683,13 @@
       "locations": [
         {
           "city": "CROIX",
-          "region": "Hauts-de-France"
+          "region": "Hauts-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Hauts-de-France"
+          }
         }
       ],
       "skills": [
@@ -1868,8 +2704,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-05T15:31:41",
       "salary_min": null,
       "salary_max": null,
@@ -1881,6 +2719,8 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Chef de projet SI",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Chef de projet SI",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -1893,39 +2733,93 @@
       "locations": [
         {
           "city": "Dijon",
-          "region": "Bourgogne-Franche-Comté"
+          "region": "Bourgogne-Franche-Comté",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Bourgogne-Franche-Comté"
+          }
         },
         {
           "city": "Bois-Guillaume",
-          "region": "Normandie"
+          "region": "Normandie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Normandie"
+          }
         },
         {
           "city": "Montigny-le-Bretonneux",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "Bruges",
-          "region": "Nouvelle-Aquitaine"
+          "region": "Nouvelle-Aquitaine",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Nouvelle-Aquitaine"
+          }
         },
         {
           "city": "Saint-Estève",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         },
         {
           "city": "Villeneuve-d'Ascq",
-          "region": "Hauts-de-France"
+          "region": "Hauts-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Hauts-de-France"
+          }
         },
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "BALMA",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         },
         {
           "city": "Charenton-le-Pont",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -1941,8 +2835,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-02T15:21:30",
       "salary_min": null,
       "salary_max": null,
@@ -1954,6 +2850,8 @@
       "company": "Natixis CIB France",
       "family": "Autres métiers data",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Autres métiers data",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -1966,7 +2864,13 @@
       "locations": [
         {
           "city": "Charenton le pont",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -1982,8 +2886,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-10-01T09:10:05",
       "salary_min": null,
       "salary_max": null,
@@ -1995,6 +2901,8 @@
       "company": "BPCE Infogérance et Technologies",
       "family": "Data Analyst",
       "contract": "Stage",
+      "source_contract": "Stage sup à 2 mois",
+      "domain": "Data Analyst",
       "duration": "6 mois",
       "duration_evidence": "Stage - 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -2007,7 +2915,13 @@
       "locations": [
         {
           "city": "BALMA",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         }
       ],
       "skills": [
@@ -2024,8 +2938,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-09-30T11:04:54",
       "salary_min": null,
       "salary_max": null,
@@ -2037,6 +2953,8 @@
       "company": "Banque Palatine",
       "family": "Data Analyst",
       "contract": "CDD",
+      "source_contract": "CDD",
+      "domain": "Data Analyst",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -2049,11 +2967,23 @@
       "locations": [
         {
           "city": "Fontenay-sous-Bois",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -2069,8 +2999,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-09-23T08:00:39",
       "salary_min": null,
       "salary_max": null,
@@ -2082,6 +3014,8 @@
       "company": "BPCE VIE",
       "family": "Chef de projet SI",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Chef de projet SI",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -2094,7 +3028,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -2110,8 +3050,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-09-23T07:35:43",
       "salary_min": null,
       "salary_max": null,
@@ -2123,6 +3065,8 @@
       "company": "BRED Banque Populaire",
       "family": "Chef de projet SI",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Chef de projet SI",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -2135,7 +3079,13 @@
       "locations": [
         {
           "city": "JOINVILLE LE PONT",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -2153,8 +3103,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-09-22T12:50:29",
       "salary_min": null,
       "salary_max": null,
@@ -2166,6 +3118,8 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Chef de projet SI",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Chef de projet SI",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -2178,43 +3132,103 @@
       "locations": [
         {
           "city": "Aix-en-provence",
-          "region": "Provence-Alpes-Côte d'Azur"
+          "region": "Provence-Alpes-Côte d'Azur",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Provence-Alpes-Côte d'Azur"
+          }
         },
         {
           "city": "Bois-Guillaume",
-          "region": "Normandie"
+          "region": "Normandie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Normandie"
+          }
         },
         {
           "city": "Saint-Jacques-de-la-Lande",
-          "region": "Bretagne"
+          "region": "Bretagne",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Bretagne"
+          }
         },
         {
           "city": "Montigny-le-Bretonneux",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "Villeurbanne",
-          "region": "Auvergne-Rhône-Alpes"
+          "region": "Auvergne-Rhône-Alpes",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "AUVERGNE-RHÔNE-ALPES"
+          }
         },
         {
           "city": "Saint-Jean-de-la-Ruelle",
-          "region": "Centre-Val de Loire"
+          "region": "Centre-Val de Loire",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Centre-Val de Loire"
+          }
         },
         {
           "city": "Dijon",
-          "region": "Bourgogne-Franche-Comté"
+          "region": "Bourgogne-Franche-Comté",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Bourgogne-Franche-Comté"
+          }
         },
         {
           "city": "BALMA",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         },
         {
           "city": "Saint-Herblain",
-          "region": "Pays de la Loire"
+          "region": "Pays de la Loire",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Pays de la Loire"
+          }
         }
       ],
       "skills": [
@@ -2230,8 +3244,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-09-18T13:37:40",
       "salary_min": null,
       "salary_max": null,
@@ -2243,6 +3259,8 @@
       "company": "BPCE Infogérance et Technologies",
       "family": "Data Engineer / Architecture",
       "contract": "Stage",
+      "source_contract": "Stage sup à 2 mois",
+      "domain": "Data Engineer / Architecture",
       "duration": "6 mois",
       "duration_evidence": "Stage - 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -2255,7 +3273,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -2270,8 +3294,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-09-17T12:56:59",
       "salary_min": null,
       "salary_max": null,
@@ -2283,6 +3309,8 @@
       "company": "BPCE Infogérance et Technologies",
       "family": "Consultant cybersécurité",
       "contract": "Stage",
+      "source_contract": "Stage sup à 2 mois",
+      "domain": "Consultant cybersécurité",
       "duration": "6 mois",
       "duration_evidence": "stage de 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -2295,7 +3323,13 @@
       "locations": [
         {
           "city": "BALMA",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         }
       ],
       "skills": [
@@ -2311,8 +3345,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-09-16T08:29:53",
       "salary_min": null,
       "salary_max": null,
@@ -2324,6 +3360,8 @@
       "company": "BPCE Infogérance et Technologies",
       "family": "Consultant cybersécurité",
       "contract": "Stage",
+      "source_contract": "Stage sup à 2 mois",
+      "domain": "Consultant cybersécurité",
       "duration": "6 mois",
       "duration_evidence": "Stage - 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -2331,12 +3369,18 @@
       "education_evidence": "Bac +5",
       "education_note": "Champ degree de l’export BPCE.",
       "study_stage": "Fin d’études",
-      "study_stage_evidence": "stage de fin d'études",
+      "study_stage_evidence": "fin d'études",
       "requirements_method": "bpce_structured_and_text",
       "locations": [
         {
           "city": "BALMA",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         }
       ],
       "skills": [],
@@ -2348,8 +3392,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-09-15T13:57:47",
       "salary_min": null,
       "salary_max": null,
@@ -2361,6 +3407,8 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Chef de projet SI",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Chef de projet SI",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -2373,43 +3421,103 @@
       "locations": [
         {
           "city": "Saint-Estève",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         },
         {
           "city": "Saint-Herblain",
-          "region": "Pays de la Loire"
+          "region": "Pays de la Loire",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Pays de la Loire"
+          }
         },
         {
           "city": "Villeneuve-d'Ascq",
-          "region": "Hauts-de-France"
+          "region": "Hauts-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Hauts-de-France"
+          }
         },
         {
           "city": "Bois-Guillaume",
-          "region": "Normandie"
+          "region": "Normandie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Normandie"
+          }
         },
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "Villeurbanne",
-          "region": "Auvergne-Rhône-Alpes"
+          "region": "Auvergne-Rhône-Alpes",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "AUVERGNE-RHÔNE-ALPES"
+          }
         },
         {
           "city": "Saint-Jacques-de-la-Lande",
-          "region": "Bretagne"
+          "region": "Bretagne",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Bretagne"
+          }
         },
         {
           "city": "Aix-en-provence",
-          "region": "Provence-Alpes-Côte d'Azur"
+          "region": "Provence-Alpes-Côte d'Azur",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Provence-Alpes-Côte d'Azur"
+          }
         },
         {
           "city": "BALMA",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         },
         {
           "city": "Saint-Jean-de-la-Ruelle",
-          "region": "Centre-Val de Loire"
+          "region": "Centre-Val de Loire",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Centre-Val de Loire"
+          }
         }
       ],
       "skills": [
@@ -2425,8 +3533,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-09-14T09:49:10",
       "salary_min": null,
       "salary_max": null,
@@ -2438,6 +3548,8 @@
       "company": "ONEY",
       "family": "Data Scientist",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Data Scientist",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -2450,7 +3562,13 @@
       "locations": [
         {
           "city": "CROIX",
-          "region": "Hauts-de-France"
+          "region": "Hauts-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Hauts-de-France"
+          }
         }
       ],
       "skills": [
@@ -2471,8 +3589,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-09-11T09:46:23",
       "salary_min": null,
       "salary_max": null,
@@ -2484,6 +3604,8 @@
       "company": "BPCE Achats & Services",
       "family": "Product Owner",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Product Owner",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -2496,7 +3618,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -2513,8 +3641,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-09-08T08:01:46",
       "salary_min": null,
       "salary_max": null,
@@ -2526,6 +3656,8 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Business Analyst",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Business Analyst",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -2538,7 +3670,13 @@
       "locations": [
         {
           "city": "Aix-en-provence",
-          "region": "Provence-Alpes-Côte d'Azur"
+          "region": "Provence-Alpes-Côte d'Azur",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Provence-Alpes-Côte d'Azur"
+          }
         }
       ],
       "skills": [
@@ -2556,8 +3694,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-09-07T09:25:03",
       "salary_min": null,
       "salary_max": null,
@@ -2569,6 +3709,8 @@
       "company": "Natixis CIB France",
       "family": "Autres métiers data",
       "contract": "Stage",
+      "source_contract": "Stage",
+      "domain": "Autres métiers data",
       "duration": "6 mois",
       "duration_evidence": "Stage - 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -2581,7 +3723,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -2595,8 +3743,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-09-03T14:10:12",
       "salary_min": null,
       "salary_max": null,
@@ -2608,6 +3758,8 @@
       "company": "BPCE Assurances",
       "family": "Auditeur SI",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Auditeur SI",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -2620,7 +3772,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [],
@@ -2633,8 +3791,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-08-31T09:48:25",
       "salary_min": null,
       "salary_max": null,
@@ -2646,6 +3806,8 @@
       "company": "Natixis CIB France",
       "family": "Responsable Analytics",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Responsable Analytics",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -2658,7 +3820,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -2672,8 +3840,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-08-14T12:10:05",
       "salary_min": null,
       "salary_max": null,
@@ -2685,6 +3855,8 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Chef de projet SI",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Chef de projet SI",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -2697,47 +3869,113 @@
       "locations": [
         {
           "city": "Saint-Jean-de-la-Ruelle",
-          "region": "Centre-Val de Loire"
+          "region": "Centre-Val de Loire",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Centre-Val de Loire"
+          }
         },
         {
           "city": "Montigny-le-Bretonneux",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "Villeneuve-d'Ascq",
-          "region": "Hauts-de-France"
+          "region": "Hauts-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Hauts-de-France"
+          }
         },
         {
           "city": "Reims",
-          "region": "Grand Est"
+          "region": "Grand Est",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Grand Est"
+          }
         },
         {
           "city": "Bois-Guillaume",
-          "region": "Normandie"
+          "region": "Normandie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Normandie"
+          }
         },
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "Saint-Herblain",
-          "region": "Pays de la Loire"
+          "region": "Pays de la Loire",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Pays de la Loire"
+          }
         },
         {
           "city": "Villeurbanne",
-          "region": "Auvergne-Rhône-Alpes"
+          "region": "Auvergne-Rhône-Alpes",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "AUVERGNE-RHÔNE-ALPES"
+          }
         },
         {
           "city": "Caen",
-          "region": "Normandie"
+          "region": "Normandie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Normandie"
+          }
         },
         {
           "city": "BALMA",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         },
         {
           "city": "Aix-en-provence",
-          "region": "Provence-Alpes-Côte d'Azur"
+          "region": "Provence-Alpes-Côte d'Azur",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Provence-Alpes-Côte d'Azur"
+          }
         }
       ],
       "skills": [
@@ -2753,8 +3991,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-08-06T17:33:17",
       "salary_min": null,
       "salary_max": null,
@@ -2766,6 +4006,8 @@
       "company": "Natixis CIB France",
       "family": "Business Analyst",
       "contract": "Stage",
+      "source_contract": "Stage",
+      "domain": "Business Analyst",
       "duration": "6 mois",
       "duration_evidence": "stage de 6 mois",
       "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
@@ -2778,7 +4020,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -2794,8 +4042,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-08-06T10:10:08",
       "salary_min": null,
       "salary_max": null,
@@ -2807,6 +4057,8 @@
       "company": "ONEY",
       "family": "Data Engineer / Architecture",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Data Engineer / Architecture",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -2819,7 +4071,13 @@
       "locations": [
         {
           "city": "CROIX",
-          "region": "Hauts-de-France"
+          "region": "Hauts-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Hauts-de-France"
+          }
         }
       ],
       "skills": [
@@ -2836,8 +4094,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-08-04T07:37:12",
       "salary_min": null,
       "salary_max": null,
@@ -2849,6 +4109,8 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Business Analyst",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Business Analyst",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -2861,7 +4123,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -2879,8 +4147,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-07-20T13:22:45",
       "salary_min": null,
       "salary_max": null,
@@ -2892,6 +4162,8 @@
       "company": "BRED Banque Populaire",
       "family": "Business Analyst",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Business Analyst",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -2904,7 +4176,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -2922,8 +4200,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-07-20T08:34:35",
       "salary_min": null,
       "salary_max": null,
@@ -2935,6 +4215,8 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Chef de projet SI",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Chef de projet SI",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -2947,55 +4229,133 @@
       "locations": [
         {
           "city": "Aix-en-provence",
-          "region": "Provence-Alpes-Côte d'Azur"
+          "region": "Provence-Alpes-Côte d'Azur",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Provence-Alpes-Côte d'Azur"
+          }
         },
         {
           "city": "Dijon",
-          "region": "Bourgogne-Franche-Comté"
+          "region": "Bourgogne-Franche-Comté",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Bourgogne-Franche-Comté"
+          }
         },
         {
           "city": "Bois-Guillaume",
-          "region": "Normandie"
+          "region": "Normandie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Normandie"
+          }
         },
         {
           "city": "Saint-Herblain",
-          "region": "Pays de la Loire"
+          "region": "Pays de la Loire",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Pays de la Loire"
+          }
         },
         {
           "city": "BALMA",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         },
         {
           "city": "Montigny-le-Bretonneux",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "Strasbourg",
-          "region": "Grand Est"
+          "region": "Grand Est",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Grand Est"
+          }
         },
         {
           "city": "Villeneuve-d'Ascq",
-          "region": "Hauts-de-France"
+          "region": "Hauts-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Hauts-de-France"
+          }
         },
         {
           "city": "ORLEANS",
-          "region": "Centre-Val de Loire"
+          "region": "Centre-Val de Loire",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Centre-Val de Loire"
+          }
         },
         {
           "city": "Villeurbanne",
-          "region": "Auvergne-Rhône-Alpes"
+          "region": "Auvergne-Rhône-Alpes",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "AUVERGNE-RHÔNE-ALPES"
+          }
         },
         {
           "city": "Bruges",
-          "region": "Nouvelle-Aquitaine"
+          "region": "Nouvelle-Aquitaine",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Nouvelle-Aquitaine"
+          }
         },
         {
           "city": "Saint-Jacques-de-la-Lande",
-          "region": "Bretagne"
+          "region": "Bretagne",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Bretagne"
+          }
         },
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -3010,8 +4370,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-07-16T12:29:46",
       "salary_min": null,
       "salary_max": null,
@@ -3023,6 +4385,8 @@
       "company": "BPCE SA",
       "family": "Chef de projet SI",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Chef de projet SI",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -3035,7 +4399,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -3053,8 +4423,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-07-07T13:17:57",
       "salary_min": null,
       "salary_max": null,
@@ -3066,6 +4438,8 @@
       "company": "BPCE SA",
       "family": "Business Analyst",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Business Analyst",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -3078,7 +4452,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -3098,8 +4478,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-07-07T13:17:29",
       "salary_min": null,
       "salary_max": null,
@@ -3111,6 +4493,8 @@
       "company": "BPCE Infogérance et Technologies",
       "family": "Chef de projet SI",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Chef de projet SI",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -3123,11 +4507,23 @@
       "locations": [
         {
           "city": "Dijon",
-          "region": "Bourgogne-Franche-Comté"
+          "region": "Bourgogne-Franche-Comté",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Bourgogne-Franche-Comté"
+          }
         },
         {
           "city": "Villeurbanne",
-          "region": "Auvergne-Rhône-Alpes"
+          "region": "Auvergne-Rhône-Alpes",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "AUVERGNE-RHÔNE-ALPES"
+          }
         }
       ],
       "skills": [
@@ -3141,8 +4537,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-07-07T13:17:23",
       "salary_min": null,
       "salary_max": null,
@@ -3154,6 +4552,8 @@
       "company": "BPCE Payment Services",
       "family": "Business Analyst",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Business Analyst",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -3166,7 +4566,13 @@
       "locations": [
         {
           "city": "Charenton-le-Pont",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -3181,8 +4587,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-07-07T13:17:21",
       "salary_min": null,
       "salary_max": null,
@@ -3194,6 +4602,8 @@
       "company": "BPCE Payment Services",
       "family": "Responsable Analytics",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Responsable Analytics",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -3206,7 +4616,13 @@
       "locations": [
         {
           "city": "Charenton-le-Pont",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [],
@@ -3218,8 +4634,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-07-07T13:17:10",
       "salary_min": null,
       "salary_max": null,
@@ -3229,8 +4647,10 @@
       "id": "20910",
       "title": "Data Governance Manager (F/H)",
       "company": "Natixis CIB France",
-      "family": "Chief Data Officer / gouvernance",
+      "family": "Gouvernance et qualité des données",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Gouvernance et qualité des données",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -3243,7 +4663,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -3258,8 +4684,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-07-01T19:10:11",
       "salary_min": null,
       "salary_max": null,
@@ -3271,6 +4699,8 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Business Analyst",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Business Analyst",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -3283,23 +4713,53 @@
       "locations": [
         {
           "city": "Mérignac",
-          "region": "Nouvelle-Aquitaine"
+          "region": "Nouvelle-Aquitaine",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Nouvelle-Aquitaine"
+          }
         },
         {
           "city": "Dijon",
-          "region": "Bourgogne-Franche-Comté"
+          "region": "Bourgogne-Franche-Comté",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Bourgogne-Franche-Comté"
+          }
         },
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "Villeneuve-d'Ascq",
-          "region": "Hauts-de-France"
+          "region": "Hauts-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Hauts-de-France"
+          }
         },
         {
           "city": "BALMA",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         }
       ],
       "skills": [
@@ -3316,8 +4776,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-06-23T12:43:02",
       "salary_min": null,
       "salary_max": null,
@@ -3329,6 +4791,8 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Business Analyst",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Business Analyst",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -3341,43 +4805,103 @@
       "locations": [
         {
           "city": "Bruges",
-          "region": "Nouvelle-Aquitaine"
+          "region": "Nouvelle-Aquitaine",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Nouvelle-Aquitaine"
+          }
         },
         {
           "city": "Charenton-le-Pont",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "Saint-Herblain",
-          "region": "Pays de la Loire"
+          "region": "Pays de la Loire",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Pays de la Loire"
+          }
         },
         {
           "city": "Bois-Guillaume",
-          "region": "Normandie"
+          "region": "Normandie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Normandie"
+          }
         },
         {
           "city": "BALMA",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         },
         {
           "city": "Montigny-le-Bretonneux",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "Dijon",
-          "region": "Bourgogne-Franche-Comté"
+          "region": "Bourgogne-Franche-Comté",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Bourgogne-Franche-Comté"
+          }
         },
         {
           "city": "Villeneuve-d'Ascq",
-          "region": "Hauts-de-France"
+          "region": "Hauts-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Hauts-de-France"
+          }
         },
         {
           "city": "Saint-Estève",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         },
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         }
       ],
       "skills": [
@@ -3393,8 +4917,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-03-16T12:24:18",
       "salary_min": null,
       "salary_max": null,
@@ -3406,6 +4932,8 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Business Analyst",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Business Analyst",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -3418,39 +4946,93 @@
       "locations": [
         {
           "city": "Bois-Guillaume",
-          "region": "Normandie"
+          "region": "Normandie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Normandie"
+          }
         },
         {
           "city": "BALMA",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         },
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "Charenton-le-Pont",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "Montigny-le-Bretonneux",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "Saint-Estève",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         },
         {
           "city": "Dijon",
-          "region": "Bourgogne-Franche-Comté"
+          "region": "Bourgogne-Franche-Comté",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Bourgogne-Franche-Comté"
+          }
         },
         {
           "city": "Villeneuve-d'Ascq",
-          "region": "Hauts-de-France"
+          "region": "Hauts-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Hauts-de-France"
+          }
         },
         {
           "city": "Saint-Herblain",
-          "region": "Pays de la Loire"
+          "region": "Pays de la Loire",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Pays de la Loire"
+          }
         }
       ],
       "skills": [
@@ -3467,8 +5049,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-02-24T10:29:18",
       "salary_min": null,
       "salary_max": null,
@@ -3480,6 +5064,8 @@
       "company": "BPCE Solutions Informatiques",
       "family": "Business Analyst",
       "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Business Analyst",
       "duration": null,
       "duration_evidence": null,
       "duration_note": null,
@@ -3492,39 +5078,93 @@
       "locations": [
         {
           "city": "Saint-Estève",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         },
         {
           "city": "Montigny-le-Bretonneux",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "Saint-Herblain",
-          "region": "Pays de la Loire"
+          "region": "Pays de la Loire",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Pays de la Loire"
+          }
         },
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "Charenton-le-Pont",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
         },
         {
           "city": "BALMA",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         },
         {
           "city": "Dijon",
-          "region": "Bourgogne-Franche-Comté"
+          "region": "Bourgogne-Franche-Comté",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Bourgogne-Franche-Comté"
+          }
         },
         {
           "city": "Villeneuve-d'Ascq",
-          "region": "Hauts-de-France"
+          "region": "Hauts-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Hauts-de-France"
+          }
         },
         {
           "city": "Bruges",
-          "region": "Nouvelle-Aquitaine"
+          "region": "Nouvelle-Aquitaine",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Nouvelle-Aquitaine"
+          }
         }
       ],
       "skills": [
@@ -3541,8 +5181,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T01:48:12+00:00",
-      "status": "snapshot",
+      "observed_at": "2026-10-31T03:24:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-10-31T03:24:05+00:00",
       "modified_at": "2026-02-04T16:10:46",
       "salary_min": null,
       "salary_max": null,
@@ -3557,7 +5199,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Île-de-France"
+          }
         }
       ],
       "skills": [
@@ -3586,11 +5234,15 @@
         "CMSI",
         "ARAMIS"
       ],
-      "status": "snapshot",
+      "status": "unverified",
+      "status_origin": "manual_snapshot",
+      "status_checked_at": "2026-10-31",
       "modified_at": null,
       "salary_min": null,
       "salary_max": null,
-      "remote_source": null
+      "remote_source": null,
+      "domain": "Auditeur SI",
+      "source_contract": "CDI"
     },
     {
       "id": "editorial-deloitte-amoa",
@@ -3601,7 +5253,13 @@
       "locations": [
         {
           "city": "Toulouse",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         }
       ],
       "skills": [
@@ -3631,11 +5289,15 @@
         "CMSI",
         "ARAMIS"
       ],
-      "status": "snapshot",
+      "status": "unverified",
+      "status_origin": "manual_snapshot",
+      "status_checked_at": "2026-10-31",
       "modified_at": null,
       "salary_min": null,
       "salary_max": null,
-      "remote_source": null
+      "remote_source": null,
+      "domain": "Conseil & transformation SI",
+      "source_contract": "CDI"
     },
     {
       "id": "editorial-capgemini-plm-549022",
@@ -3646,7 +5308,13 @@
       "locations": [
         {
           "city": "Toulouse",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         }
       ],
       "skills": [
@@ -3673,14 +5341,22 @@
       "pathways": [
         "CMSI"
       ],
-      "status": "snapshot",
+      "status": "unverified",
+      "status_origin": "manual_snapshot",
+      "status_checked_at": "2026-10-31",
       "modified_at": null,
       "salary_min": null,
       "salary_max": null,
-      "remote_source": null
+      "remote_source": null,
+      "domain": "Consultant ERP / solutions métier",
+      "source_contract": "Stage"
     },
     {
       "id": "editorial-wttj-wiremind-po",
+      "status": "closed",
+      "status_origin": "owner_review",
+      "status_checked_at": "2026-10-31",
+      "status_note": "Fermeture signalée dans la revue transmise par le propriétaire le 31 octobre 2026. Conservée comme exemple pédagogique archivé, pas comme opportunité actuelle. Le contrôle automatisé de la page n’a pas permis de confirmer indépendamment cette fermeture.",
       "title": "Product Owner Data (M/F) - Internship - Paris",
       "company": "Wiremind",
       "family": "Product Owner",
@@ -3688,7 +5364,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Île-de-France"
+          }
         }
       ],
       "skills": [
@@ -3696,7 +5378,7 @@
         "Recette / tests"
       ],
       "description": "Synthèse éditoriale : participer à la définition, à la priorisation et aux tests des fonctionnalités de produits de prévision et d’optimisation, en lien avec les équipes produit, logiciel et data science.",
-      "eligibility_note": "Master ingénierie ou management, compétences analytiques et anglais demandés. Publication ancienne : disponibilité à revérifier.",
+      "eligibility_note": "Exemple archivé. Master ingénierie ou management, compétences analytiques et anglais demandés.",
       "education_level": "Master en cours",
       "education_evidence": "You are pursuing a Master's degree in Engineering or Management and looking for a internship",
       "study_stage": "En cours de Master",
@@ -3715,14 +5397,19 @@
       "pathways": [
         "CMSI"
       ],
-      "status": "snapshot",
       "modified_at": null,
       "salary_min": null,
       "salary_max": null,
-      "remote_source": null
+      "remote_source": null,
+      "domain": "Product Owner",
+      "source_contract": "Stage"
     },
     {
       "id": "editorial-wttj-navigacom-cyber",
+      "status": "closed",
+      "status_origin": "owner_review",
+      "status_checked_at": "2026-10-31",
+      "status_note": "Fermeture signalée dans la revue transmise par le propriétaire le 31 octobre 2026. Conservée comme exemple pédagogique archivé, pas comme opportunité actuelle. Le contrôle automatisé de la page n’a pas permis de confirmer indépendamment cette fermeture.",
       "title": "Consultant(e) Junior(e) Cybersécurité",
       "company": "Navigacom",
       "family": "Consultant cybersécurité",
@@ -3730,7 +5417,13 @@
       "locations": [
         {
           "city": "Paris",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Île-de-France"
+          }
         }
       ],
       "skills": [
@@ -3739,7 +5432,7 @@
         "IAM"
       ],
       "description": "Synthèse éditoriale : contribuer à des projets cybersécurité, aux recommandations stratégiques et aux études de solutions. La page mentionne notamment la sécurité réseau, la gestion des identités et la sécurité opérationnelle.",
-      "eligibility_note": "Bac+5 spécialisé cybersécurité et connaissances techniques attendus ; le seul intitulé du Master MSI ne suffit pas. Publication et date de début anciennes : disponibilité à revérifier.",
+      "eligibility_note": "Exemple archivé. Bac+5 spécialisé cybersécurité et connaissances techniques attendus ; le seul intitulé du Master MSI ne suffit pas.",
       "education_level": "Bac+5",
       "education_evidence": "Diplômé(e) d’une formation supérieure (Bac+5) en cybersécurité (réseaux et systèmes)",
       "source": "Welcome to the Jungle",
@@ -3758,11 +5451,12 @@
       "pathways": [
         "CMSI"
       ],
-      "status": "snapshot",
       "modified_at": null,
       "salary_min": null,
       "salary_max": null,
-      "remote_source": null
+      "remote_source": null,
+      "domain": "Consultant cybersécurité",
+      "source_contract": "CDI"
     },
     {
       "id": "editorial-jobteaser-cio-advisory",
@@ -3773,7 +5467,13 @@
       "locations": [
         {
           "city": "Issy-les-Moulineaux",
-          "region": "Île-de-France"
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Île-de-France"
+          }
         }
       ],
       "skills": [],
@@ -3798,11 +5498,15 @@
         "CMSI",
         "ARAMIS"
       ],
-      "status": "snapshot",
+      "status": "unverified",
+      "status_origin": "manual_snapshot",
+      "status_checked_at": "2026-10-31",
       "modified_at": null,
       "salary_min": null,
       "salary_max": null,
-      "remote_source": null
+      "remote_source": null,
+      "domain": "Conseil & transformation SI",
+      "source_contract": "Stage"
     },
     {
       "id": "editorial-jobteaser-business-analyst",
@@ -3813,7 +5517,13 @@
       "locations": [
         {
           "city": "Toulouse",
-          "region": "Occitanie"
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
         }
       ],
       "skills": [
@@ -3840,7 +5550,75 @@
         "CMSI",
         "ID"
       ],
-      "status": "snapshot",
+      "status": "unverified",
+      "status_origin": "manual_snapshot",
+      "status_checked_at": "2026-10-31",
+      "modified_at": null,
+      "salary_min": null,
+      "salary_max": null,
+      "remote_source": null,
+      "domain": "Business Analyst",
+      "source_contract": "Stage"
+    },
+    {
+      "id": "editorial-capgemini-pl-506269",
+      "title": "Intern Application Consultant (with German)",
+      "company": "Capgemini",
+      "family": "Conseil & transformation SI",
+      "domain": "Conseil & transformation SI",
+      "contract": "Stage",
+      "source_contract": "Internship",
+      "locations": [
+        {
+          "city": "Wrocław",
+          "region": "Pologne",
+          "country": "Pologne",
+          "country_code": "PL"
+        },
+        {
+          "city": "Warszawa",
+          "region": "Pologne",
+          "country": "Pologne",
+          "country_code": "PL"
+        },
+        {
+          "city": "Poznań",
+          "region": "Pologne",
+          "country": "Pologne",
+          "country_code": "PL"
+        },
+        {
+          "city": "Opole",
+          "region": "Pologne",
+          "country": "Pologne",
+          "country_code": "PL"
+        }
+      ],
+      "skills": [],
+      "description": "Editorial summary: support the analysis and configuration of business applications in an international team. The employer accepts students from at least the second year in IT, mathematics or physics, or applicants with initial IT practice or completed courses. English and German at B2 are required. Duration is not specified.",
+      "education_level": "2nd year of studies or initial IT practice / courses",
+      "education_evidence": "You are a student in at least the second year of studies of specific subject areas (IT, mathematics, physics) or you have taken your first steps in IT (practice, completed courses)",
+      "education_note": "No French diploma equivalence inferred.",
+      "eligibility_note": "English and German B2 required. Located in Poland, not Germany. Check the employer’s page for eligibility and current availability.",
+      "source": "Capgemini · site carrières",
+      "source_key": "capgemini",
+      "source_url": "https://careers.capgemini.com/job/Wroc%C5%82aw-Intern-Application-Consultant-(with-German)/1406556233/",
+      "observed_at": "2026-10-31",
+      "published_at": "2026-10-13",
+      "duration": null,
+      "duration_evidence": null,
+      "duration_note": null,
+      "study_stage": null,
+      "study_stage_evidence": null,
+      "requirements_method": "editorial_verified",
+      "pathways": [
+        "CMSI",
+        "ARAMIS"
+      ],
+      "collection_method": "editorial",
+      "status": "unverified",
+      "status_origin": "manual_snapshot",
+      "status_checked_at": "2026-10-31",
       "modified_at": null,
       "salary_min": null,
       "salary_max": null,
