@@ -1,6 +1,6 @@
 # Sources · Élan MSI
 
-Ce document distingue références académiques, source principale automatisée et fiches éditoriales. Les dates propres à chaque fiche figurent dans les données et l’interface ; une importation quotidienne ne remplace pas une consultation de la page d’origine.
+Ce document distingue références académiques, trois sources automatisées et fiches éditoriales. Les dates propres à chaque fiche figurent dans les données et l’interface ; une importation quotidienne ne remplace pas une consultation de la page d’origine.
 
 ## Références académiques consultables
 
@@ -10,11 +10,21 @@ Ce document distingue références académiques, source principale automatisée 
 
 Ces pages publiques sont les références consultables pour les parcours. La brochure MSI fournie a aidé à cadrer le projet, mais une mention isolée de « page 3 » n’est pas utilisée comme justification publique.
 
-## BPCE, source principale
+## BPCE, source bancaire automatisée
 
 Le [catalogue data.gouv.fr](https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques) décrit le jeu d’offres publiques du Groupe BPCE. Le pipeline utilise son [export JSON public](https://bpce.opendatasoft.com/api/explore/v2.1/catalog/datasets/groupe-bpce-offres-emploi/exports/json), filtre le périmètre MSI et regroupe les localisations.
 
-Le poids de BPCE est calculé dans `bpce_share_percent` et présenté comme celui de la source principale, non d’un complément marginal. La licence du jeu ouvert ne s’étend pas aux annonces des autres plateformes.
+Le poids de BPCE est calculé dans `bpce_share_percent`, non présenté comme un complément marginal. La licence du jeu ouvert ne s’étend pas aux annonces des autres plateformes.
+
+## Sopra Steria et Bosch, sélections automatisées
+
+Les listes publiques de [Sopra Steria](https://jobs.smartrecruiters.com/?company=SopraSteria1) et [Bosch](https://jobs.smartrecruiters.com/?company=BoschGroup) sont consultées via la [Posting API documentée](https://developers.smartrecruiters.com/docs/endpoints), dans son périmètre public sans authentification décrit par la [documentation d’authentification](https://developers.smartrecruiters.com/docs/authentication). Aucun accès aux candidatures ou aux offres internes.
+
+Les six recherches `data`, `cyber`, `business analyst`, `product owner`, `stage`, `alternance` sont limitées à douze pages de 100 chacune ; les identifiants sont fusionnés, puis au plus 40 détails étudiants MSI récents sont retenus par employeur. L’intitulé doit satisfaire le classificateur MSI et indiquer explicitement un stage/internship/Praktikum ou une alternance/apprenticeship. Ces catégories ne garantissent pas l’équivalence juridique des contrats entre pays.
+
+Chaque détail valide l’identité, l’URL recruteur HTTPS attendue, la date, le pays explicite et le texte des missions. Les URL de détail sont construites sur un hôte fixe, pas suivies aveuglément depuis le champ `ref`. Les réponses 404/410 entre liste et détail sont ignorées comme suppressions concurrentes ; les autres erreurs font échouer la collecte et conservent tout l’instantané précédent.
+
+Seuls des faits structurés et une synthèse de métadonnées sont publiés, pas les descriptions intégrales. La présence lors de la collecte ne certifie pas qu’une candidature sera acceptée. Les limites et volumes réels apparaissent dans `additional_sources` ; aucune exhaustivité ni licence ouverte n’est présumée.
 
 ## Fiches éditoriales
 

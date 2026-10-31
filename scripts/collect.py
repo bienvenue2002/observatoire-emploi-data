@@ -369,7 +369,7 @@ def load_curated(path):
     return result
 
 
-def export(records, output, observed_at, curated_path=None, scope="msi"):
+def export(records, output, observed_at, curated_path=None, scope="msi", additional_jobs=None, additional_sources=None):
     validate_source(records, observed_at)
     jobs, matched = transform(records, observed_at, scope=scope)
     bpce_count = len(jobs)
@@ -383,11 +383,24 @@ def export(records, output, observed_at, curated_path=None, scope="msi"):
             if "country_code" not in location:
                 location.update(country_fields({"country": "France", "state": location["region"]}))
     jobs.extend(editorial)
+    for job in additional_jobs or []:
+        required = {"id", "title", "company", "family", "domain", "source", "source_key",
+                    "source_url", "description", "locations", "skills", "pathways",
+                    "contract", "collection_method", "observed_at", "modified_at"}
+        if not isinstance(job, dict) or not required.issubset(job) or not valid_url(job["source_url"]):
+            raise ValueError("Source supplémentaire incomplète.")
+        if not job["description"] or not job["title"] or not job["locations"] or not pathways(job["family"]):
+            raise ValueError("Offre supplémentaire hors périmètre ou incomplète.")
+        validate_date(job["modified_at"], "Publication supplémentaire")
+        validate_date(job["observed_at"], "Collecte supplémentaire")
+        jobs.append(job)
+    if len({j["id"] for j in jobs}) != len(jobs):
+        raise ValueError("Doublon entre sources.")
     if not jobs or not bpce_count:
         raise ValueError("Aucune offre BPCE pertinente ; ancien instantané conservé.")
     meta = {
         "title": "Élan MSI · Débouchés et opportunités",
-        "edition": "Master MSI, France et international : source principale BPCE enrichie d’une sélection éditoriale",
+        "edition": "Master MSI, France et international : BPCE et API publiques, enrichis d’une sélection éditoriale",
         "scope_id": scope,
         "last_success_at": observed_at,
         "observed_at": observed_at,
@@ -398,10 +411,12 @@ def export(records, output, observed_at, curated_path=None, scope="msi"):
         "france_rows": sum(norm(r.get("country")) == "france" for r in records),
         "matched_location_rows": matched, "unique_offers": len(jobs),
         "bpce_unique_offers": bpce_count, "editorial_offers": len(editorial),
+        "additional_sources": additional_sources or [],
+        "public_api_offers": len(additional_jobs or []),
         "sources": dict(Counter(j["source"] for j in jobs)),
         "competency_statistics": "Descriptions intégrales BPCE uniquement ; les fiches éditoriales sont exclues du dénominateur.",
         "salary_available": sum(j["salary_min"] is not None or j["salary_max"] is not None for j in jobs),
-        "scope": "Offres liées aux métiers du Master MSI, France et international. BPCE est la source principale ; corpus partiel et fortement bancaire. Rattachement pédagogique indicatif, sans garantie d’éligibilité ni d’ouverture actuelle.",
+        "scope": "Offres liées aux métiers du Master MSI, France et international. Export BPCE, sélections bornées d’API publiques et fiches éditoriales. Corpus partiel, non représentatif. Rattachement pédagogique indicatif, sans garantie d’éligibilité ni d’ouverture actuelle.",
         "deduplication": "Une annonce par référence source ; les villes multiples sont regroupées.",
         "families": dict(Counter(j["family"] for j in jobs)),
         "pipeline_version": "4.0.0",

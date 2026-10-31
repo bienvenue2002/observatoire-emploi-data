@@ -22,7 +22,9 @@ Le moteur de recherche et les ressources pédagogiques s’appuient sur le même
 
 ## D’où viennent les offres ?
 
-**BPCE est la source principale**, enrichie d’une sélection éditoriale Deloitte, Capgemini, Welcome to the Jungle et JobTeaser. Sa part réelle et les volumes sont calculés à partir des fichiers publics plutôt que figés dans ce README ; ce corpus très bancaire ne représente pas tout le marché.
+**Trois sources sont collectées automatiquement : BPCE, Sopra Steria et Bosch**, avec une sélection éditoriale Deloitte, Capgemini, Welcome to the Jungle et JobTeaser. Les volumes par source et le poids de BPCE sont calculés dans les métadonnées ; cet élargissement ne rend pas le corpus représentatif de tout le marché.
+
+Sopra Steria (conseil et services numériques) et Bosch (industrie et technologies) sont interrogés via la [Posting API publique SmartRecruiters](https://developers.smartrecruiters.com/docs/endpoints). Chaque employeur est couvert par une sélection bornée : six recherches, douze pages de 100 par recherche et au plus 40 fiches étudiantes MSI. Les détails doivent passer les contrôles d’identité, d’URL, de date, de pays et de description avant publication ; les fiches ne recopient pas les descriptions intégrales.
 
 La collecte utilise l’[export public BPCE](https://bpce.opendatasoft.com/api/explore/v2.1/catalog/datasets/groupe-bpce-offres-emploi/exports/json), décrit dans le [catalogue data.gouv.fr](https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques). La Licence Ouverte du jeu BPCE ne s’étend pas aux plateformes éditoriales ; les fiches manuelles utilisent des résumés originaux et renvoient aux pages d’origine.
 
@@ -34,9 +36,9 @@ Les huit fiches éditoriales comprennent deux exemples archivés. Les fermetures
 
 Le [workflow GitHub Actions](https://github.com/bienvenue2002/observatoire-emploi-data/blob/master/.github/workflows/pages.yml) est programmé chaque jour à **04 h 17 UTC**, soit 05 h 17 en France métropolitaine en hiver et 06 h 17 en été. Il peut aussi être lancé manuellement depuis GitHub ; l’ordinateur personnel peut rester éteint.
 
-1. Télécharger l’export BPCE et valider le schéma, les descriptions, les URL et les dates.
+1. Télécharger l’export BPCE et les sélections SmartRecruiters Sopra Steria/Bosch ; valider les schémas, les descriptions, les URL et les dates.
 2. Retenir les métiers MSI, regrouper les localisations et importer les fiches éditoriales sans changer leur date de vérification.
-3. Refuser une baisse supérieure à 50 % des références BPCE sans validation humaine explicite.
+3. Refuser une baisse supérieure à 50 % de chaque source déjà établie (au moins dix fiches) sans validation humaine explicite ; refuser la disparition totale d’une source SmartRecruiters.
 4. Préparer et contrôler les nouveaux fichiers avant de remplacer l’instantané, avec sauvegarde et restauration en cas d’échec de remplacement.
 5. Exécuter les tests Python, JavaScript et navigateur, versionner les données puis publier GitHub Pages dans le même workflow.
 
@@ -45,6 +47,15 @@ Une collecte refusée conserve le dernier corpus valide et sa date de succès ; 
 Ce n’est pas du temps réel : de nouvelles offres apparaissent après leur présence dans l’export et une collecte réussie. GitHub précise que les [exécutions programmées peuvent être retardées et désactivées après 60 jours d’inactivité d’un dépôt public](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows).
 
 Les fiches éditoriales ne sont pas revérifiées automatiquement. Aucun robot ne contourne les accès de Welcome to the Jungle ou JobTeaser, et aucun compte candidat ou CV n’est demandé.
+
+## Lecture immédiate, favoris et RSS
+
+- **Démarrage :** trois vraies fiches datées sont présentes dans le HTML initial, avant JavaScript. La [page sans JavaScript](https://bienvenue2002.github.io/observatoire-emploi-data/offres.html) donne toute la sélection étudiante hors archives ; aucune fiche fictive n’est utilisée si le chargement échoue.
+- **Filtres :** métier, pays et contrat au premier niveau ; études, statut et autres critères sous « Plus de filtres ». Le lien principal ouvre les offres hors archives ; un lien `?status=archived` affiche un avertissement et un retour à la recherche normale.
+- **Favoris de session :** sélection en mémoire uniquement, perdue au rechargement ou à la fermeture. Les exports CSV/JSON de tous les favoris ignorent les filtres actifs et conservent les statuts, y compris une archive sauvegardée. Ils sont distincts des exports de la recherche filtrée. Aucune sauvegarde de compte ou synchronisation entre appareils.
+- **RSS public :** [flux Élan MSI](https://bienvenue2002.github.io/observatoire-emploi-data/feed.xml), au plus 100 stages/alternances hors archives, triés par date source et identifiants stables. L’abonnement se fait dans un lecteur RSS ; ni alerte e-mail/push ni flux personnalisé par favoris. L’absence d’un poste dans ce flux limité ne prouve pas sa fermeture.
+
+Les pages HTML et le RSS sont générés à partir du même instantané validé par `python scripts/build_public.py`, dans le workflow de publication. Le RSS utilise la date fournie par la source (publication/republication SmartRecruiters, dernière modification BPCE), pas une nouvelle date quotidienne inventée.
 
 ## Lancer et vérifier
 
@@ -67,7 +78,8 @@ python scripts/refresh.py
 
 # Rejouer un export local autorisé, sans appel réseau
 python scripts/collect.py --input /chemin/export-bpce.json \
-  --observed-at 2026-10-31T03:18:42+00:00 --scope msi-international
+  --observed-at 2026-10-31T03:18:42+00:00 --scope msi-international \
+  --output /tmp/elan-msi-rejeu-bpce
 ```
 
 Ne pas publier l’export brut : seules les données normalisées de `site/data/` sont déployées. `--allow-large-drop` doit être réservé à une revue humaine d’une baisse réelle ; il ne désactive pas les autres validations.

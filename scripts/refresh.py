@@ -10,8 +10,10 @@ from pathlib import Path
 from urllib.request import Request, urlopen
 try:
     from .collect import API_URL, ROOT, export, commit_files
+    from .smartrecruiters import collect as collect_postings
 except ImportError:
     from collect import API_URL, ROOT, export, commit_files
+    from smartrecruiters import collect as collect_postings
 
 PUBLIC_FILES = ("jobs.json", "jobs.csv", "meta.json",
                 "msi-jobs.json", "msi-jobs.csv", "msi-meta.json")
@@ -34,7 +36,7 @@ def write_status(output, status):
     os.replace(temporary, output / "update-status.json")
 
 
-def refresh(output, loader=download, attempted_at=None, curated=None, allow_large_drop=False):
+def refresh(output, loader=download, attempted_at=None, curated=None, allow_large_drop=False, extra_loader=None):
     output = Path(output)
     previous = json.loads((output / "meta.json").read_text(encoding="utf-8"))
     attempted_at = attempted_at or now_utc()
@@ -44,14 +46,20 @@ def refresh(output, loader=download, attempted_at=None, curated=None, allow_larg
               "workflow_url": "https://github.com/bienvenue2002/observatoire-emploi-data/actions/workflows/pages.yml"}
     try:
         records = loader()
+        extra_jobs, extra_sources = extra_loader(attempted_at) if extra_loader else ([], [])
         # Rendering, validation and mirrors are staged away from the live data.
         with tempfile.TemporaryDirectory(dir=output.parent) as folder:
             staging = Path(folder)
             meta = export(records, staging, attempted_at,
-                          curated or ROOT / "data/curated.json", scope="msi-international")
+                          curated or ROOT / "data/curated.json", scope="msi-international",
+                          additional_jobs=extra_jobs, additional_sources=extra_sources)
             old_count = previous.get("bpce_unique_offers", 0)
             if not allow_large_drop and old_count >= 10 and meta["bpce_unique_offers"] < old_count * 0.5:
                 raise ValueError("Chute de plus de 50 % du corpus BPCE ; contrôle manuel nécessaire.")
+            for source in previous.get("additional_sources", []):
+                replacement = next((s for s in extra_sources if s["key"] == source["key"]), None)
+                if replacement is None or (not allow_large_drop and source["offers"] >= 10 and replacement["offers"] < source["offers"] * .5):
+                    raise ValueError("Source supplémentaire absente ou chute majeure ; revue nécessaire.")
             status.update(status="success", last_success_at=attempted_at,
                           bpce_offers=meta["bpce_unique_offers"], reason=None)
             write_status(staging, status)
@@ -70,7 +78,7 @@ def main():
     parser.add_argument("--output", type=Path, default=ROOT / "site/data")
     parser.add_argument("--allow-large-drop", action="store_true", help="Après revue humaine uniquement")
     args = parser.parse_args()
-    return 0 if refresh(args.output, allow_large_drop=args.allow_large_drop) else 1
+    return 0 if refresh(args.output, allow_large_drop=args.allow_large_drop, extra_loader=collect_postings) else 1
 
 
 if __name__ == "__main__":

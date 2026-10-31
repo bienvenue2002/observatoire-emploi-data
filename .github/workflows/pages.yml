@@ -45,7 +45,7 @@ jobs:
           node --check site/app.js
           node --check site/msi-app.js
           node tests/test_i18n.cjs
-      - name: Actualiser BPCE, conserver les données si erreur
+      - name: Actualiser les trois sources, conserver les données si erreur
         id: refresh
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         continue-on-error: true
@@ -57,6 +57,8 @@ jobs:
           else
             python scripts/refresh.py
           fi
+      - name: Générer la lecture sans JavaScript et le RSS
+        run: python scripts/build_public.py
       - name: Revérifier les données avant publication
         run: python -m unittest discover -s tests -v
       - uses: actions/setup-node@v4
@@ -71,7 +73,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add site/data
+          git add site/data site/index.html site/offres.html site/feed.xml
           if ! git diff --cached --quiet; then
             git commit -m "Actualiser le corpus MSI et son état de collecte"
             git push origin HEAD:master
@@ -109,5 +111,5 @@ jobs:
       - name: Signaler l’échec de collecte après publication du dernier corpus valide
         if: needs.build.outputs.refresh_failed == 'true'
         run: |
-          echo "::error::Collecte BPCE refusée. Dernier corpus valide conservé et avertissement publié."
+          echo "::error::Collecte multi-source refusée. Dernier corpus valide conservé et avertissement publié."
           exit 1

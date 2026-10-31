@@ -148,7 +148,7 @@ window.ELAN_I18N = {
     "archives": "Exemples archivés uniquement",
     "allStatuses": "Tous les statuts",
     "closed": "Offre fermée — exemple archivé",
-    "sourcePresent": "Présente dans le dernier export BPCE",
+    "sourcePresent": "Présente à la dernière collecte · disponibilité à vérifier",
     "unverified": "Fiche éditoriale — disponibilité à vérifier",
     "statusEvidence": "Origine du statut",
     "lastSuccess": "Dernière collecte BPCE réussie",
@@ -308,7 +308,7 @@ window.ELAN_I18N = {
     "archives": "Archived examples only",
     "allStatuses": "All statuses",
     "closed": "Closed listing — archived example",
-    "sourcePresent": "Present in the latest BPCE export",
+    "sourcePresent": "Present at last collection · check availability",
     "unverified": "Editorial profile — check availability",
     "statusEvidence": "Status origin",
     "lastSuccess": "Last successful BPCE collection",
@@ -468,7 +468,7 @@ window.ELAN_I18N = {
     "archives": "Solo ejemplos archivados",
     "allStatuses": "Todos los estados",
     "closed": "Oferta cerrada — ejemplo archivado",
-    "sourcePresent": "Presente en el último exportado BPCE",
+    "sourcePresent": "Presente en la última recogida · verifica disponibilidad",
     "unverified": "Ficha editorial — comprobar disponibilidad",
     "statusEvidence": "Origen del estado",
     "lastSuccess": "Última recogida BPCE correcta",
@@ -628,7 +628,7 @@ window.ELAN_I18N = {
     "archives": "Nur archivierte Beispiele",
     "allStatuses": "Alle Status",
     "closed": "Geschlossenes Angebot — Archivbeispiel",
-    "sourcePresent": "Im neuesten BPCE-Export vorhanden",
+    "sourcePresent": "Beim letzten Abruf vorhanden · Verfügbarkeit prüfen",
     "unverified": "Redaktioneller Eintrag — Verfügbarkeit prüfen",
     "statusEvidence": "Herkunft des Status",
     "lastSuccess": "Letzter erfolgreicher BPCE-Abruf",
@@ -788,7 +788,7 @@ window.ELAN_I18N = {
     "archives": "アーカイブ事例のみ",
     "allStatuses": "すべての状態",
     "closed": "募集終了 — アーカイブ事例",
-    "sourcePresent": "最新のBPCEデータに掲載",
+    "sourcePresent": "直近の収集時に掲載・募集状況は要確認",
     "unverified": "編集掲載 — 募集状況は要確認",
     "statusEvidence": "状態の根拠",
     "lastSuccess": "直近のBPCE収集成功日時",
@@ -948,7 +948,7 @@ window.ELAN_I18N = {
     "archives": "仅归档示例",
     "allStatuses": "所有状态",
     "closed": "职位已关闭 — 归档示例",
-    "sourcePresent": "存在于最新BPCE导出中",
+    "sourcePresent": "上次采集时存在，请确认招聘状态",
     "unverified": "人工编辑 — 请确认是否仍开放",
     "statusEvidence": "状态依据",
     "lastSuccess": "最近一次BPCE采集成功时间",
@@ -961,3 +961,78 @@ window.ELAN_I18N = {
     "pathwayOfficial": "官方培养方案 ↗"
   }
 };
+
+// Version 4.2: source diversification, session-only favorites and public RSS.
+const ELAN_FOLLOW_KEYS = ["scopeNote","sourcesIntro","lastSuccess","bpceShare","methodDatesText","save","saved","saveNamed","removeNamed","savedCount","exportSaved","savedNote","archiveWarning","backCurrent","rssLink","rssNote","plainLink","apiCoverage"];
+const ELAN_FOLLOW_TEXT = {
+  fr: [
+    "BPCE, Sopra Steria et Bosch : trois sources automatisées, complétées de fiches éditoriales datées. Corpus MSI partiel, non représentatif ; disponibilité et éligibilité à confirmer.",
+    "BPCE est collecté via son export public ; Sopra Steria et Bosch via leur API publique SmartRecruiters. La sélection éditoriale n’est pas revérifiée automatiquement. Les exemples fermés restent séparés.",
+    "Dernière collecte automatisée réussie","BPCE : {n} % du corpus",
+    "Collecte BPCE, Sopra Steria et Bosch prévue chaque jour à 04:17 UTC, sous réserve d’exécution par GitHub. Toute erreur conserve le dernier corpus valide. Les fiches éditoriales gardent leur propre date. Le flux RSS est régénéré après publication.",
+    "Garder en favori","En favori","Garder « {title} » en favori","Retirer « {title} » des favoris","Mes favoris ({n})","Exporter tous mes favoris",
+    "Favoris de cette visite uniquement : exporte-les avant de fermer ou recharger la page. Exports indépendants des filtres, archives identifiées incluses si sauvegardées. Aucun compte ni synchronisation.",
+    "Tu consultes des exemples archivés, pas des postes à pourvoir.","Revenir aux offres hors archives",
+    "Suivre les nouvelles offres par RSS","Flux public : au plus 100 stages et alternances récents hors archives. À ouvrir dans un lecteur RSS ; aucune alerte e-mail.","Version sans JavaScript",
+    "Sélection bornée : six recherches, douze pages de 100 par recherche et 40 fiches MSI étudiantes au maximum par employeur. Faits structurés, sans republication des descriptions intégrales. Présence au moment de la collecte, disponibilité à confirmer."
+  ],
+  en: [
+    "BPCE, Sopra Steria and Bosch: three automated sources with dated editorial profiles. Partial, non-representative MSI dataset; confirm availability and eligibility.",
+    "BPCE uses its public export; Sopra Steria and Bosch use their public SmartRecruiters API. Editorial profiles are not automatically reverified. Closed examples remain separate.",
+    "Last successful automated collection","BPCE: {n}% of the dataset",
+    "BPCE, Sopra Steria and Bosch are scheduled daily at 04:17 UTC, subject to GitHub execution. Any error retains the last valid dataset. Editorial entries keep their own dates. RSS is regenerated on publication.",
+    "Save offer","Saved","Save “{title}”","Remove “{title}” from favorites","My favorites ({n})","Export all my favorites",
+    "Favorites last for this visit only: export before closing or reloading. Exports ignore filters and include marked archives if saved. No account or synchronization.",
+    "These are archived examples, not vacancies to apply for.","Back to non-archived offers",
+    "Follow new offers via RSS","Public feed: up to 100 recent non-archived internships and work-study offers. Use an RSS reader; no email alerts.","No-JavaScript version",
+    "Bounded selection: six searches, twelve pages of 100 per search, and at most 40 MSI student listings per employer. Structured facts, not full descriptions. Confirm availability with the recruiter."
+  ],
+  es: [
+    "BPCE, Sopra Steria y Bosch: tres fuentes automáticas con fichas editoriales fechadas. Corpus MSI parcial, no representativo; confirma disponibilidad y requisitos.",
+    "BPCE utiliza su exportación pública; Sopra Steria y Bosch, su API pública SmartRecruiters. Las fichas editoriales no se verifican automáticamente. Los ejemplos cerrados se separan.",
+    "Última recogida automática correcta","BPCE: {n} % del corpus",
+    "Recogida diaria de BPCE, Sopra Steria y Bosch a las 04:17 UTC, sujeta a GitHub. Ante un error se conserva el último corpus válido. Las fichas editoriales mantienen sus fechas. El RSS se regenera al publicar.",
+    "Guardar oferta","Guardada","Guardar «{title}»","Eliminar «{title}» de favoritos","Mis favoritos ({n})","Exportar todos mis favoritos",
+    "Favoritos solo durante esta visita: expórtalos antes de cerrar o recargar. La exportación ignora filtros e incluye archivos identificados si se guardaron. Sin cuenta ni sincronización.",
+    "Estos son ejemplos archivados, no vacantes disponibles.","Volver a ofertas sin archivar",
+    "Seguir ofertas nuevas por RSS","Flujo público: hasta 100 prácticas y ofertas de formación dual recientes sin archivar. Utiliza un lector RSS; sin alertas por correo.","Versión sin JavaScript",
+    "Selección limitada: seis búsquedas, doce páginas de 100 por búsqueda y como máximo 40 fichas MSI para estudiantes por empresa. Datos estructurados, no descripciones completas. Confirma disponibilidad con la empresa."
+  ],
+  de: [
+    "BPCE, Sopra Steria und Bosch: drei automatische Quellen mit datierten redaktionellen Einträgen. Begrenzter, nicht repräsentativer MSI-Datensatz; Verfügbarkeit und Eignung prüfen.",
+    "BPCE nutzt den öffentlichen Export, Sopra Steria und Bosch ihre öffentliche SmartRecruiters-API. Redaktionelle Einträge werden nicht automatisch nachgeprüft. Geschlossene Beispiele bleiben getrennt.",
+    "Letzter erfolgreicher automatischer Abruf","BPCE: {n} % des Datensatzes",
+    "Täglicher Abruf bei BPCE, Sopra Steria und Bosch um 04:17 UTC, abhängig von GitHub. Bei Fehlern bleibt der letzte gültige Datensatz erhalten. Redaktionelle Einträge behalten eigene Daten. RSS wird bei Veröffentlichung erneuert.",
+    "Angebot merken","Gemerkt","„{title}“ merken","„{title}“ aus Favoriten entfernen","Meine Favoriten ({n})","Alle Favoriten exportieren",
+    "Favoriten gelten nur während dieses Besuchs: vor Schließen oder Neuladen exportieren. Der Export ignoriert Filter und enthält markierte Archive, falls gespeichert. Kein Konto oder Abgleich.",
+    "Dies sind archivierte Beispiele, keine verfügbaren Stellen.","Zu nicht archivierten Angeboten",
+    "Neue Angebote per RSS verfolgen","Öffentlicher Feed: bis zu 100 aktuelle nicht archivierte Praktikums- und Ausbildungsangebote. RSS-Reader verwenden; keine E-Mail-Benachrichtigungen.","Version ohne JavaScript",
+    "Begrenzte Auswahl: sechs Suchläufe, je zwölf Seiten à 100 und maximal 40 studentische MSI-Einträge pro Arbeitgeber. Strukturierte Fakten statt vollständiger Beschreibungen. Verfügbarkeit beim Arbeitgeber prüfen."
+  ],
+  ja: [
+    "BPCE、Sopra Steria、Boschの3つの自動収集元と日付付き編集掲載を利用します。MSIの部分的なデータで、市場全体を表すものではありません。募集状況と応募資格を確認してください。",
+    "BPCEは公開エクスポート、Sopra SteriaとBoschは公開SmartRecruiters APIを利用します。編集掲載は自動で再確認されません。終了した求人は別に表示します。",
+    "直近の自動収集成功日時","BPCE：全体の{n}%",
+    "BPCE、Sopra Steria、Boschの収集は毎日04:17 UTCを予定し、GitHubの実行状況に依存します。エラー時は前回の有効データを保持します。編集掲載の日付は維持し、公開時にRSSを更新します。",
+    "お気に入りに追加","追加済み","「{title}」を保存","「{title}」をお気に入りから削除","お気に入り（{n}）","お気に入りをすべて書き出す",
+    "お気に入りは今回の訪問中のみ有効です。閉じる・再読み込みの前に書き出してください。書き出しは絞り込みに関係なく、保存済みの終了例も明示して含みます。アカウントや同期はありません。",
+    "ここは終了した求人の参考例です。応募可能な求人ではありません。","アーカイブ以外の求人に戻る",
+    "RSSで新着求人を確認","公開フィード：アーカイブ以外の新しいインターン・就業学習求人を最大100件掲載。RSSリーダーを利用してください。メール通知はありません。","JavaScriptなし版",
+    "限定された収集です。6つの検索語ごとに100件を12ページ、各企業のMSI学生向け求人を最大40件掲載します。全文ではなく構造化された事実を扱います。募集状況は採用元で確認してください。"
+  ],
+  zh: [
+    "BPCE、Sopra Steria和Bosch三个自动来源，辅以标注日期的人工编辑职位。MSI数据不完整且不代表整个市场；请确认招聘状态及资格。",
+    "BPCE使用公开导出；Sopra Steria和Bosch使用公开SmartRecruiters API。人工编辑职位不会自动重新核实。已关闭示例单独展示。",
+    "最近一次自动采集成功时间","BPCE：数据的{n}%",
+    "计划每日04:17 UTC采集BPCE、Sopra Steria和Bosch，实际执行取决于GitHub。错误时保留上次有效数据。人工职位保留原日期，发布时更新RSS。",
+    "收藏职位","已收藏","收藏“{title}”","取消收藏“{title}”","我的收藏（{n}）","导出全部收藏",
+    "收藏仅在本次访问期间有效，请在关闭或刷新前导出。导出不受筛选影响，包括已收藏且明确标记的归档示例。无需账号，不同步。",
+    "这里是已归档示例，并非可申请职位。","返回非归档职位",
+    "通过RSS关注新职位","公开订阅：最多100条近期非归档实习或工学交替职位。请使用RSS阅读器；不发送邮件提醒。","无JavaScript版本",
+    "有限采集：六个关键词，每个最多十二页、每页100条；每家企业最多40条MSI学生职位。只提取结构化事实，不转载完整描述。请向招聘方确认可用性。"
+  ]
+};
+for (const [lang, values] of Object.entries(ELAN_FOLLOW_TEXT)) {
+  if(values.length !== ELAN_FOLLOW_KEYS.length)throw new Error("Incomplete follow-up translations");
+  Object.assign(window.ELAN_I18N[lang],Object.fromEntries(ELAN_FOLLOW_KEYS.map((key,index)=>[key,values[index]])));
+}

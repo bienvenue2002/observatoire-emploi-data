@@ -4,7 +4,8 @@ La version 4 publie uniquement les débouchés liés au Master MSI, en France et
 
 ## Acquisition et provenance
 
-- **BPCE :** téléchargement unique de l’[export JSON public](https://bpce.opendatasoft.com/api/explore/v2.1/catalog/datasets/groupe-bpce-offres-emploi/exports/json), sans scraping des pages de recrutement. L’export fournit la source principale ; son poids est calculé dans les métadonnées et visible dans l’interface.
+- **BPCE :** téléchargement unique de l’[export JSON public](https://bpce.opendatasoft.com/api/explore/v2.1/catalog/datasets/groupe-bpce-offres-emploi/exports/json), sans scraping des pages de recrutement. Son poids est calculé dans les métadonnées et visible dans l’interface.
+- **SmartRecruiters :** sélections bornées Sopra Steria/Bosch, six requêtes de douze pages de 100 au maximum et 40 détails étudiants MSI par employeur via l’[API publique documentée](https://developers.smartrecruiters.com/docs/endpoints). Données factuelles, dates de publication/republication explicites, pays source et liens recruteurs ; pas de description intégrale republiée.
 - **Éditorial :** `data/curated.json` et `data/international.json` contiennent huit fiches normalisées, dont deux archives. Les dates de consultation et de statut ne sont pas remplacées par la date de collecte BPCE.
 - **Limites :** une présence dans l’export n’atteste pas l’ouverture du poste. Les sources ne sont ni exhaustives ni représentatives du marché ; les annonces éditoriales ne sont pas actualisées automatiquement.
 
@@ -14,7 +15,7 @@ Chaque ligne source doit avoir un titre, une référence, une URL HTTPS exploita
 
 Un fichier éditorial explicitement demandé mais introuvable est une erreur. Les URL, descriptions, dates éditoriales et statuts reconnus sont contrôlés avant de remplacer les fichiers publics.
 
-L’actualisation est préparée dans un dossier temporaire. Une baisse supérieure à 50 % du nombre de références BPCE est refusée, sauf revue humaine explicite ; les anciens fichiers sont sauvegardés avant remplacement et restaurés si une opération échoue.
+L’actualisation est préparée dans un dossier temporaire. Pour chaque source établie comportant au moins dix fiches, une baisse supérieure à 50 % est refusée, sauf revue humaine explicite. L’absence d’une source SmartRecruiters déjà présente et une sélection SmartRecruiters totalement vide sont refusées ; les anciens fichiers sont sauvegardés avant remplacement et restaurés si une opération échoue. Une panne d’une source suspend donc toute la collecte, plutôt que publier un succès partiel trompeur.
 
 ## Normalisation et classification
 
@@ -31,7 +32,7 @@ Le niveau d’études privilégie le champ structuré, avec repli textuel docume
 
 ## Disponibilité et fraîcheur
 
-- **`source_present` :** référence BPCE présente dans l’export de la dernière collecte réussie ; aucune garantie d’ouverture.
+- **`source_present` :** référence présente dans l’export BPCE ou l’API publique lors de la dernière collecte réussie ; aucune garantie d’ouverture.
 - **`unverified` :** fiche éditoriale dont la disponibilité doit être vérifiée sur la page d’origine.
 - **`closed` :** exemple archivé, exclu des résultats par défaut ; origine et date du signalement conservées.
 

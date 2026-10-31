@@ -1,5 +1,18 @@
 # Parcours à préserver et évolution MSI
 
+## Diversification, démarrage et suivi personnel
+- Baseline publique observée avant édition : 28 stages/alternances, disponibilité `current`, aucune carte archivée par défaut.
+- Conserver les six langues, le périmètre MSI, les filtres, parcours, ressources, détails, tri, pagination, exports existants et la protection des données.
+- Ajouter des collectes publiques SmartRecruiters Sopra Steria et Bosch, bornées et attribuées ; aucune assimilation du flux public à une licence ouverte.
+- Valider schémas/dates/URL avant publication ; toute panne de collecte conserve l'instantané précédent. Afficher les volumes réels par source.
+- Démarrage : aperçu HTML daté visible avant JavaScript, page complète sans JavaScript, liens recruteurs et flux RSS excluant les archives.
+- Afficher seulement métier/pays/contrat au premier niveau ; déplacer études et statut dans les filtres avancés.
+- Mode archives explicite, avertissement et retour à la recherche hors archives ; le lien canonique reste sans filtre d'archives.
+- Favoris de session en mémoire, filtre favoris, exports CSV/JSON de tous les favoris indépendants des filtres ; annoncer explicitement leur effacement au rechargement. Aucun nouveau stockage navigateur ou compte.
+- RSS public sans compte : abonnements dans un lecteur externe, pas de promesse d'alerte e-mail/push.
+- Recette : favoris aller/retour/rechargement, exports réels et anti-formules, absence de stockage, six langues, erreur réseau, entrée archives, no-JS, mobile 320/375, sources et RSS XML valide.
+- Rejouer la suite existante et les nouveaux tests ; vérifier le déploiement GitHub et l'aperçu hébergé dans des contextes neufs.
+
 ## Typography and readability
 - Baseline observed in the public app before editing: Manrope; body 16.96 px, metadata 12.8 px, offer titles 14.72 px at a 1440 px viewport.
 - Use locally hosted Source Sans 3 on the search page and French resources, retaining the existing colours, content, data, controls and layout structure.

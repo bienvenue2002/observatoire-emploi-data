@@ -52,6 +52,20 @@ Les tests ne garantissent pas la disponibilité des annonces tierces, l’exhaus
 
 ## Recette réalisée le 31 octobre 2026
 
+### Évolution v4.2 : diversification et suivi
+
+La collecte réelle multi-source du 31 octobre 2026, débutée à `2026-10-31T05:23:49+00:00`, a produit 144 fiches : 77 BPCE, 40 Sopra Steria, 19 Bosch et 8 éditoriales, dont 2 archives. La sélection étudiante hors archives compte 87 fiches, sur un corpus couvrant 14 pays/territoires. Ce sont les compteurs de cet instantané, pas des volumes garantis à l’avenir ; les métadonnées restent la référence.
+
+Les nouvelles suites `tests/test_follow.py` et `tests/browser/follow.spec.cjs` complètent les tests existants : API publiques simulées, validation des champs et destinations, déduplication entre requêtes, pagination au-delà des 200 premiers résultats, conservation du corpus en cas de panne, RSS XML et identifiants stables, absence des archives, génération HTML répétable et échappement des textes.
+
+Les contrôles navigateur couvrent en plus les favoris temporaires, les exports réels de favoris indépendants des filtres, les six langues, le stockage bloqué, l’entrée par lien d’archives et le retour normal, l’aperçu pendant le chargement puis son masquage, la lecture complète sans JavaScript et l’accès au RSS. Les captures desktop et mobile de la recherche et de l’écran des sources sont inspectées séparément ; les captures CI restent rattachées à la révision testée.
+
+Recette locale exécutée : 50 tests Python, contrôle JavaScript des deux applications, contrôle des six dictionnaires (152 clés communes) et 12 scénarios Playwright réussis. Ces nombres décrivent la suite versionnée de cette évolution ; ils ne certifient ni la disponibilité des offres, ni une conformité d’accessibilité complète.
+
+Les favoris sont en mémoire uniquement et disparaissent au rechargement, comme indiqué dans l’interface. Le RSS n’est ni un service d’e-mail, ni une certification que les postes sont encore ouverts. Les limites de collecte par source sont publiées dans la méthodologie ; les descriptions SmartRecruiters ne sont pas recopiées.
+
+### Historique des recettes précédentes
+
 La révision applicative `949d0fe` a passé 41 tests Python, le contrôle des six dictionnaires et les six scénarios Playwright. Les mêmes six scénarios ont ensuite réussi contre le site GitHub Pages en contexte navigateur neuf ; les captures desktop et allemand mobile ont été inspectées visuellement, sans revendication de certification d’accessibilité.
 
 La [publication initiale](https://github.com/bienvenue2002/observatoire-emploi-data/actions/runs/41164411936) et le [cycle réel collecte → tests → commit → déploiement](https://github.com/bienvenue2002/observatoire-emploi-data/actions/runs/41164441639) ont réussi. Ce dernier a produit la révision de données `6861e35` et l’artefact `recette-navigateur-6861e35991aabc12a2033df0881d4895c25b3e2c`, avec rapports, captures et métadonnées ; la dernière collecte réussie correspondante est `2026-10-31T03:28:02+00:00`.

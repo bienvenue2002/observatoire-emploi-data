@@ -17,6 +17,7 @@ test("MSI, archives séparées, profils et exports complets",async({page})=>{
   await expect(page.locator("#job-detail")).toContainText(finalYear.education_level || "Non précisé");
   await page.keyboard.press("Escape");
   await page.locator("#reset").click();
+  await page.locator("#advanced summary").click();
   await page.locator("#availability").selectOption("archived");
   await expect(page.locator(".archived-status")).toHaveCount(2);
   const [download]=await Promise.all([page.waitForEvent("download"),page.locator("#export-json").click()]);
@@ -38,6 +39,7 @@ test("six langues, parcours et stage international",async({page})=>{
   await page.goto("./");
   await expect(page.locator("#loaded")).toBeVisible();
   await page.locator("#international").click();
+  await page.locator("#search").fill("Intern Application Consultant (with German)");
   await page.locator("#country").selectOption("PL");
   for(const lang of ["fr","en","es","de","ja","zh"]){
     await page.locator("#language").selectOption(lang);
