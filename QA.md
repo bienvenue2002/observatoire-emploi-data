@@ -12,6 +12,8 @@
 - Titre « D’où viennent les offres ? » vérifié ; lien des références puis page officielle CMSI ouverts par de vrais clics.
 - Écran 1440 px et dialogue 375 px inspectés ; preuve dépliée à 320 px sans débordement. Aucun nouvel échec JavaScript nominal.
 - Scénarios défavorables : erreur réseau explicite, aucune démonstration substituée ; balises injectées dans les nouveaux champs échappées, pas d’exécution.
+- Après publication GitHub Pages, contexte neuf sans connexion : titre naturel, fiche Business Analyst à six mois/Bac+5/fin d’études, réserve 4 à 6 mois, export JSON relu, recherche Bac+4 à 15 résultats et affichage 375 px vérifiés ; aucune erreur JavaScript.
+- Aperçu Perplexity actualisé et vérifié sur son point d’accès hébergé, le conteneur partageable restant protégé par Cloudflare dans le navigateur automatisé. Le site public GitHub Pages a été vérifié directement.
 - Les résultats de versions antérieures ci-dessous sont conservés comme historique.
 
 ## Renommage Élan MSI, 31 octobre 2026
