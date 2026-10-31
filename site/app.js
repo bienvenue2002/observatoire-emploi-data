@@ -9,7 +9,8 @@ const safeUrl = value => {try {const url=new URL(value);return url.protocol==="h
 const fieldNames = ["domain","country","contract","education","source","region","skill","pathway"];
 const locales = Object.keys(window.ELAN_I18N);
 const state = {jobs:[],meta:null,catalog:null,update:null,filtered:[],lang:"fr",page:1,pageSize:8,student:true,international:false,view:"offers",openJob:null,opener:null,ready:false,saved:new Set(),savedOnly:false};
-try {const saved=localStorage.getItem("elan-msi-language");if(locales.includes(saved))state.lang=saved;}catch{/* Opaque preview origins and blocked storage are supported. */}
+const requestedLanguage=new URLSearchParams(location.search).get("lang");
+if(locales.includes(requestedLanguage))state.lang=requestedLanguage;
 const t = (key, values={}) => String(window.ELAN_I18N[state.lang][key] ?? key).replace(/\{(\w+)\}/g,(_,name)=>values[name]??"");
 const number = value => new Intl.NumberFormat(state.lang).format(value);
 const domainLabel = value => window.ELAN_I18N[state.lang].domains[value] || t("unknown");
@@ -219,7 +220,8 @@ async function init() {
   }catch{state.ready=false;$("#loaded").hidden=true;$("#loading").hidden=true;$("#load-error").hidden=false;}
 }
 $("#language").addEventListener("change",event=>{
-  state.lang=event.target.value;try{localStorage.setItem("elan-msi-language",state.lang);}catch{}
+  state.lang=event.target.value;
+  try{const url=new URL(location.href);url.searchParams.set("lang",state.lang);history.replaceState(null,"",url);}catch{/* Opaque previews retain language in memory. */}
   // Preserve the selected set when changing language; language is not a data filter.
   translateInterface();
 });

@@ -33,6 +33,7 @@ test("favoris de session, export indépendant des filtres et six langues",async(
   await expect(page.locator("#saved-json")).toBeDisabled();
   await page.reload();await expect(page.locator("#loaded")).toBeVisible();
   await expect(page.locator("#saved-only")).toContainText("0");
+  await expect(page.locator("#language")).toHaveValue("zh");
   expect(errors).toEqual([]);
 });
 

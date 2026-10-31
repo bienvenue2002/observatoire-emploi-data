@@ -42,7 +42,7 @@
 - Pays/territoires issus des champs explicites de la source ; pays absent = inconnu. Ne jamais déduire un pays de la langue demandée. VIE distinct de stage et d'alternance ; aucune équivalence automatique de contrat ou de diplôme entre pays.
 - Recherche libre, domaines, pays/territoires, contrat, études, source, compétence, région, tri, pagination, réinitialisation, raccourcis étudiant/international/ARA, détails et exports filtrés.
 - Interface complète en fr/en/es/de/ja/zh : navigation, filtres, compteurs, états vides/erreurs, détails, dates, pagination, accessibilité et messages d'export. Les annonces, preuves source et ressources MSI restent en langue d'origine avec avertissement traduit.
-- La langue ne change ni les filtres ni le corpus ; choix mémorisé si stockage autorisé, repli en mémoire si bloqué. Changer de langue pendant un détail ouvert.
+- La langue ne change ni les filtres ni le corpus ; choix porté par le paramètre `lang` du lien, repli en mémoire si l’aperçu bloque la mise à jour de l’URL. Aucun stockage navigateur. Changer de langue pendant un détail ouvert.
 - Recette : six langues, conservation de la sélection, véritable stage hors France, alternance et VIE distincts, niveau/durée/preuves, formation sans annonce, recherche avec accents/apostrophes, export réel CSV/JSON et anti-formules, Échap et retour focus, lien externe activé, erreur réseau, texte malveillant échappé, ressources historiques et absence de débordement à 375/320 px.
 - Revoir README, sources, méthode, guide et version 3 ; publier sur le même dépôt public et le même lien, puis tester la version hébergée dans un contexte neuf.
 

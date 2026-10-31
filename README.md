@@ -15,7 +15,7 @@ Un portail étudiant consacré aux débouchés du Master Management des Système
 - **Recherche :** famille métier, pays, contrat, études, source, région, compétences, parcours, tri et pagination. Les stages et alternances hors archives sont affichés par défaut ; les autres contrats restent accessibles dans le périmètre MSI.
 - **Profil étudiant :** durée, niveau d’études demandé, avancement des études et extraits justificatifs. Une information absente reste « Non précisé » ; les études passées ne sont pas assimilées à un stage recherché.
 - **International :** pays et territoires issus d’informations explicites. Une langue exigée n’est pas transformée en pays et un diplôme étranger n’est pas converti arbitrairement en niveau français.
-- **Six langues :** français, anglais, espagnol, allemand, japonais et chinois simplifié pour l’interface. Les annonces et preuves restent dans leur langue d’origine ; la page de ressources pédagogiques reste en français.
+- **Six langues :** français, anglais, espagnol, allemand, japonais et chinois simplifié pour l’interface. Le choix passe par `?lang=en` (ou `fr`, `es`, `de`, `ja`, `zh`), sans stockage navigateur ; repli en mémoire dans un aperçu bloquant l’actualisation d’URL. Les annonces et preuves restent dans leur langue d’origine ; la page de ressources pédagogiques reste en français.
 - **Exports :** CSV et JSON de toute la sélection, pas seulement de la page affichée, avec profils, provenance, dates et statuts. Les cellules CSV pouvant être interprétées comme formules sont protégées.
 
 Le moteur de recherche et les ressources pédagogiques s’appuient sur le même corpus MSI actualisé. Les parcours, les métiers et les offres sont réunis dans un projet cohérent avec la formation.
