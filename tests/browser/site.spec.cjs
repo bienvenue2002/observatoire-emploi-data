@@ -130,3 +130,33 @@ test("échappement HTML, URL dangereuse et formule CSV",async({page})=>{
   expect(csv).toContain("\"'=1+1\"");
   expect(csv).toContain('"status"');
 });
+
+test("readable local font, responsive pages and 200% text scaling",async({page},testInfo)=>{
+  for(const path of ["./","./msi.html"]){
+    await page.goto(path);
+    await expect(page.locator("#loaded")).toBeVisible();
+    await page.evaluate(()=>document.fonts.ready);
+    expect(await page.evaluate(()=>[...document.fonts].some(font=>font.family.includes("Source Sans 3")&&font.status==="loaded"))).toBe(true);
+    await expect(page.locator("body")).toHaveCSS("font-family",/Source Sans 3/);
+    for(const width of [1440,768,375,320]){
+      await page.setViewportSize({width,height:950});
+      expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+      const navSize=await page.locator(".nav-item").first().evaluate(e=>parseFloat(getComputedStyle(e).fontSize));
+      expect(navSize).toBeGreaterThanOrEqual(14);
+    }
+    if(path==="./"){
+      for(const lang of ["fr","en","es","de","ja","zh"]){
+        await page.locator("#language").selectOption(lang);
+        expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+      }
+      await page.locator("#language").selectOption("fr");
+      expect(await page.locator(".job-open").first().evaluate(e=>parseFloat(getComputedStyle(e).fontSize))).toBeGreaterThanOrEqual(17);
+      expect(await page.locator(".job-employer").first().evaluate(e=>parseFloat(getComputedStyle(e).fontSize))).toBeGreaterThanOrEqual(14);
+    }
+    await page.screenshot({path:testInfo.outputPath(path==="./"?"search-320.png":"resources-320.png")});
+    await page.setViewportSize({width:1440,height:1000});
+    await page.evaluate(()=>document.documentElement.style.fontSize="200%");
+    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+    await page.evaluate(()=>document.documentElement.style.fontSize="");
+  }
+});

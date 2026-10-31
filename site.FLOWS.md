@@ -1,5 +1,14 @@
 # Parcours à préserver et évolution MSI
 
+## Typography and readability
+- Baseline observed in the public app before editing: Manrope; body 16.96 px, metadata 12.8 px, offer titles 14.72 px at a 1440 px viewport.
+- Use locally hosted Source Sans 3 on the search page and French resources, retaining the existing colours, content, data, controls and layout structure.
+- Increase secondary text to at least 14 px, controls/copy to at least 16 px and offer titles to at least 17 px; preserve browser zoom and responsive font sizing.
+- Check both pages at 1440, 768, 375 and 320 px, six interface languages, populated details, long German labels and simulated 200% text scaling.
+- Re-run the full browser suite: filters, sorting, pagination, profiles, archives, pathways, international, languages, resources, CSV/JSON downloads, degraded loading, blocked storage and injection protection.
+- Verify that the self-hosted font loads, capture desktop/mobile screenshots, and check the public deployment and hosted preview in fresh contexts.
+- Use a descriptive English commit message for these changes. Do not rewrite previously published history without explicit approval.
+
 ## Recentrage MSI, fiabilité et actualisation quotidienne
 - Avant édition : site public international général, 1 555 annonces ; navigation, six langues et filtres fonctionnels. Ce périmètre général est désormais annulé par le propriétaire.
 - Accueil et moteur réservés aux métiers reliés au Master MSI, en France et à l'international ; six langues et liens officiels CMSI/ID/ARAMIS conservés. Pas de catégories d'autres formations.
@@ -11,7 +20,7 @@
 - Échec d'actualisation : anciennes données et date réussie inchangées ; message d'échec public sans contenu technique sensible. Les fiches éditoriales ne sont pas présentées comme revérifiées par une collecte BPCE.
 - Famille gouvernance correctement nommée, CDO seulement perspective ; BPCE clairement source principale, proportion calculée.
 - Preuves reproductibles : suite navigateur versionnée, captures générées par la suite, rapports CI ; pas de nombre de contrôles ou de contraste non étayé.
-- README et guide : périmètre MSI, aide IA et travail réalisé dans cette conversation explicités, statut de travail évalué non inventé.
+- README et guide : présentation professionnelle du projet et périmètre actuel, sans inventer un statut de travail évalué.
 
 ## International, toutes formations et six langues
 - Avant modification : site public Élan MSI chargé dans un navigateur, titre « Du master aux métiers », 81 annonces France et interface française.

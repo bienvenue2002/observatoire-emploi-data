@@ -40,6 +40,7 @@ Les cas réels `BPCE_INFO01955` et `BPCE_INFO01938` ont aussi été contrôlés 
 - **Ressources MSI :** cinq vues, navigation mobile et exclusion de l’exemple Wiremind des résultats.
 - **Mode dégradé :** réponse d’actualisation en échec, dernière date de succès visible, données encore utilisables, changement de langue et stockage local bloqué.
 - **Robustesse :** chargement HTTP 503 puis réessai réussi, HTML injecté affiché comme texte, lien `javascript:` absent et formule neutralisée dans un CSV réellement téléchargé.
+- **Typographie :** chargement réel de Source Sans 3 depuis le site, tailles minimales des textes, six langues à 320 px, deux pages à 1440/768/375/320 px et agrandissement de la taille racine à 200 % sans débordement horizontal.
 
 Les captures sont générées par le scénario « filtres, tri, pagination et captures desktop/mobile » et peuvent être inspectées manuellement. Une assertion d’absence de débordement ne prouve pas à elle seule la qualité visuelle de toutes les langues ou tailles d’écran.
 
