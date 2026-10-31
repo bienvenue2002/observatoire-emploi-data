@@ -14,7 +14,8 @@
 - Ressources MSI : 81 annonces ; cinq vues, filtre graphique, raccourci, durée CIO Advisory, détails et pagination rejoués.
 - Rendu inspecté : desktop 1440 px ; allemand 375 px ; japonais en détail ; chinois 320 px. Aucun débordement horizontal lors du cycle desktop/mobile/desktop ; fermeture de dialogue conservée visible au défilement. Aucune erreur JavaScript.
 - README, méthode, sources et guide pédagogique alignés sur la V3 ; la couverture partielle, les sources bancaires, les annonces non traduites et la distinction VIE/stage/alternance sont explicites.
-- Publication et contrôle hébergé : consignés après déploiement ci-dessous.
+- GitHub Actions, commit `9ebaa62` : tests et publication Pages réussis. Nouvelle version chargée en contexte neuf sur le lien GitHub Pages public : 1 555 annonces et 229 stages/alternances ; filtre Pologne + hors France, espagnol, ouverture réelle de l’annonce source, export JSON téléchargé, chinois à 375 px et console sans erreur.
+- Aperçu hébergé `/computer/a` : japonais + Chine, téléchargement CSV réel avec code CN, lien vers le catalogue BPCE activé ; console sans erreur. Dans cette prévisualisation, le stockage local peut être bloqué ; le repli en mémoire a été testé.
 
 ## Profil étudiant et références publiques, version 2.1
 
