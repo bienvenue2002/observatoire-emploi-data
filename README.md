@@ -6,6 +6,8 @@ Un site d’exploration des offres data et Business Analyst, avec une chaîne Py
 
 Projet académique pour le M1 Management des systèmes d’information, Grenoble IAE. Compte GitHub : [bienvenue2002](https://github.com/bienvenue2002).
 
+Le dépôt a été créé en privé. Le lien de clonage ci-dessous fonctionne pour le propriétaire authentifié ; son passage en public et l’activation de GitHub Pages ne sont pas encore effectués.
+
 ## Ce que le site permet
 
 - Explorer les annonces par mot-clé, famille de métiers, région, contrat et compétence.

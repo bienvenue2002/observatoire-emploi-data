@@ -13,6 +13,12 @@
 
 Ces résultats décrivent le contrôle local de cette version, pas une garantie de compatibilité avec tous les navigateurs. Le contrôle de l’aperçu hébergé est consigné séparément après déploiement.
 
+## Contrôle de l’hébergement
+
+Dans un nouveau contexte navigateur, le site hébergé a chargé 52 annonces. Le filtre SQL en conserve 27, et le téléchargement JSON contient ces mêmes 27 annonces. La navigation vers la méthodologie fonctionne, sans erreur JavaScript observée.
+
+Le conteneur Perplexity partageable a présenté une vérification Cloudflare au navigateur automatisé. Le contrôle ci-dessus a donc été réalisé sur le point d’accès hébergé fourni par le déploiement, pas à travers ce conteneur. Le CSV a été validé localement ; le JSON a également été validé sur l’hébergement.
+
 ## Pipeline
 
 - Schéma et sortie non vide.
