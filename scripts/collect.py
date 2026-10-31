@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Collecte BPCE Open Data -> nettoyage -> annonces uniques -> JSON et CSV.
+"""Horizon MSI : BPCE Open Data + références éditoriales -> annonces -> JSON/CSV.
 
 Python 3.10+, bibliothèque standard uniquement. Aucune clé API nécessaire.
 Les données nominatives des recruteurs ne sont jamais exportées.
@@ -15,6 +15,11 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.request import Request, urlopen
+from urllib.parse import urlparse
+try:
+    from .taxonomy import pathways
+except ImportError:
+    from taxonomy import pathways
 
 ROOT = Path(__file__).resolve().parents[1]
 API_URL = "https://bpce.opendatasoft.com/api/explore/v2.1/catalog/datasets/groupe-bpce-offres-emploi/exports/json"
@@ -34,6 +39,15 @@ SKILLS = {
     "Machine learning": r"\b(?:machine learning|apprentissage automatique|scikit.learn|xgboost)\b",
     "Databricks": r"\bdatabricks\b",
     "Dataiku": r"\bdataiku\b",
+    "ERP / SAP": r"\b(?:erp|sap|s/4hana|s4hana)\b",
+    "Jira": r"\bjira\b",
+    "Conduite du changement": r"\b(?:conduite du changement|change management)\b",
+    "Gestion de projet": r"\b(?:gestion de projet|pilotage de projet|project management)\b",
+    "Recette / tests": r"\b(?:recette|tests? fonctionnels?|user acceptance)\b",
+    "Cybersécurité": r"\b(?:cybersecurite|cybersecurity|securite informatique)\b",
+    "IAM": r"\b(?:iam|identity and access)\b",
+    "ITIL": r"\bitil\b",
+    "BPMN / UML": r"\b(?:bpmn|uml)\b",
 }
 
 
@@ -52,16 +66,38 @@ def role(title):
     t = norm(title)
     if re.search(r"\bdatacent(?:er|re)\b|\bacheteur\b", t):
         return None
+    if re.search(r"\b(?:auditeur|audit).*(?:systemes? d.information|\bsi\b|\bit\b|informatique)", t):
+        return "Auditeur SI"
+    if re.search(r"\b(?:cybersecurite|cybersecurity|cyber|securite (?:des )?(?:systemes|informatique|data))\b", t):
+        return "Consultant cybersécurité"
+    if re.search(r"\bproduct\s*owner\b", t):
+        return "Product Owner"
+    if re.search(r"\bscrum\s*master\b", t):
+        return "Scrum Master"
     if re.search(r"\bbusiness\s+analyst", t):
         return "Business Analyst"
+    if re.search(r"\b(?:erp|sap|plm|salesforce)\b", t) and re.search(r"consult|fonctionnel|chef.*projet", t):
+        return "Consultant ERP / solutions métier"
+    if re.search(r"(?:chef|cheffe|directeur|directrice|charge|chargee|responsable).*projet.*(?:informatique|\bsi\b|\bit\b|digital|numerique|data)", t):
+        return "Chef de projet SI"
+    if re.search(r"\b(?:amoa|assistance a maitrise d.ouvrage|transformation digitale|consultant.*(?:transformation|systeme.*information|digital|\bsi\b))\b", t):
+        return "Conseil & transformation SI"
+    if re.search(r"chief data officer|\bcdo\b|data (?:governance|gouvernance|steward)|data quality|gouvernance.*donnee", t):
+        return "Chief Data Officer / gouvernance"
+    if re.search(r"(?:responsable|head of).*analytics", t):
+        return "Responsable Analytics"
+    if re.search(r"web\s*analytics|webanalyst|digital analyst", t):
+        return "Webanalytics"
     if re.search(r"data\s*scien|machine learning", t):
         return "Data Scientist"
-    if re.search(r"data\s*analyst|analyste\s+(?:de\s+)?donnees|business intelligence|decisionnel", t):
-        return "Data Analyst / BI"
+    if re.search(r"data\s*analyst|analyste\s+(?:de\s+)?donnees", t):
+        return "Data Analyst"
+    if re.search(r"business intelligence|decisionnel|\bconsultant.*\bbi\b", t):
+        return "Consultant BI / décisionnel"
     if re.search(r"data\s*(?:engineer|architect)|(?:ingenieur|developpeur).*data|big data", t):
         return "Data Engineer / Architecture"
     if re.search(r"\bdata\b", t):
-        return "Gouvernance & autres métiers data"
+        return "Autres métiers data"
     return None
 
 
@@ -130,6 +166,8 @@ def transform(records, observed_at):
                 "family": family, "contract": contract(row.get("jobtype")),
                 "locations": [], "skills": [], "description": desc,
                 "source": "Groupe BPCE · Open Data", "source_url": source_link,
+                "source_key": "bpce", "collection_method": "open_data",
+                "pathways": pathways(family),
                 "observed_at": observed_at, "status": "snapshot",
                 "modified_at": modified(row.get("lastmodifieddate")),
                 "salary_min": row.get("salary_min"), "salary_max": row.get("salary_max"),
@@ -149,30 +187,64 @@ def transform(records, observed_at):
     return jobs, matched_rows
 
 
-def export(records, output, observed_at):
+def load_curated(path):
+    """Import éditorial local ; pas de scraping non autorisé ni de faux connecteur."""
+    records = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
+    if not isinstance(records, list):
+        raise ValueError("Sélection éditoriale : liste attendue.")
+    ids, urls = set(), set()
+    result = []
+    for row in records:
+        required = {"id", "title", "company", "family", "contract", "locations", "source",
+                    "source_key", "source_url", "observed_at", "description", "skills"}
+        if not isinstance(row, dict) or not required.issubset(row):
+            raise ValueError("Fiche éditoriale incomplète.")
+        if row["id"] in ids or row["source_url"].rstrip("/") in urls:
+            raise ValueError("Doublon dans la sélection éditoriale.")
+        host = urlparse(row["source_url"])
+        allowed = {"www.capgemini.com", "careers.capgemini.com", "www.welcometothejungle.com", "www.jobteaser.com"}
+        if host.scheme != "https" or host.hostname not in allowed or not pathways(row["family"]):
+            raise ValueError("Source ou famille éditoriale non admise.")
+        if not row["locations"] or any(not {"city", "region"}.issubset(x) for x in row["locations"]):
+            raise ValueError("Localisation éditoriale manquante.")
+        ids.add(row["id"]); urls.add(row["source_url"].rstrip("/"))
+        result.append({**row, "description": redact(row["description"]),
+                       "pathways": pathways(row["family"]), "collection_method": "editorial",
+                       "status": "snapshot", "modified_at": None,
+                       "salary_min": None, "salary_max": None, "remote_source": None})
+    return result
+
+
+def export(records, output, observed_at, curated_path=None):
     jobs, matched = transform(records, observed_at)
+    bpce_count = len(jobs)
+    editorial = load_curated(curated_path) if curated_path else []
+    jobs.extend(editorial)
     output.mkdir(parents=True, exist_ok=True)
     meta = {
-        "title": "Observatoire de l'emploi data en France",
-        "edition": "Échantillon Groupe BPCE",
+        "title": "Horizon MSI · Débouchés et opportunités",
+        "edition": "Corpus MSI : Open Data BPCE + sélection éditoriale multi-source",
         "observed_at": observed_at,
         "source_url": SOURCE_URL, "api_url": API_URL,
-        "license": "Licence Ouverte / Open Licence 2.0",
+        "license": "BPCE : Licence Ouverte 2.0 ; autres plateformes : liens factuels et synthèses originales, pas de licence ouverte présumée",
         "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
         "raw_rows": len(records),
         "france_rows": sum(norm(r.get("country")) == "france" for r in records),
         "matched_location_rows": matched, "unique_offers": len(jobs),
+        "bpce_unique_offers": bpce_count, "editorial_offers": len(editorial),
+        "sources": dict(Counter(j["source"] for j in jobs)),
+        "competency_statistics": "Descriptions intégrales BPCE uniquement ; les fiches éditoriales sont exclues du dénominateur.",
         "salary_available": sum(j["salary_min"] is not None or j["salary_max"] is not None for j in jobs),
-        "scope": "Offres France d'un seul groupe bancaire, collectées à une date donnée. Non représentatif du marché national.",
+        "scope": "Offres France sélectionnées par métiers MSI. Corpus non exhaustif et non représentatif ; accès aux postes soumis au profil demandé.",
         "deduplication": "Une annonce par référence source ; les villes multiples sont regroupées.",
         "families": dict(Counter(j["family"] for j in jobs)),
-        "pipeline_version": "1.0.0",
+        "pipeline_version": "2.0.0",
     }
     payload = {"meta": meta, "jobs": jobs}
     (output / "jobs.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     (output / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
     with (output / "jobs.csv").open("w", encoding="utf-8-sig", newline="") as f:
-        fields = ["id", "title", "company", "family", "contract", "cities", "regions", "skills", "modified_at", "observed_at", "source_url"]
+        fields = ["id", "title", "company", "family", "pathways", "contract", "cities", "regions", "skills", "source", "collection_method", "modified_at", "observed_at", "source_url"]
         writer = csv.DictWriter(f, fieldnames=fields)
         writer.writeheader()
         for j in jobs:
@@ -180,6 +252,7 @@ def export(records, output, observed_at):
             row.update(cities=" | ".join(sorted(set(x["city"] for x in j["locations"]))),
                        regions=" | ".join(sorted(set(x["region"] for x in j["locations"]))),
                        skills=" | ".join(j["skills"]))
+            row["pathways"] = " | ".join(j["pathways"])
             # Empêche l'interprétation de formules lors d'une ouverture dans Excel.
             writer.writerow({k: "'" + str(v) if str(v).lstrip().startswith(("=", "+", "-", "@")) else v for k, v in row.items()})
     return meta
@@ -190,12 +263,14 @@ def main():
     parser.add_argument("--input", type=Path, help="JSON BPCE local, sans appel réseau")
     parser.add_argument("--output", type=Path, default=ROOT / "site" / "data")
     parser.add_argument("--observed-at", help="Date ISO du téléchargement local (reproductibilité)")
+    parser.add_argument("--curated", type=Path, default=ROOT / "data" / "curated.json",
+                        help="Sélection éditoriale vérifiée, importée sans appel aux plateformes")
     args = parser.parse_args()
     observed = args.observed_at or datetime.now(timezone.utc).isoformat(timespec="seconds")
     if args.input:
         records = json.loads(args.input.read_text(encoding="utf-8"))
     else:
-        request = Request(API_URL, headers={"User-Agent": "ObservatoireEmploiData-Educational/1.0", "Accept": "application/json"})
+        request = Request(API_URL, headers={"User-Agent": "HorizonMSI-Educational/2.0", "Accept": "application/json"})
         # Un export public documenté, pas de scraping de pages ni de contournement.
         with urlopen(request, timeout=90) as response:
             records = json.load(response)
@@ -207,7 +282,7 @@ def main():
     jobs, _ = transform(records, observed)
     if not jobs:
         raise ValueError("Aucune offre pertinente ; ancien instantané conservé.")
-    print(json.dumps(export(records, args.output, observed), ensure_ascii=False, indent=2))
+    print(json.dumps(export(records, args.output, observed, args.curated), ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":

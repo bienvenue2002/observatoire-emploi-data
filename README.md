@@ -1,48 +1,54 @@
-# DataScope · Observatoire de l’emploi data en France
+# Horizon MSI · Du master aux métiers
 
-Un site d’exploration des offres data et Business Analyst, avec une chaîne Python reproductible : collecte JSON, nettoyage, classification, déduplication, export et visualisation web.
+Un portail d’orientation et d’exploration des offres liées au Master Management des Systèmes d’Information de Grenoble IAE. Anciennement DataScope, le projet ne se limite plus aux métiers data : il couvre conseil, ERP, business analysis, produit, projets, cybersécurité, audit, données et recherche.
 
-**Édition initiale : échantillon Groupe BPCE.** Il ne s’agit pas d’un recensement du marché français. Les offres proviennent d’un seul groupe bancaire, à une date donnée ; leur disponibilité actuelle doit être vérifiée chez l’employeur.
+Projet académique indépendant, non affilié à l’école ni aux recruteurs. Auteur : Abra-Bienvenue Tchakah, [bienvenue2002](https://github.com/bienvenue2002). Le nom historique du dépôt est conservé pour ne pas casser ses liens.
 
-Projet académique pour le M1 Management des systèmes d’information, Grenoble IAE. Compte GitHub : [bienvenue2002](https://github.com/bienvenue2002).
+Le dépôt est privé. Son passage en public et GitHub Pages ne sont pas activés sans décision explicite.
 
-Le dépôt a été créé en privé. Le lien de clonage ci-dessous fonctionne pour le propriétaire authentifié ; son passage en public et l’activation de GitHub Pages ne sont pas encore effectués.
+## Ce que l’on peut explorer
 
-## Ce que le site permet
+- **Trois parcours :** CMSI, Intelligence des données et ARAMIS, avec rattachements indicatifs aux métiers.
+- **Dix-sept fiches :** débouchés et perspectives cités dans la brochure, complétés de deux métiers data connexes explicitement signalés.
+- **Des repères de niveau :** stage/junior, évolution avec expérience, ou poursuite en doctorat.
+- **Des offres sourcées :** recherche, parcours, métier, région, contrat, compétence et source.
+- **Des interactions :** graphiques cliquables, raccourcis stage/région, tri, pagination et fiches détaillées.
+- **Des exports :** CSV et JSON de la sélection, avec parcours, provenance, date et mode de collecte.
+- **Une méthode lisible :** déduplication, protection des coordonnées, limites du corpus et statut des sources.
 
-- Explorer les annonces par mot-clé, famille de métiers, région, contrat et compétence.
-- Isoler les stages et alternances ou les offres en Auvergne-Rhône-Alpes.
-- Comparer les mentions de compétences et la répartition géographique.
-- Ouvrir une annonce détaillée, sa description, ses villes, sa référence et son lien source.
-- Exporter la sélection filtrée en CSV ou JSON, avec dates et provenance.
-- Lire la méthodologie et l’audit de collecte dans le site.
+## Formation : le périmètre de référence
 
-## Données réelles, limites explicites
+La brochure `MSI-20WEB.pdf` fournie, page 3, est la référence principale. Les pages officielles permettent de consulter les parcours :
 
-L’instantané initial du **31 octobre 2026** contient :
+- [Conseil et Management des Systèmes d’Information](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-conseil-et-management-des-systemes-dinformation).
+- [Intelligence des Données](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-intelligence-des-donnees).
+- [Advanced Research in Management of Information Systems](https://iae.grenoble-inp.fr/en/our-programs/master-2-advanced-research-in-management-of-information-system).
 
-| Étape | Volume |
-|---|---:|
-| Lignes téléchargées | 1 888 |
-| Lignes situées en France | 1 785 |
-| Lignes retenues après filtrage métier | 102 |
-| Annonces uniques après regroupement par référence | 52 |
-| Annonces avec champ salarial structuré renseigné | 0 |
+Les missions et idées de projets sont des reformulations pédagogiques. Un rattachement ne garantit pas l’admission à un parcours ou l’éligibilité à une offre. Chief Data Officer est une perspective de direction, pas un premier emploi promis ; l’enseignement-recherche nécessite une poursuite en doctorat puis un recrutement.
 
-Ces volumes sont ceux du fichier `site/data/meta.json`. Les prochaines collectes peuvent les modifier.
+## Deux modes de données, pas de fausse intégration
 
-**Source et droit de réutilisation :** [Groupe BPCE, offres emploi publiques sur data.gouv.fr](https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques), publié sous Licence Ouverte / Open Licence 2.0.
+L’instantané du 31 octobre 2026 contient **81 annonces** : 74 issues de l’export BPCE reclassé sur le périmètre MSI et 7 fiches éditoriales.
 
-**Export public documenté :**
-<https://bpce.opendatasoft.com/api/explore/v2.1/catalog/datasets/groupe-bpce-offres-emploi/exports/json>
+| Origine | Fiches | Mode |
+|---|---:|---|
+| Groupe BPCE | 74 | Export Open Data, transformation Python |
+| Deloitte, via Welcome to the Jungle | 2 | Sélection éditoriale datée |
+| Capgemini, site carrières | 1 | Sélection éditoriale datée |
+| Welcome to the Jungle, autres employeurs | 2 | Sélection éditoriale datée |
+| JobTeaser, annonces publiques Capgemini | 2 | Sélection éditoriale datée |
 
-Le script consomme cet export public sans clé. Il ne scrape pas les sites de recrutement et ne contourne aucune authentification.
+Ces comptes décrivent le corpus du projet, pas les volumes totaux des plateformes. Le détail factuel de chaque fiche et son URL se trouvent dans `data/curated.json` ; les pages effectivement consultées et les exclusions figurent dans [le journal des sources](docs/SOURCES.md).
 
-L’API Offres d’emploi France Travail a été envisagée mais n’est pas intégrée à cette V1 : [sa fiche data.gouv.fr indique qu’elle n’est plus exposée en libre-service](https://www.data.gouv.fr/dataservices/api-offres-demploi). Aucune connexion France Travail n’est simulée.
+BPCE : 1 888 lignes initiales, 1 785 situées en France, 192 retenues par les règles MSI, puis 74 références uniques. Les 52 annonces de la première version ont toutes été conservées ; certaines ont changé de famille métier.
 
-## Lancer le projet
+Seul [l’export public BPCE](https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques) est collecté automatiquement. Aucune API Deloitte, Capgemini, WTTJ ou JobTeaser n’est branchée ; aucun Career Center privé n’est consulté. Les fiches éditoriales utilisent des informations factuelles, un lien et une synthèse originale, pas les descriptions intégrales.
 
-Pré-requis : Python 3.10 ou plus. Le pipeline n’utilise que la bibliothèque standard.
+**Statistiques de compétences :** les résumés éditoriaux ne sont pas comparables aux descriptions complètes. Le graphique et le mot-clé dominant sont donc calculés uniquement sur les offres BPCE sélectionnées. Les tags éditoriaux restent filtrables.
+
+## Lancer le site
+
+Python 3.10 ou plus ; aucune dépendance Python tierce.
 
 ```bash
 git clone https://github.com/bienvenue2002/observatoire-emploi-data.git
@@ -50,93 +56,66 @@ cd observatoire-emploi-data
 python3 -m http.server 8000 --directory site
 ```
 
-Ouvrir `http://localhost:8000`. Pour un usage personnel local, le serveur Python suffit ; aucun serveur n’est nécessaire une fois le site hébergé.
+Ouvrir `http://localhost:8000`. Ce serveur suffit à un usage personnel local. Éviter le double-clic `file://`, qui empêche généralement `fetch()` de lire les données JSON.
 
-Ne pas ouvrir `index.html` par double-clic : le navigateur bloque généralement la lecture JSON via `fetch()` depuis `file://`.
-
-## Actualiser les données
+## Actualiser et tester
 
 ```bash
-# Télécharge un export JSON public et régénère les données nettoyées :
+# Actualiser BPCE et importer la sélection éditoriale locale :
 python3 scripts/collect.py
 
-# Rejoue un téléchargement existant :
+# Rejouer un export brut conservé localement :
 python3 scripts/collect.py --input data/raw/bpce.json \
   --observed-at 2026-10-31T01:48:12+00:00
 
-# Vérifie les règles de transformation :
+# Utiliser une autre sélection éditoriale :
+python3 scripts/collect.py --curated data/curated.json
+
 python3 -m unittest discover -s tests -v
+node --check site/app.js
 ```
 
-Le téléchargement brut initial n’est pas versionné, car il contient des champs de contact recruteur et des postes hors périmètre. Le pipeline peut travailler entièrement en mémoire sans enregistrer le brut. Les champs nom et email recruteur ne sont pas exportés ; emails et numéros français présents dans les descriptions sont masqués par des règles simples.
+La date `--observed-at` doit correspondre au téléchargement réel du brut. Les fiches éditoriales conservent chacune leur propre date de consultation ; relancer le script ne revérifie pas leurs liens et ne modifie pas cette date.
 
-La date `observed_at` doit être celle du téléchargement pour une reprise locale : l’option `--observed-at` permet de la préserver. Ce n’est pas une date de publication d’annonce.
+Le brut n’est pas versionné : il contient des contacts recruteurs et des offres hors périmètre. La collecte par défaut travaille en mémoire. Une source vide ou au schéma inattendu fait échouer la commande avant export. Les fiches éditoriales sont validées avant remplacement : identifiants/URLs uniques, HTTPS et domaines admis.
 
-Si la source est vide, change de schéma ou ne donne aucune annonce pertinente, le script échoue avant de remplacer les fichiers du site. Il n’introduit jamais de données fictives.
-
-## Structure du dépôt
+## Structure
 
 ```text
-observatoire-emploi-data/
-├── scripts/
-│   └── collect.py             # Collecte et transformations Python
-├── tests/
-│   └── test_collect.py        # Tests unitaires, hors réseau
-├── site/                      # Seul dossier à héberger
-│   ├── index.html             # HTML sémantique, contenu et méthodologie
-│   ├── base.css
-│   ├── style.css              # Mise en page responsive
-│   ├── app.js                 # Filtres, agrégations, exports, détails
-│   └── data/
-│       ├── jobs.json          # Annonces nettoyées et métadonnées
-│       ├── jobs.csv           # Export complet
-│       └── meta.json          # Audit du dernier instantané
-├── docs/
-│   ├── METHODOLOGIE.md
-│   └── GUIDE_PEDAGOGIQUE.md
-├── .github/workflows/ci.yml   # Tests sur push et pull request
-└── README.md
+scripts/collect.py          Collecte BPCE, nettoyage, classement et exports
+scripts/taxonomy.py         Rattachement familles / parcours
+data/curated.json           Sept références éditoriales, liens et dates
+tests/test_collect.py      Quinze tests unitaires hors réseau
+site/index.html            Les cinq vues du site
+site/style.css             Responsive, cartes métiers et sources
+site/app.js                Filtres, calculs, navigation, détails et exports
+site/data/catalog.json     Parcours, fiches métiers et statut des sources
+site/data/jobs.json        Corpus complet et métadonnées
+site/data/jobs.csv         Export complet
+site/data/meta.json        Audit du corpus
+docs/METHODOLOGIE.md        Règles, définitions et limites
+docs/SOURCES.md             Journal des sources et exclusions
+docs/GUIDE_PEDAGOGIQUE.md  Appropriation du projet et exercices
+site.FLOWS.md              Recette des parcours, hors déploiement
+QA.md                      Résultats des vérifications
 ```
 
-## Choix techniques
+Héberger seulement `site/`. Les fiches métiers sont des données éditoriales : modifier `catalog.json` permet d’ajouter une fiche sans réécrire toute la page HTML.
 
-- **HTML5 / CSS3 :** structure sémantique, formulaires étiquetés, navigation clavier, responsive mobile.
-- **Python :** `urllib.request`, `json`, `csv`, `re`, `datetime`, tests `unittest`.
-- **JavaScript natif :** filtre les données localement et met à jour les comptes, sans dépendance de framework.
-- **Graphiques HTML/CSS :** barres interactives avec libellés et chiffres lisibles, sans bibliothèque externe.
-- **Site statique :** pas de backend, pas de secret à exposer, pas de base utilisateur.
-- **Confidentialité :** pas de cookies, stockage navigateur, suivi analytique ou collecte de candidatures.
+## Choix techniques et confidentialité
 
-Les polices Manrope et IBM Plex Mono sont chargées via Google Fonts ; leurs fontes système de secours s’appliquent si le réseau est indisponible. Le fichier de données et toutes les fonctions métier sont locaux au site.
+HTML sémantique, CSS Grid/Flexbox, JavaScript natif et pipeline Python standard. Pas de framework, backend, clé API, stockage de candidature, cookies analytiques ou compte utilisateur. Les polices Manrope et IBM Plex Mono utilisent Google Fonts, avec fontes système de secours.
 
-## Méthodologie en bref
+Les descriptions BPCE sont nettoyées et les emails/numéros français détectés sont masqués. Ce traitement ne constitue pas une garantie exhaustive d’anonymisation du texte libre. Les offres et liens restent des instantanés dont la disponibilité doit être vérifiée.
 
-Une référence = une annonce, même si elle existe dans plusieurs villes. Les statistiques de compétences comptent des annonces uniques ; les villes sont conservées pour filtrer les régions. Une annonce peut compter dans plusieurs régions : le graphique géographique n’est pas additif.
+## Présenter le projet
 
-Les familles de métiers sont des classifications par règles sur le titre, pas une vérité labellisée manuellement. Les compétences sont des mentions dans les titres/descriptions, pas forcément des exigences. Aucun salaire ni niveau de télétravail n’est estimé.
+Une fois le code étudié et les choix compris :
 
-Lire [la méthodologie détaillée](docs/METHODOLOGIE.md).
+> Développement d’Horizon MSI, portail web des débouchés du Master MSI : modélisation de parcours et familles métiers, pipeline Open Data Python, intégration de références éditoriales multi-sources, déduplication, filtres interactifs, exports CSV/JSON et tests unitaires. Documentation des biais, de la provenance et des limites d’accès aux postes.
 
-## Héberger
+Ne pas revendiquer un partenariat avec les entreprises, une agrégation automatique des quatre plateformes ou une couverture représentative du marché.
 
-Le dossier `site/` fonctionne sur tout hébergement statique. Pour GitHub Pages, une possibilité simple est de publier les fichiers de `site/` à la racine d’une branche dédiée ou d’utiliser un workflow de déploiement Pages.
+## Déploiement
 
-**Rien n’active automatiquement GitHub Pages dans cette V1.** Un dépôt privé peut nécessiter un abonnement GitHub compatible pour Pages. Le passage du dépôt en public et l’activation de Pages doivent être décidés explicitement.
-
-Le workflow inclus ne fait que lancer les tests. Aucune collecte récurrente ni publication automatique n’a été activée.
-
-## Présenter le projet sur un CV
-
-À utiliser une fois le projet étudié et compris :
-
-> Développement d’un observatoire web des offres data : collecte d’un export Open Data en Python, normalisation et déduplication multi-localisations, extraction de mentions de compétences, filtres interactifs et exports CSV/JSON. Documentation des biais et tests unitaires.
-
-Ne pas prétendre avoir analysé « tout le marché français » ni présenté des salaires moyens : les données ne le permettent pas.
-
-## Évolutions possibles
-
-- Ajouter un deuxième producteur avec une licence et un schéma compatibles.
-- Constituer des instantanés successifs pour comparer les évolutions, avec périmètre constant.
-- Annoter manuellement un échantillon pour mesurer précision et rappel de la classification.
-- Ajouter des salaires uniquement si devise, période et unité sont fiables.
-- Enrichir le contrôle qualité et comparer les biais entre sources.
+Le dossier `site/` fonctionne sur un hébergement statique. Le workflow GitHub inclus vérifie le code ; il n’active ni collecte récurrente ni publication automatique. Le dépôt reste privé et GitHub Pages n’est pas activé.

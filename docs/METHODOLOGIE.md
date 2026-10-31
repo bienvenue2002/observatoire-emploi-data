@@ -1,83 +1,66 @@
-# Méthodologie · DataScope
+# Méthodologie · Horizon MSI
 
-L’objectif est de montrer une chaîne de données lisible et reproductible. L’objectif n’est pas de produire une statistique nationale de l’emploi.
+Horizon MSI sert à explorer les débouchés du Master MSI, pas à estimer le marché national. Les décisions d’orientation et de candidature restent soumises au programme officiel et au profil demandé par chaque employeur.
 
-## Source et statut des données
+## Périmètre académique
 
-- **Producteur :** Groupe BPCE.
-- **Catalogue :** https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques
-- **Export JSON public :** https://bpce.opendatasoft.com/api/explore/v2.1/catalog/datasets/groupe-bpce-offres-emploi/exports/json
-- **Licence :** Licence Ouverte / Open Licence 2.0, indiquée dans le catalogue.
-- **Unité source :** une ligne d’annonce/localisation.
-- **Unité analytique :** une référence d’annonce unique.
-- **Statut :** instantané (`snapshot`), pas validation en temps réel d’un poste.
+La brochure MSI-20WEB fournie, page 3, décrit CMSI, Intelligence des données et ARAMIS. Le catalogue reprend les débouchés et perspectives cités et complète par Data Scientist et Data Engineer, signalés comme métiers connexes.
 
-Chaque annonce garde sa source et sa date de collecte. La date de modification source n’est jamais assimilée à la date de publication. Les liens vers les employeurs doivent être consultés pour vérifier l’état actuel d’une offre ; la collecte ne garantit pas qu’elle soit encore ouverte.
+Les [pages CMSI](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-conseil-et-management-des-systemes-dinformation), [ID](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-intelligence-des-donnees) et [ARAMIS](https://iae.grenoble-inp.fr/en/our-programs/master-2-advanced-research-in-management-of-information-system) permettent de consulter les références officielles. Le site ne reprend pas leurs chiffres d’insertion ou salaires : il ne les confond pas avec ceux de son corpus.
 
-## Transformation
+`scripts/taxonomy.py` rattache des familles à un ou plusieurs parcours. Ces rattachements sont indicatifs : ils n’établissent ni une équivalence de diplôme ni l’éligibilité à un poste. ARAMIS comprend aussi le conseil et l’audit ; ses offres rattachées ne sont pas des offres doctorales.
 
-1. Vérifier que l’export est une liste de dictionnaires avec les champs attendus.
-2. Conserver uniquement `country = France`, après normalisation.
-3. Décoder les entités HTML et supprimer les balises.
-4. Classifier l’intitulé selon des règles, dans cet ordre :
-   - exclure les acheteurs et datacenters ;
-   - Business Analyst ;
-   - Data Scientist / machine learning ;
-   - Data Analyst / business intelligence / décisionnel ;
-   - Data Engineer, architecture et Big Data ;
-   - autres intitulés contenant le mot entier « data ».
-5. Normaliser les contrats de stage et d’alternance, ainsi que certaines variantes de régions.
-6. Regrouper par référence source. Si elle manque, utiliser une empreinte du lien et du titre.
-7. Réunir les localisations et les mentions de compétences des variantes.
-8. Conserver la description la plus longue et la date de modification la plus récente.
-9. Exporter JSON, CSV et audit de collecte.
+## Sources et droits
 
-Cette taxonomie peut inclure des métiers connexes ou en manquer. Elle doit être évaluée sur des exemples annotés avant toute affirmation de performance.
+- **BPCE :** [catalogue public](https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques), [export JSON](https://bpce.opendatasoft.com/api/explore/v2.1/catalog/datasets/groupe-bpce-offres-emploi/exports/json), Licence Ouverte 2.0 avec attribution.
+- **Autres plateformes :** sélection éditoriale de pages publiques, détaillée dans [SOURCES.md](SOURCES.md). Aucune licence ouverte n’est présumée. Les fiches contiennent des faits structurés, un lien et une synthèse originale, sans reproduction de la description complète.
+- **Accès privés :** pas de compte candidat, d’espace école, d’authentification contournée ni d’API non autorisée.
 
-## Calcul des indicateurs
+## Transformation BPCE
 
-- **Nombre d’annonces :** nombre de références distinctes après tous les filtres.
-- **Stages et alternance :** annonces dont le contrat normalisé appartient à ces deux valeurs.
-- **Régions :** nombre de régions distinctes renseignées dans les annonces sélectionnées.
-- **Compétence la plus citée :** mot-clé détecté dans le plus grand nombre d’annonces sélectionnées.
-- **Part d’une compétence :** annonces mentionnant ce mot-clé divisées par toutes les annonces sélectionnées. Une annonce peut mentionner plusieurs compétences ; le total des pourcentages peut dépasser 100 %.
-- **Répartition régionale :** nombre de références distinctes présentes dans chaque région. Une offre multi-régions compte une fois par région ; la somme des barres peut dépasser le nombre d’annonces.
+Le script vérifie le schéma, conserve les lignes France, nettoie le HTML, normalise contrats/régions et classe les intitulés par règles ordonnées. Audit, cybersécurité, produit et business analysis précèdent les règles génériques data. Les domaines voisins ERP/PLM sont regroupés sous « solutions métier », sans assimiler PLM à ERP.
 
-Les graphiques affichent les sept premières catégories. Les filtres restent disponibles pour toutes les catégories détectées.
+La référence est la clé de regroupement ; à défaut, une empreinte du titre et du lien sert de secours. Les localisations et compétences des variantes sont réunies, la description la plus longue conservée et la date de modification la plus récente retenue.
 
-## Dictionnaire des champs exportés en JSON
+Les intitulés contenant « data » sans correspondance précise restent dans « Autres métiers data », jamais assimilés automatiquement à un Chief Data Officer. Les tests vérifient notamment qu’un chef de projet événementiel ou un auditeur financier n’entre pas dans les familles SI.
 
-| Champ | Sens |
-|---|---|
-| `id` | Référence source, sinon empreinte de secours |
-| `title` | Intitulé nettoyé |
-| `company` | Organisation source, à défaut Groupe BPCE |
-| `family` | Famille métier déduite par règle |
-| `contract` | Type de contrat normalisé |
-| `locations` | Liste de couples ville/région |
-| `skills` | Mentions détectées, uniques par annonce |
-| `description` | Description nettoyée ; emails et téléphones français masqués |
-| `source` / `source_url` | Producteur et lien vers l’annonce |
-| `observed_at` | Date UTC du téléchargement de l’export |
-| `modified_at` | Dernière modification source, si lisible ; fuseau non précisé par le champ source |
-| `status` | `snapshot` |
-| `salary_min` / `salary_max` | Valeurs source, éventuellement nulles ; pas annualisées |
-| `remote_source` | Champ source télétravail, éventuellement null |
+## Sélection éditoriale
 
-Les champs nom et email du recruteur ne sont pas repris du brut. Le masquage par expressions régulières des descriptions n’est pas une garantie exhaustive d’anonymisation de tout texte libre.
+`data/curated.json` conserve les faits vérifiés et la date de consultation de chaque page. `load_curated()` valide le schéma, les doublons et les domaines HTTPS admis. La famille est choisie par lecture de l’annonce ; les parcours sont ajoutés via la même taxonomie que BPCE.
 
-## Limites
+La sélection n’est ni exhaustive ni un échantillon aléatoire. Relancer le pipeline importe le fichier local, mais ne revérifie pas les pages. Les fiches anciennes comportent un avertissement ; une page affichant explicitement « poste pourvu » est écartée.
 
-Un seul groupe bancaire ne permet pas une inférence sur le marché national, ni une comparaison représentative entre villes. Les décomptes ne mesurent pas le nombre de recrutements : une annonce peut correspondre à plusieurs postes, être multi-localisée, ou ne plus être ouverte.
+Les identifiants/URLs sont uniques dans cette sélection. Le dédoublonnage entre plateformes n’est pas garanti lorsqu’une offre existe sous des URLs différentes ; aucun chevauchement identifié n’est volontairement ajouté.
 
-Un instantané ne mesure pas une tendance. Les descriptions ne distinguent pas automatiquement une compétence exigée d’une compétence souhaitée, d’un outil historique ou d’un outil cité dans la présentation de l’entreprise.
+## Indicateurs et dénominateurs
 
-Une absence de détection n’établit pas qu’une compétence est absente. Les règles prudentes pour R et Tableau réduisent certains faux positifs mais peuvent créer des faux négatifs. Aucun taux de précision n’est revendiqué.
+- **Annonces, stages, régions :** calculés sur toutes les sources après application des filtres.
+- **Compétence dominante et graphique :** seulement sur les offres `collection_method = open_data` de la sélection. Une compétence compte au plus une fois par annonce ; le dénominateur est le nombre d’offres BPCE sélectionnées, pas le total incluant les fiches éditoriales.
+- **Tags éditoriaux :** issus de la lecture de la page d’origine ; filtrables, mais exclus des comparaisons de fréquence.
+- **Régions :** chaque annonce compte au plus une fois par région. Une offre multi-régions peut contribuer à plusieurs barres.
+- **Parcours :** plusieurs rattachements sont possibles ; leurs comptes ne s’additionnent pas au total du corpus.
+- **Sept premières catégories :** seuls les sept premiers mots-clés ou régions sont tracés ; les listes de filtres gardent toutes les valeurs.
 
-Les salaires structurés sont absents de l’instantané initial : aucune moyenne n’est publiée. Une mention de télétravail dans le texte n’est pas interprétée automatiquement.
+Une mention n’est pas nécessairement une exigence. L’absence de détection n’établit pas l’absence d’une compétence ; les regex prudentes pour R/Tableau créent aussi des faux négatifs.
 
-## Vérification et reproductibilité
+## Champs additionnels de la V2
 
-Les tests portent sur les règles de transformation, notamment la déduplication, les faux positifs de compétences, les entités HTML et l’exclusion des champs recruteurs. Ils ne valident pas l’exactitude de toutes les annonces.
+Le schéma initial est enrichi sans retrait de champ : `pathways`, `source_key`, `collection_method`, et éventuellement `published_at` / `eligibility_note`. Toutes les 52 références initiales sont conservées dans les 81 annonces de la V2 ; les familles peuvent être reclassées.
 
-Le fichier `meta.json` conserve les volumes de chaque étape et la version du pipeline. Le brut n’est pas partagé ; la source peut évoluer. Une reproduction exacte exige le même export brut et sa date de téléchargement, renseignée via `--observed-at`.
+`observed_at` est le moment du téléchargement BPCE ou la date de consultation éditoriale. `published_at` est une date de publication disponible sur certaines pages ; `modified_at` est une modification source, non une publication. Le champ BPCE ne fournit pas son fuseau ; le site n’en tire aucune analyse horaire.
+
+Le CSV complet et l’export filtré ont des colonnes adaptées à leur usage. Tous deux conservent provenance, parcours et date. Le JSON filtré contient des lignes aplaties et un bloc de métadonnées dont `filtered_count` est propre à l’export ; les autres volumes décrivent le corpus complet.
+
+## Salaires, vie privée et limites
+
+Aucun salaire n’est annualisé, aucun télétravail n’est inféré d’un champ manquant. Les chiffres salariaux de certains textes ou plateformes ne sont pas repris sans unité et période fiables ; il n’y a pas de moyenne salariale.
+
+Les champs recruteurs BPCE sont exclus. Emails et numéros français repérés dans le texte sont masqués, sans garantie exhaustive d’anonymisation. Aucun CV, compte, mot de passe ou candidature n’est stocké.
+
+BPCE reste majoritaire : les chiffres ne décrivent pas la demande des recruteurs en général. Un instantané ne mesure pas une tendance ; une annonce n’est pas nécessairement un poste unique ou encore ouvert. Les parcours doctoraux et les familles absentes du corpus restent visibles sans fausses offres.
+
+## Reproductibilité et tests
+
+Quinze tests unitaires couvrent règles de classification, familles/parcours, faux positifs de compétences, déduplication, sélection éditoriale, URLs et export multi-source. Ils ne certifient ni toutes les classifications ni la disponibilité d’une annonce.
+
+Le brut BPCE initial n’est pas partagé ; une reproduction exacte nécessite le même export et sa date. Les fichiers nettoyés sont versionnés, de même que les sept fiches éditoriales et leurs dates. Les contrôles navigateur sont consignés dans `QA.md`.

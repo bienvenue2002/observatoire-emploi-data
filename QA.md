@@ -1,5 +1,23 @@
 # Contrôles d’acceptation
 
+## Résultats V2 Horizon MSI, 31 octobre 2026
+
+- 15 tests unitaires Python réussis ; `node --check site/app.js` réussi.
+- 81 annonces : 74 BPCE et 7 éditoriales. Les 52 références de la V1 sont toutes présentes après reclassement.
+- 17 fiches métiers ; filtres de fiches : 8 CMSI, 8 ID dont deux métiers connexes, 4 ARAMIS. Les catégories se recoupent.
+- 52 assertions interactives/exploratoires exécutées sur Chromium : cartes parcours réversibles, parcours/source, recherche avec/sans accent, métiers vers offres, famille doctorale vide, cinq provenances, tri, pagination, raccourcis, graphiques, fiches et fermeture, méthode et audit.
+- Vérification des cinq sources : 74 BPCE, 2 Deloitte via WTTJ, 1 Capgemini carrière, 2 WTTJ autres employeurs, 2 JobTeaser.
+- Fiche éditoriale : synthèse et vigilance profil visibles ; fiche BPCE : description complète conservée.
+- Export JobTeaser filtré : deux lignes JSON avec parcours/mode de collecte, et deux lignes CSV plus en-tête.
+- Les statistiques de compétences ne sont pas calculées sur les fiches éditoriales ; l’absence de dénominateur est signalée.
+- Liens activés réellement : annonce Deloitte sur WTTJ, plateforme JobTeaser et parcours officiel Grenoble IAE.
+- État vide et retour aux offres ; erreur réseau sans données de substitution ; titre HTML malveillant échappé et URL `javascript:` refusée dans une fixture de test non persistée.
+- Inspection desktop 1440 px, mobile 375 px, dialogue 320 px et pied de page en fenêtre courte. Les cinq vues à 320 px ne débordent pas horizontalement.
+- Contraste calculé sur 28 libellés secondaires du rendu d’accueil : minimum observé 6,13:1.
+- Aucune erreur JavaScript nominale observée. Publication publique du dépôt et GitHub Pages non activés.
+
+Le contrôle de l’hébergement V2 est ajouté après déploiement. Les résultats V1 ci-dessous sont historiques, pas les volumes actuels.
+
 ## Résultats de la V1, 31 octobre 2026
 
 - 9 tests unitaires Python réussis ; syntaxe JavaScript vérifiée avec `node --check`.

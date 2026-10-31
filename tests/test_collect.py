@@ -1,5 +1,9 @@
 import unittest
-from scripts.collect import clean, contract, role, skills_in, transform, redact
+import json
+import tempfile
+from pathlib import Path
+from scripts.collect import clean, contract, role, skills_in, transform, redact, load_curated, export, ROOT
+from scripts.taxonomy import pathways
 
 
 class PipelineTests(unittest.TestCase):
@@ -16,7 +20,69 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(role("Ingénieur Data F/H"), "Data Engineer / Architecture")
         self.assertEqual(role("Développeur Big Data"), "Data Engineer / Architecture")
         self.assertEqual(role("Data Scientist junior"), "Data Scientist")
-        self.assertEqual(role("Data Analyst"), "Data Analyst / BI")
+        self.assertEqual(role("Data Analyst"), "Data Analyst")
+
+    def test_msi_roles(self):
+        examples = {
+            "Consultant junior audit IT": "Auditeur SI",
+            "Consultant cybersécurité": "Consultant cybersécurité",
+            "Product Owner Data": "Product Owner",
+            "Scrum Master": "Scrum Master",
+            "Consultant fonctionnel SAP": "Consultant ERP / solutions métier",
+            "Chef de projet SI": "Chef de projet SI",
+            "Consultant AMOA Transformation": "Conseil & transformation SI",
+            "Consultant Business Intelligence": "Consultant BI / décisionnel",
+            "Chief Data Officer": "Chief Data Officer / gouvernance",
+            "Responsable Analytics": "Responsable Analytics",
+            "Webanalytics": "Webanalytics",
+        }
+        for title, expected in examples.items():
+            with self.subTest(title=title):
+                self.assertEqual(role(title), expected)
+                self.assertTrue(pathways(expected))
+
+    def test_non_it_project_excluded(self):
+        self.assertIsNone(role("Chef de projet événementiel"))
+        self.assertIsNone(role("Auditeur financier"))
+        self.assertNotEqual(role("Analyste Risque Data & Innovation"), "Chief Data Officer / gouvernance")
+
+    def test_career_catalog(self):
+        catalog = json.loads((ROOT / "site/data/catalog.json").read_text())
+        self.assertEqual({x["id"] for x in catalog["pathways"]}, {"CMSI", "ID", "ARAMIS"})
+        self.assertEqual(len(catalog["careers"]), 17)
+        for c in catalog["careers"]:
+            self.assertEqual(c["pathways"], pathways(c["family"]))
+        self.assertIn("après", next(c for c in catalog["careers"] if c["family"] == "Enseignement-recherche en SI")["level"].lower())
+
+    def test_curated_sources(self):
+        rows = load_curated(ROOT / "data/curated.json")
+        self.assertEqual(len(rows), 7)
+        self.assertEqual({j["source_key"] for j in rows}, {"deloitte", "capgemini", "wttj", "jobteaser"})
+        self.assertTrue(all(j["collection_method"] == "editorial" for j in rows))
+        self.assertTrue(all(j["salary_min"] is None for j in rows))
+        self.assertTrue(all(j["pathways"] for j in rows))
+
+    def test_bad_curated_url_and_duplicate(self):
+        good = json.loads((ROOT / "data/curated.json").read_text())[0]
+        with tempfile.TemporaryDirectory() as td:
+            p = Path(td) / "curated.json"
+            p.write_text(json.dumps([{**good, "source_url": "javascript:alert(1)"}]))
+            with self.assertRaises(ValueError):
+                load_curated(p)
+            p.write_text(json.dumps([good, good]))
+            with self.assertRaises(ValueError):
+                load_curated(p)
+
+    def test_multisource_export(self):
+        with tempfile.TemporaryDirectory() as td:
+            meta = export([dict(title="Product Owner", country="France", referencenumber="X")],
+                          Path(td), "2026-10-31", ROOT / "data/curated.json")
+            self.assertEqual(meta["bpce_unique_offers"], 1)
+            self.assertEqual(meta["editorial_offers"], 7)
+            self.assertEqual(meta["unique_offers"], 8)
+            payload = json.loads((Path(td) / "jobs.json").read_text())
+            self.assertEqual(len({j["id"] for j in payload["jobs"]}), 8)
+            self.assertEqual(payload["jobs"][0]["collection_method"], "open_data")
 
     def test_contract(self):
         self.assertEqual(contract("Stage sup à 2 mois"), "Stage")
