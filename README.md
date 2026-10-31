@@ -1,6 +1,8 @@
 # Élan MSI · Du master aux métiers
 
-Un portail d’orientation et d’exploration des offres liées au Master Management des Systèmes d’Information de Grenoble IAE. Anciennement DataScope, le projet ne se limite plus aux métiers data : il couvre conseil, ERP, business analysis, produit, projets, cybersécurité, audit, données et recherche.
+Un portail d’orientation et d’exploration des offres liées au Master Management des Systèmes d’Information de Grenoble IAE. Le projet couvre conseil, ERP, business analysis, produit, projets, cybersécurité, audit, données et recherche.
+
+**Version actuelle, 31 octobre 2026 : Élan MSI, 81 annonces, 17 fiches métiers et trois parcours.** Cette documentation décrit le périmètre MSI élargi, et non l’ancien prototype limité à la data.
 
 Projet académique indépendant, non affilié à l’école ni aux recruteurs. Auteur : Abra-Bienvenue Tchakah, [bienvenue2002](https://github.com/bienvenue2002). Le nom historique du dépôt est conservé pour ne pas casser ses liens.
 
@@ -9,16 +11,16 @@ Le dépôt est public, sur demande de son auteur. Le site est publié avec GitHu
 ## Ce que l’on peut explorer
 
 - **Trois parcours :** CMSI, Intelligence des données et ARAMIS, avec rattachements indicatifs aux métiers.
-- **Dix-sept fiches :** débouchés et perspectives cités dans la brochure, complétés de deux métiers data connexes explicitement signalés.
+- **Dix-sept fiches :** débouchés et perspectives des parcours MSI, complétés de deux métiers data connexes explicitement signalés.
 - **Des repères de niveau :** stage/junior, évolution avec expérience, ou poursuite en doctorat.
-- **Des offres sourcées :** recherche, parcours, métier, région, contrat, compétence et source.
+- **Des offres sourcées :** recherche, parcours, métier, région, contrat, compétence et source. Durée, niveau d’études et fin d’études sont visibles dans les résultats et les détails lorsqu’ils sont précisés.
 - **Des interactions :** graphiques cliquables, raccourcis stage/région, tri, pagination et fiches détaillées.
-- **Des exports :** CSV et JSON de la sélection, avec parcours, provenance, date et mode de collecte.
+- **Des exports :** CSV et JSON de la sélection, avec parcours, profil étudiant, preuves textuelles, provenance, date et mode de collecte.
 - **Une méthode lisible :** déduplication, protection des coordonnées, limites du corpus et statut des sources.
 
 ## Formation : le périmètre de référence
 
-La brochure `MSI-20WEB.pdf` fournie, page 3, est la référence principale. Les pages officielles permettent de consulter les parcours :
+Références consultables : Grenoble IAE – INP, UGA, pages officielles des trois Master 2 ci-dessous, consultées le 31 octobre 2026. Voir notamment leurs rubriques « Débouchés professionnels » ou « Careers » :
 
 - [Conseil et Management des Systèmes d’Information](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-conseil-et-management-des-systemes-dinformation).
 - [Intelligence des Données](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-intelligence-des-donnees).
@@ -26,7 +28,7 @@ La brochure `MSI-20WEB.pdf` fournie, page 3, est la référence principale. Les 
 
 Les missions et idées de projets sont des reformulations pédagogiques. Un rattachement ne garantit pas l’admission à un parcours ou l’éligibilité à une offre. Chief Data Officer est une perspective de direction, pas un premier emploi promis ; l’enseignement-recherche nécessite une poursuite en doctorat puis un recrutement.
 
-## Deux modes de données, pas de fausse intégration
+## D’où viennent les offres ?
 
 L’instantané du 31 octobre 2026 contient **81 annonces** : 74 issues de l’export BPCE reclassé sur le périmètre MSI et 7 fiches éditoriales.
 
@@ -40,11 +42,19 @@ L’instantané du 31 octobre 2026 contient **81 annonces** : 74 issues de l’e
 
 Ces comptes décrivent le corpus du projet, pas les volumes totaux des plateformes. Le détail factuel de chaque fiche et son URL se trouvent dans `data/curated.json` ; les pages effectivement consultées et les exclusions figurent dans [le journal des sources](docs/SOURCES.md).
 
-BPCE : 1 888 lignes initiales, 1 785 situées en France, 192 retenues par les règles MSI, puis 74 références uniques. Les 52 annonces de la première version ont toutes été conservées ; certaines ont changé de famille métier.
+BPCE : 1 888 lignes initiales, 1 785 situées en France, 192 retenues par les règles MSI, puis 74 références uniques, auxquelles s’ajoutent les sept références éditoriales.
 
 Seul [l’export public BPCE](https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques) est collecté automatiquement. Aucune API Deloitte, Capgemini, WTTJ ou JobTeaser n’est branchée ; aucun Career Center privé n’est consulté. Les fiches éditoriales utilisent des informations factuelles, un lien et une synthèse originale, pas les descriptions intégrales.
 
 **Statistiques de compétences :** les résumés éditoriaux ne sont pas comparables aux descriptions complètes. Le graphique et le mot-clé dominant sont donc calculés uniquement sur les offres BPCE sélectionnées. Les tags éditoriaux restent filtrables.
+
+## Durée et niveau d’études
+
+Le niveau BPCE provient du champ `degree` ou, s’il est absent, d’une mention explicite de niveau dans le texte, avec preuve conservée. Les durées sont extraites seulement lorsqu’un passage explicite décrit le stage ou le contrat, sans transformer une durée d’expérience en durée de poste. Les fiches éditoriales sont relues sur leur page d’origine. Une information manquante reste « Non précisé » : aucune durée n’est inventée, notamment pour un CDI. La recherche inclut ces nouveaux champs : essayer `Bac+4`, `6 mois` ou `fin d’études`.
+
+Les champs `duration`, `education_level` et `study_stage` sont accompagnés de preuves textuelles et d’un mode de vérification dans les données JSON et le CSV du pipeline. Les exports depuis le site utilisent leurs équivalents français `duree`, `niveau_etudes` et `avancement_etudes`. Une section dépliable de chaque fiche permet de vérifier les mentions d’origine.
+
+Exemples vérifiés : [CIO Advisory, Capgemini Invent](https://www.jobteaser.com/en/job-offers/3e24e59b-a298-48a0-b3da-2cbca1c6fa34-capgemini-invent-consultante-consultant-cio-advisory-stage) indique six mois, « Master level or equivalent » et un stage de fin d’études. [Business Analyst Supply Chain, Capgemini](https://www.jobteaser.com/en/job-offers/0f85b343-1448-464a-a59b-f8ea406dfa47-capgemini-business-analyst-supply-chain-stage) précise Bac+5 en cours et six mois dans son descriptif, alors que son encart affiche quatre à six mois ; cette divergence est conservée dans la fiche.
 
 ## Lancer le site
 

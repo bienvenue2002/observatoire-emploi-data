@@ -142,6 +142,61 @@ def modified(value):
     return None
 
 
+def student_requirements(row):
+    """Explicit source fields only; experience is not contract duration."""
+    text = redact(row.get("description")) + "\n" + clean(row.get("title"))
+    degree_evidence = clean(row.get("degree")) or None
+    degree_note = "Champ degree de l’export BPCE." if degree_evidence else None
+    if not degree_evidence:
+        study_match = re.search(
+            r"(?:niveau|formation|étudiant(?:e)?|dipl[oô]m[eé])[^\n.!?]{0,70}?\b"
+            r"(?P<degree>Bac\s*\+\s*\d(?:\s*(?:à|/|ou|et|-)\s*\+?\d)?|Master\s*[12])\b",
+            text, re.I)
+        if study_match:
+            degree_evidence = study_match.group(0)
+            degree = study_match.group("degree")
+            degree_note = "Niveau repéré automatiquement dans le texte ; vérifier les précisions de l’annonce."
+        else:
+            degree = None
+    else:
+        degree = degree_evidence
+    if degree:
+        degree = re.sub(r"\bbac\s*\+\s*", "Bac+", degree, flags=re.I)
+    duration = evidence = None
+    if contract(row.get("jobtype")) in {"Stage", "Alternance", "CDD"}:
+        number = r"(?:\d{1,2}|six|douze)"
+        unit = r"(?:mois|semaines?|ans?|années?)"
+        value = rf"{number}(?:\s*(?:à|a|-|et)\s*{number})?\s*{unit}(?:\s*à\s*{number}\s*{unit})?(?:\s+ou\s+plus)?"
+        prefixes = [
+            r"durée\s+(?:du|de votre|de ce)\s+(?:stage|contrat|cdd|alternance)\s*(?:souhaitée)?\s*(?::|est|de)?\s*(?:idéalement\s+|entre\s+|de\s+)?",
+            r"\b(?:stage|cdd|alternance|contrat)(?:\s+de\s+fin\s+d[’']études)?\s+(?:d[’']une\s+durée\s+de|de)\s+",
+            r"à\s+pourvoir[^.]{0,120}?\bpour\s+une\s+durée\s+de\s+",
+            r"\b(?:stage|cdd|alternance|contrat)\s*(?:[-–:]\s*)?",
+        ]
+        for prefix in prefixes:
+            for match in re.finditer(prefix + rf"(?P<value>{value})\b", text, re.I):
+                before = re.split(r"[.!?;\n]", text[:match.start()])[-1][-100:]
+                after = text[match.end():match.end() + 35]
+                if re.search(r"exp[ée]rience|effectu[ée]|r[ée]alis[ée]|pr[ée]c[ée]dent|ant[ée]rieur|avez\s+fait", before, re.I):
+                    continue
+                if re.match(r"\s+d[’']exp[ée]rience", after, re.I):
+                    continue
+                duration, evidence = match.group("value"), match.group(0)
+                break
+            if duration:
+                break
+    final_year = re.search(r"\b(?:stage|alternance)\s+de\s+fin\s+d[’']études\b", text, re.I) if contract(row.get("jobtype")) in {"Stage", "Alternance"} else None
+    return {
+        "duration": duration, "duration_evidence": evidence,
+        "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce." if duration else None,
+        "education_level": degree, "education_evidence": degree_evidence,
+        "education_note": degree_note,
+        "study_stage": "Fin d’études" if final_year else None,
+        "study_stage_evidence": final_year.group(0) if final_year else None,
+        "requirements_method": "bpce_structured_and_text",
+    }
+
+
 def transform(records, observed_at):
     """Une annonce par référence ; les localisations sont conservées en liste."""
     groups = {}
@@ -164,6 +219,7 @@ def transform(records, observed_at):
             groups[key] = {
                 "id": key, "title": clean(row.get("title")), "company": clean(row.get("organization")) or "Groupe BPCE",
                 "family": family, "contract": contract(row.get("jobtype")),
+                **student_requirements(row),
                 "locations": [], "skills": [], "description": desc,
                 "source": "Groupe BPCE · Open Data", "source_url": source_link,
                 "source_key": "bpce", "collection_method": "open_data",
@@ -180,6 +236,13 @@ def transform(records, observed_at):
         # Conserver la variante descriptive la plus complète des lignes regroupées.
         if len(desc) > len(job["description"]):
             job["description"] = desc
+        candidate = student_requirements(row)
+        for field in ("duration", "education_level", "study_stage"):
+            if not job.get(field) and candidate.get(field):
+                job[field] = candidate[field]
+                job[field + "_evidence"] = candidate.get(field + "_evidence")
+                if field != "study_stage":
+                    job[field + "_note"] = candidate.get(field + "_note")
         new_date = modified(row.get("lastmodifieddate"))
         if new_date and (not job["modified_at"] or new_date > job["modified_at"]):
             job["modified_at"] = new_date
@@ -208,7 +271,11 @@ def load_curated(path):
         if not row["locations"] or any(not {"city", "region"}.issubset(x) for x in row["locations"]):
             raise ValueError("Localisation éditoriale manquante.")
         ids.add(row["id"]); urls.add(row["source_url"].rstrip("/"))
-        result.append({**row, "description": redact(row["description"]),
+        requirements = {key: clean(row.get(key)) or None for key in (
+            "duration", "duration_evidence", "duration_note", "education_level",
+            "education_evidence", "education_note", "study_stage", "study_stage_evidence")}
+        result.append({**row, **requirements, "requirements_method": "editorial_verified",
+                       "description": redact(row["description"]),
                        "pathways": pathways(row["family"]), "collection_method": "editorial",
                        "status": "snapshot", "modified_at": None,
                        "salary_min": None, "salary_max": None, "remote_source": None})
@@ -238,13 +305,13 @@ def export(records, output, observed_at, curated_path=None):
         "scope": "Offres France sélectionnées par métiers MSI. Corpus non exhaustif et non représentatif ; accès aux postes soumis au profil demandé.",
         "deduplication": "Une annonce par référence source ; les villes multiples sont regroupées.",
         "families": dict(Counter(j["family"] for j in jobs)),
-        "pipeline_version": "2.0.0",
+        "pipeline_version": "2.1.0",
     }
     payload = {"meta": meta, "jobs": jobs}
     (output / "jobs.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     (output / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
     with (output / "jobs.csv").open("w", encoding="utf-8-sig", newline="") as f:
-        fields = ["id", "title", "company", "family", "pathways", "contract", "cities", "regions", "skills", "source", "collection_method", "modified_at", "observed_at", "source_url"]
+        fields = ["id", "title", "company", "family", "pathways", "contract", "duration", "education_level", "study_stage", "duration_evidence", "education_evidence", "study_stage_evidence", "duration_note", "education_note", "requirements_method", "cities", "regions", "skills", "source", "collection_method", "modified_at", "observed_at", "source_url"]
         writer = csv.DictWriter(f, fieldnames=fields)
         writer.writeheader()
         for j in jobs:

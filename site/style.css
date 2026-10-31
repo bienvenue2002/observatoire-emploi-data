@@ -98,3 +98,12 @@ dialog{border:1px solid var(--color-border);border-radius:var(--radius-md);backg
   .source-actions{align-items:flex-start;flex-direction:column}
 }
 @media(prefers-reduced-motion:reduce){.pathway-card{transition:none}}
+.job-requirements{display:grid;gap:6px;min-width:145px;max-width:210px;margin-top:12px;font-size:var(--text-xs);line-height:1.6}
+.study-stage{color:var(--color-primary);font-weight:600}
+.student-profile{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:24px 0;padding:20px;border:1px solid var(--color-border);border-radius:var(--radius-md);background:var(--color-surface)}
+.student-profile dt{font-size:var(--text-xs);color:var(--color-muted);margin-bottom:8px}
+.student-profile dd{margin:0;font-size:var(--text-sm);font-weight:700;overflow-wrap:anywhere}
+.requirements-proof{margin-bottom:24px;font-size:var(--text-xs);line-height:1.8}
+.requirements-proof summary{cursor:pointer;min-height:44px;display:list-item;padding-block:10px}
+.requirements-proof p{margin-top:12px;overflow-wrap:anywhere}
+@media(max-width:760px){.job-requirements{max-width:none}.student-profile{grid-template-columns:1fr;padding:16px;gap:16px}}

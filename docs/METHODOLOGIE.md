@@ -4,7 +4,7 @@
 
 ## Périmètre académique
 
-La brochure MSI-20WEB fournie, page 3, décrit CMSI, Intelligence des données et ARAMIS. Le catalogue reprend les débouchés et perspectives cités et complète par Data Scientist et Data Engineer, signalés comme métiers connexes.
+Le catalogue couvre CMSI, Intelligence des données et ARAMIS. Références publiques, consultées le 31 octobre 2026 : Grenoble IAE – INP, UGA, [Master 2 Conseil et Management des Systèmes d’Information, rubrique Débouchés professionnels](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-conseil-et-management-des-systemes-dinformation), [Master 2 Intelligence des Données, rubrique Débouchés professionnels](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-intelligence-des-donnees) et [Master 2 Advanced ReseArch in Management of Information Systems, rubrique Careers](https://iae.grenoble-inp.fr/en/our-programs/master-2-advanced-research-in-management-of-information-system). Data Scientist et Data Engineer restent signalés comme métiers connexes, et non comme intitulés directement cités par ces pages.
 
 Les [pages CMSI](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-conseil-et-management-des-systemes-dinformation), [ID](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-intelligence-des-donnees) et [ARAMIS](https://iae.grenoble-inp.fr/en/our-programs/master-2-advanced-research-in-management-of-information-system) permettent de consulter les références officielles. Le site ne reprend pas leurs chiffres d’insertion ou salaires : il ne les confond pas avec ceux de son corpus.
 
@@ -50,6 +50,14 @@ Le schéma initial est enrichi sans retrait de champ : `pathways`, `source_key`,
 `observed_at` est le moment du téléchargement BPCE ou la date de consultation éditoriale. `published_at` est une date de publication disponible sur certaines pages ; `modified_at` est une modification source, non une publication. Le champ BPCE ne fournit pas son fuseau ; le site n’en tire aucune analyse horaire.
 
 Le CSV complet et l’export filtré ont des colonnes adaptées à leur usage. Tous deux conservent provenance, parcours et date. Le JSON filtré contient des lignes aplaties et un bloc de métadonnées dont `filtered_count` est propre à l’export ; les autres volumes décrivent le corpus complet.
+
+## Profil étudiant
+
+`education_level` reprend le champ BPCE `degree`, ou à défaut une mention explicite de type niveau/formation Bac+N ou Master 1/2 dans le texte ; la preuve et le mode d’extraction sont conservés. Pour les fiches éditoriales, le niveau est vérifié sur la page d’origine. `duration` conserve une durée explicite de stage, CDD ou alternance ; une ancienneté ou une expérience exigée n’est pas une durée de contrat. Le pipeline ne calcule pas de durée pour un CDI. Les valeurs inconnues restent nulles et s’affichent « Non précisé ». Un champ `study_stage` distingue, si la source le dit, un Master en cours d’un stage de fin d’études.
+
+Les champs `duration_evidence`, `education_evidence` et `study_stage_evidence` conservent de courts extraits justificatifs. `requirements_method` distingue `bpce_structured_and_text` et `editorial_verified`. Les champs de notes gardent les réserves, dont la divergence quatre à six mois / six mois de l’offre Business Analyst Supply Chain. La détection automatique BPCE n’est pas exhaustive ; la description d’origine reste à vérifier.
+
+Le schéma 2.1 est additif : les champs et références historiques restent inchangés. Les valeurs nouvelles et leurs preuves sont présentes dans les résultats, détails et exports ; les anciens lecteurs JSON peuvent ignorer ces champs.
 
 ## Salaires, vie privée et limites
 

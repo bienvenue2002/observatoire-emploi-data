@@ -9,7 +9,7 @@ Ce projet est une base de travail à étudier, modifier et expliquer. Il ne faut
 | Internet et Web | Requête HTTP GET sur un export public, hébergement statique |
 | HTML | Structure sémantique, formulaires, tableau, liens, dialogue |
 | CSS | Variables, Flexbox, Grid, media queries et responsive |
-| JSON / CSV / API | Lecture JSON source, transformation Python, exports |
+| JSON / CSV / API | Lecture JSON source, transformation Python, exports, durée et niveau d’études accompagnés de preuves |
 | Python | Variables, listes, dictionnaires, fonctions, conditions, boucles et fichiers |
 | Collecte web | Consommation d’un export public plutôt que scraping non autorisé |
 

@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./base.css">
-  <link rel="stylesheet" href="./style.css">
-  <script src="./app.js" defer></script>
+  <link rel="stylesheet" href="./style.css?v=2.1.0">
+  <script src="./app.js?v=2.1.0" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">Aller au contenu</a>
@@ -43,7 +43,7 @@
         <div id="pathway-cards" class="pathway-grid"></div>
       </section>
       <section class="filters" aria-label="Filtrer les offres" id="filter-section">
-        <label class="search-field"><span>Rechercher</span><input id="search" type="search" placeholder="Un métier, une ville, une entreprise…" autocomplete="off"></label>
+        <label class="search-field"><span>Rechercher</span><input id="search" type="search" placeholder="Un métier, une ville, Bac+4, 6 mois…" autocomplete="off"></label>
         <label>Parcours<select id="pathway"><option value="">Tous les parcours</option></select></label>
         <label>Métier<select id="family"><option value="">Tous les métiers</option></select></label>
         <label>Région<select id="region"><option value="">Toutes les régions</option></select></label>
@@ -73,27 +73,27 @@
       <section id="offers-section" class="offers-section">
         <div class="offers-head"><div><p class="eyebrow">DES EXEMPLES POUR PASSER À L’ACTION</p><h2>Les offres à explorer<span id="result-count"></span></h2></div><div class="export-actions"><button type="button" id="export-csv" class="primary-btn">Exporter CSV ↓</button><button type="button" id="export-json" class="secondary-btn">JSON ↓</button></div></div>
         <div class="table-tools"><p id="result-detail" aria-live="polite"></p><label>Trier par <select id="sort"><option value="date">Date source la plus récente</option><option value="title">Intitulé A → Z</option><option value="company">Entreprise A → Z</option></select></label></div>
-        <div class="table-wrap"><table><thead><tr><th scope="col">Poste / entreprise / source</th><th scope="col">Localisation</th><th scope="col">Contrat</th><th scope="col">Compétences citées</th><th scope="col"><span class="sr-only">Détails</span></th></tr></thead><tbody id="jobs-table"></tbody></table></div>
+        <div class="table-wrap"><table><thead><tr><th scope="col">Poste / entreprise / source</th><th scope="col">Localisation</th><th scope="col">Contrat et profil</th><th scope="col">Compétences citées</th><th scope="col"><span class="sr-only">Détails</span></th></tr></thead><tbody id="jobs-table"></tbody></table></div>
         <div class="empty-state" id="empty" hidden><h3>Aucune annonce dans cette sélection.</h3><p>Ce corpus n’est pas exhaustif. L’absence d’offre ne signifie pas l’absence de débouché : élargissez les filtres ou consultez les plateformes.</p><div class="empty-actions"><button type="button" class="primary-btn" id="empty-reset">Effacer les filtres</button><a href="#sources" class="text-link">Explorer les sources ↗</a></div></div>
         <div class="pagination"><p id="page-label"></p><div><button id="prev" type="button" class="secondary-btn">← Précédent</button><button id="next" type="button" class="secondary-btn">Suivant →</button></div></div>
         <p id="export-status" role="status" class="export-status"></p>
       </section>
       <section id="careers-view" class="careers-view" hidden>
-        <div class="method-title"><p class="eyebrow">LA CARTE DES POSSIBLES</p><h2>Plus qu’un intitulé.<br>Un rôle à comprendre.</h2><p>Les débouchés de ta brochure MSI, page 3, avec des repères pédagogiques et deux métiers data connexes signalés comme tels. Les niveaux d’accès sont indicatifs ; chaque employeur fixe ses critères.</p></div>
+        <div class="method-title"><p class="eyebrow">LA CARTE DES POSSIBLES</p><h2>Plus qu’un intitulé.<br>Un rôle à comprendre.</h2><p>Des débouchés et perspectives du Master Management des Systèmes d’Information de Grenoble IAE – INP, UGA, avec des repères pédagogiques et deux métiers data connexes signalés comme tels. Les niveaux d’accès sont indicatifs ; chaque employeur fixe ses critères. <a class="text-link" href="#method">Consulter les références officielles des trois parcours ↗</a></p></div>
         <div id="career-tabs" class="career-tabs" role="group" aria-label="Filtrer les fiches métiers par parcours"><button type="button" data-career-path="" aria-pressed="true">Tous les parcours</button><button type="button" data-career-path="CMSI" aria-pressed="false">CMSI</button><button type="button" data-career-path="ID" aria-pressed="false">Intelligence des données</button><button type="button" data-career-path="ARAMIS" aria-pressed="false">ARAMIS</button></div>
         <p id="career-summary" aria-live="polite"></p><div id="career-grid" class="career-grid"></div>
         <aside class="reading-note"><p class="eyebrow">À GARDER EN TÊTE</p><h2>Des parcours qui se croisent.</h2><p>Business analysis, conseil ou audit peuvent mobiliser plusieurs parcours. Le rattachement proposé aide à explorer les offres ; il ne remplace ni le programme officiel ni l’analyse de ton profil.</p><a href="#sources" class="text-link">Où poursuivre la recherche ↗</a></aside>
       </section>
       <section id="sources-view" class="sources-view" hidden>
-        <div class="method-title"><p class="eyebrow">CHERCHER AU BON ENDROIT</p><h2>Des sources identifiées.<br>Pas de connexion imaginaire.</h2><p>Deloitte, Capgemini, Welcome to the Jungle et JobTeaser sont représentés par des fiches publiques consultées et des liens directs. Seul le complément BPCE utilise une collecte Open Data automatisée.</p></div>
+        <div class="method-title"><p class="eyebrow">CHERCHER AU BON ENDROIT</p><h2>D’où viennent les offres ?</h2><p>Deloitte, Capgemini, Welcome to the Jungle et JobTeaser sont représentés par des fiches publiques consultées et des liens directs. Seul le complément BPCE utilise une collecte Open Data automatisée.</p></div>
         <div id="source-grid" class="source-grid"></div>
         <aside class="reading-note"><p class="eyebrow">TES DONNÉES RESTENT CHEZ TOI</p><h2>La candidature se fait à la source.</h2><p>Aucun CV, mot de passe ou compte étudiant n’est demandé par Élan MSI. Les espaces privés et les offres réservées au Career Center ne sont pas importés.</p><a href="#method" class="text-link">Lire la méthode ↗</a></aside>
       </section>
       <section id="method-view" class="method-view" hidden>
         <div class="method-title"><p class="eyebrow">MÉTHODOLOGIE & TRANSPARENCE</p><h2>Un périmètre élargi.<br>Des limites toujours visibles.</h2><p>Ce site est un outil pédagogique d’orientation et d’exploration, pas un moteur exhaustif de toutes les offres ni un service officiel de Grenoble IAE.</p></div>
-        <div class="pipeline"><span>01 <b>Définir</b><small>Brochure et parcours MSI</small></span><span>02 <b>Sourcer</b><small>Open Data + liens vérifiés</small></span><span>03 <b>Structurer</b><small>Familles, parcours, provenance</small></span><span>04 <b>Explorer</b><small>Fiches, filtres, exports</small></span></div>
+        <div class="pipeline"><span>01 <b>Définir</b><small>Programmes officiels MSI</small></span><span>02 <b>Sourcer</b><small>Open Data + liens vérifiés</small></span><span>03 <b>Structurer</b><small>Familles, parcours, provenance</small></span><span>04 <b>Explorer</b><small>Fiches, filtres, exports</small></span></div>
         <div class="method-grid">
-          <article><h3>Formation & rattachements</h3><p>La brochure MSI-20WEB fournie, page 3, définit le socle des débouchés. Les trois pages officielles complètent ce socle. Les missions, repères d’accès et idées de projets sont des reformulations pédagogiques, non des conditions universelles de recrutement.</p><div id="academic-links" class="academic-links"></div></article>
+          <article><h3>Formation & rattachements</h3><p>Références : Grenoble IAE – INP, UGA, pages officielles du Master 2 Conseil et Management des Systèmes d’Information, du Master 2 Intelligence des Données et du Master 2 Advanced Research in Management of Information Systems (ARAMIS), consultées le 31 octobre 2026. Les liens ci-dessous permettent de consulter les programmes et leurs débouchés. Les missions, repères d’accès et idées de projets sont des reformulations pédagogiques, non des conditions universelles de recrutement.</p><div id="academic-links" class="academic-links"></div></article>
           <article><h3>Deux modes de collecte</h3><p>Le script Python collecte et reclasse les offres BPCE situées en France. Les autres plateformes sont une sélection éditoriale locale : titre, entreprise, lieu, contrat, mots-clés vérifiés, lien et synthèse originale. Pas de scraping de masse ni de connecteur privé.</p><p id="audit-counts"></p><a href="https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques" target="_blank" rel="noopener noreferrer">Catalogue BPCE et licence ↗</a></article>
           <article><h3>Déduplication & périmètre</h3><p>BPCE : une annonce par référence, avec toutes ses villes. Les fiches éditoriales sont dédupliquées par identifiant et URL ; la même offre peut néanmoins être diffusée sous des liens différents. Une région est comptée au plus une fois par offre ; les régions ne s’additionnent pas au total national.</p></article>
           <article><h3>Compétences comparables</h3><p>Le graphique et le mot-clé dominant portent uniquement sur les descriptions complètes BPCE, avec détection par expressions régulières. Les résumés éditoriaux ne sont pas comparables et sont exclus du dénominateur. Leurs tags restent filtrables et proviennent d’une lecture des pages sources.</p></article>
@@ -105,7 +105,7 @@
     </div>
     <noscript><p>Activez JavaScript pour explorer les métiers et filtrer les offres. Les <a href="./data/jobs.json">données JSON</a> restent consultables.</p></noscript>
   </main>
-  <footer><div><a class="wordmark" href="#overview">élan<span>msi</span><b>.</b></a><p>Abra-Bienvenue Tchakah · M1 MSI · Grenoble IAE<br>Projet académique indépendant · Python / HTML / CSS / JavaScript</p></div><div class="footer-source"><p>CONSEIL · PRODUIT · PROJET · CYBER · AUDIT · DATA · RECHERCHE</p><a href="#sources">Provenance et conditions de réutilisation ↗</a><span>Corpus daté, sélectionné et non représentatif du marché national.</span><span>Anciennement DataScope. Le projet a été élargi à la formation MSI.</span></div></footer>
+  <footer><div><a class="wordmark" href="#overview">élan<span>msi</span><b>.</b></a><p>Abra-Bienvenue Tchakah · M1 MSI · Grenoble IAE<br>Projet académique indépendant · Python / HTML / CSS / JavaScript</p></div><div class="footer-source"><p>CONSEIL · PRODUIT · PROJET · CYBER · AUDIT · DATA · RECHERCHE</p><a href="#sources">Provenance et conditions de réutilisation ↗</a><span>Corpus daté, sélectionné et non représentatif du marché national.</span><span>Des repères pour construire ton projet professionnel.</span></div></footer>
   <dialog id="job-dialog"><div class="dialog-top"><p class="eyebrow">DÉTAIL DE L’ANNONCE · CORPUS DATÉ</p><button id="close-dialog" class="secondary-btn" type="button">Fermer ×</button></div><div id="job-detail"></div></dialog>
 </body>
 </html>

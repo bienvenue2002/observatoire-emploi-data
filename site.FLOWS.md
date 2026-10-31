@@ -1,5 +1,15 @@
 # Parcours à préserver et évolution MSI
 
+## Durée, études et textes pour les étudiants
+- État observé : Élan MSI, 81 annonces ; CIO Advisory mentionne six mois seulement dans le point de vigilance ; la page Sources affiche encore « Pas de connexion imaginaire ».
+- Ajouter durée, niveau d’études et fin d’études aux résultats, détails et exports CSV/JSON ; afficher « Non précisé » en l’absence de donnée, sans durée estimée pour un CDI.
+- BPCE : reprendre le champ degree et les durées de contrat explicitement détectables, jamais une durée d’expérience ; garder la preuve textuelle et signaler l’extraction automatique.
+- Sept fiches éditoriales : vérifier les pages, distinguer Master en cours et fin d’études ; conserver toute divergence entre encart et description.
+- CIO Advisory : six mois, Master ou équivalent et fin d’études ; Business Analyst Supply Chain : six mois dans le descriptif, encart plateforme 4 à 6 mois.
+- Sources : titre « D’où viennent les offres ? » ; aucune référence à un document « fourni » inaccessible ; liens académiques officiels consultables dans les vues Métiers et Méthode.
+- README et documentation : Élan MSI, 81 annonces, 17 métiers, périmètre MSI et champs nouveaux ; version courte actuelle à fournir sans renvoyer une ancienne pièce jointe.
+- Rejouer tous les parcours de la recette V2 ; contrôler les nouveaux champs sur desktop/mobile, leur échappement HTML, les champs absents et les exports réels.
+
 ## Renommage Élan MSI
 - Avant modification : site public chargé sans connexion, titre Horizon MSI, deux signatures horizonmsi., 81 annonces.
 - Vérifier Élan MSI dans le titre du navigateur, la description, le libellé accessible et les deux signatures visuelles, la page Sources, les métadonnées des exports et le générateur Python.

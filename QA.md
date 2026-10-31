@@ -1,5 +1,19 @@
 # Contrôles d’acceptation
 
+## Profil étudiant et références publiques, version 2.1
+
+- 22 tests Python : degré structuré et repli textuel, durées explicites et intervalles, cas d’expérience à exclure, valeur inconnue, fiches éditoriales et colonnes CSV.
+- 81 annonces et tous leurs champs historiques comparés à la version précédente et conservés. Nouveaux champs : durée pour 30 annonces, niveau pour 73, avancement des études pour 4 ; les autres valeurs restent inconnues.
+- Recette navigateur locale : cinq vues, cartes parcours réversibles, graphiques, raccourcis, recherche et filtres, tri, pagination, fiches, fermeture et réinitialisation.
+- Recherche étendue : `Bac +4` donne 15 résultats, `6 mois` en donne 29, `fin d'études` en donne 3 ; l’apostrophe typographique et les espaces du niveau sont normalisés.
+- JobTeaser : six mois et fin d’études visibles dans les résultats et les détails ; Master ou équivalent pour CIO Advisory, Bac+5 en cours pour Business Analyst. Divergence 4 à 6 / 6 mois conservée dans la preuve dépliable.
+- Exports CSV et JSON téléchargés et relus : durée, niveau, fin d’études et preuves présents pour les deux résultats filtrés.
+- PLM sans durée : « Non précisée », aucun chiffre substitué. État vide : export désactivé puis réinitialisation réussie.
+- Titre « D’où viennent les offres ? » vérifié ; lien des références puis page officielle CMSI ouverts par de vrais clics.
+- Écran 1440 px et dialogue 375 px inspectés ; preuve dépliée à 320 px sans débordement. Aucun nouvel échec JavaScript nominal.
+- Scénarios défavorables : erreur réseau explicite, aucune démonstration substituée ; balises injectées dans les nouveaux champs échappées, pas d’exécution.
+- Les résultats de versions antérieures ci-dessous sont conservés comme historique.
+
 ## Renommage Élan MSI, 31 octobre 2026
 
 - 16 tests Python réussis, dont un test de cohérence de la marque et des métadonnées ; syntaxe JavaScript et diff vérifiés.

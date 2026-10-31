@@ -4,7 +4,7 @@ Pages consultées le 31 octobre 2026. La consultation confirme le contenu visibl
 
 ## Formation
 
-La brochure utilisateur MSI-20WEB, page 3, est la référence principale. Les compléments officiels sont [CMSI](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-conseil-et-management-des-systemes-dinformation), [ID](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-intelligence-des-donnees) et [ARAMIS](https://iae.grenoble-inp.fr/en/our-programs/master-2-advanced-research-in-management-of-information-system).
+Références publiques, consultées le 31 octobre 2026 : Grenoble IAE – INP, UGA, [Master 2 Conseil et Management des Systèmes d’Information, Débouchés professionnels](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-conseil-et-management-des-systemes-dinformation), [Master 2 Intelligence des Données, Débouchés professionnels](https://iae.grenoble-inp.fr/fr/nos-formations/master-2-intelligence-des-donnees) et [Master 2 Advanced ReseArch in Management of Information Systems, Careers](https://iae.grenoble-inp.fr/en/our-programs/master-2-advanced-research-in-management-of-information-system). Ces références remplacent le renvoi à une pièce jointe non accessible aux visiteurs.
 
 Le programme ARAMIS distingue la poursuite en doctorat et l’accès ultérieur aux carrières académiques ; les fiches du site conservent cette distinction, conformément à la [page officielle ARAMIS](https://iae.grenoble-inp.fr/en/our-programs/master-2-advanced-research-in-management-of-information-system).
 
@@ -23,6 +23,16 @@ Le programme ARAMIS distingue la poursuite en doctorat et l’accès ultérieur 
 Les faits détaillés sont enregistrés dans `data/curated.json` avec l’URL exacte. Les descriptions du site sont des synthèses originales ; les tags sont des mots-clés lus dans les annonces, pas une liste exhaustive des exigences.
 
 Les pages Wiremind et Navigacom indiquent une publication ancienne ; les fiches affichent ce point de vigilance et ne prétendent pas qu’une nouvelle offre vient d’être publiée ([Wiremind](https://www.welcometothejungle.com/fr/companies/wiremind/jobs/product-owner-data-m-f-internship-paris_paris), [Navigacom](https://www.welcometothejungle.com/en/companies/navigacom/jobs/consultant-junior-cybersecurite_puteaux)).
+
+## Durée et niveau d’études
+
+Les sept pages éditoriales ont été relues le 31 octobre 2026 pour isoler la durée, le diplôme et l’avancement des études sans les déduire du seul intitulé de poste. Les courtes preuves et leurs URL sont conservées ensemble dans `data/curated.json`.
+
+- **CIO Advisory, Capgemini Invent :** six mois, Master ou équivalent et fin d’études, selon [la page JobTeaser](https://www.jobteaser.com/en/job-offers/3e24e59b-a298-48a0-b3da-2cbca1c6fa34-capgemini-invent-consultante-consultant-cio-advisory-stage).
+- **Business Analyst Supply Chain :** Bac+5 en cours ; six mois dans le descriptif contre quatre à six mois dans l’encart, selon [la page JobTeaser](https://www.jobteaser.com/en/job-offers/0f85b343-1448-464a-a59b-f8ea406dfa47-capgemini-business-analyst-supply-chain-stage). Les deux indications sont conservées, avec invitation à confirmer.
+- **Wiremind :** Master en cours ; durée et fin d’études non précisées, selon [la page Welcome to the Jungle](https://www.welcometothejungle.com/fr/companies/wiremind/jobs/product-owner-data-m-f-internship-paris_paris).
+
+Les autres valeurs vérifiées sont indiquées dans les lignes du tableau ci-dessus et les champs de preuve. Aucune durée fixe n’est inventée pour les CDI ni pour le stage PLM dont la durée n’est pas donnée.
 
 ## Contrôles et exclusions
 

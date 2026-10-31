@@ -5,7 +5,7 @@ const $$ = selector => [...document.querySelectorAll(selector)];
 const state = {jobs:[],meta:null,catalog:null,filtered:[],page:1,pageSize:8,view:"overview",student:false,careerPath:""};
 const fmt = new Intl.NumberFormat("fr-FR");
 const esc = s => String(s ?? "").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const normal = s => String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+const normal = s => String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[’']/g,"'").replace(/\s*\+\s*/g,"+").toLowerCase();
 const unique = xs => [...new Set(xs)];
 const count = xs => xs.reduce((acc,x)=>(acc[x]=(acc[x]||0)+1,acc),{});
 const ranked = xs => Object.entries(count(xs)).sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],"fr"));
@@ -39,7 +39,7 @@ function filterJobs(){
   const q=normal($("#search").value.trim()), family=$("#family").value, region=$("#region").value,
     contract=$("#contract").value, skill=$("#skill").value, source=$("#source").value, pathway=$("#pathway").value;
   state.filtered=state.jobs.filter(j=>
-    (!q||normal([j.title,j.company,j.family,j.source,...j.pathways,...j.locations.flatMap(x=>[x.city,x.region]),...j.skills].join(" ")).includes(q))&&
+    (!q||normal([j.title,j.company,j.family,j.source,j.duration,j.education_level,j.study_stage,...j.pathways,...j.locations.flatMap(x=>[x.city,x.region]),...j.skills].join(" ")).includes(q))&&
     (!family||j.family===family)&&(!region||j.locations.some(x=>x.region===region))&&
     (!contract||j.contract===contract)&&(!skill||j.skills.includes(skill))&&(!source||j.source===source)&&
     (!pathway||j.pathways.includes(pathway))&&(!state.student||isStudent(j))
@@ -85,7 +85,7 @@ function renderTable(){
   $("#result-detail").textContent=`${n} annonce${n>1?"s":""} · corpus daté du ${dateFR(state.meta.observed_at)} · disponibilité à vérifier`;
   $("#jobs-table").innerHTML=rows.map(j=>{
     const cities=unique(j.locations.map(x=>x.city)),regions=unique(j.locations.map(x=>x.region));
-    return `<tr><td><button class="job-title" type="button" data-job="${esc(j.id)}">${esc(j.title)}</button><span class="job-company">${esc(j.company)}</span><span class="job-provenance">${esc(j.source)}</span><span class="path-label">${j.pathways.map(esc).join(" / ")} · ${isAutomatic(j)?"Open Data":"Sélection éditoriale"}</span></td><td>${esc(cities.slice(0,2).join(", "))}${cities.length>2?` + ${cities.length-2} villes`:""}<span class="location-detail">${regions.length===1?esc(regions[0]):regions.length+" régions"}</span></td><td><span class="contract-tag ${isStudent(j)?"student":""}">${esc(j.contract)}</span></td><td><div class="tags">${j.skills.length?j.skills.slice(0,3).map(s=>`<span class="tag">${esc(s)}</span>`).join("")+(j.skills.length>3?`<span class="tag">+${j.skills.length-3}</span>`:""):'<span class="muted">Non documentées</span>'}</div></td><td><button class="detail-btn" type="button" data-job="${esc(j.id)}" aria-label="Détails : ${esc(j.title)}">↗</button></td></tr>`;
+    return `<tr><td><button class="job-title" type="button" data-job="${esc(j.id)}">${esc(j.title)}</button><span class="job-company">${esc(j.company)}</span><span class="job-provenance">${esc(j.source)}</span><span class="path-label">${j.pathways.map(esc).join(" / ")} · ${isAutomatic(j)?"Open Data":"Sélection éditoriale"}</span></td><td>${esc(cities.slice(0,2).join(", "))}${cities.length>2?` + ${cities.length-2} villes`:""}<span class="location-detail">${regions.length===1?esc(regions[0]):regions.length+" régions"}</span></td><td><span class="contract-tag ${isStudent(j)?"student":""}">${esc(j.contract)}</span>${profileSummary(j)}</td><td><div class="tags">${j.skills.length?j.skills.slice(0,3).map(s=>`<span class="tag">${esc(s)}</span>`).join("")+(j.skills.length>3?`<span class="tag">+${j.skills.length-3}</span>`:""):'<span class="muted">Non documentées</span>'}</div></td><td><button class="detail-btn" type="button" data-job="${esc(j.id)}" aria-label="Détails : ${esc(j.title)}">↗</button></td></tr>`;
   }).join("");
   $$("[data-job]").forEach(el=>el.addEventListener("click",()=>openJob(el.dataset.job)));
   $("#empty").hidden=n!==0;$(".table-wrap").hidden=n===0;
@@ -97,11 +97,16 @@ function reset(){
   fields.forEach(id=>$("#"+id).value="");state.student=false;state.page=1;
   $("#export-status").textContent="";filterJobs();
 }
+function profileSummary(j){
+  return `<div class="job-requirements"><span>Durée : ${esc(j.duration||"Non précisée")}</span><span>Études : ${esc(j.education_level||"Non précisées")}</span>${j.study_stage?`<span class="study-stage">${esc(j.study_stage)}</span>`:""}</div>`;
+}
 function openJob(id){
   const j=state.jobs.find(x=>x.id===id);if(!j)return;
   const url=safeUrl(j.source_url),editorial=!isAutomatic(j);
   $("#job-detail").innerHTML=`
     <h2>${esc(j.title)}</h2><p class="detail-meta">${esc(j.company)} · ${esc(j.contract)}<br>${esc(j.family)} · ${j.pathways.map(esc).join(" / ")}</p>
+    <dl class="student-profile"><div><dt>Durée</dt><dd>${esc(j.duration||"Non précisée")}</dd></div><div><dt>Niveau d’études demandé</dt><dd>${esc(j.education_level||"Non précisé")}</dd></div><div><dt>Avancement des études</dt><dd>${esc(j.study_stage||"Non précisé")}</dd></div></dl>
+    <details class="requirements-proof"><summary>Vérifier les indications de l’annonce</summary><p>${j.requirements_method==="editorial_verified"?"Informations vérifiées sur la page d’origine.":"Niveau repris des données BPCE et durée repérée automatiquement dans le texte ; vérifie le descriptif avant de candidater."} Une information absente est affichée « Non précisé » ; elle n’est pas estimée.</p>${[["Durée",j.duration_evidence],["Études",j.education_evidence],["Avancement",j.study_stage_evidence]].filter(x=>x[1]).map(([label,value])=>`<p><strong>${label} :</strong> « ${esc(value)} »</p>`).join("")}${[j.duration_note,j.education_note].filter(Boolean).map(note=>`<p>${esc(note)}</p>`).join("")}</details>
     <div class="tags">${j.skills.map(s=>`<span class="tag">${esc(s)}</span>`).join("")||'<span class="muted">Aucun mot-clé du dictionnaire documenté.</span>'}</div>
     <p class="detail-locations">${j.locations.map(x=>esc(x.city)+" · "+esc(x.region)).join("<br>")}</p>
     <div class="detail-source"><p><b>Source : ${esc(j.source)}</b><br>${editorial?"Page consultée":"Export collecté"} le ${esc(dateFR(j.observed_at))}<br>${j.published_at?`Publication : ${esc(dateFR(j.published_at))}`:`Dernière modification source : ${esc(dateFR(j.modified_at))}`}<br>Mode : ${editorial?"sélection éditoriale, pas de flux automatique":"Open Data BPCE, pipeline Python"}. Référence : ${esc(j.id)}.</p><p>L’ouverture actuelle du poste n’est pas garantie. Vérifie la page d’origine et le profil demandé avant de candidater.</p>
@@ -145,6 +150,9 @@ function renderSources(){
 function download(kind){
   const flat=state.filtered.map(j=>({
     reference:j.id,intitule:j.title,entreprise:j.company,metier:j.family,parcours:j.pathways.join(" | "),contrat:j.contract,
+    duree:j.duration||"",niveau_etudes:j.education_level||"",avancement_etudes:j.study_stage||"",
+    preuve_duree:j.duration_evidence||"",preuve_etudes:j.education_evidence||"",preuve_avancement:j.study_stage_evidence||"",
+    precision_duree:j.duration_note||"",precision_etudes:j.education_note||"",verification_profil:j.requirements_method||"",
     villes:unique(j.locations.map(x=>x.city)).join(" | "),regions:unique(j.locations.map(x=>x.region)).join(" | "),
     competences:j.skills.join(" | "),provenance:j.source,mode_collecte:j.collection_method,publication:j.published_at||"",
     modification_source:j.modified_at||"",collecte:j.observed_at,source:j.source_url

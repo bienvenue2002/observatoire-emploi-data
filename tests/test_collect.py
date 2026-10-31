@@ -1,12 +1,80 @@
 import unittest
 import json
+import csv
 import tempfile
 from pathlib import Path
+from scripts import collect
 from scripts.collect import clean, contract, role, skills_in, transform, redact, load_curated, export, ROOT
 from scripts.taxonomy import pathways
 
 
+def base(**changes):
+    return {"title": "Data Analyst", "country": "France", "referencenumber": "profile-test",
+            "organization": "BPCE", "description": "", "jobtype": "CDI",
+            "url": "https://example.com/profile-test", **changes}
+
+
 class PipelineTests(unittest.TestCase):
+    def test_student_profile_structured_degree_and_duration(self):
+        row = base(jobtype="Stage", degree="Bac+5", description="Stage de fin d’études de 6 mois.")
+        result = collect.student_requirements(row)
+        self.assertEqual(result["duration"], "6 mois")
+        self.assertEqual(result["education_level"], "Bac+5")
+        self.assertEqual(result["study_stage"], "Fin d’études")
+        self.assertIn("stage", result["duration_evidence"].lower())
+        titled = collect.student_requirements(base(jobtype="CDD", title="Data Scientist - CDD 6 mois"))
+        self.assertEqual(titled["duration"], "6 mois")
+        fallback = collect.student_requirements(base(description="Étudiant de niveau Bac +4/5, vous cherchez un stage."))
+        self.assertEqual(fallback["education_level"], "Bac+4/5")
+        self.assertIn("automatiquement", fallback["education_note"])
+
+    def test_duration_ranges_and_qualifiers(self):
+        for text, expected in [
+            ("Durée du stage souhaitée : 4 à 6 mois", "4 à 6 mois"),
+            ("Durée du stage souhaitée : Idéalement 6 mois", "6 mois"),
+            ("Durée du stage souhaitée : 6 mois ou plus", "6 mois ou plus"),
+            ("La durée du stage est entre 4 et 6 mois", "4 et 6 mois"),
+            ("Poste à pourvoir en janvier pour une durée de 6 mois.", "6 mois"),
+        ]:
+            with self.subTest(text=text):
+                self.assertEqual(collect.student_requirements(base(jobtype="Stage", description=text))["duration"], expected)
+
+    def test_experience_is_not_contract_duration(self):
+        for text in ("Vous avez 6 mois d’expérience.", "Une expérience de six mois en analyse est attendue.",
+                     "Formation de 12 mois, avec une expérience de 6 mois.",
+                     "Vous avez effectué un stage de 6 mois en analyse.",
+                     "Une première expérience en stage de 6 mois est souhaitée.", ""):
+            self.assertIsNone(collect.student_requirements(base(jobtype="Stage", description=text))["duration"])
+        self.assertIsNone(collect.student_requirements(base(jobtype="CDI", description="Après un stage de 6 mois."))["duration"])
+        self.assertIsNone(collect.student_requirements(base(jobtype="CDI", description="Après votre stage de fin d’études."))["study_stage"])
+
+    def test_unknown_student_profile_is_null(self):
+        profile = collect.student_requirements(base(description="Un poste pour vous."))
+        self.assertIsNone(profile["duration"])
+        self.assertIsNone(profile["education_level"])
+        self.assertIsNone(profile["study_stage"])
+
+    def test_editorial_student_profiles_and_discrepancy(self):
+        jobs = {j["id"]: j for j in collect.load_curated(ROOT / "data/curated.json")}
+        cio = jobs["editorial-jobteaser-cio-advisory"]
+        self.assertEqual((cio["duration"], cio["education_level"], cio["study_stage"]),
+                         ("6 mois", "Master ou équivalent", "Fin d’études"))
+        self.assertEqual(cio["requirements_method"], "editorial_verified")
+        self.assertIn("4 à 6 mois", jobs["editorial-jobteaser-business-analyst"]["duration_note"])
+        self.assertIsNone(jobs["editorial-capgemini-plm-549022"]["duration"])
+        self.assertEqual(jobs["editorial-wttj-wiremind-po"]["study_stage"], "En cours de Master")
+
+    def test_student_profile_in_pipeline_exports(self):
+        with tempfile.TemporaryDirectory() as folder:
+            out = Path(folder)
+            collect.export([base(jobtype="Stage", degree="Bac+5", description="Un stage de 6 mois.")], out, "2026-10-31")
+            job = json.loads((out / "jobs.json").read_text())["jobs"][0]
+            self.assertEqual(job["duration"], "6 mois")
+            with (out / "jobs.csv").open(encoding="utf-8-sig", newline="") as file:
+                row = next(csv.DictReader(file))
+            self.assertEqual((row["duration"], row["education_level"]), ("6 mois", "Bac+5"))
+            self.assertTrue(row["duration_evidence"])
+
     def test_elan_brand_consistency(self):
         html = (ROOT / "site/index.html").read_text(encoding="utf-8")
         self.assertIn("<title>Élan MSI | Du master aux métiers</title>", html)
