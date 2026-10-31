@@ -44,6 +44,7 @@ test("six langues, parcours et stage international",async({page})=>{
     await expect(page.locator("html")).toHaveAttribute("lang",lang);
     await expect(page.locator("#country")).toHaveValue("PL");
     await expect(page.locator(".job-open")).toHaveCount(1);
+    if(lang==="fr")await expect(page.locator("#selection-note")).toContainText("Résultats : 1");
     for(const view of ["domains","sources","method","offers"]){
       await page.locator(`[data-view="${view}"]`).click();
       await expect(page.locator(`#${view}-view`)).toBeVisible();

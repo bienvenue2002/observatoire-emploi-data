@@ -48,3 +48,11 @@ Les captures sont générées par le scénario « filtres, tri, pagination et ca
 Les anciens comptes rendus mentionnaient notamment 52 assertions et un contraste minimal précis sans suite correspondante versionnée. Ils constituent des notes historiques accessibles dans Git, pas des preuves reproductibles ni une certification actuelle ; aucun score de contraste ou de conformité complet n’est revendiqué ici.
 
 Les tests ne garantissent pas la disponibilité des annonces tierces, l’exhaustivité du corpus, une conformité RGAA/WCAG complète ni le respect de l’horaire par GitHub. Une panne de GitHub avant déploiement peut empêcher l’affichage d’un nouvel avertissement ; l’ancien site reste publié et l’historique du workflow fait foi pour l’exécution.
+
+## Recette réalisée le 31 octobre 2026
+
+La révision applicative `949d0fe` a passé 41 tests Python, le contrôle des six dictionnaires et les six scénarios Playwright. Les mêmes six scénarios ont ensuite réussi contre le site GitHub Pages en contexte navigateur neuf ; les captures desktop et allemand mobile ont été inspectées visuellement, sans revendication de certification d’accessibilité.
+
+La [publication initiale](https://github.com/bienvenue2002/observatoire-emploi-data/actions/runs/41164411936) et le [cycle réel collecte → tests → commit → déploiement](https://github.com/bienvenue2002/observatoire-emploi-data/actions/runs/41164441639) ont réussi. Ce dernier a produit la révision de données `6861e35` et l’artefact `recette-navigateur-6861e35991aabc12a2033df0881d4895c25b3e2c`, avec rapports, captures et métadonnées ; la dernière collecte réussie correspondante est `2026-10-31T03:28:02+00:00`.
+
+L’aperçu hébergé a aussi été rechargé dans un nouveau contexte : interface japonaise, filtre Pologne, stage international et téléchargement CSV réels ont fonctionné. Ces résultats attestent cette recette datée, pas l’état futur des annonces tierces.
