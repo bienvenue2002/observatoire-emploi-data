@@ -1,5 +1,18 @@
 # Contrôles d’acceptation
 
+## Résultats de la V1, 31 octobre 2026
+
+- 9 tests unitaires Python réussis ; syntaxe JavaScript vérifiée avec `node --check`.
+- Parcours navigateur vérifiés sur Chromium : chargement de 52 annonces, raccourcis stage/région, recherche avec et sans accent, combinaison métier/compétence, clic sur le graphique SQL, pagination, tri, détail et fermeture par Échap/bouton, navigation et audit.
+- Export filtré Python : 20 annonces dans le JSON ; nombre de lignes CSV identique à la sélection.
+- Recherche sans résultat : état vide, export désactivé et réinitialisation opérationnels.
+- Interception réseau en erreur : message explicite, aucun chiffre de substitution.
+- Inspection visuelle à 1440 px et 375 px : tableaux transformés en cartes, graphiques lisibles, dialogue utilisable, largeur de document identique à la largeur mobile.
+- Aucune erreur JavaScript observée pendant les parcours nominaux.
+- Correctif mobile : région sur une ligne distincte de la ville.
+
+Ces résultats décrivent le contrôle local de cette version, pas une garantie de compatibilité avec tous les navigateurs. Le contrôle de l’aperçu hébergé est consigné séparément après déploiement.
+
 ## Pipeline
 
 - Schéma et sortie non vide.
