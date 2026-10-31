@@ -1,10 +1,10 @@
-# Comprendre et défendre Horizon MSI
+# Comprendre et défendre Élan MSI
 
 Ce projet est une base de travail à étudier, modifier et expliquer. Il ne faut pas présenter comme acquises des notions que l’on ne sait pas encore reproduire.
 
 ## Correspondance avec le cours
 
-| Partie du cours | Application dans Horizon MSI |
+| Partie du cours | Application dans Élan MSI |
 |---|---|
 | Internet et Web | Requête HTTP GET sur un export public, hébergement statique |
 | HTML | Structure sémantique, formulaires, tableau, liens, dialogue |

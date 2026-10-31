@@ -1,4 +1,4 @@
-name: Publier Horizon MSI sur GitHub Pages
+name: Publier Élan MSI sur GitHub Pages
 
 on:
   push:

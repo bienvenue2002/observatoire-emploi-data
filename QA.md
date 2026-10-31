@@ -1,5 +1,15 @@
 # Contrôles d’acceptation
 
+## Renommage Élan MSI, 31 octobre 2026
+
+- 16 tests Python réussis, dont un test de cohérence de la marque et des métadonnées ; syntaxe JavaScript et diff vérifiés.
+- Corpus comparé à la version précédente : les 81 annonces sont strictement inchangées.
+- Contrôle local : titre, description, signatures et nom accessible ; audit et export JSON au nom Élan MSI ; fichiers CSV/JSON préfixés `elan-msi-offres-`.
+- Parcours rejoués : cinq vues, cartes CMSI réversibles, graphiques compétence/région, raccourcis, filtres métiers/source, recherche, pagination, tri, détail, fermeture par Échap, état vide, exports désactivés puis réinitialisation.
+- Fiches métiers : 17 au total, filtres CMSI/ID/ARAMIS et idées de projets ; cartes sources et renvoi vers les annonces vérifiés.
+- Accueil inspecté à 1440 px et 375 px, sans débordement mobile ni erreur JavaScript nominale.
+- L’adresse GitHub Pages et le nom technique du dépôt sont conservés pour préserver les liens existants.
+
 ## Résultats V2 Horizon MSI, 31 octobre 2026
 
 - 15 tests unitaires Python réussis ; `node --check site/app.js` réussi.

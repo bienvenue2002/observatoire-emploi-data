@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Horizon MSI : BPCE Open Data + références éditoriales -> annonces -> JSON/CSV.
+"""Élan MSI : BPCE Open Data + références éditoriales -> annonces -> JSON/CSV.
 
 Python 3.10+, bibliothèque standard uniquement. Aucune clé API nécessaire.
 Les données nominatives des recruteurs ne sont jamais exportées.
@@ -222,7 +222,7 @@ def export(records, output, observed_at, curated_path=None):
     jobs.extend(editorial)
     output.mkdir(parents=True, exist_ok=True)
     meta = {
-        "title": "Horizon MSI · Débouchés et opportunités",
+        "title": "Élan MSI · Débouchés et opportunités",
         "edition": "Corpus MSI : Open Data BPCE + sélection éditoriale multi-source",
         "observed_at": observed_at,
         "source_url": SOURCE_URL, "api_url": API_URL,
@@ -270,7 +270,7 @@ def main():
     if args.input:
         records = json.loads(args.input.read_text(encoding="utf-8"))
     else:
-        request = Request(API_URL, headers={"User-Agent": "HorizonMSI-Educational/2.0", "Accept": "application/json"})
+        request = Request(API_URL, headers={"User-Agent": "ElanMSI-Educational/2.0", "Accept": "application/json"})
         # Un export public documenté, pas de scraping de pages ni de contournement.
         with urlopen(request, timeout=90) as response:
             records = json.load(response)

@@ -1,5 +1,13 @@
 # Parcours à préserver et évolution MSI
 
+## Renommage Élan MSI
+- Avant modification : site public chargé sans connexion, titre Horizon MSI, deux signatures horizonmsi., 81 annonces.
+- Vérifier Élan MSI dans le titre du navigateur, la description, le libellé accessible et les deux signatures visuelles, la page Sources, les métadonnées des exports et le générateur Python.
+- Exports CSV et JSON : noms de fichiers commençant par elan-msi ; aucune ancienne marque dans les métadonnées.
+- Conserver le dépôt et son adresse publique ; ne pas modifier les descriptions d’annonces contenant le mot courant « horizons ».
+- Rejouer les cinq vues, les cartes parcours, filtres, recherche, tri, pagination, graphiques, détails, liens, exports, état vide et réinitialisation.
+- Contrôler le rendu desktop/mobile, l’absence d’erreur JavaScript et la nouvelle identité dans un contexte neuf après publication.
+
 ## État initial observé
 - L’accueil DataScope charge 52 annonces uniques et ses indicateurs.
 - Recherche sans accent ; filtres métier, région, contrat, compétence ; raccourcis stage/alternance et Auvergne-Rhône-Alpes.
@@ -27,4 +35,4 @@
 - Méthodologie : limites du corpus multi-source, déduplication, absence de salaire estimé, ARAMIS sans faux postes de recherche.
 - Mobile 375px et 320px ; desktop ; fermeture des dialogues ; absence d’erreur JS.
 - Cas limites : filtres contradictoires ; réseau en erreur ; fiche au titre malveillant ; URI non HTTPS refusée.
-- Après déploiement : nouveau contexte, identité Horizon MSI, filtre de source, fiche et export vérifiés.
+- Après déploiement : nouveau contexte, identité Élan MSI, filtre de source, fiche et export vérifiés.

@@ -1,4 +1,4 @@
-# Journal des sources · Horizon MSI
+# Journal des sources · Élan MSI
 
 Pages consultées le 31 octobre 2026. La consultation confirme le contenu visible de la page, pas l’ouverture garantie du poste ni la compatibilité de tous les profils MSI.
 

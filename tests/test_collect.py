@@ -7,6 +7,19 @@ from scripts.taxonomy import pathways
 
 
 class PipelineTests(unittest.TestCase):
+    def test_elan_brand_consistency(self):
+        html = (ROOT / "site/index.html").read_text(encoding="utf-8")
+        self.assertIn("<title>Élan MSI | Du master aux métiers</title>", html)
+        self.assertIn('aria-label="Élan MSI accueil"', html)
+        self.assertEqual(html.count("élan<span>msi</span>"), 2)
+        self.assertNotIn("Horizon MSI", html)
+        app = (ROOT / "site/app.js").read_text(encoding="utf-8")
+        self.assertIn("elan-msi-offres-", app)
+        for filename in ("jobs.json", "meta.json"):
+            payload = json.loads((ROOT / "site/data" / filename).read_text(encoding="utf-8"))
+            meta = payload["meta"] if filename == "jobs.json" else payload
+            self.assertEqual(meta["title"], "Élan MSI · Débouchés et opportunités")
+
     def test_entities(self):
         self.assertEqual(clean("<p>Data &amp; IA</p>"), "Data & IA")
 
@@ -80,6 +93,7 @@ class PipelineTests(unittest.TestCase):
             self.assertEqual(meta["bpce_unique_offers"], 1)
             self.assertEqual(meta["editorial_offers"], 7)
             self.assertEqual(meta["unique_offers"], 8)
+            self.assertEqual(meta["title"], "Élan MSI · Débouchés et opportunités")
             payload = json.loads((Path(td) / "jobs.json").read_text())
             self.assertEqual(len({j["id"] for j in payload["jobs"]}), 8)
             self.assertEqual(payload["jobs"][0]["collection_method"], "open_data")

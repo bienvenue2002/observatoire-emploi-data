@@ -1,6 +1,6 @@
-# Méthodologie · Horizon MSI
+# Méthodologie · Élan MSI
 
-Horizon MSI sert à explorer les débouchés du Master MSI, pas à estimer le marché national. Les décisions d’orientation et de candidature restent soumises au programme officiel et au profil demandé par chaque employeur.
+Élan MSI sert à explorer les débouchés du Master MSI, pas à estimer le marché national. Les décisions d’orientation et de candidature restent soumises au programme officiel et au profil demandé par chaque employeur.
 
 ## Périmètre académique
 

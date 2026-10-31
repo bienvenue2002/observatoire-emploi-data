@@ -1,10 +1,10 @@
-# Horizon MSI · Du master aux métiers
+# Élan MSI · Du master aux métiers
 
 Un portail d’orientation et d’exploration des offres liées au Master Management des Systèmes d’Information de Grenoble IAE. Anciennement DataScope, le projet ne se limite plus aux métiers data : il couvre conseil, ERP, business analysis, produit, projets, cybersécurité, audit, données et recherche.
 
 Projet académique indépendant, non affilié à l’école ni aux recruteurs. Auteur : Abra-Bienvenue Tchakah, [bienvenue2002](https://github.com/bienvenue2002). Le nom historique du dépôt est conservé pour ne pas casser ses liens.
 
-Le dépôt est public, sur demande de son auteur. Le site est publié avec GitHub Pages : [ouvrir Horizon MSI](https://bienvenue2002.github.io/observatoire-emploi-data/).
+Le dépôt est public, sur demande de son auteur. Le site est publié avec GitHub Pages : [ouvrir Élan MSI](https://bienvenue2002.github.io/observatoire-emploi-data/).
 
 ## Ce que l’on peut explorer
 
@@ -112,7 +112,7 @@ Les descriptions BPCE sont nettoyées et les emails/numéros français détecté
 
 Une fois le code étudié et les choix compris :
 
-> Développement d’Horizon MSI, portail web des débouchés du Master MSI : modélisation de parcours et familles métiers, pipeline Open Data Python, intégration de références éditoriales multi-sources, déduplication, filtres interactifs, exports CSV/JSON et tests unitaires. Documentation des biais, de la provenance et des limites d’accès aux postes.
+> Développement d’Élan MSI, portail web des débouchés du Master MSI : modélisation de parcours et familles métiers, pipeline Open Data Python, intégration de références éditoriales multi-sources, déduplication, filtres interactifs, exports CSV/JSON et tests unitaires. Documentation des biais, de la provenance et des limites d’accès aux postes.
 
 Ne pas revendiquer un partenariat avec les entreprises, une agrégation automatique des quatre plateformes ou une couverture représentative du marché.
 

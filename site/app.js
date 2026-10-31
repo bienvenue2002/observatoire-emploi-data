@@ -1,4 +1,4 @@
-/* Horizon MSI : HTML/CSS/JS sans framework, état en mémoire, aucune clé privée. */
+/* Élan MSI : HTML/CSS/JS sans framework, état en mémoire, aucune clé privée. */
 "use strict";
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
@@ -153,7 +153,7 @@ function download(kind){
   const text=kind==="json"?JSON.stringify({meta:{...state.meta,exported_at:new Date().toISOString(),filtered_count:flat.length},jobs:flat},null,2):
     "\uFEFF"+[Object.keys(flat[0]).map(csvCell).join(";"),...flat.map(r=>Object.values(r).map(csvCell).join(";"))].join("\r\n");
   const url=URL.createObjectURL(new Blob([text],{type:kind==="json"?"application/json;charset=utf-8":"text/csv;charset=utf-8"})),a=document.createElement("a");
-  a.href=url;a.download=`horizon-msi-offres-${new Date().toISOString().slice(0,10)}.${kind}`;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),20000);
+  a.href=url;a.download=`elan-msi-offres-${new Date().toISOString().slice(0,10)}.${kind}`;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),20000);
   $("#export-status").textContent=`Export ${kind.toUpperCase()} préparé : ${flat.length} annonces sélectionnées, avec parcours, provenance et dates.`;
 }
 async function init(){
