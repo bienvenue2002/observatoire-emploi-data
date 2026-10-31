@@ -2,7 +2,7 @@
 
 Un portail d’orientation et d’exploration des offres liées au Master Management des Systèmes d’Information de Grenoble IAE. Le projet couvre conseil, ERP, business analysis, produit, projets, cybersécurité, audit, données et recherche.
 
-**Version actuelle, 31 octobre 2026 : Élan MSI, 81 annonces, 17 fiches métiers et trois parcours.** Cette documentation décrit le périmètre MSI élargi, et non l’ancien prototype limité à la data.
+** Cette documentation décrit le périmètre MSI élargi.
 
 Projet académique indépendant, non affilié à l’école ni aux recruteurs. Auteur : Abra-Bienvenue Tchakah, [bienvenue2002](https://github.com/bienvenue2002). Le nom historique du dépôt est conservé pour ne pas casser ses liens.
 
