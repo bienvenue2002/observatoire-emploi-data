@@ -4,7 +4,7 @@ Un portail d’orientation et d’exploration des offres liées au Master Manage
 
 Projet académique indépendant, non affilié à l’école ni aux recruteurs. Auteur : Abra-Bienvenue Tchakah, [bienvenue2002](https://github.com/bienvenue2002). Le nom historique du dépôt est conservé pour ne pas casser ses liens.
 
-Le dépôt est privé. Son passage en public et GitHub Pages ne sont pas activés sans décision explicite.
+Le dépôt est public, sur demande de son auteur. Le site est publié avec GitHub Pages : [ouvrir Horizon MSI](https://bienvenue2002.github.io/observatoire-emploi-data/).
 
 ## Ce que l’on peut explorer
 
@@ -118,4 +118,6 @@ Ne pas revendiquer un partenariat avec les entreprises, une agrégation automati
 
 ## Déploiement
 
-Le dossier `site/` fonctionne sur un hébergement statique. Le workflow GitHub inclus vérifie le code ; il n’active ni collecte récurrente ni publication automatique. Le dépôt reste privé et GitHub Pages n’est pas activé.
+Le dossier `site/` est publié sur GitHub Pages par `.github/workflows/pages.yml`. Une modification des fichiers du site, des scripts, des tests ou de ce workflow sur `master` déclenche les tests puis le déploiement. Le workflow peut aussi être lancé manuellement dans l’onglet Actions. Seul `site/` est envoyé à l’hébergement : les fichiers de travail, les tests et les données brutes ne sont pas publiés comme pages web.
+
+Cette publication n’actualise pas les annonces : elles restent un instantané daté. Pour actualiser BPCE, exécuter le script localement, contrôler les résultats puis pousser les exports ; les sept références éditoriales nécessitent toujours une vérification manuelle.
