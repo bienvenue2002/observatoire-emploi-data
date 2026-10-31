@@ -16,7 +16,9 @@
 - Contraste calculé sur 28 libellés secondaires du rendu d’accueil : minimum observé 6,13:1.
 - Aucune erreur JavaScript nominale observée. Publication publique du dépôt et GitHub Pages non activés.
 
-Le contrôle de l’hébergement V2 est ajouté après déploiement. Les résultats V1 ci-dessous sont historiques, pas les volumes actuels.
+Contrôle post-déploiement V2 dans un nouveau contexte Chromium : chargement de 81 annonces, navigation vers les 17 fiches métiers, filtre CMSI à 8 fiches, cinq cartes sources, sélection JobTeaser à deux annonces, téléchargement JSON terminé sans erreur, ouverture et fermeture du détail, absence de débordement à 375 px et aucune erreur JavaScript observée. Le conteneur Perplexity partageable a présenté une vérification Cloudflare au navigateur automatisé ; ces contrôles ont donc été réalisés sur le point d’accès hébergé fourni par le déploiement, et non à travers le conteneur.
+
+Les résultats V1 ci-dessous sont historiques, pas les volumes actuels.
 
 ## Résultats de la V1, 31 octobre 2026
 
