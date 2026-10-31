@@ -1,0 +1,24 @@
+{
+  "title": "Observatoire de l'emploi data en France",
+  "edition": "Échantillon Groupe BPCE",
+  "observed_at": "2026-10-31T01:48:12+00:00",
+  "source_url": "https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques",
+  "api_url": "https://bpce.opendatasoft.com/api/explore/v2.1/catalog/datasets/groupe-bpce-offres-emploi/exports/json",
+  "license": "Licence Ouverte / Open Licence 2.0",
+  "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+  "raw_rows": 1888,
+  "france_rows": 1785,
+  "matched_location_rows": 102,
+  "unique_offers": 52,
+  "salary_available": 0,
+  "scope": "Offres France d'un seul groupe bancaire, collectées à une date donnée. Non représentatif du marché national.",
+  "deduplication": "Une annonce par référence source ; les villes multiples sont regroupées.",
+  "families": {
+    "Data Engineer / Architecture": 6,
+    "Business Analyst": 19,
+    "Data Scientist": 7,
+    "Data Analyst / BI": 9,
+    "Gouvernance & autres métiers data": 11
+  },
+  "pipeline_version": "1.0.0"
+}

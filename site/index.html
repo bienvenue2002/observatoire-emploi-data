@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Explorer les métiers, compétences et territoires de l'emploi data. Projet académique Python, HTML, CSS et JavaScript sur des offres Open Data BPCE en France.">
+  <meta name="theme-color" content="#182c3c">
+  <title>DataScope | Observatoire de l'emploi data en France</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Aller au contenu</a>
+  <header class="site-header">
+    <a href="#overview" class="wordmark" aria-label="DataScope accueil">data<span>scope</span><b>.</b></a>
+    <nav aria-label="Navigation principale">
+      <a href="#overview" class="nav-item active" data-view="overview">Vue d’ensemble</a>
+      <a href="#offers" class="nav-item" data-view="offers">Les offres <span id="nav-count">…</span></a>
+      <a href="#method" class="nav-item" data-view="method">Méthodologie</a>
+    </nav>
+    <a class="author" href="https://github.com/bienvenue2002" target="_blank" rel="noopener noreferrer">bienvenue2002 <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+    <section class="intro">
+      <div>
+        <p class="eyebrow">OBSERVATOIRE DE L’EMPLOI DATA EN FRANCE</p>
+        <h1>L’emploi data, à la loupe<span>.</span></h1>
+        <p class="intro-copy">Des offres réelles. Des compétences identifiées. Un regard transparent sur les données.</p>
+      </div>
+      <div class="snapshot"><span class="status-dot"></span> Instantané Open Data<span id="snapshot-date">Chargement…</span></div>
+    </section>
+    <aside class="scope-notice">
+      <span class="notice-index">01 / PÉRIMÈTRE</span>
+      <p><b>Édition Groupe BPCE.</b> Offres situées en France, regroupées par référence. Cet échantillon d’un seul groupe bancaire ne représente pas tout le marché français.</p>
+      <a href="#method" class="text-link">Comprendre les données <span aria-hidden="true">↗</span></a>
+    </aside>
+    <div id="load-error" class="error-panel" hidden role="alert"></div>
+    <div id="loaded" hidden>
+      <section class="filters" aria-label="Filtrer les offres" id="filter-section">
+        <label class="search-field"><span>Rechercher</span><input id="search" type="search" placeholder="Un métier, une ville, une entreprise…" autocomplete="off"></label>
+        <label>Métier<select id="family"><option value="">Tous les métiers</option></select></label>
+        <label>Région<select id="region"><option value="">Toutes les régions</option></select></label>
+        <label>Contrat<select id="contract"><option value="">Tous les contrats</option></select></label>
+        <button id="reset" class="reset-btn" type="button" aria-label="Réinitialiser tous les filtres">Réinitialiser <span aria-hidden="true">↺</span></button>
+      </section>
+      <div class="filter-bottom">
+        <div class="quick-filters"><span>Explorer :</span><button type="button" data-quick="student" aria-pressed="false">Stages & alternance</button><button type="button" data-quick="ara" aria-pressed="false">Auvergne-Rhône-Alpes</button></div>
+        <label class="skill-select">Compétence <select id="skill"><option value="">Toutes</option></select></label>
+      </div>
+      <p id="active-summary" class="sr-only" aria-live="polite"></p>
+
+      <div id="overview-view">
+        <section class="metrics" aria-label="Indicateurs de l'échantillon filtré">
+          <article><p>Annonces uniques</p><strong id="stat-jobs">—</strong><span id="stat-jobs-note">après déduplication</span></article>
+          <article><p>Stages & alternance</p><strong id="stat-student">—</strong><span id="stat-student-note">dans la sélection</span></article>
+          <article><p>Régions représentées</p><strong id="stat-regions">—</strong><span>une offre peut couvrir plusieurs régions</span></article>
+          <article><p>Compétence la plus citée</p><strong id="stat-skill" class="skill-name">—</strong><span id="stat-skill-note">détection dans les textes</span></article>
+        </section>
+
+        <section class="charts" aria-label="Analyse des offres">
+          <article class="chart-panel">
+            <div class="panel-heading"><div><p class="eyebrow">LES SAVOIR-FAIRE</p><h2>Quelles compétences ressortent ?</h2></div><span class="chart-index">01</span></div>
+            <p class="chart-sub">Part des annonces mentionnant le mot-clé. Cliquez pour filtrer.</p>
+            <div id="skills-chart" class="bars"></div>
+            <p class="chart-foot">Une annonce peut citer plusieurs compétences. Les mentions ne prouvent pas une exigence.</p>
+          </article>
+          <article class="chart-panel region-panel">
+            <div class="panel-heading"><div><p class="eyebrow">LES TERRITOIRES</p><h2>Où sont les opportunités ?</h2></div><span class="chart-index">02</span></div>
+            <p class="chart-sub">Annonces uniques par région. Cliquez pour explorer.</p>
+            <div id="regions-chart" class="bars"></div>
+            <p class="chart-foot">Une même annonce peut figurer dans plusieurs régions ; les comptes ne sont pas additifs.</p>
+          </article>
+        </section>
+        <section class="reading-note">
+          <p class="eyebrow">LE BON RÉFLEXE DATA</p>
+          <h2>Une donnée manquante n’est pas un zéro.</h2>
+          <p id="salary-note">Les salaires ne sont pas suffisamment renseignés pour calculer une moyenne fiable. Aucun salaire n’est estimé ou inventé.</p>
+          <a class="text-link" href="#method">Voir les limites de l’analyse ↗</a>
+        </section>
+      </div>
+
+      <section id="offers-section" class="offers-section">
+        <div class="offers-head"><div><p class="eyebrow">EXPLORER L’ÉCHANTILLON</p><h2>Les offres derrière les chiffres<span id="result-count"></span></h2></div>
+          <div class="export-actions"><button type="button" id="export-csv" class="primary-btn">Exporter CSV <span aria-hidden="true">↓</span></button><button type="button" id="export-json" class="secondary-btn">JSON ↓</button></div>
+        </div>
+        <div class="table-tools"><p id="result-detail" aria-live="polite"></p><label>Trier par <select id="sort"><option value="date">Modification la plus récente</option><option value="title">Intitulé A → Z</option><option value="company">Entreprise A → Z</option></select></label></div>
+        <div class="table-wrap"><table><thead><tr><th scope="col">Poste / entreprise</th><th scope="col">Localisation</th><th scope="col">Contrat</th><th scope="col">Compétences citées</th><th scope="col"><span class="sr-only">Détails</span></th></tr></thead><tbody id="jobs-table"></tbody></table></div>
+        <div class="empty-state" id="empty" hidden><h3>Aucune annonce dans cette sélection.</h3><p>Essayez un autre mot-clé ou élargissez les filtres pour retrouver des opportunités.</p><button type="button" class="primary-btn" id="empty-reset">Effacer les filtres</button></div>
+        <div class="pagination"><p id="page-label"></p><div><button id="prev" type="button" class="secondary-btn">← Précédent</button><button id="next" type="button" class="secondary-btn">Suivant →</button></div></div>
+        <p id="export-status" role="status" class="export-status"></p>
+      </section>
+
+      <section id="method-view" class="method-view" hidden>
+        <div class="method-title"><p class="eyebrow">MÉTHODOLOGIE & TRANSPARENCE</p><h2>Ce que les données disent.<br>Et ce qu’elles ne disent pas.</h2><p>Une analyse utile commence par un périmètre explicite, des règles reproductibles et des limites visibles.</p></div>
+        <div class="pipeline"><span>01 <b>Collecter</b><small>Export JSON public BPCE</small></span><span>02 <b>Nettoyer</b><small>HTML, régions, contrats</small></span><span>03 <b>Regrouper</b><small>Une référence = une annonce</small></span><span>04 <b>Explorer</b><small>Filtres, graphiques, CSV</small></span></div>
+        <div class="method-grid">
+          <article><h3>Source & instantané</h3><p>Source unique : Groupe BPCE, offres d’emploi publiques, publiées sous Licence Ouverte 2.0 sur data.gouv.fr. La date de collecte indique quand l’export a été téléchargé, pas la date de publication des annonces. La disponibilité actuelle d’un poste doit être vérifiée auprès de l’employeur.</p><p id="audit-counts"></p><a href="https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques" target="_blank" rel="noopener noreferrer">Consulter le catalogue data.gouv.fr ↗</a></article>
+          <article><h3>Quels métiers sont retenus ?</h3><p>Recherche dans le titre : Data Analyst, Business Analyst, Data Scientist, Data Engineer, Big Data, décisionnel et autres intitulés contenant le mot « data ». Les datacenters et les acheteurs sont exclus. Les autres postes data sont regroupés en gouvernance et métiers connexes. Cette classification par règles peut comporter des erreurs.</p></article>
+          <article><h3>Déduplication & territoires</h3><p>Les lignes partageant une référence sont regroupées en une seule annonce ; leurs localisations sont conservées. Une annonce compte une seule fois dans les totaux. Dans le graphique régional, elle compte une fois dans chacune de ses régions, d’où une somme potentiellement supérieure au nombre d’annonces.</p></article>
+          <article><h3>Détection des compétences</h3><p>Expressions régulières appliquées à l’intitulé et à la description. Une compétence est comptée au plus une fois par annonce. Les détections sur les variantes regroupées sont réunies. Le mot « tableau » seul et la lettre « R » isolée sont évités pour réduire les faux positifs ; certaines mentions seront donc manquées. Une mention peut être facultative ou contextuelle.</p></article>
+          <article><h3>Salaires & télétravail</h3><p>Aucun salaire ni statut de télétravail n’est inféré du silence d’une annonce. Sans unité et période fiables, les rémunérations ne sont pas annualisées. Sans données suffisantes, aucune comparaison salariale n’est affichée.</p></article>
+          <article><h3>Biais & protection des données</h3><p>Un seul groupe, un seul secteur et un instantané : pas de généralisation nationale ni de tendance historique. Les noms et emails des recruteurs sont exclus des exports. Les emails et numéros français présents dans les descriptions sont masqués. Aucune candidature ni donnée utilisateur n’est stockée.</p></article>
+        </div>
+        <details class="audit"><summary>Audit de collecte et liens reproductibles</summary><pre id="audit-meta"></pre><p>Les exports sont des instantanés, pas des offres garanties encore ouvertes. Pour reconstruire les données, exécutez <code>python3 scripts/collect.py</code> dans le dépôt du projet.</p><p>API publique utilisée :</p><p class="selectable-url">https://bpce.opendatasoft.com/api/explore/v2.1/catalog/datasets/groupe-bpce-offres-emploi/exports/json</p><a href="https://www.etalab.gouv.fr/licence-ouverte-open-licence/" target="_blank" rel="noopener noreferrer">Lire la Licence Ouverte ↗</a></details>
+      </section>
+    </div>
+    <noscript><p>Activez JavaScript pour filtrer les données. Les données nettoyées restent disponibles dans <a href="./data/jobs.json">l’export JSON</a>.</p></noscript>
+  </main>
+  <footer>
+    <div><a class="wordmark" href="#overview">data<span>scope</span><b>.</b></a><p>Abra-Bienvenue Tchakah · M1 MSI · Grenoble IAE<br>Projet académique · Python / HTML / CSS / JavaScript</p></div>
+    <div class="footer-source"><p>DONNÉES : GROUPE BPCE · LICENCE OUVERTE 2.0</p><a href="https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques" target="_blank" rel="noopener noreferrer">Source et conditions de réutilisation ↗</a><span class="selectable-url">https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques</span><span>Instantané non représentatif du marché national.</span></div>
+  </footer>
+
+  <dialog id="job-dialog">
+    <div class="dialog-top"><p class="eyebrow">DÉTAIL DE L’ANNONCE · INSTANTANÉ</p><button id="close-dialog" class="secondary-btn" type="button">Fermer ×</button></div>
+    <div id="job-detail"></div>
+  </dialog>
+</body>
+</html>
