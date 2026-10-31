@@ -29,4 +29,4 @@ Ce projet applique HTML, CSS, données web et Python au besoin d’orientation e
 4. Exécuter Playwright pour suivre archives, langues, profils, exports, navigation et état d’échec.
 5. Consulter les captures desktop/mobile et distinguer contrôle visuel, assertion automatique et garantie non démontrée.
 
-Les commandes figurent dans le [README](../README.md) et les scénarios dans [QA.md](../QA.md). La rubrique « Ma contribution et les outils utilisés » du README décrit l’assistance reçue ; ce guide ne doit pas être présenté comme la preuve d’un développement entièrement autonome.
+Les commandes figurent dans le [README](../README.md) et les scénarios dans [QA.md](../QA.md). Ce guide accompagne la lecture du code et l’explication des choix techniques du projet.

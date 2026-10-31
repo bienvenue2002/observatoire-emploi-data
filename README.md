@@ -7,7 +7,7 @@ Un portail étudiant consacré aux débouchés du Master Management des Système
 - **Actualisations :** [exécutions et état du workflow](https://github.com/bienvenue2002/observatoire-emploi-data/actions/workflows/pages.yml).
 - **Porteuse du projet :** Abra-Bienvenue Tchakah, Grenoble IAE.
 
-Projet personnel à visée pédagogique et de portfolio, indépendant de l’établissement et des recruteurs. Ce dépôt ne revendique ni partenariat ni validation académique officielle.
+Élan MSI est un projet personnel lié à ma formation en management des systèmes d’information et destiné à mon portfolio. Le site est indépendant de l’établissement et des recruteurs.
 
 ## Ce que propose le site
 
@@ -18,7 +18,7 @@ Projet personnel à visée pédagogique et de portfolio, indépendant de l’ét
 - **Six langues :** français, anglais, espagnol, allemand, japonais et chinois simplifié pour l’interface. Les annonces et preuves restent dans leur langue d’origine ; la page de ressources pédagogiques reste en français.
 - **Exports :** CSV et JSON de toute la sélection, pas seulement de la page affichée, avec profils, provenance, dates et statuts. Les cellules CSV pouvant être interprétées comme formules sont protégées.
 
-L’ouverture à toutes les formations de la version 3 est abandonnée. Les deux pages partagent désormais le même corpus MSI actualisé ; la page de ressources n’est plus un instantané séparé de 81 annonces.
+Le moteur de recherche et les ressources pédagogiques s’appuient sur le même corpus MSI actualisé. Les parcours, les métiers et les offres sont réunis dans un projet cohérent avec la formation.
 
 ## D’où viennent les offres ?
 
@@ -81,8 +81,8 @@ Ne pas publier l’export brut : seules les données normalisées de `site/data/
 
 Les rapports Playwright et captures desktop/mobile sont produits par une suite versionnée et conservés 14 jours comme artefacts du workflow, identifiés par le commit testé. Les anciens comptes rendus ne constituent pas une garantie de conformité actuelle ou une mesure d’accessibilité certifiée.
 
-## Ma contribution et les outils utilisés
+## À propos du projet
 
-- **Choix du produit :** j’ai choisi le besoin étudiant, validé le nom Élan MSI et précisé le périmètre de ma formation, les langues, l’international, les profils demandés et l’actualisation souhaitée.
-- **Mise en œuvre assistée :** le code HTML/CSS/JavaScript, le pipeline Python, les tests, la documentation et les workflows ont été élaborés avec l’aide de Perplexity Computer. Je ne présente pas ces éléments comme une réalisation entièrement autonome.
-- **Démarche de portfolio :** le dépôt rend les règles, limites et tests consultables. La compréhension et l’explication personnelle du code restent distinctes de l’assistance reçue ; une soutenance ou une évaluation n’est pas attestée par ce README.
+Je porte Élan MSI dans le cadre de mon parcours en Master MSI à Grenoble IAE. J’ai choisi le besoin étudiant, le nom du site et ses priorités : des métiers liés à la formation, des profils demandés lisibles, une recherche internationale, une interface multilingue et une actualisation quotidienne.
+
+Ce projet a pour objectif de relier les enseignements web et données à un besoin concret de recherche de stage ou d’alternance. Le dépôt permet d’explorer son fonctionnement, ses choix techniques, ses tests et les limites de ses sources.
