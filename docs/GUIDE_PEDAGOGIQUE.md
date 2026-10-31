@@ -10,7 +10,8 @@ Ce projet applique HTML, CSS, données web et Python au besoin d’orientation e
 - **Langues :** `site/i18n.js` contient les six dictionnaires d’interface ; les contenus des recruteurs ne sont pas traduits automatiquement.
 - **Données :** `scripts/collect.py` valide, normalise et regroupe les annonces ; `taxonomy.py` rattache les familles MSI aux parcours.
 - **Actualisation :** `scripts/refresh.py` prépare un candidat, contrôle les écarts, sauvegarde l’ancien instantané et publie un état de succès ou d’échec.
-- **Ressources :** `site/msi.html` et `msi-app.js` présentent métiers, parcours et graphiques sur le même corpus actualisé, hors archives.
+- **Ressources :** `site/msi.html`, `pedagogy.css` et `msi-app.js` présentent les parcours, métiers et projets suggérés. L’atelier de mots-clés est explicitement limité à BPCE, replié par défaut et sans conclusion sur le marché. Les filtres d’offres, détails et exports restent centralisés dans la recherche principale ; les liens transmettent les critères correspondants.
+- **Amélioration progressive :** `scripts/build_public.py` génère des parcours et offres statiques dans le HTML initial. Le JavaScript enrichit cette base ; son absence ou une erreur réseau ne doit pas empêcher toute lecture.
 
 ## Points de raisonnement
 

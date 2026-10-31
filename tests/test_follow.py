@@ -129,6 +129,8 @@ class FollowTests(unittest.TestCase):
             payload["jobs"] = [job]
             (site / "data/jobs.json").write_text(json.dumps(payload))
             (site / "index.html").write_text("<!-- OFFER_PREVIEW_START --><!-- OFFER_PREVIEW_END -->")
+            (site / "msi.html").write_text("<!-- MSI_FALLBACK_START --><!-- MSI_FALLBACK_END -->")
+            (site / "data/catalog.json").write_text((ROOT / "site/data/catalog.json").read_text())
             build(site)
             before = (site / "index.html").read_text()
             build(site)
@@ -137,4 +139,9 @@ class FollowTests(unittest.TestCase):
             self.assertNotIn("<img", before)
             self.assertIn(job["observed_at"][:10], before)
             self.assertIn("sans JavaScript", (site / "offres.html").read_text())
+            msi = (site / "msi.html").read_text()
+            self.assertIn('id="msi-fallback"', msi)
+            self.assertEqual(msi.count('class="pathway-card"'), 3)
+            self.assertIn("&lt;img", msi)
+            self.assertNotIn("<img", msi)
             ET.parse(site / "feed.xml")

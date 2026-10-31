@@ -135,7 +135,7 @@ function renderResults() {
 function resetFilters() {
   fieldNames.forEach(id=>$("#"+id).value="");$("#search").value="";$("#sort").value="recent";$("#availability").value="current";
   state.student=true;state.international=false;state.savedOnly=false;state.page=1;
-  try{const url=new URL(location.href);url.searchParams.delete("status");history.replaceState(null,"",url);}catch{/* Opaque previews do not expose History API. */}
+  try{const url=new URL(location.href);[...fieldNames,"status","student","q"].forEach(key=>url.searchParams.delete(key));history.replaceState(null,"",url);}catch{/* Opaque previews do not expose History API. */}
   filterJobs();
 }
 function renderDomains() {
@@ -215,7 +215,17 @@ async function init() {
     state.jobs=data.jobs;state.meta=data.meta;state.ready=true;$("#loading").hidden=true;$("#load-error").hidden=true;$("#loaded").hidden=false;
     if($("#offer-preview"))$("#offer-preview").hidden=true;
     translateInterface();
-    if(new URLSearchParams(location.search).get("status")==="archived"){$("#availability").value="archived";state.student=false;$("#advanced").open=true;}
+    const params=new URLSearchParams(location.search);
+    for(const key of fieldNames){
+      const value=params.get(key),select=$("#"+key);
+      if(value&&[...select.options].some(option=>option.value===value)){
+        select.value=value;
+        if(["education","source","region","skill","pathway"].includes(key))$("#advanced").open=true;
+      }
+    }
+    if(params.get("q"))$("#search").value=params.get("q").slice(0,250);
+    if(params.get("student")==="all"||($("#contract").value&&!["Stage","Alternance"].includes($("#contract").value)))state.student=false;
+    if(params.get("status")==="archived"){$("#availability").value="archived";state.student=false;$("#advanced").open=true;}
     filterJobs();
   }catch{state.ready=false;$("#loaded").hidden=true;$("#loading").hidden=true;$("#load-error").hidden=false;}
 }

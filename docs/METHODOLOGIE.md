@@ -44,6 +44,10 @@ Les deux archives Wiremind et Navigacom ont pour origine `owner_review`, en réf
 
 Le workflow quotidien se lance à 04 h 17 UTC et assure lui-même collecte, tests, commit des données et déploiement. Un commit créé avec `GITHUB_TOKEN` ne déclenche pas normalement un autre workflow : la publication n’en dépend donc pas ([documentation GitHub](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows)).
 
-Les deux pages utilisent des exports miroirs identiques ; le mode ressources masque les archives et renvoie vers le moteur pour les consulter. Les dénominateurs des graphiques et la provenance des données restent explicites.
+Les deux pages utilisent des exports miroirs identiques, mais n’offrent plus deux moteurs concurrents. `index.html` porte la recherche, les détails et les exports ; `msi.html` porte l’orientation, les fiches métiers et les références. Les parcours, familles et sources renvoient au moteur avec des critères préremplis validés contre ses options.
+
+Le graphique de compétences est un atelier BPCE replié par défaut, pas un indicateur du marché. Les barres donnent des nombres absolus de mentions « n / N descriptions BPCE ». Les synthèses API et éditoriales restent exclues ; aucune comparaison artificielle entre textes de natures différentes n’est ajoutée. Le clic maintient le périmètre BPCE dans la recherche ; le graphique des localisations est séparément étiqueté « toutes les sources du corpus ».
+
+Le générateur produit également un contenu HTML de repli sur chaque page. Les trois parcours et trois offres datées restent lisibles dans l’espace pédagogique sans JavaScript, pendant le chargement ou après un échec réseau. Ce contenu est régénéré à partir de l’instantané validé lors des publications quotidiennes.
 
 Les commandes, scénarios navigateur, captures produites et limites de la recette sont décrits dans [QA.md](../QA.md). Une recette automatisée ne prouve ni la disponibilité actuelle de chaque annonce ni une conformité d’accessibilité complète.

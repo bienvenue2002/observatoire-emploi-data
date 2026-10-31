@@ -81,11 +81,14 @@ test("filtres, tri, pagination et captures desktop/mobile",async({page},testInfo
   await page.screenshot({path:testInfo.outputPath("mobile.png"),fullPage:true});
   await page.locator(".msi-resource").click();
   await expect(page.locator("#loaded")).toBeVisible();
-  for(const view of ["careers","sources","method","overview","offers"]){
+  for(const view of ["careers","sources","method","overview"]){
     await page.locator(`[data-view="${view}"]`).click();
-    await expect(page.locator(view==="offers"?"#offers-section":`#${view}-view`)).toBeVisible();
+    await expect(page.locator(`#${view}-view`)).toBeVisible();
   }
-  await expect(page.locator("#jobs-table")).not.toContainText("Product Owner Data (M/F) - Internship - Paris");
+  await expect(page.locator("#jobs-table")).toHaveCount(0);
+  await page.locator('.site-header a[href="./index.html#offers"]').click();
+  await expect(page.locator("#loaded")).toBeVisible();
+  await expect(page.locator(".archived-status")).toHaveCount(0);
 });
 
 test("échec actualisation visible, anciennes données utilisables et stockage bloqué",async({page})=>{

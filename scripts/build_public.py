@@ -71,6 +71,32 @@ def build(site):
         lambda _: f"<!-- OFFER_PREVIEW_START -->{preview}<!-- OFFER_PREVIEW_END -->", index, flags=re.S)
     if replacements != 1:
         raise ValueError("Emplacement de l'aperçu absent ou ambigu.")
+    msi_path = site / "msi.html"
+    msi = None
+    if msi_path.exists():
+        catalog = json.loads((site / "data/catalog.json").read_text(encoding="utf-8"))
+        pathways = []
+        for path in catalog["pathways"]:
+            if not valid_url(path["url"]):
+                raise ValueError("Lien académique invalide.")
+            pathways.append(f'<article class="pathway-card"><p>{escape(path["id"])}</p>'
+                f'<h3>{escape(path["name"])}</h3><p>{escape(path["line"])}</p><p>{escape(path["details"])}</p>'
+                f'<a href="{escape(path["url"], quote=True)}" target="_blank" rel="noopener noreferrer">Consulter le programme officiel</a></article>')
+        fallback = ('<section id="msi-fallback" class="pedagogy-fallback" aria-labelledby="static-msi-title">'
+            '<h2 id="static-msi-title">Les trois parcours MSI, à lire dès maintenant</h2>'
+            '<p>Cette version HTML reste lisible si JavaScript est désactivé ou si le chargement échoue. '
+            'Les liens officiels permettent de consulter les programmes ; les rattachements aux métiers sont indicatifs.</p>'
+            '<div class="pathway-grid">' + "".join(pathways) + '</div>'
+            f'<h2>Quelques offres du corpus, instantané du {date}</h2>'
+            '<p>Ces exemples servent à relier formation et missions ; leur disponibilité reste à vérifier chez le recruteur.</p>'
+            + "".join(item_html(job) for job in jobs[:3])
+            + '<p><a href="./offres.html">Lire toutes les offres étudiantes sans JavaScript</a> · '
+            '<a href="./index.html#offers">Rechercher, garder en favoris et exporter</a></p></section>')
+        msi, count = re.subn(r"<!-- MSI_FALLBACK_START -->.*?<!-- MSI_FALLBACK_END -->",
+            lambda _: f"<!-- MSI_FALLBACK_START -->{fallback}<!-- MSI_FALLBACK_END -->",
+            msi_path.read_text(encoding="utf-8"), flags=re.S)
+        if count != 1:
+            raise ValueError("Emplacement du repli pédagogique absent ou ambigu.")
     page = (f'<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
         '<title>Élan MSI · Offres sans JavaScript</title><link rel="stylesheet" href="./base.css"><link rel="stylesheet" href="./style.css?v=4.2.0">'
         '<link rel="stylesheet" href="./global.css?v=4.2.0"><link rel="alternate" type="application/rss+xml" href="./feed.xml" title="Élan MSI"></head>'
@@ -83,6 +109,8 @@ def build(site):
     feed = rss(payload)
     ET.fromstring(feed)
     index_path.write_text(index, encoding="utf-8")
+    if msi is not None:
+        msi_path.write_text(msi, encoding="utf-8")
     (site / "offres.html").write_text(page, encoding="utf-8")
     (site / "feed.xml").write_text(feed, encoding="utf-8")
 

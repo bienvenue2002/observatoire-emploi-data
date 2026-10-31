@@ -20,6 +20,16 @@ Un portail étudiant consacré aux débouchés du Master Management des Système
 
 Le moteur de recherche et les ressources pédagogiques s’appuient sur le même corpus MSI actualisé. Les parcours, les métiers et les offres sont réunis dans un projet cohérent avec la formation.
 
+## Deux espaces, deux usages
+
+- **Rechercher et candidater :** `index.html` concentre les filtres, les résultats, les détails, les favoris de session et les exports CSV/JSON.
+- **Comprendre et se préparer :** `msi.html` présente les trois parcours, les fiches métiers, les niveaux d’accès indicatifs, les projets suggérés et les références. Il ne duplique plus le moteur : ses liens ouvrent la recherche avec les critères correspondants.
+- **Apprendre à lire un corpus :** l’atelier BPCE est replié par défaut. Son titre, ses nombres absolus « n / N descriptions BPCE » et son dénominateur désignent explicitement le groupe BPCE. Il ne présente aucun classement des compétences du marché ; les synthèses d’autres sources ne sont pas artificiellement mélangées aux descriptions BPCE.
+
+Les liens pédagogiques transmettent des critères tels que `?source=bpce&skill=SQL&student=all#offers`. Le moteur n’accepte que les valeurs présentes dans ses options ; les valeurs inconnues sont ignorées. `student=all` affiche tous les contrats hors archives pour que le compteur pédagogique reste cohérent. L’ancien lien `msi.html#offers` est redirigé vers ce moteur unique.
+
+Le HTML initial des deux pages contient un contenu de repli réel, pas une page vide : trois offres datées sur la recherche, trois programmes et trois offres sur l’espace pédagogique. Ce contenu reste visible sans JavaScript, pendant l’attente et en cas d’échec réseau. La page `offres.html` conserve la liste complète des stages et alternances hors archives.
+
 ## D’où viennent les offres ?
 
 **Trois sources sont collectées automatiquement : BPCE, Sopra Steria et Bosch**, avec une sélection éditoriale Deloitte, Capgemini, Welcome to the Jungle et JobTeaser. Les volumes par source et le poids de BPCE sont calculés dans les métadonnées ; cet élargissement ne rend pas le corpus représentatif de tout le marché.

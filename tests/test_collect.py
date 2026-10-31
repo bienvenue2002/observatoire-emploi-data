@@ -81,7 +81,7 @@ class PipelineTests(unittest.TestCase):
         self.assertIn("<title>Élan MSI | Débouchés et opportunités</title>", html)
         self.assertIn('aria-label="Élan MSI"', html)
         legacy = (ROOT / "site/msi.html").read_text(encoding="utf-8")
-        self.assertIn("<title>Élan MSI | Du master aux métiers</title>", legacy)
+        self.assertIn("<title>Élan MSI | Comprendre les parcours et les métiers</title>", legacy)
         self.assertEqual(html.count("élan<span>msi</span>"), 2)
         self.assertNotIn("Horizon MSI", html)
         app = (ROOT / "site/app.js").read_text(encoding="utf-8")

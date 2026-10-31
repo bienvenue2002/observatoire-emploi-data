@@ -1,5 +1,15 @@
 # Parcours à préserver et évolution MSI
 
+## Séparer orientation et recherche, expliciter le cas BPCE
+- Baseline navigateur : l’accueil de recherche possède trois cartes HTML sans JS ; `msi.html` n’en possède pas et répète filtres, tableau et exports.
+- Recherche principale : conserver six langues, filtres, détails, tri, pagination, exports et favoris, RSS et archives explicites.
+- Espace MSI : parcours, fiches métiers, projets suggérés, références et méthode ; les liens d’offres renvoient au moteur unique avec critères validés.
+- Supprimer uniquement le moteur dupliqué de la page pédagogique ; migrer l’ancien lien `msi.html#offers` vers la recherche principale, sans perdre l’accès aux fonctions.
+- Graphique : atelier BPCE replié par défaut, titre et dénominateur exclusivement BPCE, compte absolu sur N descriptions BPCE ; aucun classement transversal du marché. Clic = moteur avec source BPCE et mot-clé déjà sélectionnés.
+- Ajouter à `msi.html` un aperçu HTML généré des trois parcours et de trois vraies offres datées ; il reste visible sans JS, pendant le chargement et en cas d’échec.
+- Génération quotidienne du repli pédagogique à partir du même instantané ; inclure `msi.html` dans le commit automatisé.
+- Contrôles : entrées métier/parcours/source/graphiques et ancien lien, critères inconnus ou malveillants ignorés, retour à la recherche, échec réseau pédagogique, sans JS et téléchargement, toutes les régressions existantes, mobile et aperçu hébergé.
+
 ## Diversification, démarrage et suivi personnel
 - Baseline publique observée avant édition : 28 stages/alternances, disponibilité `current`, aucune carte archivée par défaut.
 - Conserver les six langues, le périmètre MSI, les filtres, parcours, ressources, détails, tri, pagination, exports existants et la protection des données.

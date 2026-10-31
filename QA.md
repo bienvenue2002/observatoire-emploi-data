@@ -52,6 +52,16 @@ Les tests ne garantissent pas la disponibilité des annonces tierces, l’exhaus
 
 ## Recette réalisée le 31 octobre 2026
 
+### Évolution v4.3 : orientation distincte et cas BPCE
+
+L’espace pédagogique ne possède plus de filtres d’offres, tableau, détail d’annonce ou exports dupliqués. Les liens parcours, métier, source et graphique mènent au moteur unique avec des critères validés, tout en conservant les contrats et les périmètres des compteurs. L’ancien fragment `msi.html#offers` redirige vers la recherche.
+
+L’atelier BPCE est replié par défaut, porte un titre exclusivement BPCE et affiche des comptes sur le nombre de descriptions BPCE, sans classement transversal du marché. La suite vérifie que cliquer une barre conserve cette source et son mot-clé dans le moteur. Les localisations restent distinctement étiquetées toutes sources.
+
+Le repli HTML pédagogique comprend trois parcours officiels et trois vraies offres datées. Les tests couvrent JavaScript désactivé, requête en attente, erreur réseau, lecture à 320 px, accès à la liste statique complète, critères URL inconnus et absence du moteur dupliqué. La recette antérieure des six langues, favoris, exports, archives et sécurité est rejouée avec ces scénarios.
+
+Recette locale v4.3 : 50 tests Python, contrôle des six dictionnaires, syntaxe des deux applications et 17 scénarios Playwright réussis. Les vues pédagogique et atelier ouvert sont inspectées visuellement sur desktop et à 320 px ; l’aperçu pédagogique sans JavaScript conserve ses trois parcours.
+
 ### Évolution v4.2 : diversification et suivi
 
 La collecte réelle multi-source du 31 octobre 2026, débutée à `2026-10-31T05:23:49+00:00`, a produit 144 fiches : 77 BPCE, 40 Sopra Steria, 19 Bosch et 8 éditoriales, dont 2 archives. La sélection étudiante hors archives compte 87 fiches, sur un corpus couvrant 14 pays/territoires. Ce sont les compteurs de cet instantané, pas des volumes garantis à l’avenir ; les métadonnées restent la référence.
