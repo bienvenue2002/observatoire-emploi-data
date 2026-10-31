@@ -3,8 +3,8 @@
     "title": "Élan MSI · Débouchés et opportunités",
     "edition": "Master MSI, France et international : BPCE et API publiques, enrichis d’une sélection éditoriale",
     "scope_id": "msi-international",
-    "last_success_at": "2026-10-31T05:23:49+00:00",
-    "observed_at": "2026-10-31T05:23:49+00:00",
+    "last_success_at": "2026-10-31T05:30:03+00:00",
+    "observed_at": "2026-10-31T05:30:03+00:00",
     "source_url": "https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques",
     "api_url": "https://bpce.opendatasoft.com/api/explore/v2.1/catalog/datasets/groupe-bpce-offres-emploi/exports/json",
     "license": "BPCE : Licence Ouverte 2.0 ; autres plateformes : liens factuels et synthèses originales, pas de licence ouverte présumée",
@@ -20,7 +20,7 @@
         "key": "sr-soprasteria1",
         "name": "Sopra Steria",
         "offers": 40,
-        "observed_at": "2026-10-31T05:23:49+00:00",
+        "observed_at": "2026-10-31T05:30:03+00:00",
         "bounded_selection": true,
         "truncated": true,
         "max_pages_per_query": 12,
@@ -31,7 +31,7 @@
         "key": "sr-boschgroup",
         "name": "Bosch",
         "offers": 19,
-        "observed_at": "2026-10-31T05:23:49+00:00",
+        "observed_at": "2026-10-31T05:30:03+00:00",
         "bounded_selection": true,
         "truncated": true,
         "max_pages_per_query": 12,
@@ -168,10 +168,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-30T18:10:06",
       "salary_min": null,
       "salary_max": null,
@@ -219,10 +219,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-30T16:47:07",
       "salary_min": null,
       "salary_max": null,
@@ -271,10 +271,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-28T07:10:13",
       "salary_min": null,
       "salary_max": null,
@@ -318,10 +318,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-28T07:10:06",
       "salary_min": null,
       "salary_max": null,
@@ -369,10 +369,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-27T16:10:09",
       "salary_min": null,
       "salary_max": null,
@@ -509,10 +509,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-27T10:01:45",
       "salary_min": null,
       "salary_max": null,
@@ -558,10 +558,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-26T16:21:36",
       "salary_min": null,
       "salary_max": null,
@@ -610,10 +610,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-26T10:15:02",
       "salary_min": null,
       "salary_max": null,
@@ -666,10 +666,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-24T11:18:52",
       "salary_min": null,
       "salary_max": null,
@@ -816,10 +816,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-23T14:42:10",
       "salary_min": null,
       "salary_max": null,
@@ -956,10 +956,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-23T14:17:37",
       "salary_min": null,
       "salary_max": null,
@@ -1006,10 +1006,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-22T17:04:24",
       "salary_min": null,
       "salary_max": null,
@@ -1056,10 +1056,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-22T14:01:34",
       "salary_min": null,
       "salary_max": null,
@@ -1103,10 +1103,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-21T14:10:11",
       "salary_min": null,
       "salary_max": null,
@@ -1156,10 +1156,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-21T11:10:08",
       "salary_min": null,
       "salary_max": null,
@@ -1210,10 +1210,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-21T10:10:07",
       "salary_min": null,
       "salary_max": null,
@@ -1262,10 +1262,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-20T17:44:25",
       "salary_min": null,
       "salary_max": null,
@@ -1314,10 +1314,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-20T17:17:42",
       "salary_min": null,
       "salary_max": null,
@@ -1363,10 +1363,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-20T17:10:06",
       "salary_min": null,
       "salary_max": null,
@@ -1414,10 +1414,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-20T15:07:16",
       "salary_min": null,
       "salary_max": null,
@@ -1465,10 +1465,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-20T13:57:01",
       "salary_min": null,
       "salary_max": null,
@@ -1627,10 +1627,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-19T15:04:47",
       "salary_min": null,
       "salary_max": null,
@@ -1676,10 +1676,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-19T07:52:09",
       "salary_min": null,
       "salary_max": null,
@@ -1726,10 +1726,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-19T06:49:44",
       "salary_min": null,
       "salary_max": null,
@@ -1776,10 +1776,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-19T06:22:51",
       "salary_min": null,
       "salary_max": null,
@@ -1831,10 +1831,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-16T14:30:43",
       "salary_min": null,
       "salary_max": null,
@@ -1880,10 +1880,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-16T13:10:06",
       "salary_min": null,
       "salary_max": null,
@@ -1928,10 +1928,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-16T09:54:33",
       "salary_min": null,
       "salary_max": null,
@@ -1976,10 +1976,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-14T15:33:53",
       "salary_min": null,
       "salary_max": null,
@@ -2029,10 +2029,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-14T10:10:05",
       "salary_min": null,
       "salary_max": null,
@@ -2082,10 +2082,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-13T11:10:06",
       "salary_min": null,
       "salary_max": null,
@@ -2133,10 +2133,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-13T10:10:11",
       "salary_min": null,
       "salary_max": null,
@@ -2182,10 +2182,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-12T15:47:19",
       "salary_min": null,
       "salary_max": null,
@@ -2231,10 +2231,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-12T14:38:45",
       "salary_min": null,
       "salary_max": null,
@@ -2282,10 +2282,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-12T12:04:34",
       "salary_min": null,
       "salary_max": null,
@@ -2332,10 +2332,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-12T07:50:42",
       "salary_min": null,
       "salary_max": null,
@@ -2383,10 +2383,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-09T15:06:14",
       "salary_min": null,
       "salary_max": null,
@@ -2435,10 +2435,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-09T13:17:15",
       "salary_min": null,
       "salary_max": null,
@@ -2485,10 +2485,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-09T09:10:12",
       "salary_min": null,
       "salary_max": null,
@@ -2538,10 +2538,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-08T07:58:52",
       "salary_min": null,
       "salary_max": null,
@@ -2590,10 +2590,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-07T15:11:57",
       "salary_min": null,
       "salary_max": null,
@@ -2642,10 +2642,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-06T15:10:06",
       "salary_min": null,
       "salary_max": null,
@@ -2692,10 +2692,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-06T11:10:10",
       "salary_min": null,
       "salary_max": null,
@@ -2742,10 +2742,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-05T15:31:41",
       "salary_min": null,
       "salary_max": null,
@@ -2873,10 +2873,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-02T15:21:30",
       "salary_min": null,
       "salary_max": null,
@@ -2924,10 +2924,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-01T09:10:05",
       "salary_min": null,
       "salary_max": null,
@@ -2976,10 +2976,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-30T11:04:54",
       "salary_min": null,
       "salary_max": null,
@@ -3037,10 +3037,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-23T08:00:39",
       "salary_min": null,
       "salary_max": null,
@@ -3088,10 +3088,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-23T07:35:43",
       "salary_min": null,
       "salary_max": null,
@@ -3141,10 +3141,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-22T12:50:29",
       "salary_min": null,
       "salary_max": null,
@@ -3282,10 +3282,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-18T13:37:40",
       "salary_min": null,
       "salary_max": null,
@@ -3332,10 +3332,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-17T12:56:59",
       "salary_min": null,
       "salary_max": null,
@@ -3383,10 +3383,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-16T08:29:53",
       "salary_min": null,
       "salary_max": null,
@@ -3430,10 +3430,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-15T13:57:47",
       "salary_min": null,
       "salary_max": null,
@@ -3571,10 +3571,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-14T09:49:10",
       "salary_min": null,
       "salary_max": null,
@@ -3627,10 +3627,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-11T09:46:23",
       "salary_min": null,
       "salary_max": null,
@@ -3679,10 +3679,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-08T08:01:46",
       "salary_min": null,
       "salary_max": null,
@@ -3732,10 +3732,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-07T09:25:03",
       "salary_min": null,
       "salary_max": null,
@@ -3781,10 +3781,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-03T14:10:12",
       "salary_min": null,
       "salary_max": null,
@@ -3829,10 +3829,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-08-31T09:48:25",
       "salary_min": null,
       "salary_max": null,
@@ -3878,10 +3878,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-08-14T12:10:05",
       "salary_min": null,
       "salary_max": null,
@@ -4029,10 +4029,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-08-06T17:33:17",
       "salary_min": null,
       "salary_max": null,
@@ -4080,10 +4080,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-08-06T10:10:08",
       "salary_min": null,
       "salary_max": null,
@@ -4132,10 +4132,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-08-04T07:37:12",
       "salary_min": null,
       "salary_max": null,
@@ -4185,10 +4185,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-07-20T13:22:45",
       "salary_min": null,
       "salary_max": null,
@@ -4238,10 +4238,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-07-20T08:34:35",
       "salary_min": null,
       "salary_max": null,
@@ -4408,10 +4408,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-07-16T12:29:46",
       "salary_min": null,
       "salary_max": null,
@@ -4461,10 +4461,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-07-07T13:17:57",
       "salary_min": null,
       "salary_max": null,
@@ -4516,10 +4516,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-07-07T13:17:29",
       "salary_min": null,
       "salary_max": null,
@@ -4575,10 +4575,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-07-07T13:17:23",
       "salary_min": null,
       "salary_max": null,
@@ -4625,10 +4625,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-07-07T13:17:21",
       "salary_min": null,
       "salary_max": null,
@@ -4672,10 +4672,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-07-07T13:17:10",
       "salary_min": null,
       "salary_max": null,
@@ -4722,10 +4722,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-07-01T19:10:11",
       "salary_min": null,
       "salary_max": null,
@@ -4814,10 +4814,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-06-23T12:43:02",
       "salary_min": null,
       "salary_max": null,
@@ -4955,10 +4955,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-03-16T12:24:18",
       "salary_min": null,
       "salary_max": null,
@@ -5087,10 +5087,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-02-24T10:29:18",
       "salary_min": null,
       "salary_max": null,
@@ -5219,10 +5219,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-02-04T16:10:46",
       "salary_min": null,
       "salary_max": null,
@@ -5701,10 +5701,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-29T16:39:52.538Z",
       "published_at": "2026-10-29T16:39:52.538Z",
       "salary_min": null,
@@ -5751,10 +5751,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-29T14:45:25.144Z",
       "published_at": "2026-10-29T14:45:25.144Z",
       "salary_min": null,
@@ -5803,10 +5803,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-29T14:43:13.554Z",
       "published_at": "2026-10-29T14:43:13.554Z",
       "salary_min": null,
@@ -5854,10 +5854,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-29T13:48:28.794Z",
       "published_at": "2026-10-29T13:48:28.794Z",
       "salary_min": null,
@@ -5904,10 +5904,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-29T13:46:04.877Z",
       "published_at": "2026-10-29T13:46:04.877Z",
       "salary_min": null,
@@ -5956,10 +5956,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-29T13:45:14.293Z",
       "published_at": "2026-10-29T13:45:14.293Z",
       "salary_min": null,
@@ -6009,10 +6009,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-29T13:44:43.338Z",
       "published_at": "2026-10-29T13:44:43.338Z",
       "salary_min": null,
@@ -6061,10 +6061,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-29T09:21:01.281Z",
       "published_at": "2026-10-29T09:21:01.281Z",
       "salary_min": null,
@@ -6113,10 +6113,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-28T12:11:35.245Z",
       "published_at": "2026-10-28T12:11:35.245Z",
       "salary_min": null,
@@ -6164,10 +6164,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-28T08:46:11.392Z",
       "published_at": "2026-10-28T08:46:11.392Z",
       "salary_min": null,
@@ -6215,10 +6215,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-28T08:07:54.238Z",
       "published_at": "2026-10-28T08:07:54.238Z",
       "salary_min": null,
@@ -6266,10 +6266,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-27T14:18:48.740Z",
       "published_at": "2026-10-27T14:18:48.740Z",
       "salary_min": null,
@@ -6316,10 +6316,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-27T08:35:35.625Z",
       "published_at": "2026-10-27T08:35:35.625Z",
       "salary_min": null,
@@ -6367,10 +6367,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-27T08:24:33.683Z",
       "published_at": "2026-10-27T08:24:33.683Z",
       "salary_min": null,
@@ -6418,10 +6418,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-26T15:43:54.492Z",
       "published_at": "2026-10-26T15:43:54.492Z",
       "salary_min": null,
@@ -6469,10 +6469,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-26T15:36:12.888Z",
       "published_at": "2026-10-26T15:36:12.888Z",
       "salary_min": null,
@@ -6522,10 +6522,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-26T10:17:15.249Z",
       "published_at": "2026-10-26T10:17:15.249Z",
       "salary_min": null,
@@ -6573,10 +6573,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-23T11:49:21.916Z",
       "published_at": "2026-10-23T11:49:21.916Z",
       "salary_min": null,
@@ -6623,10 +6623,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-23T11:47:34.409Z",
       "published_at": "2026-10-23T11:47:34.409Z",
       "salary_min": null,
@@ -6673,10 +6673,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-22T08:20:01.331Z",
       "published_at": "2026-10-22T08:20:01.331Z",
       "salary_min": null,
@@ -6724,10 +6724,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-21T09:32:56.443Z",
       "published_at": "2026-10-21T09:32:56.443Z",
       "salary_min": null,
@@ -6773,10 +6773,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-21T09:09:25.498Z",
       "published_at": "2026-10-21T09:09:25.498Z",
       "salary_min": null,
@@ -6824,10 +6824,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-20T12:17:38.644Z",
       "published_at": "2026-10-20T12:17:38.644Z",
       "salary_min": null,
@@ -6873,10 +6873,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-20T12:15:41.302Z",
       "published_at": "2026-10-20T12:15:41.302Z",
       "salary_min": null,
@@ -6924,10 +6924,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-19T12:48:11.239Z",
       "published_at": "2026-10-19T12:48:11.239Z",
       "salary_min": null,
@@ -6977,10 +6977,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-12T15:28:52.674Z",
       "published_at": "2026-10-12T15:28:52.674Z",
       "salary_min": null,
@@ -7029,10 +7029,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-30T14:14:22.543Z",
       "published_at": "2026-09-30T14:14:22.543Z",
       "salary_min": null,
@@ -7084,10 +7084,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-30T10:02:29.276Z",
       "published_at": "2026-09-30T10:02:29.276Z",
       "salary_min": null,
@@ -7136,10 +7136,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-30T09:55:50.490Z",
       "published_at": "2026-09-30T09:55:50.490Z",
       "salary_min": null,
@@ -7185,10 +7185,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-28T16:55:53.183Z",
       "published_at": "2026-09-28T16:55:53.183Z",
       "salary_min": null,
@@ -7239,10 +7239,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-28T08:33:10.165Z",
       "published_at": "2026-09-28T08:33:10.165Z",
       "salary_min": null,
@@ -7290,10 +7290,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-25T09:22:25.963Z",
       "published_at": "2026-09-25T09:22:25.963Z",
       "salary_min": null,
@@ -7343,10 +7343,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-25T09:18:01.147Z",
       "published_at": "2026-09-25T09:18:01.147Z",
       "salary_min": null,
@@ -7394,10 +7394,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-24T13:24:23.418Z",
       "published_at": "2026-09-24T13:24:23.418Z",
       "salary_min": null,
@@ -7446,10 +7446,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-16T11:06:37.696Z",
       "published_at": "2026-09-16T11:06:37.696Z",
       "salary_min": null,
@@ -7498,10 +7498,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-16T10:58:26.604Z",
       "published_at": "2026-09-16T10:58:26.604Z",
       "salary_min": null,
@@ -7550,10 +7550,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-16T10:57:41.462Z",
       "published_at": "2026-09-16T10:57:41.462Z",
       "salary_min": null,
@@ -7599,10 +7599,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-16T10:29:41.961Z",
       "published_at": "2026-09-16T10:29:41.961Z",
       "salary_min": null,
@@ -7650,10 +7650,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-16T10:06:14.323Z",
       "published_at": "2026-09-16T10:06:14.323Z",
       "salary_min": null,
@@ -7701,10 +7701,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-16T09:36:46.152Z",
       "published_at": "2026-09-16T09:36:46.152Z",
       "salary_min": null,
@@ -7753,10 +7753,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-20T09:24:54.254Z",
       "published_at": "2026-10-20T09:24:54.254Z",
       "salary_min": null,
@@ -7804,10 +7804,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-15T12:12:57.793Z",
       "published_at": "2026-10-15T12:12:57.793Z",
       "salary_min": null,
@@ -7856,10 +7856,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-14T08:21:15.246Z",
       "published_at": "2026-10-14T08:21:15.246Z",
       "salary_min": null,
@@ -7908,10 +7908,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-12T12:23:18.225Z",
       "published_at": "2026-10-12T12:23:18.225Z",
       "salary_min": null,
@@ -7959,10 +7959,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-09T18:27:01.312Z",
       "published_at": "2026-10-09T18:27:01.312Z",
       "salary_min": null,
@@ -8009,10 +8009,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-09T09:20:21.922Z",
       "published_at": "2026-10-09T09:20:21.922Z",
       "salary_min": null,
@@ -8059,10 +8059,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-08T12:56:26.600Z",
       "published_at": "2026-10-08T12:56:26.600Z",
       "salary_min": null,
@@ -8111,10 +8111,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-07T06:14:28.023Z",
       "published_at": "2026-10-07T06:14:28.023Z",
       "salary_min": null,
@@ -8162,10 +8162,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-10-05T08:48:18.832Z",
       "published_at": "2026-10-05T08:48:18.832Z",
       "salary_min": null,
@@ -8210,10 +8210,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-17T11:45:40.411Z",
       "published_at": "2026-09-17T11:45:40.411Z",
       "salary_min": null,
@@ -8265,10 +8265,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-09-11T08:58:17.149Z",
       "published_at": "2026-09-11T08:58:17.149Z",
       "salary_min": null,
@@ -8316,10 +8316,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-08-31T20:07:02.139Z",
       "published_at": "2026-08-31T20:07:02.139Z",
       "salary_min": null,
@@ -8370,10 +8370,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-08-06T12:57:19.253Z",
       "published_at": "2026-08-06T12:57:19.253Z",
       "salary_min": null,
@@ -8420,10 +8420,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-07-29T06:56:37.746Z",
       "published_at": "2026-07-29T06:56:37.746Z",
       "salary_min": null,
@@ -8470,10 +8470,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-07-27T10:25:05.776Z",
       "published_at": "2026-07-27T10:25:05.776Z",
       "salary_min": null,
@@ -8521,10 +8521,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-07-03T08:44:57.141Z",
       "published_at": "2026-07-03T08:44:57.141Z",
       "salary_min": null,
@@ -8572,10 +8572,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-07-01T05:19:21.702Z",
       "published_at": "2026-07-01T05:19:21.702Z",
       "salary_min": null,
@@ -8625,10 +8625,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2026-04-09T07:33:15.772Z",
       "published_at": "2026-04-09T07:33:15.772Z",
       "salary_min": null,
@@ -8678,10 +8678,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-10-31T05:23:49+00:00",
+      "observed_at": "2026-10-31T05:30:03+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-10-31T05:23:49+00:00",
+      "status_checked_at": "2026-10-31T05:30:03+00:00",
       "modified_at": "2022-11-07T03:46:49.030Z",
       "published_at": "2022-11-07T03:46:49.030Z",
       "salary_min": null,
