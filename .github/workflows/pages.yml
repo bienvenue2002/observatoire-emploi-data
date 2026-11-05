@@ -39,6 +39,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
       - name: Vérifier le pipeline et le JavaScript
         run: |
           python -m unittest discover -s tests -v
@@ -47,7 +50,6 @@ jobs:
           node tests/test_i18n.cjs
       - name: Actualiser les trois sources, conserver les données si erreur
         id: refresh
-        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         continue-on-error: true
         env:
           ALLOW_DROP: ${{ inputs.allow_large_drop }}
@@ -61,15 +63,11 @@ jobs:
         run: python scripts/build_public.py
       - name: Revérifier les données avant publication
         run: python -m unittest discover -s tests -v
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "22"
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - name: Recette navigateur reproductible
         run: npx playwright test
       - name: Versionner le résultat ou le signalement d’échec
-        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
