@@ -10,8 +10,14 @@ test("MSI, archives séparées, profils et exports complets",async({page})=>{
   await expect(page.locator("#result-count")).toContainText(String(payload.meta.student_offers));
   await expect(page.locator(".job-status.archived-status")).toHaveCount(0);
   const finalYear=payload.jobs.find(j=>j.study_stage==="Fin d’études" && ["Stage","Alternance"].includes(j.contract) && j.status!=="closed");
+  expect(finalYear,"Le corpus doit contenir une offre étudiante de fin d’études hors archives").toBeDefined();
   await page.locator("#search").fill(finalYear.title);
-  await page.locator(".job-open").first().click();
+  const target=page.locator(".job-open").filter({hasNot:page.locator(".__unused")});
+  const offer=page.locator(".job-open[data-job="+JSON.stringify(finalYear.id)+"]");
+  while(await offer.count()===0 && await page.locator("#next").isEnabled())await page.locator("#next").click();
+  await expect(offer).toHaveCount(1);
+  await offer.click();
+  await expect(page.locator("#job-detail .source-visit")).toHaveAttribute("href",new URL(finalYear.source_url).href);
   await expect(page.locator("#job-detail")).toContainText("Fin d’études");
   await expect(page.locator("#job-detail")).toContainText(finalYear.duration || "Non précisée");
   await expect(page.locator("#job-detail")).toContainText(finalYear.education_level || "Non précisé");
