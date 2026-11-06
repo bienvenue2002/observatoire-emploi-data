@@ -1,9 +1,9 @@
 {
-  "last_attempt_at": "2026-11-02T12:22:02+00:00",
-  "last_success_at": "2026-11-02T12:22:02+00:00",
+  "last_attempt_at": "2026-11-06T00:07:59+00:00",
+  "last_success_at": "2026-11-06T00:07:59+00:00",
   "schedule_utc": "17 4 * * *",
   "workflow_url": "https://github.com/bienvenue2002/observatoire-emploi-data/actions/workflows/pages.yml",
   "status": "success",
-  "bpce_offers": 73,
+  "bpce_offers": 74,
   "reason": null
 }
