@@ -3,24 +3,24 @@
     "title": "Élan MSI · Débouchés et opportunités",
     "edition": "Master MSI, France et international : BPCE et API publiques, enrichis d’une sélection éditoriale",
     "scope_id": "msi-international",
-    "last_success_at": "2026-11-06T00:07:59+00:00",
-    "observed_at": "2026-11-06T00:07:59+00:00",
+    "last_success_at": "2026-11-06T12:04:46+00:00",
+    "observed_at": "2026-11-06T12:04:46+00:00",
     "source_url": "https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques",
     "api_url": "https://bpce.opendatasoft.com/api/explore/v2.1/catalog/datasets/groupe-bpce-offres-emploi/exports/json",
     "license": "BPCE : Licence Ouverte 2.0 ; autres plateformes : liens factuels et synthèses originales, pas de licence ouverte présumée",
     "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
-    "raw_rows": 1827,
-    "france_rows": 1729,
-    "matched_location_rows": 196,
-    "unique_offers": 140,
-    "bpce_unique_offers": 74,
+    "raw_rows": 1796,
+    "france_rows": 1700,
+    "matched_location_rows": 197,
+    "unique_offers": 141,
+    "bpce_unique_offers": 75,
     "editorial_offers": 8,
     "additional_sources": [
       {
         "key": "sr-soprasteria1",
         "name": "Sopra Steria",
         "offers": 40,
-        "observed_at": "2026-11-06T00:07:59+00:00",
+        "observed_at": "2026-11-06T12:04:46+00:00",
         "bounded_selection": true,
         "truncated": true,
         "max_pages_per_query": 12,
@@ -31,7 +31,7 @@
         "key": "sr-boschgroup",
         "name": "Bosch",
         "offers": 18,
-        "observed_at": "2026-11-06T00:07:59+00:00",
+        "observed_at": "2026-11-06T12:04:46+00:00",
         "bounded_selection": true,
         "truncated": true,
         "max_pages_per_query": 12,
@@ -41,7 +41,7 @@
     ],
     "public_api_offers": 58,
     "sources": {
-      "Groupe BPCE · Open Data": 74,
+      "Groupe BPCE · Open Data": 75,
       "Deloitte · via Welcome to the Jungle": 2,
       "Capgemini · site carrières": 2,
       "Welcome to the Jungle": 2,
@@ -54,35 +54,35 @@
     "scope": "Offres liées aux métiers du Master MSI, France et international. Export BPCE, sélections bornées d’API publiques et fiches éditoriales. Corpus partiel, non représentatif. Rattachement pédagogique indicatif, sans garantie d’éligibilité ni d’ouverture actuelle.",
     "deduplication": "Une annonce par référence source ; les villes multiples sont regroupées.",
     "families": {
-      "Data Analyst": 11,
-      "Data Scientist": 12,
-      "Business Analyst": 31,
-      "Gouvernance et qualité des données": 2,
-      "Consultant cybersécurité": 16,
-      "Chef de projet SI": 15,
+      "Data Scientist": 14,
+      "Business Analyst": 33,
       "Autres métiers data": 13,
+      "Data Analyst": 11,
+      "Gouvernance et qualité des données": 2,
+      "Consultant cybersécurité": 10,
+      "Chef de projet SI": 15,
       "Product Owner": 6,
-      "Conseil & transformation SI": 16,
+      "Conseil & transformation SI": 18,
       "Data Engineer / Architecture": 9,
       "Auditeur SI": 2,
       "Responsable Analytics": 2,
-      "Consultant ERP / solutions métier": 5
+      "Consultant ERP / solutions métier": 6
     },
     "pipeline_version": "4.0.0",
     "domains": {
-      "Data Analyst": 11,
-      "Data Scientist": 12,
-      "Business Analyst": 31,
-      "Gouvernance et qualité des données": 2,
-      "Consultant cybersécurité": 16,
-      "Chef de projet SI": 15,
+      "Data Scientist": 14,
+      "Business Analyst": 33,
       "Autres métiers data": 13,
+      "Data Analyst": 11,
+      "Gouvernance et qualité des données": 2,
+      "Consultant cybersécurité": 10,
+      "Chef de projet SI": 15,
       "Product Owner": 6,
-      "Conseil & transformation SI": 16,
+      "Conseil & transformation SI": 18,
       "Data Engineer / Architecture": 9,
       "Auditeur SI": 2,
       "Responsable Analytics": 2,
-      "Consultant ERP / solutions métier": 5
+      "Consultant ERP / solutions métier": 6
     },
     "domain_options": [
       "Business Analyst",
@@ -121,10 +121,267 @@
     "international_offers": 22,
     "student_offers": 85,
     "archived_offers": 2,
-    "non_archived_offers": 138,
-    "bpce_share_percent": 52.9
+    "non_archived_offers": 139,
+    "bpce_share_percent": 53.2
   },
   "jobs": [
+    {
+      "id": "BPGO05178",
+      "title": "Data Scientist F/H",
+      "company": "Banque Populaire Grand Ouest",
+      "family": "Data Scientist",
+      "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Data Scientist",
+      "duration": null,
+      "duration_evidence": null,
+      "duration_note": null,
+      "education_level": "Bac+5",
+      "education_evidence": "Bac +5",
+      "education_note": "Champ degree de l’export BPCE.",
+      "study_stage": null,
+      "study_stage_evidence": null,
+      "requirements_method": "bpce_structured_and_text",
+      "locations": [
+        {
+          "city": "Saint-Herblain",
+          "region": "Pays de la Loire",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Pays de la Loire"
+          }
+        }
+      ],
+      "skills": [
+        "Machine learning",
+        "Python",
+        "SQL"
+      ],
+      "description": "UN « PETIT » MOT SUR NOUS La Banque Populaire Grand Ouest est une grande équipe de près de 3 000 collaboratrices et collaborateurs, réparti(e)s sur tout le Grand Ouest, dans 12 départements, avec nos 2 marques, Banque Populaire Grand Ouest et Crédit Maritime Grand Ouest. Selon nos expertises et nos métiers, nous accompagnons nos 900 000 clientes et clients (dont plus de 400 000 sociétaires) soit dans l'une de nos 250 agences, soit dans l'un de nos 3 sites centraux de Rennes, Nantes et Angers. Historiquement reconnue comme Banque des entrepreneur(e)s et Banque du monde marin, nous nous différencions par une très forte proximité et une capacité à innover chaque jour au service de la réussite de nos clients. Poste et missions Dans un environnement bancaire en constante évolution, notre objectif est de développer nos ventes. Nous recherchons un(e) Data Scientist expérimenté.e pour contribuer au développement commercial et monitorer les modèles existants. Dans ce cadre, vos missions seront les suivantes : Animation de la feuille de route Data Science : écriture, animation, cadrage des projets. Conception de modèles : Choisir la stratégie de modélisation la plus adaptée aux données disponibles et aux objectifs fixés, construire les bases nécessaires et optimiser les modèles pour maximiser les performances. Interprétabilité du modèle : Mener des travaux sur l'interprétabilité des résultats du modèle afin de fournir des insights clairs et actionnables pour les équipes métier. Déploiement : Définir et mettre en œuvre la stratégie MLOps pour assurer une intégration fluide du modèle dans l'architecture existante. Collaboration avec les équipes CRM pour valider l’efficacité des modèles en situation réelle. Vous contribuerez également à la création de projets de Machine Learning pour répondre à la feuille de route du service et aux ambitions de BPGO. Projets qui peuvent se définir parmi 3 axes de travail : Détection de moments de vie clients, Détection d’appétences produits, Détection d’appétences à un canal de communication. Profil et compétences requises Formation : BAC +5 orienté Data Science avec expérience significative Compétences : Maîtrise des principales méthodes de modélisation statistiques. Connaissance approfondie de Python. Compétences en SQL pour la gestion et l'analyse des données Curiosité et passion pour l'analyse de données. Capacité à travailler en équipe et à communiquer efficacement. Rigueur et capacité d'analyse. Informations complémentaires sur le poste LISTE (NON EXHAUSTIVE) DES AVANTAGES QUI VOUS SERONT RÉSERVÉS - Une rémunération selon votre profil et votre expérience sur 13 mois - Des primes d’intéressement et de participation - Un accompagnement à la formation individualisé - Un restaurant d'entreprise - Une mutuelle d’entreprise individuelle ou familiale - Un comité d’entreprise - Une agence bancaire collaborateurs(trices), avec des Conseillères et Conseillers dédiés à la gestion de vos comptes et ceux de votre famille - Une culture d’entreprise résolument coopérative, responsable et innovante où l’enthousiasme est clé, à découvrir ici : www.bpgototheplace.fr N’attendons plus pour nous rencontrer ! #LaReussiteEstEnVous PLACE À VOUS, AVEC NOUS Place à vous : plus qu’une promesse, voici l’engagement que la Banque Populaire Grand Ouest prend envers ses 3000 collaboratrices et collaborateurs. En rejoignant notre collectif, vous pouvez être certains que nous serons attentifs à ce que vous y trouviez, non pas une place, mais VOTRE place et même VOS places : celles qui expriment pleinement qui vous êtes. Que vous soyez coopératif(ve), engagé(é), solidaire, responsable, audacieux(se), populaire, enthousiaste, amoureux(se) de la mer ou du littoral, précurseur(e), sportif(ve), révélateur(trice) ou tout cela à la fois... Place à vous, avec nous.",
+      "source": "Groupe BPCE · Open Data",
+      "source_url": "https://recrutement.bpce.fr/job/data-scientist-f-h",
+      "source_key": "bpce",
+      "collection_method": "open_data",
+      "pathways": [
+        "ID"
+      ],
+      "observed_at": "2026-11-06T12:04:46+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
+      "modified_at": "2026-11-06T08:58:04",
+      "salary_min": null,
+      "salary_max": null,
+      "remote_source": null
+    },
+    {
+      "id": "BPCE_INFO01938",
+      "title": "STAGE - Business Analyst (F/H) - PARIS",
+      "company": "BPCE Solutions Informatiques",
+      "family": "Business Analyst",
+      "contract": "Stage",
+      "source_contract": "Stage sup à 2 mois",
+      "domain": "Business Analyst",
+      "duration": "6 mois",
+      "duration_evidence": "Durée du stage souhaitée : 6 mois",
+      "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
+      "education_level": "Bac+5",
+      "education_evidence": "Bac +5",
+      "education_note": "Champ degree de l’export BPCE.",
+      "study_stage": "Fin d’études",
+      "study_stage_evidence": "fin d'étude",
+      "requirements_method": "bpce_structured_and_text",
+      "locations": [
+        {
+          "city": "Paris",
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
+        }
+      ],
+      "skills": [
+        "Agile",
+        "Excel"
+      ],
+      "description": "BPCE Solutions informatiques, c’est un acteur IT de référence implanté au cœur des territoires. Ce sont près de 2 600 femmes et hommes au service des Banques Populaires, des Caisses d’Epargne et de plusieurs métiers spécialisés du Groupe BPCE, 2e acteur bancaire en France. Nous imaginons et développons des solutions IT innovantes pour faciliter le quotidien de nos utilisateurs. Chaque jour, ce sont près de 1 français sur 2 qui utilisent nos solutions ! Entreprise inclusive et engagée, ce sont vos compétences qui font la différence. Les horaires flexibles vous permettent de préserver votre équilibre de vie. Sur nos sites, vous bénéficiez d’un environnement innovant et responsable. A quoi ressemble un stage à BPCE SI ? 🚀 Vous êtes accompagné(e) et encouragé(e) par une équipe bienveillante Vous travaillez sur des projets d’envergure au service de nos clients Vous apprenez du savoir-faire de personnes passionnées par leur métier Vous déployez votre potentiel et consolidez votre projet professionnel Alors, rejoignez-nous pour profiter de la diversité du terrain de jeu que propose BPCE Solutions informatiques ! ⚡ Poste et missions Intégrez la DSI de la filiale groupe CEGC (Compagnie Europenne de Cautions et Garanties) au sein de BPCE Solutions informatiques ! Au sein de l'équipe Corporate et Digital, et plus particulièrement dans l'équipe projet NOUGA, En tant que Business Analyst (F/H), vous aurez pour missions : Monter en compétence sur le périmètre métier du projet pour comprendre le besoin Elaborer des cas de tests sur base des spécifications afin de vérifier les développements Effectuer les tests (vérification) des développements effectués et échanger avec les développeurs pour qu'ils apportent les corrections éventuelles. Ecrire les Users stories et spécifications détaillées sur certaines fonctionnalités (Etat et reporting par exemple) Participer aux réunions de l’équipe et aux différents rituels agiles Profil et compétences requises Vous recherchez un stage de fin d'étude dans le cadre de vos études supérieures (écoles de commerce, finance, numérique, informatique ...) de niveau Bac+5. Vous avez envie d’apprendre et d’intégrer une entreprise dynamique et agile qui vous permettra d’acquérir un réseau et une première expérience solide. Vous avez à cœur de participer à des projets d'envergure. Vous êtes rigoureux(se) avec une bonne capacité d'analyse et de synthèse. Vous avez un bon relationnel et un esprit positif, vous êtes curieux(se) et vous appréciez travailler en équipe. Compétences techniques requises : Maîtrise des outils bureautiques : (Excel, Word) Notion de l'Agile (Safe, ou Scrum) Informations complémentaires : Date de démarrage souhaitée : 2027 Durée du stage souhaitée : 6 mois Notre processus de recrutement se compose de deux entretiens : un entretien RH, puis un entretien opérationnel avec le manager et le tuteur.",
+      "source": "Groupe BPCE · Open Data",
+      "source_url": "https://recrutement.bpce.fr/job/stage-business-analyst-f-h-paris-3",
+      "source_key": "bpce",
+      "collection_method": "open_data",
+      "pathways": [
+        "CMSI",
+        "ID"
+      ],
+      "observed_at": "2026-11-06T12:04:46+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
+      "modified_at": "2026-11-06T08:16:33",
+      "salary_min": null,
+      "salary_max": null,
+      "remote_source": null
+    },
+    {
+      "id": "BPCE_INFO01937",
+      "title": "STAGE - Business Analyst (F/H) - Paris",
+      "company": "BPCE Solutions Informatiques",
+      "family": "Business Analyst",
+      "contract": "Stage",
+      "source_contract": "Stage sup à 2 mois",
+      "domain": "Business Analyst",
+      "duration": "6 mois ou plus",
+      "duration_evidence": "Durée du stage souhaitée : 6 mois ou plus",
+      "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
+      "education_level": "Bac+4",
+      "education_evidence": "Bac +4",
+      "education_note": "Champ degree de l’export BPCE.",
+      "study_stage": null,
+      "study_stage_evidence": null,
+      "requirements_method": "bpce_structured_and_text",
+      "locations": [
+        {
+          "city": "Paris",
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
+        }
+      ],
+      "skills": [
+        "Agile",
+        "Jira"
+      ],
+      "description": "BPCE Solutions informatiques, c’est un acteur IT de référence implanté au cœur des territoires. Ce sont près de 2 600 femmes et hommes au service des Banques Populaires, des Caisses d’Epargne et de plusieurs métiers spécialisés du Groupe BPCE, 2e acteur bancaire en France. Nous imaginons et développons des solutions IT innovantes pour faciliter le quotidien de nos utilisateurs. Chaque jour, ce sont près de 1 français sur 2 qui utilisent nos solutions ! Entreprise inclusive et engagée, ce sont vos compétences qui font la différence. Les horaires flexibles vous permettent de préserver votre équilibre de vie. Sur nos sites, vous bénéficiez d’un environnement innovant et responsable. A quoi ressemble un stage à BPCE SI ? 🚀 • Vous êtes accompagné(e) et encouragé(e) par une équipe bienveillante • Vous travaillez sur des projets d’envergure au service de nos clients • Vous apprenez du savoir-faire de personnes passionnées par leur métier • Vous déployez votre potentiel et consolidez votre projet professionnel Alors, rejoignez nous pour profiter de la diversité du terrain de jeu que propose BPCE Solutions informatiques ! ⚡ Poste et missions Intégrez la Plateforme Assurances de Personnes au sein de BPCE Solutions informatiques ! Au sein de l'équipe applications Front Conseillers. En tant que Stagiaire - Business Analyst IT (F/H), vous aurez pour missions de : 1 - Recueillir et analyser les besoins métiers : Participer aux ateliers de travail avec les Directions métiers de l'Assurance Vie. Analyser l’existant et formaliser les besoins d'évolution ou de nouvelles fonctionnalités. 2 – La rédaction des spécifications : Rédiger les spécifications fonctionnelles (User Stories dans un cadre Agile). Modéliser les processus métiers de l'Assurance Vie (parcours de souscription, gestion des contrats, sinistres, etc.). 3 – L’accompagnement au changement : Echanger avec les développeurs, répondre à leurs interrogations sur les règles métier. Aider à la préparation des démonstrations des nouvelles fonctionnalités (Sprint Reviews). Accompagner les équipes de tests Profil et compétences requises Vous recherchez un stage dans le cadre de vos études supérieures (d'École d'Ingénieurs, d'École de Commerce ou Master Universitaire) de niveau Bac 4/5. Vous avez envie d’apprendre et d’intégrer une entreprise dynamique et agile qui vous permettra d’acquérir un réseau et une première expérience solide. Vous avez à cœur d'accompagner vos clients dans des projets d'envergure. Vous êtes rigoureux(se) avec une bonne capacité d'analyse et de synthèse. Vous avez un bon relationnel et un esprit positif, vous êtes curieux(se) et vous appréciez travailler en équipe. Compétences souhaitées : Forte capacité d'analyse, de synthèse et aisance rédactionnelle. Curiosité d'esprit et appétence pour l'univers de la Tech et de l'informatique. Un intérêt ou une première sensibilité au secteur de la finance ou de l'assurance (l'Assurance Vie est un plus, mais s'apprend sur place !). La connaissance des méthodologies Agiles (Scrum) et d’outils comme Jira/Confluence est un atout. Les équipes de développement étant basées à Porto, l'anglais sera votre langue de travail au quotidien pour collaborer et mener à bien les projets. Informations complémentaires : Date de démarrage souhaitée : 2026-2027 Durée du stage souhaitée : 6 mois ou plus Notre processus de recrutement se compose de deux entretiens : un entretien RH, puis un entretien opérationnel avec un Manager.",
+      "source": "Groupe BPCE · Open Data",
+      "source_url": "https://recrutement.bpce.fr/job/stage-business-analyst-f-h-paris-2",
+      "source_key": "bpce",
+      "collection_method": "open_data",
+      "pathways": [
+        "CMSI",
+        "ID"
+      ],
+      "observed_at": "2026-11-06T12:04:46+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
+      "modified_at": "2026-11-06T08:14:59",
+      "salary_min": null,
+      "salary_max": null,
+      "remote_source": null
+    },
+    {
+      "id": "BPCE_INFO01943",
+      "title": "STAGE - Business Analyst (F/H) – PARIS",
+      "company": "BPCE Solutions Informatiques",
+      "family": "Business Analyst",
+      "contract": "Stage",
+      "source_contract": "Stage sup à 2 mois",
+      "domain": "Business Analyst",
+      "duration": "6 mois",
+      "duration_evidence": "Durée du stage souhaitée : 6 mois",
+      "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
+      "education_level": "Bac+4",
+      "education_evidence": "Bac +4",
+      "education_note": "Champ degree de l’export BPCE.",
+      "study_stage": null,
+      "study_stage_evidence": null,
+      "requirements_method": "bpce_structured_and_text",
+      "locations": [
+        {
+          "city": "Paris",
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
+        }
+      ],
+      "skills": [
+        "Agile",
+        "Recette / tests",
+        "SQL"
+      ],
+      "description": "BPCE Solutions informatiques, c’est un acteur IT de référence implanté au cœur des territoires. Ce sont près de 2 600 femmes et hommes au service des Banques Populaires, des Caisses d’Epargne et de plusieurs métiers spécialisés du Groupe BPCE, 2e acteur bancaire en France. Nous imaginons et développons des solutions IT innovantes pour faciliter le quotidien de nos utilisateurs. Chaque jour, ce sont près de 1 français sur 2 qui utilisent nos solutions ! Entreprise inclusive et engagée, ce sont vos compétences qui font la différence. Les horaires flexibles vous permettent de préserver votre équilibre de vie. Sur nos sites, vous bénéficiez d’un environnement innovant et responsable. A quoi ressemble un stage à BPCE SI ? 🚀 Vous êtes accompagné(e) et encouragé(e) par une équipe bienveillante Vous travaillez sur des projets d’envergure au service de nos clients Vous apprenez du savoir-faire de personnes passionnées par leur métier Vous déployez votre potentiel et consolidez votre projet professionnel Alors, rejoignez-nous pour profiter de la diversité du terrain de jeu que propose BPCE Solutions informatiques ! ⚡ Poste et missions Intégrez la Plateforme Assurance au sein de BPCE Solutions informatiques ! Au sein de l'équipe Corporate Professionnels de l'immobilier, En tant que stagiaire Business Analyst (F/H), vous aurez pour missions : Contribuer à la phase de conception des projets Contribuer à la conception de la solution informatique en collaboration avec l’ensemble des acteurs projets (chef de projets, architectes). Rédiger les user stories. Accompagner l’équipe de développement. Contribuer à la recette des projets Participer à la rédaction de la stratégie de recette des projets (IT et métier). Définir le périmètre des tests fonctionnels assurés par l’IT. Accompagner si besoin les automaticiens dans l’élaboration d’automatisation de tests fonctionnels, notamment pour l’exécution de tests de non-régression. Réaliser si nécessaire toute ou partie de la recette fonctionnelle. Profil et compétences requises Vous recherchez un stage dans le cadre de vos études supérieures en école d’ingénieur spécialisée en informatique de gestion (de type MIAGE) de niveau Bac+4/5. Vous avez envie d’apprendre et d’intégrer une entreprise dynamique et agile qui vous permettra d’acquérir un réseau et une première expérience solide. Vous avez à cœur d'accompagner vos clients dans des projets d'envergure. Vous êtes rigoureux(se) avec une bonne capacité d'analyse et de synthèse. Vous avez un bon relationnel et un esprit positif, vous êtes curieux(se) et vous appréciez travailler en équipe. Compétences requises : Domaines de connaissance : systèmes d’information d’entreprise, capacité analytique, capacité rédactionnelle, méthodes projets Agile. Compétences outils : maîtrise des outils bureautiques, le SQL est un plus. Capacité à documenter et à écrire des user stories ; compréhension des enjeux métier et traçabilité des livrables. Usage de l’anglais dans le poste : Débutant Informations complémentaires : Date de démarrage souhaitée : 2026/2027 Durée du stage souhaitée : 6 mois Notre processus de recrutement se compose de deux entretiens : un entretien RH, puis un entretien opérationnel avec le manager et/ou le tuteur.",
+      "source": "Groupe BPCE · Open Data",
+      "source_url": "https://recrutement.bpce.fr/job/stage-business-analyst-f-h-paris-4",
+      "source_key": "bpce",
+      "collection_method": "open_data",
+      "pathways": [
+        "CMSI",
+        "ID"
+      ],
+      "observed_at": "2026-11-06T12:04:46+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
+      "modified_at": "2026-11-06T08:13:11",
+      "salary_min": null,
+      "salary_max": null,
+      "remote_source": null
+    },
+    {
+      "id": "BPCE_INFO01944",
+      "title": "STAGE – Data Modeler (F/H) - PARIS",
+      "company": "BPCE Solutions Informatiques",
+      "family": "Autres métiers data",
+      "contract": "Stage",
+      "source_contract": "Stage sup à 2 mois",
+      "domain": "Autres métiers data",
+      "duration": "4 à 6 mois",
+      "duration_evidence": "Durée du stage souhaitée : 4 à 6 mois",
+      "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
+      "education_level": "Bac+3",
+      "education_evidence": "Bac +3",
+      "education_note": "Champ degree de l’export BPCE.",
+      "study_stage": null,
+      "study_stage_evidence": null,
+      "requirements_method": "bpce_structured_and_text",
+      "locations": [
+        {
+          "city": "Paris",
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
+        }
+      ],
+      "skills": [
+        "Agile",
+        "Cloud",
+        "Jira",
+        "SQL"
+      ],
+      "description": "BPCE Solutions informatiques, c’est un acteur IT de référence implanté au cœur des territoires. Ce sont près de 2 600 femmes et hommes au service des Banques Populaires, des Caisses d’Epargne et de plusieurs métiers spécialisés du Groupe BPCE, 2e acteur bancaire en France. Nous imaginons et développons des solutions IT innovantes pour faciliter le quotidien de nos utilisateurs. Chaque jour, ce sont près de 1 français sur 2 qui utilisent nos solutions ! Entreprise inclusive et engagée, ce sont vos compétences qui font la différence. Les horaires flexibles vous permettent de préserver votre équilibre de vie. Sur nos sites, vous bénéficiez d’un environnement innovant et responsable. A quoi ressemble un stage à BPCE SI ? 🚀 Vous êtes accompagné(e) et encouragé(e) par une équipe bienveillante Vous travaillez sur des projets d’envergure au service de nos clients Vous apprenez du savoir-faire de personnes passionnées par leur métier Vous déployez votre potentiel et consolidez votre projet professionnel Alors, rejoignez-nous pour profiter de la diversité du terrain de jeu que propose BPCE Solutions informatiques ! ⚡ Poste et missions Intégrez la Plateforme Distribution Data au sein de BPCE Solutions informatiques ! Au sein de l'équipe Data Usages Retail MYSYS, vous rejoindrez nos équipes Data pour participer activement à la structuration, à l'optimisation et à la gouvernance de notre patrimoine de données. Accompagné(e) par un tuteur, vous monterez en compétences sur les pratiques de modélisation de données à grande échelle et collaborerez au quotidien avec nos squads produits DREAM dans un environnement agile et innovant. En tant que stagiaire Data Modeler (F/H), avec l'appui de votre tuteur vous aurez pour missions : Mise en qualité des modèles de données : vous contribuerez à réduire les écarts entre les modèles et les bases de données, tout en enrichissant les métadonnées et en documentant le lignage des données. Amélioration continue : vous participerez aux chantiers d'amélioration de la qualité des modèles et veillerez à leur cohérence avec les normes, les standards et la sémantique définis par la gouvernance des données du Groupe BPCE. Automatisation et suivi : vous prendrez part aux initiatives d'automatisation des processus de mise à jour et de suivi des différents modèles de données. Modélisation Cloud : vous participerez à la conception et à la mise en place d'une modélisation de données adaptée à notre environnement Cloud (Google Cloud Platform - GCP). Collaboration agile : vous travaillerez en synergie avec nos squads produits DREAM dans un cadre de travail collaboratif. Profil et compétences requises Vous recherchez un stage dans le cadre de vos études supérieures en université ou d’école d’ingénieur, avec une spécialisation en informatique, science et ingénierie des données ou systèmes décisionnels de niveau Bac+3/5. Vous avez envie d’apprendre et d’intégrer une entreprise dynamique et agile qui vous permettra d’acquérir un réseau et une première expérience solide. Vous avez à cœur d'accompagner vos clients dans des projets d'envergure. Vous êtes rigoureux(se) avec une bonne capacité d'analyse et de synthèse. Vous avez un bon relationnel et un esprit positif, vous êtes curieux(se) et vous appréciez travailler en équipe. Compétences techniques requises : Modélisation : bonnes bases théoriques de la méthode Merise et idéalement une première manipulation d'un outil de modélisation comme PowerDesigner / PowerAMC Culture Data & SQL : bonne compréhension générale des environnements Data, des requêtes SQL et du fonctionnement d’une base de données Oracle. Méthodologie & Outils : sensibilisation aux méthodes agiles et utilisation d'outils collaboratifs tels que Jira et Confluence. Environnement Cloud : un intérêt ou une première sensibilité à l'écosystème Google Cloud Platform (GCP) Secteur : appétit pour l'environnement bancaire et financier Informations complémentaires : Date de démarrage souhaitée : 2027 Durée du stage souhaitée : 4 à 6 mois Notre processus de recrutement se compose de deux entretiens : un entretien RH, puis un entretien opérationnel avec le manager et/ou le tuteur.",
+      "source": "Groupe BPCE · Open Data",
+      "source_url": "https://recrutement.bpce.fr/job/stage-data-modeler-f-h-paris",
+      "source_key": "bpce",
+      "collection_method": "open_data",
+      "pathways": [
+        "ID"
+      ],
+      "observed_at": "2026-11-06T12:04:46+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
+      "modified_at": "2026-11-06T08:08:43",
+      "salary_min": null,
+      "salary_max": null,
+      "remote_source": null
+    },
     {
       "id": "CEN04499",
       "title": "Stage - Data Analyst H/F",
@@ -167,10 +424,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-11-05T14:33:56",
       "salary_min": null,
       "salary_max": null,
@@ -219,10 +476,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-11-05T14:10:05",
       "salary_min": null,
       "salary_max": null,
@@ -272,10 +529,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-11-05T12:55:10",
       "salary_min": null,
       "salary_max": null,
@@ -400,10 +657,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-11-05T11:26:49",
       "salary_min": null,
       "salary_max": null,
@@ -452,10 +709,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-11-04T15:42:13",
       "salary_min": null,
       "salary_max": null,
@@ -502,10 +759,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-11-04T12:10:10",
       "salary_min": null,
       "salary_max": null,
@@ -553,10 +810,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-11-04T09:32:46",
       "salary_min": null,
       "salary_max": null,
@@ -602,10 +859,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-11-03T12:37:57",
       "salary_min": null,
       "salary_max": null,
@@ -652,10 +909,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-11-02T17:03:00",
       "salary_min": null,
       "salary_max": null,
@@ -703,10 +960,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-11-02T11:10:06",
       "salary_min": null,
       "salary_max": null,
@@ -754,10 +1011,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-11-02T09:10:10",
       "salary_min": null,
       "salary_max": null,
@@ -806,10 +1063,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-28T07:10:13",
       "salary_min": null,
       "salary_max": null,
@@ -853,10 +1110,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-28T07:10:06",
       "salary_min": null,
       "salary_max": null,
@@ -904,10 +1161,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-27T16:10:09",
       "salary_min": null,
       "salary_max": null,
@@ -1044,10 +1301,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-27T10:01:45",
       "salary_min": null,
       "salary_max": null,
@@ -1093,10 +1350,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-26T16:21:36",
       "salary_min": null,
       "salary_max": null,
@@ -1145,10 +1402,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-26T10:15:02",
       "salary_min": null,
       "salary_max": null,
@@ -1201,10 +1458,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-24T11:18:52",
       "salary_min": null,
       "salary_max": null,
@@ -1351,10 +1608,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-23T14:42:10",
       "salary_min": null,
       "salary_max": null,
@@ -1491,10 +1748,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-23T14:17:37",
       "salary_min": null,
       "salary_max": null,
@@ -1541,10 +1798,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-22T17:04:24",
       "salary_min": null,
       "salary_max": null,
@@ -1591,10 +1848,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-22T14:01:34",
       "salary_min": null,
       "salary_max": null,
@@ -1638,10 +1895,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-21T14:10:11",
       "salary_min": null,
       "salary_max": null,
@@ -1691,10 +1948,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-21T11:10:08",
       "salary_min": null,
       "salary_max": null,
@@ -1745,217 +2002,11 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-21T10:10:07",
-      "salary_min": null,
-      "salary_max": null,
-      "remote_source": null
-    },
-    {
-      "id": "BPCE_INFO01944",
-      "title": "STAGE – Data Modeler (F/H) - PARIS",
-      "company": "BPCE Solutions Informatiques",
-      "family": "Autres métiers data",
-      "contract": "Stage",
-      "source_contract": "Stage sup à 2 mois",
-      "domain": "Autres métiers data",
-      "duration": "4 à 6 mois",
-      "duration_evidence": "Durée du stage souhaitée : 4 à 6 mois",
-      "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
-      "education_level": "Bac+3",
-      "education_evidence": "Bac +3",
-      "education_note": "Champ degree de l’export BPCE.",
-      "study_stage": null,
-      "study_stage_evidence": null,
-      "requirements_method": "bpce_structured_and_text",
-      "locations": [
-        {
-          "city": "Paris",
-          "region": "Île-de-France",
-          "country_code": "FR",
-          "country": "France",
-          "country_evidence": {
-            "country": "France",
-            "state": "Ile de France"
-          }
-        }
-      ],
-      "skills": [
-        "Agile",
-        "Cloud",
-        "Jira",
-        "SQL"
-      ],
-      "description": "BPCE Solutions informatiques, c’est un acteur IT de référence implanté au cœur des territoires. Ce sont près de 2 600 femmes et hommes au service des Banques Populaires, des Caisses d’Epargne et de plusieurs métiers spécialisés du Groupe BPCE, 2e acteur bancaire en France. Nous imaginons et développons des solutions IT innovantes pour faciliter le quotidien de nos utilisateurs. Chaque jour, ce sont près de 1 français sur 2 qui utilisent nos solutions ! Entreprise inclusive et engagée, ce sont vos compétences qui font la différence. Les horaires flexibles vous permettent de préserver votre équilibre de vie. Sur nos sites, vous bénéficiez d’un environnement innovant et responsable. A quoi ressemble un stage à BPCE SI ? 🚀 Vous êtes accompagné(e) et encouragé(e) par une équipe bienveillante Vous travaillez sur des projets d’envergure au service de nos clients Vous apprenez du savoir-faire de personnes passionnées par leur métier Vous déployez votre potentiel et consolidez votre projet professionnel Alors, rejoignez-nous pour profiter de la diversité du terrain de jeu que propose BPCE Solutions informatiques ! ⚡ Poste et missions Intégrez la Plateforme Distribution Data au sein de BPCE Solutions informatiques ! Au sein de l'équipe Data Usages Retail MYSYS, vous rejoindrez nos équipes Data pour participer activement à la structuration, à l'optimisation et à la gouvernance de notre patrimoine de données. Accompagné(e) par un tuteur, vous monterez en compétences sur les pratiques de modélisation de données à grande échelle et collaborerez au quotidien avec nos squads produits DREAM dans un environnement agile et innovant. En tant que stagiaire Data Modeler (F/H), avec l'appui de votre tuteur vous aurez pour missions : Mise en qualité des modèles de données : vous contribuerez à réduire les écarts entre les modèles et les bases de données, tout en enrichissant les métadonnées et en documentant le lignage des données. Amélioration continue : vous participerez aux chantiers d'amélioration de la qualité des modèles et veillerez à leur cohérence avec les normes, les standards et la sémantique définis par la gouvernance des données du Groupe BPCE. Automatisation et suivi : vous prendrez part aux initiatives d'automatisation des processus de mise à jour et de suivi des différents modèles de données. Modélisation Cloud : vous participerez à la conception et à la mise en place d'une modélisation de données adaptée à notre environnement Cloud (Google Cloud Platform - GCP). Collaboration agile : vous travaillerez en synergie avec nos squads produits DREAM dans un cadre de travail collaboratif. Profil et compétences requises Vous recherchez un stage dans le cadre de vos études supérieures en université ou d’école d’ingénieur, avec une spécialisation en informatique, science et ingénierie des données ou systèmes décisionnels de niveau Bac+3/5. Vous avez envie d’apprendre et d’intégrer une entreprise dynamique et agile qui vous permettra d’acquérir un réseau et une première expérience solide. Vous avez à cœur d'accompagner vos clients dans des projets d'envergure. Vous êtes rigoureux(se) avec une bonne capacité d'analyse et de synthèse. Vous avez un bon relationnel et un esprit positif, vous êtes curieux(se) et vous appréciez travailler en équipe. Compétences techniques requises : Modélisation : bonnes bases théoriques de la méthode Merise et idéalement une première manipulation d'un outil de modélisation comme PowerDesigner / PowerAMC Culture Data & SQL : bonne compréhension générale des environnements Data, des requêtes SQL et du fonctionnement d’une base de données Oracle. Méthodologie & Outils : sensibilisation aux méthodes agiles et utilisation d'outils collaboratifs tels que Jira et Confluence. Environnement Cloud : un intérêt ou une première sensibilité à l'écosystème Google Cloud Platform (GCP) Secteur : appétit pour l'environnement bancaire et financier Informations complémentaires : Date de démarrage souhaitée : 2027 Durée du stage souhaitée : 4 à 6 mois Notre processus de recrutement se compose de deux entretiens : un entretien RH avec Meriem et Léana, puis un entretien opérationnel avec le manager et/ou le tuteur.",
-      "source": "Groupe BPCE · Open Data",
-      "source_url": "https://recrutement.bpce.fr/job/stage-data-modeler-f-h-paris",
-      "source_key": "bpce",
-      "collection_method": "open_data",
-      "pathways": [
-        "ID"
-      ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
-      "status": "source_present",
-      "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
-      "modified_at": "2026-10-20T17:44:25",
-      "salary_min": null,
-      "salary_max": null,
-      "remote_source": null
-    },
-    {
-      "id": "BPCE_INFO01943",
-      "title": "STAGE - Business Analyst (F/H) – PARIS",
-      "company": "BPCE Solutions Informatiques",
-      "family": "Business Analyst",
-      "contract": "Stage",
-      "source_contract": "Stage sup à 2 mois",
-      "domain": "Business Analyst",
-      "duration": "6 mois",
-      "duration_evidence": "Durée du stage souhaitée : 6 mois",
-      "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
-      "education_level": "Bac+4",
-      "education_evidence": "Bac +4",
-      "education_note": "Champ degree de l’export BPCE.",
-      "study_stage": null,
-      "study_stage_evidence": null,
-      "requirements_method": "bpce_structured_and_text",
-      "locations": [
-        {
-          "city": "Paris",
-          "region": "Île-de-France",
-          "country_code": "FR",
-          "country": "France",
-          "country_evidence": {
-            "country": "France",
-            "state": "Ile de France"
-          }
-        }
-      ],
-      "skills": [
-        "Agile",
-        "Recette / tests",
-        "SQL"
-      ],
-      "description": "BPCE Solutions informatiques, c’est un acteur IT de référence implanté au cœur des territoires. Ce sont près de 2 600 femmes et hommes au service des Banques Populaires, des Caisses d’Epargne et de plusieurs métiers spécialisés du Groupe BPCE, 2e acteur bancaire en France. Nous imaginons et développons des solutions IT innovantes pour faciliter le quotidien de nos utilisateurs. Chaque jour, ce sont près de 1 français sur 2 qui utilisent nos solutions ! Entreprise inclusive et engagée, ce sont vos compétences qui font la différence. Les horaires flexibles vous permettent de préserver votre équilibre de vie. Sur nos sites, vous bénéficiez d’un environnement innovant et responsable. A quoi ressemble un stage à BPCE SI ? 🚀 Vous êtes accompagné(e) et encouragé(e) par une équipe bienveillante Vous travaillez sur des projets d’envergure au service de nos clients Vous apprenez du savoir-faire de personnes passionnées par leur métier Vous déployez votre potentiel et consolidez votre projet professionnel Alors, rejoignez-nous pour profiter de la diversité du terrain de jeu que propose BPCE Solutions informatiques ! ⚡ Poste et missions Intégrez la Plateforme Assurance au sein de BPCE Solutions informatiques ! Au sein de l'équipe Corporate Professionnels de l'immobilier, En tant que stagiaire Business Analyst (F/H), vous aurez pour missions : Contribuer à la phase de conception des projets Contribuer à la conception de la solution informatique en collaboration avec l’ensemble des acteurs projets (chef de projets, architectes). Rédiger les user stories. Accompagner l’équipe de développement. Contribuer à la recette des projets Participer à la rédaction de la stratégie de recette des projets (IT et métier). Définir le périmètre des tests fonctionnels assurés par l’IT. Accompagner si besoin les automaticiens dans l’élaboration d’automatisation de tests fonctionnels, notamment pour l’exécution de tests de non-régression. Réaliser si nécessaire toute ou partie de la recette fonctionnelle. Profil et compétences requises Vous recherchez un stage dans le cadre de vos études supérieures en école d’ingénieur spécialisée en informatique de gestion (de type MIAGE) de niveau Bac+4/5. Vous avez envie d’apprendre et d’intégrer une entreprise dynamique et agile qui vous permettra d’acquérir un réseau et une première expérience solide. Vous avez à cœur d'accompagner vos clients dans des projets d'envergure. Vous êtes rigoureux(se) avec une bonne capacité d'analyse et de synthèse. Vous avez un bon relationnel et un esprit positif, vous êtes curieux(se) et vous appréciez travailler en équipe. Compétences requises : Domaines de connaissance : systèmes d’information d’entreprise, capacité analytique, capacité rédactionnelle, méthodes projets Agile. Compétences outils : maîtrise des outils bureautiques, le SQL est un plus. Capacité à documenter et à écrire des user stories ; compréhension des enjeux métier et traçabilité des livrables. Usage de l’anglais dans le poste : Débutant Informations complémentaires : Date de démarrage souhaitée : 2026/2027 Durée du stage souhaitée : 6 mois Notre processus de recrutement se compose de deux entretiens : un entretien RH avec Léana et Meriem, puis un entretien opérationnel avec le manager et/ou le tuteur.",
-      "source": "Groupe BPCE · Open Data",
-      "source_url": "https://recrutement.bpce.fr/job/stage-business-analyst-f-h-paris-4",
-      "source_key": "bpce",
-      "collection_method": "open_data",
-      "pathways": [
-        "CMSI",
-        "ID"
-      ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
-      "status": "source_present",
-      "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
-      "modified_at": "2026-10-20T17:17:42",
-      "salary_min": null,
-      "salary_max": null,
-      "remote_source": null
-    },
-    {
-      "id": "BPCE_INFO01938",
-      "title": "STAGE - Business Analyst (F/H) - PARIS",
-      "company": "BPCE Solutions Informatiques",
-      "family": "Business Analyst",
-      "contract": "Stage",
-      "source_contract": "Stage sup à 2 mois",
-      "domain": "Business Analyst",
-      "duration": "6 mois",
-      "duration_evidence": "Durée du stage souhaitée : 6 mois",
-      "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
-      "education_level": "Bac+5",
-      "education_evidence": "Bac +5",
-      "education_note": "Champ degree de l’export BPCE.",
-      "study_stage": "Fin d’études",
-      "study_stage_evidence": "fin d'étude",
-      "requirements_method": "bpce_structured_and_text",
-      "locations": [
-        {
-          "city": "Paris",
-          "region": "Île-de-France",
-          "country_code": "FR",
-          "country": "France",
-          "country_evidence": {
-            "country": "France",
-            "state": "Ile de France"
-          }
-        }
-      ],
-      "skills": [
-        "Agile",
-        "Excel"
-      ],
-      "description": "BPCE Solutions informatiques, c’est un acteur IT de référence implanté au cœur des territoires. Ce sont près de 2 600 femmes et hommes au service des Banques Populaires, des Caisses d’Epargne et de plusieurs métiers spécialisés du Groupe BPCE, 2e acteur bancaire en France. Nous imaginons et développons des solutions IT innovantes pour faciliter le quotidien de nos utilisateurs. Chaque jour, ce sont près de 1 français sur 2 qui utilisent nos solutions ! Entreprise inclusive et engagée, ce sont vos compétences qui font la différence. Les horaires flexibles vous permettent de préserver votre équilibre de vie. Sur nos sites, vous bénéficiez d’un environnement innovant et responsable. A quoi ressemble un stage à BPCE SI ? 🚀 Vous êtes accompagné(e) et encouragé(e) par une équipe bienveillante Vous travaillez sur des projets d’envergure au service de nos clients Vous apprenez du savoir-faire de personnes passionnées par leur métier Vous déployez votre potentiel et consolidez votre projet professionnel Alors, rejoignez-nous pour profiter de la diversité du terrain de jeu que propose BPCE Solutions informatiques ! ⚡ Poste et missions Intégrez la DSI de la filiale groupe CEGC (Compagnie Europenne de Cautions et Garanties) au sein de BPCE Solutions informatiques ! Au sein de l'équipe Corporate et Digital, et plus particulièrement dans l'équipe projet NOUGA, En tant que Business Analyst (F/H), vous aurez pour missions : Monter en compétence sur le périmètre métier du projet pour comprendre le besoin Elaborer des cas de tests sur base des spécifications afin de vérifier les développements Effectuer les tests (vérification) des développements effectués et échanger avec les développeurs pour qu'ils apportent les corrections éventuelles. Ecrire les Users stories et spécifications détaillées sur certaines fonctionnalités (Etat et reporting par exemple) Participer aux réunions de l’équipe et aux différents rituels agiles Profil et compétences requises Vous recherchez un stage de fin d'étude dans le cadre de vos études supérieures (écoles de commerce, finance, numérique, informatique ...) de niveau Bac+5. Vous avez envie d’apprendre et d’intégrer une entreprise dynamique et agile qui vous permettra d’acquérir un réseau et une première expérience solide. Vous avez à cœur de participer à des projets d'envergure. Vous êtes rigoureux(se) avec une bonne capacité d'analyse et de synthèse. Vous avez un bon relationnel et un esprit positif, vous êtes curieux(se) et vous appréciez travailler en équipe. Compétences techniques requises : Maîtrise des outils bureautiques : (Excel, Word) Notion de l'Agile (Safe, ou Scrum) Informations complémentaires : Date de démarrage souhaitée : 2027 Durée du stage souhaitée : 6 mois Notre processus de recrutement se compose de deux entretiens : un entretien RH avec Léana et Meriem, puis un entretien opérationnel avec le manager et le tuteur.",
-      "source": "Groupe BPCE · Open Data",
-      "source_url": "https://recrutement.bpce.fr/job/stage-business-analyst-f-h-paris-3",
-      "source_key": "bpce",
-      "collection_method": "open_data",
-      "pathways": [
-        "CMSI",
-        "ID"
-      ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
-      "status": "source_present",
-      "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
-      "modified_at": "2026-10-20T15:07:16",
-      "salary_min": null,
-      "salary_max": null,
-      "remote_source": null
-    },
-    {
-      "id": "BPCE_INFO01937",
-      "title": "STAGE - Business Analyst (F/H) - Paris",
-      "company": "BPCE Solutions Informatiques",
-      "family": "Business Analyst",
-      "contract": "Stage",
-      "source_contract": "Stage sup à 2 mois",
-      "domain": "Business Analyst",
-      "duration": "6 mois ou plus",
-      "duration_evidence": "Durée du stage souhaitée : 6 mois ou plus",
-      "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
-      "education_level": "Bac+4",
-      "education_evidence": "Bac +4",
-      "education_note": "Champ degree de l’export BPCE.",
-      "study_stage": null,
-      "study_stage_evidence": null,
-      "requirements_method": "bpce_structured_and_text",
-      "locations": [
-        {
-          "city": "Paris",
-          "region": "Île-de-France",
-          "country_code": "FR",
-          "country": "France",
-          "country_evidence": {
-            "country": "France",
-            "state": "Ile de France"
-          }
-        }
-      ],
-      "skills": [
-        "Agile",
-        "Jira"
-      ],
-      "description": "BPCE Solutions informatiques, c’est un acteur IT de référence implanté au cœur des territoires. Ce sont près de 2 600 femmes et hommes au service des Banques Populaires, des Caisses d’Epargne et de plusieurs métiers spécialisés du Groupe BPCE, 2e acteur bancaire en France. Nous imaginons et développons des solutions IT innovantes pour faciliter le quotidien de nos utilisateurs. Chaque jour, ce sont près de 1 français sur 2 qui utilisent nos solutions ! Entreprise inclusive et engagée, ce sont vos compétences qui font la différence. Les horaires flexibles vous permettent de préserver votre équilibre de vie. Sur nos sites, vous bénéficiez d’un environnement innovant et responsable. A quoi ressemble un stage à BPCE SI ? 🚀 • Vous êtes accompagné(e) et encouragé(e) par une équipe bienveillante • Vous travaillez sur des projets d’envergure au service de nos clients • Vous apprenez du savoir-faire de personnes passionnées par leur métier • Vous déployez votre potentiel et consolidez votre projet professionnel Alors, rejoignez nous pour profiter de la diversité du terrain de jeu que propose BPCE Solutions informatiques ! ⚡ Poste et missions Intégrez la Plateforme Assurances de Personnes au sein de BPCE Solutions informatiques ! Au sein de l'équipe applications Front Conseillers. En tant que Stagiaire - Business Analyst IT (F/H), vous aurez pour missions de : 1 - Recueillir et analyser les besoins métiers : Participer aux ateliers de travail avec les Directions métiers de l'Assurance Vie. Analyser l’existant et formaliser les besoins d'évolution ou de nouvelles fonctionnalités. 2 – La rédaction des spécifications : Rédiger les spécifications fonctionnelles (User Stories dans un cadre Agile). Modéliser les processus métiers de l'Assurance Vie (parcours de souscription, gestion des contrats, sinistres, etc.). 3 – L’accompagnement au changement : Echanger avec les développeurs, répondre à leurs interrogations sur les règles métier. Aider à la préparation des démonstrations des nouvelles fonctionnalités (Sprint Reviews). Accompagner les équipes de tests Profil et compétences requises Vous recherchez un stage dans le cadre de vos études supérieures (d'École d'Ingénieurs, d'École de Commerce ou Master Universitaire) de niveau Bac 4/5. Vous avez envie d’apprendre et d’intégrer une entreprise dynamique et agile qui vous permettra d’acquérir un réseau et une première expérience solide. Vous avez à cœur d'accompagner vos clients dans des projets d'envergure. Vous êtes rigoureux(se) avec une bonne capacité d'analyse et de synthèse. Vous avez un bon relationnel et un esprit positif, vous êtes curieux(se) et vous appréciez travailler en équipe. Compétences souhaitées : Forte capacité d'analyse, de synthèse et aisance rédactionnelle. Curiosité d'esprit et appétence pour l'univers de la Tech et de l'informatique. Un intérêt ou une première sensibilité au secteur de la finance ou de l'assurance (l'Assurance Vie est un plus, mais s'apprend sur place !). La connaissance des méthodologies Agiles (Scrum) et d’outils comme Jira/Confluence est un atout. Les équipes de développement étant basées à Porto, l'anglais sera votre langue de travail au quotidien pour collaborer et mener à bien les projets. Informations complémentaires : Date de démarrage souhaitée : 2026-2027 Durée du stage souhaitée : 6 mois ou plus Notre processus de recrutement se compose de deux entretiens : un entretien RH avec Meriem et Léana, puis un entretien opérationnel avec un Manager.",
-      "source": "Groupe BPCE · Open Data",
-      "source_url": "https://recrutement.bpce.fr/job/stage-business-analyst-f-h-paris-2",
-      "source_key": "bpce",
-      "collection_method": "open_data",
-      "pathways": [
-        "CMSI",
-        "ID"
-      ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
-      "status": "source_present",
-      "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
-      "modified_at": "2026-10-20T13:57:01",
       "salary_min": null,
       "salary_max": null,
       "remote_source": null
@@ -2113,10 +2164,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-19T15:04:47",
       "salary_min": null,
       "salary_max": null,
@@ -2162,10 +2213,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-19T07:52:09",
       "salary_min": null,
       "salary_max": null,
@@ -2212,10 +2263,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-19T06:49:44",
       "salary_min": null,
       "salary_max": null,
@@ -2262,10 +2313,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-19T06:22:51",
       "salary_min": null,
       "salary_max": null,
@@ -2317,10 +2368,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-16T14:30:43",
       "salary_min": null,
       "salary_max": null,
@@ -2366,10 +2417,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-16T13:10:06",
       "salary_min": null,
       "salary_max": null,
@@ -2414,10 +2465,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-16T09:54:33",
       "salary_min": null,
       "salary_max": null,
@@ -2462,10 +2513,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-14T15:33:53",
       "salary_min": null,
       "salary_max": null,
@@ -2515,10 +2566,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-14T10:10:05",
       "salary_min": null,
       "salary_max": null,
@@ -2568,10 +2619,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-13T11:10:06",
       "salary_min": null,
       "salary_max": null,
@@ -2619,10 +2670,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-13T10:10:11",
       "salary_min": null,
       "salary_max": null,
@@ -2668,10 +2719,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-12T15:47:19",
       "salary_min": null,
       "salary_max": null,
@@ -2717,10 +2768,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-12T14:38:45",
       "salary_min": null,
       "salary_max": null,
@@ -2768,10 +2819,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-12T12:04:34",
       "salary_min": null,
       "salary_max": null,
@@ -2819,10 +2870,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-09T15:06:14",
       "salary_min": null,
       "salary_max": null,
@@ -2869,10 +2920,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-09T09:10:12",
       "salary_min": null,
       "salary_max": null,
@@ -2921,10 +2972,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-07T15:11:57",
       "salary_min": null,
       "salary_max": null,
@@ -2971,10 +3022,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-06T11:10:10",
       "salary_min": null,
       "salary_max": null,
@@ -3021,10 +3072,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-05T15:31:41",
       "salary_min": null,
       "salary_max": null,
@@ -3152,10 +3203,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-02T15:21:30",
       "salary_min": null,
       "salary_max": null,
@@ -3203,10 +3254,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-01T09:10:05",
       "salary_min": null,
       "salary_max": null,
@@ -3264,10 +3315,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-09-23T08:00:39",
       "salary_min": null,
       "salary_max": null,
@@ -3405,10 +3456,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-09-18T13:37:40",
       "salary_min": null,
       "salary_max": null,
@@ -3455,10 +3506,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-09-17T12:56:59",
       "salary_min": null,
       "salary_max": null,
@@ -3506,10 +3557,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-09-16T08:29:53",
       "salary_min": null,
       "salary_max": null,
@@ -3553,10 +3604,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-09-15T13:57:47",
       "salary_min": null,
       "salary_max": null,
@@ -3694,10 +3745,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-09-14T09:49:10",
       "salary_min": null,
       "salary_max": null,
@@ -3750,10 +3801,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-09-11T09:46:23",
       "salary_min": null,
       "salary_max": null,
@@ -3802,10 +3853,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-09-08T08:01:46",
       "salary_min": null,
       "salary_max": null,
@@ -3851,10 +3902,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-09-03T14:10:12",
       "salary_min": null,
       "salary_max": null,
@@ -3900,10 +3951,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-08-14T12:10:05",
       "salary_min": null,
       "salary_max": null,
@@ -4051,10 +4102,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-08-06T17:33:17",
       "salary_min": null,
       "salary_max": null,
@@ -4102,10 +4153,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-08-06T10:10:08",
       "salary_min": null,
       "salary_max": null,
@@ -4154,10 +4205,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-08-04T07:37:12",
       "salary_min": null,
       "salary_max": null,
@@ -4207,10 +4258,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-07-20T13:22:45",
       "salary_min": null,
       "salary_max": null,
@@ -4260,10 +4311,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-07-20T08:34:35",
       "salary_min": null,
       "salary_max": null,
@@ -4430,10 +4481,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-07-16T12:29:46",
       "salary_min": null,
       "salary_max": null,
@@ -4483,10 +4534,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-07-07T13:17:57",
       "salary_min": null,
       "salary_max": null,
@@ -4538,10 +4589,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-07-07T13:17:29",
       "salary_min": null,
       "salary_max": null,
@@ -4597,10 +4648,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-07-07T13:17:23",
       "salary_min": null,
       "salary_max": null,
@@ -4647,10 +4698,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-07-07T13:17:21",
       "salary_min": null,
       "salary_max": null,
@@ -4694,10 +4745,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-07-07T13:17:10",
       "salary_min": null,
       "salary_max": null,
@@ -4835,10 +4886,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-03-16T12:24:18",
       "salary_min": null,
       "salary_max": null,
@@ -4967,10 +5018,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-02-24T10:29:18",
       "salary_min": null,
       "salary_max": null,
@@ -5099,10 +5150,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-02-04T16:10:46",
       "salary_min": null,
       "salary_max": null,
@@ -5543,6 +5594,158 @@
       "remote_source": null
     },
     {
+      "id": "sr-soprasteria1-744000160176484",
+      "title": "Stage - Consultant(e) - Prevent_Audit - Cybersécurité - Île de France",
+      "company": "Sopra Steria",
+      "family": "Consultant cybersécurité",
+      "domain": "Consultant cybersécurité",
+      "contract": "Stage",
+      "source_contract": "Full-time ; catégorie issue de l’intitulé : Stage",
+      "duration": "six mois",
+      "duration_evidence": "six mois",
+      "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
+      "education_level": null,
+      "education_evidence": null,
+      "education_note": null,
+      "study_stage": "Fin d’études",
+      "study_stage_evidence": "Fin d’études",
+      "requirements_method": "public_posting_facts",
+      "locations": [
+        {
+          "city": "Courbevoie",
+          "region": "IDF",
+          "country_code": "FR",
+          "country": "FR",
+          "country_evidence": {
+            "country": "fr"
+          }
+        }
+      ],
+      "skills": [
+        "Cybersécurité"
+      ],
+      "description": "Poste : Stage - Consultant(e) - Prevent_Audit - Cybersécurité - Île de France. Entreprise : Sopra Steria. Localisation : Courbevoie (FR). Outils et compétences repérés : Cybersécurité. Cette fiche reprend des faits structurés, pas le descriptif intégral. Consulte la fiche du recruteur pour les missions, les exigences et la disponibilité.",
+      "source": "Sopra Steria · SmartRecruiters",
+      "source_key": "sr-soprasteria1",
+      "source_url": "https://jobs.smartrecruiters.com/SopraSteria1/744000160176484-stage-consultant-e-prevent-audit-cybersecurite-ile-de-france",
+      "collection_method": "public_api",
+      "pathways": [
+        "CMSI"
+      ],
+      "observed_at": "2026-11-06T12:04:46+00:00",
+      "status": "source_present",
+      "status_origin": "public_posting_api",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
+      "modified_at": "2026-11-06T11:27:27.091Z",
+      "published_at": "2026-11-06T11:27:27.091Z",
+      "salary_min": null,
+      "salary_max": null,
+      "remote_source": null,
+      "status_note": "Présente dans l’API publique au moment de la collecte ; disponibilité à confirmer sur la fiche recruteur."
+    },
+    {
+      "id": "sr-soprasteria1-744000160168144",
+      "title": "Stage - Consultant/e SAP - BL SAP ARA - Lyon",
+      "company": "Sopra Steria",
+      "family": "Consultant ERP / solutions métier",
+      "domain": "Consultant ERP / solutions métier",
+      "contract": "Stage",
+      "source_contract": "Full-time ; catégorie issue de l’intitulé : Stage",
+      "duration": "4 à 6 mois",
+      "duration_evidence": "4 à 6 mois",
+      "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
+      "education_level": null,
+      "education_evidence": null,
+      "education_note": null,
+      "study_stage": null,
+      "study_stage_evidence": null,
+      "requirements_method": "public_posting_facts",
+      "locations": [
+        {
+          "city": "Lyon",
+          "region": "Auvergne-Rhône-Alpes",
+          "country_code": "FR",
+          "country": "FR",
+          "country_evidence": {
+            "country": "fr"
+          }
+        }
+      ],
+      "skills": [
+        "ERP / SAP"
+      ],
+      "description": "Poste : Stage - Consultant/e SAP - BL SAP ARA - Lyon. Entreprise : Sopra Steria. Localisation : Lyon (FR). Outils et compétences repérés : ERP / SAP. Cette fiche reprend des faits structurés, pas le descriptif intégral. Consulte la fiche du recruteur pour les missions, les exigences et la disponibilité.",
+      "source": "Sopra Steria · SmartRecruiters",
+      "source_key": "sr-soprasteria1",
+      "source_url": "https://jobs.smartrecruiters.com/SopraSteria1/744000160168144-stage-consultant-e-sap-bl-sap-ara-lyon",
+      "collection_method": "public_api",
+      "pathways": [
+        "CMSI"
+      ],
+      "observed_at": "2026-11-06T12:04:46+00:00",
+      "status": "source_present",
+      "status_origin": "public_posting_api",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
+      "modified_at": "2026-11-06T10:47:57.692Z",
+      "published_at": "2026-11-06T10:47:57.692Z",
+      "salary_min": null,
+      "salary_max": null,
+      "remote_source": null,
+      "status_note": "Présente dans l’API publique au moment de la collecte ; disponibilité à confirmer sur la fiche recruteur."
+    },
+    {
+      "id": "sr-soprasteria1-744000160167739",
+      "title": "Stage - Ingénieur(e) Data Scientist / Data Engineer - Industrie - Toulouse",
+      "company": "Sopra Steria",
+      "family": "Data Scientist",
+      "domain": "Data Scientist",
+      "contract": "Stage",
+      "source_contract": "Intern ; catégorie issue de l’intitulé : Stage",
+      "duration": "6 mois",
+      "duration_evidence": "6 mois",
+      "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
+      "education_level": "Bac+5",
+      "education_evidence": "Bac+5",
+      "education_note": "Niveau repéré automatiquement dans le texte ; vérifier les précisions de l’annonce.",
+      "study_stage": null,
+      "study_stage_evidence": null,
+      "requirements_method": "public_posting_facts",
+      "locations": [
+        {
+          "city": "Toulouse",
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "FR",
+          "country_evidence": {
+            "country": "fr"
+          }
+        }
+      ],
+      "skills": [
+        "Python",
+        "Spark",
+        "Machine learning"
+      ],
+      "description": "Poste : Stage - Ingénieur(e) Data Scientist / Data Engineer - Industrie - Toulouse. Entreprise : Sopra Steria. Localisation : Toulouse (FR). Outils et compétences repérés : Python, Spark, Machine learning. Cette fiche reprend des faits structurés, pas le descriptif intégral. Consulte la fiche du recruteur pour les missions, les exigences et la disponibilité.",
+      "source": "Sopra Steria · SmartRecruiters",
+      "source_key": "sr-soprasteria1",
+      "source_url": "https://jobs.smartrecruiters.com/SopraSteria1/744000160167739-stage-ingenieur-e-data-scientist-data-engineer-industrie-toulouse",
+      "collection_method": "public_api",
+      "pathways": [
+        "ID"
+      ],
+      "observed_at": "2026-11-06T12:04:46+00:00",
+      "status": "source_present",
+      "status_origin": "public_posting_api",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
+      "modified_at": "2026-11-06T10:42:06.007Z",
+      "published_at": "2026-11-06T10:42:06.007Z",
+      "salary_min": null,
+      "salary_max": null,
+      "remote_source": null,
+      "status_note": "Présente dans l’API publique au moment de la collecte ; disponibilité à confirmer sur la fiche recruteur."
+    },
+    {
       "id": "sr-soprasteria1-744000159897388",
       "title": "Stage - Consultant(e) - Transformation digitale en Aéronautique -Ile de France",
       "company": "Sopra Steria",
@@ -5582,10 +5785,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-11-05T15:19:11.655Z",
       "published_at": "2026-11-05T15:19:11.655Z",
       "salary_min": null,
@@ -5634,10 +5837,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-11-05T15:17:26.188Z",
       "published_at": "2026-11-05T15:17:26.188Z",
       "salary_min": null,
@@ -5687,10 +5890,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-11-05T14:25:41.695Z",
       "published_at": "2026-11-05T14:25:41.695Z",
       "salary_min": null,
@@ -5739,112 +5942,12 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-11-04T14:03:51.878Z",
       "published_at": "2026-11-04T14:03:51.878Z",
-      "salary_min": null,
-      "salary_max": null,
-      "remote_source": null,
-      "status_note": "Présente dans l’API publique au moment de la collecte ; disponibilité à confirmer sur la fiche recruteur."
-    },
-    {
-      "id": "sr-soprasteria1-744000159628661",
-      "title": "Stage - Analyste Threat Intelligence - Sciences Politiques - Cybersécurité - Toulouse",
-      "company": "Sopra Steria",
-      "family": "Consultant cybersécurité",
-      "domain": "Consultant cybersécurité",
-      "contract": "Stage",
-      "source_contract": "Full-time ; catégorie issue de l’intitulé : Stage",
-      "duration": null,
-      "duration_evidence": null,
-      "duration_note": null,
-      "education_level": null,
-      "education_evidence": null,
-      "education_note": null,
-      "study_stage": "Fin d’études",
-      "study_stage_evidence": "Fin d’études",
-      "requirements_method": "public_posting_facts",
-      "locations": [
-        {
-          "city": "Colomiers",
-          "region": "Occitanie",
-          "country_code": "FR",
-          "country": "FR",
-          "country_evidence": {
-            "country": "fr"
-          }
-        }
-      ],
-      "skills": [
-        "Cybersécurité"
-      ],
-      "description": "Poste : Stage - Analyste Threat Intelligence - Sciences Politiques - Cybersécurité - Toulouse. Entreprise : Sopra Steria. Localisation : Colomiers (FR). Outils et compétences repérés : Cybersécurité. Cette fiche reprend des faits structurés, pas le descriptif intégral. Consulte la fiche du recruteur pour les missions, les exigences et la disponibilité.",
-      "source": "Sopra Steria · SmartRecruiters",
-      "source_key": "sr-soprasteria1",
-      "source_url": "https://jobs.smartrecruiters.com/SopraSteria1/744000159628661-stage-analyste-threat-intelligence-sciences-politiques-cybersecurite-toulouse",
-      "collection_method": "public_api",
-      "pathways": [
-        "CMSI"
-      ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
-      "status": "source_present",
-      "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
-      "modified_at": "2026-11-04T13:20:52.100Z",
-      "published_at": "2026-11-04T13:20:52.100Z",
-      "salary_min": null,
-      "salary_max": null,
-      "remote_source": null,
-      "status_note": "Présente dans l’API publique au moment de la collecte ; disponibilité à confirmer sur la fiche recruteur."
-    },
-    {
-      "id": "sr-soprasteria1-744000159630588",
-      "title": "Stage - Analyste Threat Intelligence - Sciences Politiques - Cybersécurité - Ile-de-France",
-      "company": "Sopra Steria",
-      "family": "Consultant cybersécurité",
-      "domain": "Consultant cybersécurité",
-      "contract": "Stage",
-      "source_contract": "Full-time ; catégorie issue de l’intitulé : Stage",
-      "duration": null,
-      "duration_evidence": null,
-      "duration_note": null,
-      "education_level": null,
-      "education_evidence": null,
-      "education_note": null,
-      "study_stage": "Fin d’études",
-      "study_stage_evidence": "Fin d’études",
-      "requirements_method": "public_posting_facts",
-      "locations": [
-        {
-          "city": "Courbevoie",
-          "region": "IDF",
-          "country_code": "FR",
-          "country": "FR",
-          "country_evidence": {
-            "country": "fr"
-          }
-        }
-      ],
-      "skills": [
-        "Cybersécurité"
-      ],
-      "description": "Poste : Stage - Analyste Threat Intelligence - Sciences Politiques - Cybersécurité - Ile-de-France. Entreprise : Sopra Steria. Localisation : Courbevoie (FR). Outils et compétences repérés : Cybersécurité. Cette fiche reprend des faits structurés, pas le descriptif intégral. Consulte la fiche du recruteur pour les missions, les exigences et la disponibilité.",
-      "source": "Sopra Steria · SmartRecruiters",
-      "source_key": "sr-soprasteria1",
-      "source_url": "https://jobs.smartrecruiters.com/SopraSteria1/744000159630588-stage-analyste-threat-intelligence-sciences-politiques-cybersecurite-ile-de-france",
-      "collection_method": "public_api",
-      "pathways": [
-        "CMSI"
-      ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
-      "status": "source_present",
-      "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
-      "modified_at": "2026-11-04T13:20:25.658Z",
-      "published_at": "2026-11-04T13:20:25.658Z",
       "salary_min": null,
       "salary_max": null,
       "remote_source": null,
@@ -5892,10 +5995,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-11-04T09:04:41.953Z",
       "published_at": "2026-11-04T09:04:41.953Z",
       "salary_min": null,
@@ -5942,10 +6045,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-11-03T10:41:43.047Z",
       "published_at": "2026-11-03T10:41:43.047Z",
       "salary_min": null,
@@ -5993,62 +6096,12 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-11-03T09:02:43.231Z",
       "published_at": "2026-11-03T09:02:43.231Z",
-      "salary_min": null,
-      "salary_max": null,
-      "remote_source": null,
-      "status_note": "Présente dans l’API publique au moment de la collecte ; disponibilité à confirmer sur la fiche recruteur."
-    },
-    {
-      "id": "sr-soprasteria1-744000159153172",
-      "title": "Stage - Consultant/e SAP - BL SAP ARA - Lyon",
-      "company": "Sopra Steria",
-      "family": "Consultant ERP / solutions métier",
-      "domain": "Consultant ERP / solutions métier",
-      "contract": "Stage",
-      "source_contract": "Full-time ; catégorie issue de l’intitulé : Stage",
-      "duration": "4 à 6 mois",
-      "duration_evidence": "4 à 6 mois",
-      "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
-      "education_level": null,
-      "education_evidence": null,
-      "education_note": null,
-      "study_stage": null,
-      "study_stage_evidence": null,
-      "requirements_method": "public_posting_facts",
-      "locations": [
-        {
-          "city": "Lyon",
-          "region": "Auvergne-Rhône-Alpes",
-          "country_code": "FR",
-          "country": "FR",
-          "country_evidence": {
-            "country": "fr"
-          }
-        }
-      ],
-      "skills": [
-        "ERP / SAP"
-      ],
-      "description": "Poste : Stage - Consultant/e SAP - BL SAP ARA - Lyon. Entreprise : Sopra Steria. Localisation : Lyon (FR). Outils et compétences repérés : ERP / SAP. Cette fiche reprend des faits structurés, pas le descriptif intégral. Consulte la fiche du recruteur pour les missions, les exigences et la disponibilité.",
-      "source": "Sopra Steria · SmartRecruiters",
-      "source_key": "sr-soprasteria1",
-      "source_url": "https://jobs.smartrecruiters.com/SopraSteria1/744000159153172-stage-consultant-e-sap-bl-sap-ara-lyon",
-      "collection_method": "public_api",
-      "pathways": [
-        "CMSI"
-      ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
-      "status": "source_present",
-      "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
-      "modified_at": "2026-11-02T14:23:43.314Z",
-      "published_at": "2026-11-02T14:23:43.314Z",
       "salary_min": null,
       "salary_max": null,
       "remote_source": null,
@@ -6095,10 +6148,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-29T14:43:13.554Z",
       "published_at": "2026-10-29T14:43:13.554Z",
       "salary_min": null,
@@ -6146,10 +6199,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-29T13:48:28.794Z",
       "published_at": "2026-10-29T13:48:28.794Z",
       "salary_min": null,
@@ -6196,10 +6249,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-29T13:46:04.877Z",
       "published_at": "2026-10-29T13:46:04.877Z",
       "salary_min": null,
@@ -6248,10 +6301,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-29T13:45:14.293Z",
       "published_at": "2026-10-29T13:45:14.293Z",
       "salary_min": null,
@@ -6301,10 +6354,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-29T13:44:43.338Z",
       "published_at": "2026-10-29T13:44:43.338Z",
       "salary_min": null,
@@ -6353,10 +6406,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-29T09:21:01.281Z",
       "published_at": "2026-10-29T09:21:01.281Z",
       "salary_min": null,
@@ -6405,10 +6458,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-28T12:11:35.245Z",
       "published_at": "2026-10-28T12:11:35.245Z",
       "salary_min": null,
@@ -6456,10 +6509,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-28T08:46:11.392Z",
       "published_at": "2026-10-28T08:46:11.392Z",
       "salary_min": null,
@@ -6507,164 +6560,12 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-27T14:18:48.740Z",
       "published_at": "2026-10-27T14:18:48.740Z",
-      "salary_min": null,
-      "salary_max": null,
-      "remote_source": null,
-      "status_note": "Présente dans l’API publique au moment de la collecte ; disponibilité à confirmer sur la fiche recruteur."
-    },
-    {
-      "id": "sr-soprasteria1-744000157985448",
-      "title": "Stage - Consultant(e) Stratégie - Cybersécurité - Île-De-France",
-      "company": "Sopra Steria",
-      "family": "Consultant cybersécurité",
-      "domain": "Consultant cybersécurité",
-      "contract": "Stage",
-      "source_contract": "Full-time ; catégorie issue de l’intitulé : Stage",
-      "duration": "six mois",
-      "duration_evidence": "six mois",
-      "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
-      "education_level": null,
-      "education_evidence": null,
-      "education_note": null,
-      "study_stage": "Fin d’études",
-      "study_stage_evidence": "Fin d’études",
-      "requirements_method": "public_posting_facts",
-      "locations": [
-        {
-          "city": "Courbevoie",
-          "region": "IDF",
-          "country_code": "FR",
-          "country": "FR",
-          "country_evidence": {
-            "country": "fr"
-          }
-        }
-      ],
-      "skills": [
-        "Cybersécurité"
-      ],
-      "description": "Poste : Stage - Consultant(e) Stratégie - Cybersécurité - Île-De-France. Entreprise : Sopra Steria. Localisation : Courbevoie (FR). Outils et compétences repérés : Cybersécurité. Cette fiche reprend des faits structurés, pas le descriptif intégral. Consulte la fiche du recruteur pour les missions, les exigences et la disponibilité.",
-      "source": "Sopra Steria · SmartRecruiters",
-      "source_key": "sr-soprasteria1",
-      "source_url": "https://jobs.smartrecruiters.com/SopraSteria1/744000157985448-stage-consultant-e-strategie-cybersecurite-ile-de-france",
-      "collection_method": "public_api",
-      "pathways": [
-        "CMSI"
-      ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
-      "status": "source_present",
-      "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
-      "modified_at": "2026-10-27T08:35:35.625Z",
-      "published_at": "2026-10-27T08:35:35.625Z",
-      "salary_min": null,
-      "salary_max": null,
-      "remote_source": null,
-      "status_note": "Présente dans l’API publique au moment de la collecte ; disponibilité à confirmer sur la fiche recruteur."
-    },
-    {
-      "id": "sr-soprasteria1-744000157982839",
-      "title": "Stage - Consultant(e) communication et sensibilisation - Cybersécurité - Île-de-France",
-      "company": "Sopra Steria",
-      "family": "Consultant cybersécurité",
-      "domain": "Consultant cybersécurité",
-      "contract": "Stage",
-      "source_contract": "Full-time ; catégorie issue de l’intitulé : Stage",
-      "duration": null,
-      "duration_evidence": null,
-      "duration_note": null,
-      "education_level": null,
-      "education_evidence": null,
-      "education_note": null,
-      "study_stage": "Fin d’études",
-      "study_stage_evidence": "Fin d’études",
-      "requirements_method": "public_posting_facts",
-      "locations": [
-        {
-          "city": "Courbevoie",
-          "region": "IDF",
-          "country_code": "FR",
-          "country": "FR",
-          "country_evidence": {
-            "country": "fr"
-          }
-        }
-      ],
-      "skills": [
-        "Conduite du changement",
-        "Cybersécurité"
-      ],
-      "description": "Poste : Stage - Consultant(e) communication et sensibilisation - Cybersécurité - Île-de-France. Entreprise : Sopra Steria. Localisation : Courbevoie (FR). Outils et compétences repérés : Conduite du changement, Cybersécurité. Cette fiche reprend des faits structurés, pas le descriptif intégral. Consulte la fiche du recruteur pour les missions, les exigences et la disponibilité.",
-      "source": "Sopra Steria · SmartRecruiters",
-      "source_key": "sr-soprasteria1",
-      "source_url": "https://jobs.smartrecruiters.com/SopraSteria1/744000157982839-stage-consultant-e-communication-et-sensibilisation-cybersecurite-ile-de-france",
-      "collection_method": "public_api",
-      "pathways": [
-        "CMSI"
-      ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
-      "status": "source_present",
-      "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
-      "modified_at": "2026-10-27T08:24:33.683Z",
-      "published_at": "2026-10-27T08:24:33.683Z",
-      "salary_min": null,
-      "salary_max": null,
-      "remote_source": null,
-      "status_note": "Présente dans l’API publique au moment de la collecte ; disponibilité à confirmer sur la fiche recruteur."
-    },
-    {
-      "id": "sr-soprasteria1-744000157850919",
-      "title": "Stage - Ingénieur(e) EPP / EDR - Cybersécurité - Île-de-France",
-      "company": "Sopra Steria",
-      "family": "Consultant cybersécurité",
-      "domain": "Consultant cybersécurité",
-      "contract": "Stage",
-      "source_contract": "Full-time ; catégorie issue de l’intitulé : Stage",
-      "duration": null,
-      "duration_evidence": null,
-      "duration_note": null,
-      "education_level": null,
-      "education_evidence": null,
-      "education_note": null,
-      "study_stage": "Fin d’études",
-      "study_stage_evidence": "Fin d’études",
-      "requirements_method": "public_posting_facts",
-      "locations": [
-        {
-          "city": "Courbevoie",
-          "region": "IDF",
-          "country_code": "FR",
-          "country": "FR",
-          "country_evidence": {
-            "country": "fr"
-          }
-        }
-      ],
-      "skills": [
-        "Agile",
-        "Cybersécurité"
-      ],
-      "description": "Poste : Stage - Ingénieur(e) EPP / EDR - Cybersécurité - Île-de-France. Entreprise : Sopra Steria. Localisation : Courbevoie (FR). Outils et compétences repérés : Agile, Cybersécurité. Cette fiche reprend des faits structurés, pas le descriptif intégral. Consulte la fiche du recruteur pour les missions, les exigences et la disponibilité.",
-      "source": "Sopra Steria · SmartRecruiters",
-      "source_key": "sr-soprasteria1",
-      "source_url": "https://jobs.smartrecruiters.com/SopraSteria1/744000157850919-stage-ingenieur-e-epp-edr-cybersecurite-ile-de-france",
-      "collection_method": "public_api",
-      "pathways": [
-        "CMSI"
-      ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
-      "status": "source_present",
-      "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
-      "modified_at": "2026-10-26T15:43:54.492Z",
-      "published_at": "2026-10-26T15:43:54.492Z",
       "salary_min": null,
       "salary_max": null,
       "remote_source": null,
@@ -6710,10 +6611,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-26T15:36:12.888Z",
       "published_at": "2026-10-26T15:36:12.888Z",
       "salary_min": null,
@@ -6763,63 +6664,12 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-26T10:17:15.249Z",
       "published_at": "2026-10-26T10:17:15.249Z",
-      "salary_min": null,
-      "salary_max": null,
-      "remote_source": null,
-      "status_note": "Présente dans l’API publique au moment de la collecte ; disponibilité à confirmer sur la fiche recruteur."
-    },
-    {
-      "id": "sr-soprasteria1-744000157454098",
-      "title": "Stage - Ingénieur(e) Cybersécurité - Architecture et IA - Protect by Design - Toulouse",
-      "company": "Sopra Steria",
-      "family": "Consultant cybersécurité",
-      "domain": "Consultant cybersécurité",
-      "contract": "Stage",
-      "source_contract": "Full-time ; catégorie issue de l’intitulé : Stage",
-      "duration": "six mois",
-      "duration_evidence": "six mois",
-      "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
-      "education_level": null,
-      "education_evidence": null,
-      "education_note": null,
-      "study_stage": "Fin d’études",
-      "study_stage_evidence": "Fin d’études",
-      "requirements_method": "public_posting_facts",
-      "locations": [
-        {
-          "city": "Colomiers",
-          "region": "Occitanie",
-          "country_code": "FR",
-          "country": "FR",
-          "country_evidence": {
-            "country": "fr"
-          }
-        }
-      ],
-      "skills": [
-        "Python",
-        "Cybersécurité"
-      ],
-      "description": "Poste : Stage - Ingénieur(e) Cybersécurité - Architecture et IA - Protect by Design - Toulouse. Entreprise : Sopra Steria. Localisation : Colomiers (FR). Outils et compétences repérés : Python, Cybersécurité. Cette fiche reprend des faits structurés, pas le descriptif intégral. Consulte la fiche du recruteur pour les missions, les exigences et la disponibilité.",
-      "source": "Sopra Steria · SmartRecruiters",
-      "source_key": "sr-soprasteria1",
-      "source_url": "https://jobs.smartrecruiters.com/SopraSteria1/744000157454098-stage-ingenieur-e-cybersecurite-architecture-et-ia-protect-by-design-toulouse",
-      "collection_method": "public_api",
-      "pathways": [
-        "CMSI"
-      ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
-      "status": "source_present",
-      "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
-      "modified_at": "2026-10-23T11:49:21.916Z",
-      "published_at": "2026-10-23T11:49:21.916Z",
       "salary_min": null,
       "salary_max": null,
       "remote_source": null,
@@ -6865,10 +6715,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-21T09:32:56.443Z",
       "published_at": "2026-10-21T09:32:56.443Z",
       "salary_min": null,
@@ -6914,10 +6764,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-21T09:09:25.498Z",
       "published_at": "2026-10-21T09:09:25.498Z",
       "salary_min": null,
@@ -6963,63 +6813,12 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-20T12:15:41.302Z",
       "published_at": "2026-10-20T12:15:41.302Z",
-      "salary_min": null,
-      "salary_max": null,
-      "remote_source": null,
-      "status_note": "Présente dans l’API publique au moment de la collecte ; disponibilité à confirmer sur la fiche recruteur."
-    },
-    {
-      "id": "sr-soprasteria1-744000156311939",
-      "title": "Stage - Consultant(e) - Gouvernance - Cybersécurité - Toulouse",
-      "company": "Sopra Steria",
-      "family": "Consultant cybersécurité",
-      "domain": "Consultant cybersécurité",
-      "contract": "Stage",
-      "source_contract": "Full-time ; catégorie issue de l’intitulé : Stage",
-      "duration": null,
-      "duration_evidence": null,
-      "duration_note": null,
-      "education_level": null,
-      "education_evidence": null,
-      "education_note": null,
-      "study_stage": "Fin d’études",
-      "study_stage_evidence": "Fin d’études",
-      "requirements_method": "public_posting_facts",
-      "locations": [
-        {
-          "city": "Colomiers",
-          "region": "Occitanie",
-          "country_code": "FR",
-          "country": "FR",
-          "country_evidence": {
-            "country": "fr"
-          }
-        }
-      ],
-      "skills": [
-        "Agile",
-        "Cybersécurité"
-      ],
-      "description": "Poste : Stage - Consultant(e) - Gouvernance - Cybersécurité - Toulouse. Entreprise : Sopra Steria. Localisation : Colomiers (FR). Outils et compétences repérés : Agile, Cybersécurité. Cette fiche reprend des faits structurés, pas le descriptif intégral. Consulte la fiche du recruteur pour les missions, les exigences et la disponibilité.",
-      "source": "Sopra Steria · SmartRecruiters",
-      "source_key": "sr-soprasteria1",
-      "source_url": "https://jobs.smartrecruiters.com/SopraSteria1/744000156311939-stage-consultant-e-gouvernance-cybersecurite-toulouse",
-      "collection_method": "public_api",
-      "pathways": [
-        "CMSI"
-      ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
-      "status": "source_present",
-      "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
-      "modified_at": "2026-10-19T12:48:11.239Z",
-      "published_at": "2026-10-19T12:48:11.239Z",
       "salary_min": null,
       "salary_max": null,
       "remote_source": null,
@@ -7066,10 +6865,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-09-30T14:14:22.543Z",
       "published_at": "2026-09-30T14:14:22.543Z",
       "salary_min": null,
@@ -7121,10 +6920,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-09-30T10:02:29.276Z",
       "published_at": "2026-09-30T10:02:29.276Z",
       "salary_min": null,
@@ -7170,10 +6969,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-09-28T16:55:53.183Z",
       "published_at": "2026-09-28T16:55:53.183Z",
       "salary_min": null,
@@ -7224,10 +7023,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-09-28T08:33:10.165Z",
       "published_at": "2026-09-28T08:33:10.165Z",
       "salary_min": null,
@@ -7275,10 +7074,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-09-25T09:22:25.963Z",
       "published_at": "2026-09-25T09:22:25.963Z",
       "salary_min": null,
@@ -7328,10 +7127,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-09-25T09:18:01.147Z",
       "published_at": "2026-09-25T09:18:01.147Z",
       "salary_min": null,
@@ -7379,10 +7178,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-09-24T13:24:23.418Z",
       "published_at": "2026-09-24T13:24:23.418Z",
       "salary_min": null,
@@ -7431,10 +7230,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-09-16T11:06:37.696Z",
       "published_at": "2026-09-16T11:06:37.696Z",
       "salary_min": null,
@@ -7483,10 +7282,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-09-16T10:58:26.604Z",
       "published_at": "2026-09-16T10:58:26.604Z",
       "salary_min": null,
@@ -7535,10 +7334,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-09-16T10:57:41.462Z",
       "published_at": "2026-09-16T10:57:41.462Z",
       "salary_min": null,
@@ -7584,12 +7383,267 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-09-16T10:29:41.961Z",
       "published_at": "2026-09-16T10:29:41.961Z",
+      "salary_min": null,
+      "salary_max": null,
+      "remote_source": null,
+      "status_note": "Présente dans l’API publique au moment de la collecte ; disponibilité à confirmer sur la fiche recruteur."
+    },
+    {
+      "id": "sr-soprasteria1-744000149824358",
+      "title": "Stage de fin d'études - Consultant(e) en transformation digitale",
+      "company": "Sopra Steria",
+      "family": "Conseil & transformation SI",
+      "domain": "Conseil & transformation SI",
+      "contract": "Stage",
+      "source_contract": "Full-time ; catégorie issue de l’intitulé : Stage",
+      "duration": null,
+      "duration_evidence": null,
+      "duration_note": null,
+      "education_level": null,
+      "education_evidence": null,
+      "education_note": null,
+      "study_stage": "Fin d’études",
+      "study_stage_evidence": "Fin d’études",
+      "requirements_method": "public_posting_facts",
+      "locations": [
+        {
+          "city": "Courbevoie",
+          "region": "IDF",
+          "country_code": "FR",
+          "country": "FR",
+          "country_evidence": {
+            "country": "fr"
+          }
+        }
+      ],
+      "skills": [
+        "Conduite du changement"
+      ],
+      "description": "Poste : Stage de fin d'études - Consultant(e) en transformation digitale. Entreprise : Sopra Steria. Localisation : Courbevoie (FR). Outils et compétences repérés : Conduite du changement. Cette fiche reprend des faits structurés, pas le descriptif intégral. Consulte la fiche du recruteur pour les missions, les exigences et la disponibilité.",
+      "source": "Sopra Steria · SmartRecruiters",
+      "source_key": "sr-soprasteria1",
+      "source_url": "https://jobs.smartrecruiters.com/SopraSteria1/744000149824358-stage-de-fin-d-etudes-consultant-e-en-transformation-digitale",
+      "collection_method": "public_api",
+      "pathways": [
+        "CMSI",
+        "ARAMIS"
+      ],
+      "observed_at": "2026-11-06T12:04:46+00:00",
+      "status": "source_present",
+      "status_origin": "public_posting_api",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
+      "modified_at": "2026-09-16T10:06:14.323Z",
+      "published_at": "2026-09-16T10:06:14.323Z",
+      "salary_min": null,
+      "salary_max": null,
+      "remote_source": null,
+      "status_note": "Présente dans l’API publique au moment de la collecte ; disponibilité à confirmer sur la fiche recruteur."
+    },
+    {
+      "id": "sr-soprasteria1-744000149816749",
+      "title": "Stage Conseil - Transformation Digitale - Télécom - IDF",
+      "company": "Sopra Steria",
+      "family": "Conseil & transformation SI",
+      "domain": "Conseil & transformation SI",
+      "contract": "Stage",
+      "source_contract": "Intern ; catégorie issue de l’intitulé : Stage",
+      "duration": null,
+      "duration_evidence": null,
+      "duration_note": null,
+      "education_level": null,
+      "education_evidence": null,
+      "education_note": null,
+      "study_stage": null,
+      "study_stage_evidence": null,
+      "requirements_method": "public_posting_facts",
+      "locations": [
+        {
+          "city": "Courbevoie",
+          "region": "IDF",
+          "country_code": "FR",
+          "country": "FR",
+          "country_evidence": {
+            "country": "fr"
+          }
+        }
+      ],
+      "skills": [
+        "Conduite du changement"
+      ],
+      "description": "Poste : Stage Conseil - Transformation Digitale - Télécom - IDF. Entreprise : Sopra Steria. Localisation : Courbevoie (FR). Outils et compétences repérés : Conduite du changement. Cette fiche reprend des faits structurés, pas le descriptif intégral. Consulte la fiche du recruteur pour les missions, les exigences et la disponibilité.",
+      "source": "Sopra Steria · SmartRecruiters",
+      "source_key": "sr-soprasteria1",
+      "source_url": "https://jobs.smartrecruiters.com/SopraSteria1/744000149816749-stage-conseil-transformation-digitale-telecom-idf",
+      "collection_method": "public_api",
+      "pathways": [
+        "CMSI",
+        "ARAMIS"
+      ],
+      "observed_at": "2026-11-06T12:04:46+00:00",
+      "status": "source_present",
+      "status_origin": "public_posting_api",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
+      "modified_at": "2026-09-16T09:36:46.152Z",
+      "published_at": "2026-09-16T09:36:46.152Z",
+      "salary_min": null,
+      "salary_max": null,
+      "remote_source": null,
+      "status_note": "Présente dans l’API publique au moment de la collecte ; disponibilité à confirmer sur la fiche recruteur."
+    },
+    {
+      "id": "sr-soprasteria1-744000149616934",
+      "title": "Stage - Business Analyst - Tests de Systèmes - Air Traffic Management - Toulouse",
+      "company": "Sopra Steria",
+      "family": "Business Analyst",
+      "domain": "Business Analyst",
+      "contract": "Stage",
+      "source_contract": "Full-time ; catégorie issue de l’intitulé : Stage",
+      "duration": null,
+      "duration_evidence": null,
+      "duration_note": null,
+      "education_level": "Bac+5",
+      "education_evidence": "Bac+5",
+      "education_note": "Niveau repéré automatiquement dans le texte ; vérifier les précisions de l’annonce.",
+      "study_stage": null,
+      "study_stage_evidence": null,
+      "requirements_method": "public_posting_facts",
+      "locations": [
+        {
+          "city": "Colomiers",
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "FR",
+          "country_evidence": {
+            "country": "fr"
+          }
+        }
+      ],
+      "skills": [
+        "Recette / tests"
+      ],
+      "description": "Poste : Stage - Business Analyst - Tests de Systèmes - Air Traffic Management - Toulouse. Entreprise : Sopra Steria. Localisation : Colomiers (FR). Outils et compétences repérés : Recette / tests. Cette fiche reprend des faits structurés, pas le descriptif intégral. Consulte la fiche du recruteur pour les missions, les exigences et la disponibilité.",
+      "source": "Sopra Steria · SmartRecruiters",
+      "source_key": "sr-soprasteria1",
+      "source_url": "https://jobs.smartrecruiters.com/SopraSteria1/744000149616934-stage-business-analyst-tests-de-systemes-air-traffic-management-toulouse",
+      "collection_method": "public_api",
+      "pathways": [
+        "CMSI",
+        "ID"
+      ],
+      "observed_at": "2026-11-06T12:04:46+00:00",
+      "status": "source_present",
+      "status_origin": "public_posting_api",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
+      "modified_at": "2026-09-15T14:14:51.960Z",
+      "published_at": "2026-09-15T14:14:51.960Z",
+      "salary_min": null,
+      "salary_max": null,
+      "remote_source": null,
+      "status_note": "Présente dans l’API publique au moment de la collecte ; disponibilité à confirmer sur la fiche recruteur."
+    },
+    {
+      "id": "sr-soprasteria1-744000149617366",
+      "title": "Stage - Business Analyst - AMOA / Air Traffic Management - Toulouse",
+      "company": "Sopra Steria",
+      "family": "Business Analyst",
+      "domain": "Business Analyst",
+      "contract": "Stage",
+      "source_contract": "Full-time ; catégorie issue de l’intitulé : Stage",
+      "duration": null,
+      "duration_evidence": null,
+      "duration_note": null,
+      "education_level": "Bac+5",
+      "education_evidence": "Bac+5",
+      "education_note": "Niveau repéré automatiquement dans le texte ; vérifier les précisions de l’annonce.",
+      "study_stage": null,
+      "study_stage_evidence": null,
+      "requirements_method": "public_posting_facts",
+      "locations": [
+        {
+          "city": "Colomiers",
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "FR",
+          "country_evidence": {
+            "country": "fr"
+          }
+        }
+      ],
+      "skills": [
+        "Agile",
+        "Recette / tests"
+      ],
+      "description": "Poste : Stage - Business Analyst - AMOA / Air Traffic Management - Toulouse. Entreprise : Sopra Steria. Localisation : Colomiers (FR). Outils et compétences repérés : Agile, Recette / tests. Cette fiche reprend des faits structurés, pas le descriptif intégral. Consulte la fiche du recruteur pour les missions, les exigences et la disponibilité.",
+      "source": "Sopra Steria · SmartRecruiters",
+      "source_key": "sr-soprasteria1",
+      "source_url": "https://jobs.smartrecruiters.com/SopraSteria1/744000149617366-stage-business-analyst-amoa-air-traffic-management-toulouse",
+      "collection_method": "public_api",
+      "pathways": [
+        "CMSI",
+        "ID"
+      ],
+      "observed_at": "2026-11-06T12:04:46+00:00",
+      "status": "source_present",
+      "status_origin": "public_posting_api",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
+      "modified_at": "2026-09-15T14:14:31.972Z",
+      "published_at": "2026-09-15T14:14:31.972Z",
+      "salary_min": null,
+      "salary_max": null,
+      "remote_source": null,
+      "status_note": "Présente dans l’API publique au moment de la collecte ; disponibilité à confirmer sur la fiche recruteur."
+    },
+    {
+      "id": "sr-soprasteria1-744000149313400",
+      "title": "Stage Consultant.e SAP - SAP Excellence Center - Lille",
+      "company": "Sopra Steria",
+      "family": "Consultant ERP / solutions métier",
+      "domain": "Consultant ERP / solutions métier",
+      "contract": "Stage",
+      "source_contract": "Full-time ; catégorie issue de l’intitulé : Stage",
+      "duration": null,
+      "duration_evidence": null,
+      "duration_note": null,
+      "education_level": "Master 2",
+      "education_evidence": "Master 2",
+      "education_note": "Niveau explicite dans la rubrique Qualifications, sans équivalence déduite.",
+      "study_stage": "Fin d’études",
+      "study_stage_evidence": "Fin d’études",
+      "requirements_method": "public_posting_facts",
+      "locations": [
+        {
+          "city": "Villeneuve-d'Ascq",
+          "region": "Hauts-de-France",
+          "country_code": "FR",
+          "country": "FR",
+          "country_evidence": {
+            "country": "fr"
+          }
+        }
+      ],
+      "skills": [
+        "ERP / SAP"
+      ],
+      "description": "Poste : Stage Consultant.e SAP - SAP Excellence Center - Lille. Entreprise : Sopra Steria. Localisation : Villeneuve-d'Ascq (FR). Outils et compétences repérés : ERP / SAP. Cette fiche reprend des faits structurés, pas le descriptif intégral. Consulte la fiche du recruteur pour les missions, les exigences et la disponibilité.",
+      "source": "Sopra Steria · SmartRecruiters",
+      "source_key": "sr-soprasteria1",
+      "source_url": "https://jobs.smartrecruiters.com/SopraSteria1/744000149313400-stage-consultant-e-sap-sap-excellence-center-lille",
+      "collection_method": "public_api",
+      "pathways": [
+        "CMSI"
+      ],
+      "observed_at": "2026-11-06T12:04:46+00:00",
+      "status": "source_present",
+      "status_origin": "public_posting_api",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
+      "modified_at": "2026-09-14T12:20:58.015Z",
+      "published_at": "2026-09-14T12:20:58.015Z",
       "salary_min": null,
       "salary_max": null,
       "remote_source": null,
@@ -7632,10 +7686,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-11-04T14:03:20.060Z",
       "published_at": "2026-11-04T14:03:20.060Z",
       "salary_min": null,
@@ -7680,10 +7734,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-11-03T13:31:15.835Z",
       "published_at": "2026-11-03T13:31:15.835Z",
       "salary_min": null,
@@ -7732,10 +7786,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-20T09:24:54.254Z",
       "published_at": "2026-10-20T09:24:54.254Z",
       "salary_min": null,
@@ -7783,10 +7837,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-15T12:12:57.793Z",
       "published_at": "2026-10-15T12:12:57.793Z",
       "salary_min": null,
@@ -7835,10 +7889,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-14T08:21:15.246Z",
       "published_at": "2026-10-14T08:21:15.246Z",
       "salary_min": null,
@@ -7887,10 +7941,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-12T12:23:18.225Z",
       "published_at": "2026-10-12T12:23:18.225Z",
       "salary_min": null,
@@ -7938,10 +7992,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-09T18:27:01.312Z",
       "published_at": "2026-10-09T18:27:01.312Z",
       "salary_min": null,
@@ -7988,10 +8042,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-08T12:56:26.600Z",
       "published_at": "2026-10-08T12:56:26.600Z",
       "salary_min": null,
@@ -8040,10 +8094,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-07T06:14:28.023Z",
       "published_at": "2026-10-07T06:14:28.023Z",
       "salary_min": null,
@@ -8091,10 +8145,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-10-05T08:48:18.832Z",
       "published_at": "2026-10-05T08:48:18.832Z",
       "salary_min": null,
@@ -8146,10 +8200,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-09-11T08:58:17.149Z",
       "published_at": "2026-09-11T08:58:17.149Z",
       "salary_min": null,
@@ -8197,10 +8251,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-08-31T20:07:02.139Z",
       "published_at": "2026-08-31T20:07:02.139Z",
       "salary_min": null,
@@ -8251,10 +8305,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-08-06T12:57:19.253Z",
       "published_at": "2026-08-06T12:57:19.253Z",
       "salary_min": null,
@@ -8301,10 +8355,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-07-29T06:56:37.746Z",
       "published_at": "2026-07-29T06:56:37.746Z",
       "salary_min": null,
@@ -8352,10 +8406,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-07-03T08:44:57.141Z",
       "published_at": "2026-07-03T08:44:57.141Z",
       "salary_min": null,
@@ -8403,10 +8457,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-07-01T05:19:21.702Z",
       "published_at": "2026-07-01T05:19:21.702Z",
       "salary_min": null,
@@ -8456,10 +8510,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2026-04-09T07:33:15.772Z",
       "published_at": "2026-04-09T07:33:15.772Z",
       "salary_min": null,
@@ -8509,10 +8563,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-06T00:07:59+00:00",
+      "observed_at": "2026-11-06T12:04:46+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-06T00:07:59+00:00",
+      "status_checked_at": "2026-11-06T12:04:46+00:00",
       "modified_at": "2022-11-07T03:46:49.030Z",
       "published_at": "2022-11-07T03:46:49.030Z",
       "salary_min": null,
