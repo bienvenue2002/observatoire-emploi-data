@@ -2,16 +2,16 @@
   "title": "Élan MSI · Débouchés et opportunités",
   "edition": "Master MSI, France et international : BPCE et API publiques, enrichis d’une sélection éditoriale",
   "scope_id": "msi-international",
-  "last_success_at": "2026-11-06T12:04:46+00:00",
-  "observed_at": "2026-11-06T12:04:46+00:00",
+  "last_success_at": "2026-11-07T11:02:25+00:00",
+  "observed_at": "2026-11-07T11:02:25+00:00",
   "source_url": "https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques",
   "api_url": "https://bpce.opendatasoft.com/api/explore/v2.1/catalog/datasets/groupe-bpce-offres-emploi/exports/json",
   "license": "BPCE : Licence Ouverte 2.0 ; autres plateformes : liens factuels et synthèses originales, pas de licence ouverte présumée",
   "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
-  "raw_rows": 1796,
-  "france_rows": 1700,
-  "matched_location_rows": 197,
-  "unique_offers": 141,
+  "raw_rows": 1812,
+  "france_rows": 1712,
+  "matched_location_rows": 189,
+  "unique_offers": 142,
   "bpce_unique_offers": 75,
   "editorial_offers": 8,
   "additional_sources": [
@@ -19,7 +19,7 @@
       "key": "sr-soprasteria1",
       "name": "Sopra Steria",
       "offers": 40,
-      "observed_at": "2026-11-06T12:04:46+00:00",
+      "observed_at": "2026-11-07T11:02:25+00:00",
       "bounded_selection": true,
       "truncated": true,
       "max_pages_per_query": 12,
@@ -29,8 +29,8 @@
     {
       "key": "sr-boschgroup",
       "name": "Bosch",
-      "offers": 18,
-      "observed_at": "2026-11-06T12:04:46+00:00",
+      "offers": 19,
+      "observed_at": "2026-11-07T11:02:25+00:00",
       "bounded_selection": true,
       "truncated": true,
       "max_pages_per_query": 12,
@@ -38,7 +38,7 @@
       "url": "https://jobs.smartrecruiters.com/?company=BoschGroup"
     }
   ],
-  "public_api_offers": 58,
+  "public_api_offers": 59,
   "sources": {
     "Groupe BPCE · Open Data": 75,
     "Deloitte · via Welcome to the Jungle": 2,
@@ -46,42 +46,42 @@
     "Welcome to the Jungle": 2,
     "JobTeaser · annonces publiques": 2,
     "Sopra Steria · SmartRecruiters": 40,
-    "Bosch · SmartRecruiters": 18
+    "Bosch · SmartRecruiters": 19
   },
   "competency_statistics": "Descriptions intégrales BPCE uniquement ; les fiches éditoriales sont exclues du dénominateur.",
   "salary_available": 0,
   "scope": "Offres liées aux métiers du Master MSI, France et international. Export BPCE, sélections bornées d’API publiques et fiches éditoriales. Corpus partiel, non représentatif. Rattachement pédagogique indicatif, sans garantie d’éligibilité ni d’ouverture actuelle.",
   "deduplication": "Une annonce par référence source ; les villes multiples sont regroupées.",
   "families": {
+    "Autres métiers data": 14,
+    "Data Analyst": 12,
     "Data Scientist": 14,
-    "Business Analyst": 33,
-    "Autres métiers data": 13,
-    "Data Analyst": 11,
+    "Business Analyst": 32,
     "Gouvernance et qualité des données": 2,
-    "Consultant cybersécurité": 10,
-    "Chef de projet SI": 15,
+    "Consultant cybersécurité": 12,
+    "Chef de projet SI": 14,
     "Product Owner": 6,
     "Conseil & transformation SI": 18,
     "Data Engineer / Architecture": 9,
     "Auditeur SI": 2,
     "Responsable Analytics": 2,
-    "Consultant ERP / solutions métier": 6
+    "Consultant ERP / solutions métier": 5
   },
   "pipeline_version": "4.0.0",
   "domains": {
+    "Autres métiers data": 14,
+    "Data Analyst": 12,
     "Data Scientist": 14,
-    "Business Analyst": 33,
-    "Autres métiers data": 13,
-    "Data Analyst": 11,
+    "Business Analyst": 32,
     "Gouvernance et qualité des données": 2,
-    "Consultant cybersécurité": 10,
-    "Chef de projet SI": 15,
+    "Consultant cybersécurité": 12,
+    "Chef de projet SI": 14,
     "Product Owner": 6,
     "Conseil & transformation SI": 18,
     "Data Engineer / Architecture": 9,
     "Auditeur SI": 2,
     "Responsable Analytics": 2,
-    "Consultant ERP / solutions métier": 6
+    "Consultant ERP / solutions métier": 5
   },
   "domain_options": [
     "Business Analyst",
@@ -117,9 +117,9 @@
     "US",
     "VN"
   ],
-  "international_offers": 22,
-  "student_offers": 85,
+  "international_offers": 23,
+  "student_offers": 88,
   "archived_offers": 2,
-  "non_archived_offers": 139,
-  "bpce_share_percent": 53.2
+  "non_archived_offers": 140,
+  "bpce_share_percent": 52.8
 }
