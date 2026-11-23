@@ -3,24 +3,24 @@
     "title": "Élan MSI · Débouchés et opportunités",
     "edition": "Master MSI, France et international : BPCE et API publiques, enrichis d’une sélection éditoriale",
     "scope_id": "msi-international",
-    "last_success_at": "2026-11-22T12:33:47+00:00",
-    "observed_at": "2026-11-22T12:33:47+00:00",
+    "last_success_at": "2026-11-23T14:35:05+00:00",
+    "observed_at": "2026-11-23T14:35:05+00:00",
     "source_url": "https://www.data.gouv.fr/datasets/groupe-bpce-offres-emploi-publiques",
     "api_url": "https://bpce.opendatasoft.com/api/explore/v2.1/catalog/datasets/groupe-bpce-offres-emploi/exports/json",
     "license": "BPCE : Licence Ouverte 2.0 ; autres plateformes : liens factuels et synthèses originales, pas de licence ouverte présumée",
     "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
-    "raw_rows": 1844,
-    "france_rows": 1751,
-    "matched_location_rows": 199,
-    "unique_offers": 136,
-    "bpce_unique_offers": 75,
+    "raw_rows": 1860,
+    "france_rows": 1766,
+    "matched_location_rows": 201,
+    "unique_offers": 138,
+    "bpce_unique_offers": 77,
     "editorial_offers": 8,
     "additional_sources": [
       {
         "key": "sr-soprasteria1",
         "name": "Sopra Steria",
         "offers": 39,
-        "observed_at": "2026-11-22T12:33:47+00:00",
+        "observed_at": "2026-11-23T14:35:05+00:00",
         "bounded_selection": true,
         "truncated": false,
         "max_pages_per_query": 12,
@@ -31,7 +31,7 @@
         "key": "sr-boschgroup",
         "name": "Bosch",
         "offers": 14,
-        "observed_at": "2026-11-22T12:33:47+00:00",
+        "observed_at": "2026-11-23T14:35:05+00:00",
         "bounded_selection": true,
         "truncated": true,
         "max_pages_per_query": 12,
@@ -41,7 +41,7 @@
     ],
     "public_api_offers": 53,
     "sources": {
-      "Groupe BPCE · Open Data": 75,
+      "Groupe BPCE · Open Data": 77,
       "Deloitte · via Welcome to the Jungle": 2,
       "Capgemini · site carrières": 2,
       "Welcome to the Jungle": 2,
@@ -54,34 +54,34 @@
     "scope": "Offres liées aux métiers du Master MSI, France et international. Export BPCE, sélections bornées d’API publiques et fiches éditoriales. Corpus partiel, non représentatif. Rattachement pédagogique indicatif, sans garantie d’éligibilité ni d’ouverture actuelle.",
     "deduplication": "Une annonce par référence source ; les villes multiples sont regroupées.",
     "families": {
-      "Data Engineer / Architecture": 11,
+      "Consultant cybersécurité": 10,
+      "Data Engineer / Architecture": 12,
       "Business Analyst": 32,
       "Chef de projet SI": 13,
-      "Data Analyst": 13,
+      "Data Analyst": 12,
       "Scrum Master": 1,
-      "Data Scientist": 11,
+      "Data Scientist": 12,
       "Autres métiers data": 14,
       "Auditeur SI": 2,
       "Product Owner": 5,
       "Gouvernance et qualité des données": 1,
-      "Consultant cybersécurité": 9,
       "Conseil & transformation SI": 18,
       "Responsable Analytics": 1,
       "Consultant ERP / solutions métier": 5
     },
     "pipeline_version": "4.0.0",
     "domains": {
-      "Data Engineer / Architecture": 11,
+      "Consultant cybersécurité": 10,
+      "Data Engineer / Architecture": 12,
       "Business Analyst": 32,
       "Chef de projet SI": 13,
-      "Data Analyst": 13,
+      "Data Analyst": 12,
       "Scrum Master": 1,
-      "Data Scientist": 11,
+      "Data Scientist": 12,
       "Autres métiers data": 14,
       "Auditeur SI": 2,
       "Product Owner": 5,
       "Gouvernance et qualité des données": 1,
-      "Consultant cybersécurité": 9,
       "Conseil & transformation SI": 18,
       "Responsable Analytics": 1,
       "Consultant ERP / solutions métier": 5
@@ -120,12 +120,163 @@
       "VN"
     ],
     "international_offers": 17,
-    "student_offers": 87,
+    "student_offers": 88,
     "archived_offers": 2,
-    "non_archived_offers": 134,
-    "bpce_share_percent": 55.1
+    "non_archived_offers": 136,
+    "bpce_share_percent": 55.8
   },
   "jobs": [
+    {
+      "id": "ESTREEM00048",
+      "title": "Senior Cyber & IT Risk Analyst (H/F)",
+      "company": "ESTREEM",
+      "family": "Consultant cybersécurité",
+      "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Consultant cybersécurité",
+      "duration": null,
+      "duration_evidence": null,
+      "duration_note": null,
+      "education_level": "Bac+5",
+      "education_evidence": "Bac +5",
+      "education_note": "Champ degree de l’export BPCE.",
+      "study_stage": null,
+      "study_stage_evidence": null,
+      "requirements_method": "bpce_structured_and_text",
+      "locations": [
+        {
+          "city": "Toulouse",
+          "region": "Occitanie",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Occitanie"
+          }
+        }
+      ],
+      "skills": [
+        "Cybersécurité"
+      ],
+      "description": "Estreem : la nouvelle référence du processing de paiements en Europe Née d’un partenariat stratégique entre deux grands groupes bancaires français, BNP Paribas et BPCE, Estreem est une fintech autonome lancée en février 2025. Son ambition : devenir le premier processeur de paiements souverain en France, capable d’opérer à l’échelle européenne. Dans un secteur des paiements en pleine transformation, Estreem se positionne comme un acteur de rupture, alliant sécurité, agilité technologique et compétitivité économique. L’objectif est clair : intégrer rapidement le TOP 3 des processeurs européens. Dotée d’une plateforme de nouvelle génération, Estreem couvre l’ensemble de la chaîne de valeur du processing carte, de l’édition logicielle à la gestion opérationnelle, en s’appuyant sur une infrastructure de pointe (cloud). Elle prend en charge tous les grands schemes de paiement (CB, Visa, Mastercard) ainsi que les nouveaux schemes européens, comme Wero. Pensée dès sa création pour rayonner au-delà des frontières françaises, Estreem vise à devenir un pilier de l’autonomie stratégique européenne dans le domaine des paiements. Les 3“E” d’Estreem résument son ADN : l’Excellence technologique, l’Expertise métier, une vision Européenne forte. 📍Où nous sommes : Paris, Lyon, Toulouse Plus d’informations sur Estreem et nos projets sont disponibles sur notre site web : Estreem | European Payment Processing for Banks Poste et missions💼 Votre rôle chez Estreem Rattaché directement au Cyber & IT Risks Director, le/la Senior Cyber & IT Risk Analyst aura pour objectifs majeurs l’identification, l’évaluation, le pilotage et le reporting des risques Cyber et IT (y.c. résilience SI) liées aux systèmes d’information en conformité avec les exigences de place (DORA, PCI DSS, NIST, IBM FS Cloud, ISO 27001…) et les standards de l’entreprise. Sa capacité à collaborer efficacement avec l’équipe Security IT du pôle Technology sera également un facteur déterminant pour garantir un haut niveau de sécurité à l’ensemble des systèmes d’information. L’ensemble des activités d’ESTREEM seront couvertes : Edition logiciel Exploitation logiciel Gestion des opérations de paiements Vos responsabilités : Réaliser les analyses concernant notamment les risques liés à la cybersécurité, à l’exploitation, à la résilience IT ainsi qu’au développement : la probabilité d’occurrence, les impacts opérationnels, les dispositifs de maitrise de risque associés. Alimenter et maintenir la cartographie des risques de l’entreprise afin de garantir une vision et une consolidation à jour. Piloter les plans de remédiation et suivre l’avancement des actions d’atténuation des risques. Contribuer à la formalisation et à l’évolution des politiques de cybersécurité, de résilience IT, de développement et d’exploitation des SI en s’appuyant notamment sur les différents référentiels réglementaires ou de place et en tenant compte des objectifs de l’entreprise ainsi que des contraintes technologiques et/ou économiques. Analyser les incidents Cyber et IT, participer aux analyses des causes et suivre la mise en œuvre des actions correctrices. Assurer le reporting réglementaire associé. Apporter son support aux audits de conformité et de certification en collaboration avec l’équipe IT Security. Contribuer activement à la diffusion et au développement de la culture Risques Cyber et IT auprès de l’ensemble des collaborateurs, en menant par exemple des actions de sensibilisation, de communication et de formation adaptées. Assurer une veille active sur les évolutions technologiques, règlementaires et sur l’évolution des menaces afin de maintenir une expertise de haut niveau pour rester à jour sur les évolutions du secteur. Collaborer avec l’équipe IT Security et les Direction métiers pour renforcer la résilience des systèmes d’information, contribuer aux exercices de continuité d’activité, analyser les résultats et recommander des actions d’amélioration. Profil et compétences requises🎯Votre profil Diplôme d’ingénieur - Bac+5 - Master avec une spécialisation dans un secteur technique ou un équivalent avec une école spécialisée. Expérience d’au moins 10 ans dans la Tech et la sécurité avec au minimum 5 ans sur un poste similaire de Senior Cyber & IT Risks. Français courant (C2), Anglais professionnel (B2-C1). 📌 Compétences clés requises Compétences techniques & Réglementaires Certification CISSP (Certified Information Systems Security Professional) recommandée. Compétences en sécurité du cloud, attestées par les certifications CCSP (Certified Cloud Security Professional) ou CCSK (Certificate of Cloud Security Knowledge). ISO 27001, RGPD, Dora, PCI DSS. Maîtrise des outils collaboratifs Microsoft 365 et appétence pour les solutions d’IA générative. Compétences métiers Solides compétences en gestion des risques IT (y.c. résilience SI) et Cyber. Connaissance approfondie des normes de sécurité (ISO 27001, PCI-DSS, etc.) et des réglementations (RGPD, DORA, etc.). Soft Skills Excellentes capacités de communication orale et écrite, avec un sens de la synthèse. Aptitude à adapter son discours selon les interlocuteurs et à vulgariser des sujets complexes. Rigueur morale, intégrité et respect absolu de la confidentialité des informations sensibles. Capacité à fédérer et à embarquer les équipes autour des enjeux de sécurité. Aptitude à animer réunions, comités et sessions de sensibilisation. Capacité à travailler dans un environnement dynamique et en évolution rapide. 🤖 L’IA, une pratique quotidienne chez Estreem Chez Estreem, l’IA n’est pas un sujet de veille : c’est un outil de travail, pour tous les métiers. Elle nous aide à gagner du temps, à mieux analyser et à nous concentrer sur ce qui a le plus de valeur, dans un cadre sécurisé adapté aux exigences de nos clients bancaires. Nous recherchons des collaborateurs qui : ont déjà utilisé des outils d’IA générative dans un contexte professionnel et savent en parler concrètement (cas d’usage, résultats, limites) ; gardent un regard critique sur ce que produit l’IA, avec le réflexe de vérifier et de protéger les données sensibles ; identifient dans leur périmètre des opportunités d’automatisation ou d’amélioration, et les transforment en gains concrets. Informations complémentaires sur le posteCaractéristiques du poste Localisation : Toulouse Date d'entrée en poste : Dès que possible Type de contrat : CDI Télétravail : jusqu’à 10 jours par mois, dans la limite de 3 jours maximum par semaine. Statut niveau Cadre Rémunération & Avantages Possibilité de CET Carte SWILE (ticket restaurant) FMD (forfait mobilité douce) Épargne salariale PEE, PERCO, intéressement, abondement Nous nous inscrivons dans une démarche de qualité et recevrons chaque candidat avec bienveillance et respect. Pour rappel, ce poste est ouvert aux personnes en situation de handicap. Enfin, nous attachons une importance particulière à ce que nos futurs collaborateurs et collaboratrices agissent au quotidien avec responsabilité éthique et professionnelle. À tout moment pendant le processus de recrutement, les informations figurant sur votre CV, vos données d’identification et vos antécédents pourront être vérifiés.",
+      "source": "Groupe BPCE · Open Data",
+      "source_url": "https://recrutement.bpce.fr/job/senior-cyber-it-risk-analyst-h-f",
+      "source_key": "bpce",
+      "collection_method": "open_data",
+      "pathways": [
+        "CMSI"
+      ],
+      "observed_at": "2026-11-23T14:35:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
+      "modified_at": "2026-11-23T09:48:38",
+      "salary_min": null,
+      "salary_max": null,
+      "remote_source": null
+    },
+    {
+      "id": "ESTREEM00047",
+      "title": "Cyber Defense Engineer (H/F)",
+      "company": "ESTREEM",
+      "family": "Consultant cybersécurité",
+      "contract": "CDI",
+      "source_contract": "CDI",
+      "domain": "Consultant cybersécurité",
+      "duration": null,
+      "duration_evidence": null,
+      "duration_note": null,
+      "education_level": "Bac+5",
+      "education_evidence": "Bac +5",
+      "education_note": "Champ degree de l’export BPCE.",
+      "study_stage": null,
+      "study_stage_evidence": null,
+      "requirements_method": "bpce_structured_and_text",
+      "locations": [
+        {
+          "city": "Paris",
+          "region": "Île-de-France",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Ile de France"
+          }
+        }
+      ],
+      "skills": [
+        "Agile",
+        "Cybersécurité",
+        "IAM"
+      ],
+      "description": "Estreem : la nouvelle référence du processing de paiements en Europe Née d’un partenariat stratégique entre deux grands groupes bancaires français, BNP Paribas et BPCE, Estreem est une fintech autonome lancée en février 2025. Son ambition : devenir le premier processeur de paiements souverain en France, capable d’opérer à l’échelle européenne. Dans un secteur des paiements en pleine transformation, Estreem se positionne comme un acteur de rupture, alliant sécurité, agilité technologique et compétitivité économique. L’objectif est clair : intégrer rapidement le TOP 3 des processeurs européens. Dotée d’une plateforme de nouvelle génération, Estreem couvre l’ensemble de la chaîne de valeur du processing carte, de l’édition logicielle à la gestion opérationnelle, en s’appuyant sur une infrastructure de pointe (cloud). Elle prend en charge tous les grands schemes de paiement (CB, Visa, Mastercard) ainsi que les nouveaux schemes européens, comme Wero. Pensée dès sa création pour rayonner au-delà des frontières françaises, Estreem vise à devenir un pilier de l’autonomie stratégique européenne dans le domaine des paiements. Les 3“E” d’Estreem résument son ADN : l’Excellence technologique, l’Expertise métier, une vision Européenne forte. 📍Où nous sommes : Paris, Lyon, Toulouse Plus d’informations sur Estreem et nos projets sont disponibles sur notre site web : Estreem | European Payment Processing for Banks Poste et missions💼 Votre rôle chez Estreem Rattaché(e) au SOC Manager, le Cyber Defense Engineer assure la surveillance de sécurité de la plateforme Estreem, qualifie les alertes et participe à la réponse aux incidents, en lien avec les équipes IT, Cloud, SRE et métiers, conformément aux standards de sécurité applicables. Vos responsabilités : Surveillance & détection Assurer la surveillance des événements de sécurité remontés par les outils en place (SIEM, EDR, etc.). Analyser, qualifier et prioriser les alertes selon leur criticité. Contribuer à la définition et à l’amélioration des règles de détection et des cas d’usage, en lien avec le SOC Manager. Gestion des incidents de sécurité Réaliser le second niveau sur les incidents de sécurité. Amélioration continue de la gestion des incidents de premier niveau et automatisation de ceux-ci au travers des fonctionnalités offertes par le SOAR. Documenter les analyses et contribuer à la rédaction des rapports d’incident. Escalader au SOC Manager les incidents dépassant son périmètre ou nécessitant une décision. Threat Intelligence & Hunting Contribuer aux activités de threat hunting régulières. Suivre les sources de threat intelligence pertinentes pour le secteur monétique. Identifier les menaces, TTPs et vecteurs d’attaque pertinents pour l’environnement Estreem. Outillage &; intégration Participer à l’intégration des nouvelles sources de logs dans les outils SOC (SIEM/SOAR). Contribuer à l’exploitation quotidienne et au tuning des outils de sécurité (SIEM, EDR, SOAR). Gouvernance & documentation Contribuer à la rédaction et à la mise à jour des procédures et playbooks SOC. Participer aux audits de sécurité internes et externes. Contexte et environnement technique Le Cyber Defense Engineer évolue dans un environnement dual, typique du secteur bancaire et des paiements par carte : Un environnement IT Corporate classique (postes de travail, messagerie et outils collaboratifs en mode SaaS, infrastructure Windows et Linux). Une plateforme de paiement critique, hébergée en mode cloud hybride, reposant sur une architecture de microservices conteneurisés et orchestrés, exposée via des API internes et externes. Le Cyber Defense Engineer supervise et analyse les événements de sécurité des environnements critiques (réseau, systèmes, applications, cloud, IAM et HSM). Profil et compétences requises🎯Votre profil Nous recherchons avant tout un profil ayant une expérience significative au sein d’un SOC, avec une forte expertise en analyse d’incidents, détection des menaces et opérations de cybersécurité. Bac+5 en cybersécurité, informatique, réseaux ou formation équivalente Minimum 7 ans d'expérience sur un poste similaire Français courant (C2), Anglais professionnel (B2-C1) 📌 Compétences clés requises Compétences techniques Connaissance des outils SOC : SIEM, EDR/xDR, SOAR (une première expérience opérationnelle est un plus). Compréhension des logs d’infrastructure (Active Directory, firewall, proxy, switch, virtualisation, OS Linux/Windows). Notions sur les environnements Cloud/SaaS (Microsoft 365, Entra ID, Intune) et PaaS (Kubernetes/OpenShift). Bases en analyse d’incidents et en lecture de logs réseau/système. Connaissance du framework MITRE ATT&CK ; sensibilité aux référentiels PCI-DSS, NIST et ISO 27001 appréciée. Compétences métiers Analyse et qualification d’alertes de sécurité. Investigation sur incidents de sécurité (niveau 2/3). Rédaction de rapports et de documentation technique claire. Contribution à l’amélioration continue des capacités de détection. Soft skills Rigueur et sens de l’analyse. Curiosité technique et capacité d’apprentissage rapide, dans un environnement agile. Autonomie et capacité à travailler en équipe. Bonne communication, y compris avec des interlocuteurs non techniques. Capacité à évoluer dans un contexte mouvant, où les outils et le périmètre se construisent progressivement. 💡 Ce que nous valorisons Un mindset produit : impact, sens utilisateur, qualité durable. Capacité à challenger et à prendre du recul. La curiosité : envie d’apprendre et d’évoluer. Informations complémentaires sur le poste Caractéristiques du poste Localisation : Paris Date d'entrée en poste : Dès que possible Type de contrat : CDI Télétravail : jusqu’à 10 jours par mois, dans la limite de 3 jours maximum par semaine. Statut niveau Cadre Rémunération & Avantages Possibilité de CET Carte SWILE (ticket restaurant) FMD (forfait mobilité douce) Épargne salariale PEE, PERCO, intéressement, abondement Nous nous inscrivons dans une démarche de qualité et recevrons chaque candidat avec bienveillance et respect. Pour rappel, ce poste est ouvert aux personnes en situation de handicap. Enfin, nous attachons une importance particulière à ce que nos futurs collaborateurs et collaboratrices agissent au quotidien avec responsabilité éthique et professionnelle. À tout moment pendant le processus de recrutement, les informations figurant sur votre CV, vos données d’identification et vos antécédents pourront être vérifiés.",
+      "source": "Groupe BPCE · Open Data",
+      "source_url": "https://recrutement.bpce.fr/job/cyber-defense-engineer-h-f",
+      "source_key": "bpce",
+      "collection_method": "open_data",
+      "pathways": [
+        "CMSI"
+      ],
+      "observed_at": "2026-11-23T14:35:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
+      "modified_at": "2026-11-23T09:41:04",
+      "salary_min": null,
+      "salary_max": null,
+      "remote_source": null
+    },
+    {
+      "id": "BPCE_INFO01962",
+      "title": "STAGE - Data Engineer (F/H) - Nantes",
+      "company": "BPCE Solutions Informatiques",
+      "family": "Data Engineer / Architecture",
+      "contract": "Stage",
+      "source_contract": "Stage sup à 2 mois",
+      "domain": "Data Engineer / Architecture",
+      "duration": "3 à 6 mois",
+      "duration_evidence": "Durée du stage souhaitée : 3 à 6 mois",
+      "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
+      "education_level": "Bac+3",
+      "education_evidence": "Bac +3",
+      "education_note": "Champ degree de l’export BPCE.",
+      "study_stage": null,
+      "study_stage_evidence": null,
+      "requirements_method": "bpce_structured_and_text",
+      "locations": [
+        {
+          "city": "Saint-Herblain",
+          "region": "Pays de la Loire",
+          "country_code": "FR",
+          "country": "France",
+          "country_evidence": {
+            "country": "France",
+            "state": "Pays de la Loire"
+          }
+        }
+      ],
+      "skills": [
+        "Agile",
+        "Power BI",
+        "SQL"
+      ],
+      "description": "BPCE Solutions informatiques, c’est un acteur IT de référence implanté au cœur des territoires. Ce sont près de 2 600 femmes et hommes au service des Banques Populaires, des Caisses d’Epargne et de plusieurs métiers spécialisés du Groupe BPCE, 2e acteur bancaire en France. Nous imaginons et développons des solutions IT innovantes pour faciliter le quotidien de nos utilisateurs. Chaque jour, ce sont près de 1 français sur 2 qui utilisent nos solutions ! Entreprise inclusive et engagée, ce sont vos compétences qui font la différence. Les horaires flexibles vous permettent de préserver votre équilibre de vie. Sur nos sites, vous bénéficiez d’un environnement innovant et responsable. A quoi ressemble un stage à BPCE SI ? 🚀 Vous êtes accompagné(e) et encouragé(e) par une équipe bienveillante Vous travaillez sur des projets d’envergure au service de nos clients Vous apprenez du savoir-faire de personnes passionnées par leur métier Vous déployez votre potentiel et consolidez votre projet professionnel Alors, rejoignez nous pour profiter de la diversité du terrain de jeu que propose BPCE Solutions informatiques ! ⚡ Poste et missions Rejoignez la Plateforme Distribution et Data de BPCE Solutions informatiques ! Au sein des équipes Data Usages Retail, En tant que Stagiaire Data Engineer – Développeur (F/H) vous aurez pour missions : Participation active aux projets et à la maintenance de nos systèmes d’information. (Equinoxe/Mysys) Gérer et enrichir le patrimoine de données (Datamarts, dataviz) selon les besoins métiers. Garantir la qualité, la performance et l'optimisation continue des solutions techniques. Concevoir des architectures DATA et assurer le maintien en condition opérationnelle du parc applicatif. Vous pourrez être amener à travailler sur d'autres sujets de développement ou d'IA. Profil et compétences requises Vous recherchez un stage dans le cadre de vos études supérieures en Data de niveau Bac+3 et plus. Vous avez envie d’apprendre et d’intégrer une entreprise dynamique et agile qui vous permettra d’acquérir un réseau et une première expérience solide. Vous avez à cœur d'accompagner vos clients dans des projets d'envergure. Vous êtes rigoureux(se) avec une bonne capacité d'analyse et de synthèse. Vous avez un bon relationnel et un esprit positif, vous êtes curieux(se) et vous appréciez travailler en équipe. Compétences techniques requises : Langage SQL : Permettant d’extraire et de manipuler les données. Compétences techniques souhaitées : Connaissances sur un ETL (Semarchy idéalement) : intégration, transformation et qualité des données. Connaissances en développement continu, Dataviz (Power BI), ou BigQuery. Informations complémentaires : Date de démarrage souhaitée : Début 2027. Durée du stage souhaitée : 3 à 6 mois. Notre processus de recrutement se compose de deux entretiens : un entretien RH avec Meriem et Léana, puis un entretien opérationnel avec le manager et/ou tuteur.",
+      "source": "Groupe BPCE · Open Data",
+      "source_url": "https://recrutement.bpce.fr/job/stage-data-engineer-f-h-nantes",
+      "source_key": "bpce",
+      "collection_method": "open_data",
+      "pathways": [
+        "ID"
+      ],
+      "observed_at": "2026-11-23T14:35:05+00:00",
+      "status": "source_present",
+      "status_origin": "bpce_export",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
+      "modified_at": "2026-11-23T09:41:02",
+      "salary_min": null,
+      "salary_max": null,
+      "remote_source": null
+    },
     {
       "id": "BPCE_INFO01988",
       "title": "Stage - Data Engineer (F/H) - Lille",
@@ -169,10 +320,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-20T17:33:44",
       "salary_min": null,
       "salary_max": null,
@@ -333,10 +484,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-20T16:29:36",
       "salary_min": null,
       "salary_max": null,
@@ -384,10 +535,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-20T09:01:18",
       "salary_min": null,
       "salary_max": null,
@@ -435,10 +586,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-19T15:10:06",
       "salary_min": null,
       "salary_max": null,
@@ -579,10 +730,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-19T14:08:07",
       "salary_min": null,
       "salary_max": null,
@@ -730,10 +881,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-19T13:44:47",
       "salary_min": null,
       "salary_max": null,
@@ -871,10 +1022,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-18T13:12:40",
       "salary_min": null,
       "salary_max": null,
@@ -1003,10 +1154,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-18T13:12:01",
       "salary_min": null,
       "salary_max": null,
@@ -1053,10 +1204,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-18T12:38:49",
       "salary_min": null,
       "salary_max": null,
@@ -1102,10 +1253,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-18T10:10:09",
       "salary_min": null,
       "salary_max": null,
@@ -1155,10 +1306,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-17T12:54:46",
       "salary_min": null,
       "salary_max": null,
@@ -1205,10 +1356,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-16T22:05:00",
       "salary_min": null,
       "salary_max": null,
@@ -1254,10 +1405,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-16T16:34:06",
       "salary_min": null,
       "salary_max": null,
@@ -1302,10 +1453,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-13T15:25:01",
       "salary_min": null,
       "salary_max": null,
@@ -1355,10 +1506,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-13T13:18:09",
       "salary_min": null,
       "salary_max": null,
@@ -1405,10 +1556,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-13T12:56:19",
       "salary_min": null,
       "salary_max": null,
@@ -1454,10 +1605,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-12T17:10:07",
       "salary_min": null,
       "salary_max": null,
@@ -1504,10 +1655,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-12T09:52:37",
       "salary_min": null,
       "salary_max": null,
@@ -1555,10 +1706,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-10T14:10:07",
       "salary_min": null,
       "salary_max": null,
@@ -1608,10 +1759,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-10T11:10:05",
       "salary_min": null,
       "salary_max": null,
@@ -1662,10 +1813,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-09T17:03:38",
       "salary_min": null,
       "salary_max": null,
@@ -1715,10 +1866,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-09T13:58:18",
       "salary_min": null,
       "salary_max": null,
@@ -1764,10 +1915,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-09T10:10:07",
       "salary_min": null,
       "salary_max": null,
@@ -1814,10 +1965,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-06T11:10:04",
       "salary_min": null,
       "salary_max": null,
@@ -1865,10 +2016,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-06T08:16:33",
       "salary_min": null,
       "salary_max": null,
@@ -1916,10 +2067,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-06T08:14:59",
       "salary_min": null,
       "salary_max": null,
@@ -1968,10 +2119,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-06T08:13:11",
       "salary_min": null,
       "salary_max": null,
@@ -2020,10 +2171,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-06T08:08:43",
       "salary_min": null,
       "salary_max": null,
@@ -2071,10 +2222,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-05T14:33:56",
       "salary_min": null,
       "salary_max": null,
@@ -2123,10 +2274,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-05T14:10:05",
       "salary_min": null,
       "salary_max": null,
@@ -2251,10 +2402,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-05T11:26:49",
       "salary_min": null,
       "salary_max": null,
@@ -2303,10 +2454,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-04T15:42:13",
       "salary_min": null,
       "salary_max": null,
@@ -2353,10 +2504,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-04T12:10:10",
       "salary_min": null,
       "salary_max": null,
@@ -2402,10 +2553,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-03T12:37:57",
       "salary_min": null,
       "salary_max": null,
@@ -2453,10 +2604,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-02T11:10:06",
       "salary_min": null,
       "salary_max": null,
@@ -2504,10 +2655,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-02T09:10:10",
       "salary_min": null,
       "salary_max": null,
@@ -2556,10 +2707,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-28T07:10:13",
       "salary_min": null,
       "salary_max": null,
@@ -2603,10 +2754,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-28T07:10:06",
       "salary_min": null,
       "salary_max": null,
@@ -2654,10 +2805,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-27T16:10:09",
       "salary_min": null,
       "salary_max": null,
@@ -2794,10 +2945,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-27T10:01:45",
       "salary_min": null,
       "salary_max": null,
@@ -2843,10 +2994,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-26T16:21:36",
       "salary_min": null,
       "salary_max": null,
@@ -2895,10 +3046,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-26T10:15:02",
       "salary_min": null,
       "salary_max": null,
@@ -3045,10 +3196,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-23T14:42:10",
       "salary_min": null,
       "salary_max": null,
@@ -3185,10 +3336,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-23T14:17:37",
       "salary_min": null,
       "salary_max": null,
@@ -3235,61 +3386,11 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-22T17:04:24",
-      "salary_min": null,
-      "salary_max": null,
-      "remote_source": null
-    },
-    {
-      "id": "CEIDF13265",
-      "title": "Data Analyst - Pilotage de la Rentabilité Commerciale",
-      "company": "Caisse d'Epargne Ile de France",
-      "family": "Data Analyst",
-      "contract": "CDI",
-      "source_contract": "CDI",
-      "domain": "Data Analyst",
-      "duration": null,
-      "duration_evidence": null,
-      "duration_note": null,
-      "education_level": "Bac+5",
-      "education_evidence": "Bac +5",
-      "education_note": "Champ degree de l’export BPCE.",
-      "study_stage": null,
-      "study_stage_evidence": null,
-      "requirements_method": "bpce_structured_and_text",
-      "locations": [
-        {
-          "city": "Paris",
-          "region": "Île-de-France",
-          "country_code": "FR",
-          "country": "France",
-          "country_evidence": {
-            "country": "France",
-            "state": "Ile de France"
-          }
-        }
-      ],
-      "skills": [
-        "Power BI",
-        "SQL"
-      ],
-      "description": "QUI SOMMES-NOUS ? Une Banque engagée : utile à tous nos clients, nous contribuons durablement au développement économique, environnemental et sociétal de nos territoires. Une Banque coopérative : nous appartenons à 100% à nos clients-sociétaires et nous nous engageons pour et avec nos clients. Une Banque régionale : 100% de l’argent collecté est réinvesti en Ile-De-France et sur le territoire de nos 3 filiales Banque BCP, Banque de Tahiti et Banque de Nouvelle Calédonie. Une Banque bicentenaire et pionnière : en action depuis plus de 200 ans, nous avons créé le premier réseau bancaire français de proximité et avons participé activement à l'émancipation financière des femmes. Une Banque humaine : notre politique de responsabilité sociale porte sur des sujets clés comme la mixité, la diversité, le handicap et la qualité de vie au travail. Pour en savoir plus sur la Caisse d'Epargne Ile de France (CEIDF) Poste et missions Au sein du Département Pilotage de la Rentabilité Commerciale rattaché au pôle Finance, vous assurez un ensemble de missions visant à faire fonctionner, évoluer et optimiser les différents outils existants, et à en créer de nouveaux. En particulier, cela consiste à assurer la production régulière des restitutions du département et participer à leur évolution (rapports quotidiens à destination du Directoire, tableaux de bord mensuels auprès du réseau commercial, alimentation des bases à destination des autres départements du Contrôle de gestion, travaux récurrents à destination des autres directions). Le poste comprend aussi un rôle d’animation auprès des équipes commerciales (par exemple, des interventions en comités Directions Régionales/Direction Secteur Commercial pour présenter les règles de gestion) et parallèlement aux résultats transmis, de diffuser des analyses expliquant le positionnement de l’entité ou les décalages par rapport à l’attendu. Et bien entendu, répondre aux sollicitations des commerciaux sur les chiffres fournis. Pour ce faire, vous exploitez les bases de données décisionnelles, tant communautaires (Système d’Information décisionnel sous Oracle) qu’internes (environnement SQL-Server) et assurez tous les développements nécessaires. Vous rédigez également toute la documentation fonctionnelle et les modes opératoires nécessaires. Profil et compétences requises Vous êtes titulaire d’un diplôme de niveau Bac+4/5 en informatique décisionnelle, tel qu’un Master MIAGE ou d’une formation spécialisée en analyse de données. Vous savez concevoir et exploiter des bases de données, êtes à l’aise avec le langage SQL et vous connaissez si possible la suite BI de Microsoft (dont Power BI) et/ou l’outil d’analyse Alteryx Designer. Informations complémentaires sur le poste Votre rémunération : Entre 45 000€ et 55 000€ selon profil Type de contrat : CDI Être collaborateur CEIDF, c’est : Partager nos valeurs incarnées à travers notre histoire, notre culture et nos clients : Proximité, Confiance et Responsabilité. Profiter dès votre arrivée d'un parcours d'intégration complet, adapté à votre métier et favorisant la prise de poste. Accéder à notre politique sociale attractive : Rémunération fixe en fonction du profil, assortie d’un variable sur objectifs et d’un intéressement. Titre restaurant dématérialisé, de 12€ par jour travaillé pris en charge à hauteur de 50%. Une protection sociale renforcée (mutuelle, retraite, prévoyance). Une politique parentale avantageuse. 32 jours de congés payés + RTT, Compte Epargne Temps. Un accès à notre Comité Social et Economique dès votre arrivée. Des tarifs bancaires et assurantiels préférentiels. Toutes les candidatures feront l’objet d’un contrôle de références : vérification des diplômes, du parcours professionnel et des documents administratifs.",
-      "source": "Groupe BPCE · Open Data",
-      "source_url": "https://recrutement.bpce.fr/job/data-analyst-pilotage-de-la-rentabilite-commerciale",
-      "source_key": "bpce",
-      "collection_method": "open_data",
-      "pathways": [
-        "ID"
-      ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
-      "status": "source_present",
-      "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
-      "modified_at": "2026-10-22T14:01:34",
       "salary_min": null,
       "salary_max": null,
       "remote_source": null
@@ -3332,10 +3433,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-21T14:10:11",
       "salary_min": null,
       "salary_max": null,
@@ -3385,10 +3486,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-21T11:10:08",
       "salary_min": null,
       "salary_max": null,
@@ -3439,10 +3540,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-21T10:10:07",
       "salary_min": null,
       "salary_max": null,
@@ -3601,10 +3702,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-19T15:04:47",
       "salary_min": null,
       "salary_max": null,
@@ -3650,10 +3751,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-19T07:52:09",
       "salary_min": null,
       "salary_max": null,
@@ -3705,10 +3806,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-16T14:30:43",
       "salary_min": null,
       "salary_max": null,
@@ -3753,10 +3854,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-16T09:54:33",
       "salary_min": null,
       "salary_max": null,
@@ -3801,10 +3902,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-14T15:33:53",
       "salary_min": null,
       "salary_max": null,
@@ -3854,10 +3955,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-14T10:10:05",
       "salary_min": null,
       "salary_max": null,
@@ -3907,10 +4008,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-13T11:10:06",
       "salary_min": null,
       "salary_max": null,
@@ -3958,10 +4059,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-13T10:10:11",
       "salary_min": null,
       "salary_max": null,
@@ -4007,10 +4108,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-12T15:47:19",
       "salary_min": null,
       "salary_max": null,
@@ -4058,10 +4159,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-09T15:06:14",
       "salary_min": null,
       "salary_max": null,
@@ -4108,10 +4209,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-09T09:10:12",
       "salary_min": null,
       "salary_max": null,
@@ -4160,10 +4261,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-07T15:11:57",
       "salary_min": null,
       "salary_max": null,
@@ -4210,10 +4311,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-06T11:10:10",
       "salary_min": null,
       "salary_max": null,
@@ -4351,10 +4452,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-09-18T13:37:40",
       "salary_min": null,
       "salary_max": null,
@@ -4401,10 +4502,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-09-17T12:56:59",
       "salary_min": null,
       "salary_max": null,
@@ -4452,10 +4553,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-09-16T08:29:53",
       "salary_min": null,
       "salary_max": null,
@@ -4499,10 +4600,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-09-15T13:57:47",
       "salary_min": null,
       "salary_max": null,
@@ -4640,10 +4741,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-09-14T09:49:10",
       "salary_min": null,
       "salary_max": null,
@@ -4692,10 +4793,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-09-08T08:01:46",
       "salary_min": null,
       "salary_max": null,
@@ -4741,10 +4842,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-08-14T12:10:05",
       "salary_min": null,
       "salary_max": null,
@@ -4793,10 +4894,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-08-04T07:37:12",
       "salary_min": null,
       "salary_max": null,
@@ -4846,10 +4947,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-07-20T13:22:45",
       "salary_min": null,
       "salary_max": null,
@@ -4899,10 +5000,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-07-20T08:34:35",
       "salary_min": null,
       "salary_max": null,
@@ -5069,10 +5170,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-07-16T12:29:46",
       "salary_min": null,
       "salary_max": null,
@@ -5124,10 +5225,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-07-07T13:17:29",
       "salary_min": null,
       "salary_max": null,
@@ -5174,10 +5275,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "bpce_export",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-07-07T13:17:21",
       "salary_min": null,
       "salary_max": null,
@@ -5618,6 +5719,109 @@
       "remote_source": null
     },
     {
+      "id": "sr-soprasteria1-744000163161216",
+      "title": "Stage de fin d’étude – Ingénieur(e) IA/ML – Exploration et prototypage de solutions de Machine Learning",
+      "company": "Sopra Steria",
+      "family": "Data Scientist",
+      "domain": "Data Scientist",
+      "contract": "Stage",
+      "source_contract": "Intern ; catégorie issue de l’intitulé : Stage",
+      "duration": null,
+      "duration_evidence": null,
+      "duration_note": null,
+      "education_level": "master 2",
+      "education_evidence": "master 2",
+      "education_note": "Niveau repéré automatiquement dans le texte ; vérifier les précisions de l’annonce.",
+      "study_stage": "Fin d’études",
+      "study_stage_evidence": "Fin d’études",
+      "requirements_method": "public_posting_facts",
+      "locations": [
+        {
+          "city": "Le Plessis-Robinson",
+          "region": "IDF",
+          "country_code": "FR",
+          "country": "FR",
+          "country_evidence": {
+            "country": "fr"
+          }
+        }
+      ],
+      "skills": [
+        "Python",
+        "Git",
+        "Machine learning"
+      ],
+      "description": "Poste : Stage de fin d’étude – Ingénieur(e) IA/ML – Exploration et prototypage de solutions de Machine Learning. Entreprise : Sopra Steria. Localisation : Le Plessis-Robinson (FR). Outils et compétences repérés : Python, Git, Machine learning. Cette fiche reprend des faits structurés, pas le descriptif intégral. Consulte la fiche du recruteur pour les missions, les exigences et la disponibilité.",
+      "source": "Sopra Steria · SmartRecruiters",
+      "source_key": "sr-soprasteria1",
+      "source_url": "https://jobs.smartrecruiters.com/SopraSteria1/744000163161216-stage-de-fin-d-etude-ingenieur-e-ia-ml-exploration-et-prototypage-de-solutions-de-machine-learning",
+      "collection_method": "public_api",
+      "pathways": [
+        "ID"
+      ],
+      "observed_at": "2026-11-23T14:35:05+00:00",
+      "status": "source_present",
+      "status_origin": "public_posting_api",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
+      "modified_at": "2026-11-23T08:41:13.272Z",
+      "published_at": "2026-11-23T08:41:13.272Z",
+      "salary_min": null,
+      "salary_max": null,
+      "remote_source": null,
+      "status_note": "Présente dans l’API publique au moment de la collecte ; disponibilité à confirmer sur la fiche recruteur."
+    },
+    {
+      "id": "sr-soprasteria1-744000163151218",
+      "title": "Stage - Ingénieur(e) EPP / EDR - Cybersécurité - Île-de-France",
+      "company": "Sopra Steria",
+      "family": "Consultant cybersécurité",
+      "domain": "Consultant cybersécurité",
+      "contract": "Stage",
+      "source_contract": "Full-time ; catégorie issue de l’intitulé : Stage",
+      "duration": null,
+      "duration_evidence": null,
+      "duration_note": null,
+      "education_level": null,
+      "education_evidence": null,
+      "education_note": null,
+      "study_stage": "Fin d’études",
+      "study_stage_evidence": "Fin d’études",
+      "requirements_method": "public_posting_facts",
+      "locations": [
+        {
+          "city": "Courbevoie",
+          "region": "IDF",
+          "country_code": "FR",
+          "country": "FR",
+          "country_evidence": {
+            "country": "fr"
+          }
+        }
+      ],
+      "skills": [
+        "Agile",
+        "Cybersécurité"
+      ],
+      "description": "Poste : Stage - Ingénieur(e) EPP / EDR - Cybersécurité - Île-de-France. Entreprise : Sopra Steria. Localisation : Courbevoie (FR). Outils et compétences repérés : Agile, Cybersécurité. Cette fiche reprend des faits structurés, pas le descriptif intégral. Consulte la fiche du recruteur pour les missions, les exigences et la disponibilité.",
+      "source": "Sopra Steria · SmartRecruiters",
+      "source_key": "sr-soprasteria1",
+      "source_url": "https://jobs.smartrecruiters.com/SopraSteria1/744000163151218-stage-ingenieur-e-epp-edr-cybersecurite-ile-de-france",
+      "collection_method": "public_api",
+      "pathways": [
+        "CMSI"
+      ],
+      "observed_at": "2026-11-23T14:35:05+00:00",
+      "status": "source_present",
+      "status_origin": "public_posting_api",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
+      "modified_at": "2026-11-23T07:34:42.104Z",
+      "published_at": "2026-11-23T07:34:42.104Z",
+      "salary_min": null,
+      "salary_max": null,
+      "remote_source": null,
+      "status_note": "Présente dans l’API publique au moment de la collecte ; disponibilité à confirmer sur la fiche recruteur."
+    },
+    {
       "id": "sr-soprasteria1-744000162537030",
       "title": "Stage - Business Analyst /Tests - Services Publics - Toulouse",
       "company": "Sopra Steria",
@@ -5659,10 +5863,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-19T15:13:14.659Z",
       "published_at": "2026-11-19T15:13:14.659Z",
       "salary_min": null,
@@ -5710,10 +5914,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-19T13:46:32.185Z",
       "published_at": "2026-11-19T13:46:32.185Z",
       "salary_min": null,
@@ -5761,10 +5965,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-19T10:55:35.671Z",
       "published_at": "2026-11-19T10:55:35.671Z",
       "salary_min": null,
@@ -5812,62 +6016,12 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-19T10:33:01.707Z",
       "published_at": "2026-11-19T10:33:01.707Z",
-      "salary_min": null,
-      "salary_max": null,
-      "remote_source": null,
-      "status_note": "Présente dans l’API publique au moment de la collecte ; disponibilité à confirmer sur la fiche recruteur."
-    },
-    {
-      "id": "sr-soprasteria1-744000162352385",
-      "title": "Stage - Consultant(e) - Prevent_Risk - Cybersécurité - Île-de-France",
-      "company": "Sopra Steria",
-      "family": "Consultant cybersécurité",
-      "domain": "Consultant cybersécurité",
-      "contract": "Stage",
-      "source_contract": "Full-time ; catégorie issue de l’intitulé : Stage",
-      "duration": "six mois",
-      "duration_evidence": "six mois",
-      "duration_note": "Durée repérée automatiquement ; vérifier les précisions de l’annonce.",
-      "education_level": null,
-      "education_evidence": null,
-      "education_note": null,
-      "study_stage": "Fin d’études",
-      "study_stage_evidence": "Fin d’études",
-      "requirements_method": "public_posting_facts",
-      "locations": [
-        {
-          "city": "Courbevoie",
-          "region": "IDF",
-          "country_code": "FR",
-          "country": "FR",
-          "country_evidence": {
-            "country": "fr"
-          }
-        }
-      ],
-      "skills": [
-        "Cybersécurité"
-      ],
-      "description": "Poste : Stage - Consultant(e) - Prevent_Risk - Cybersécurité - Île-de-France. Entreprise : Sopra Steria. Localisation : Courbevoie (FR). Outils et compétences repérés : Cybersécurité. Cette fiche reprend des faits structurés, pas le descriptif intégral. Consulte la fiche du recruteur pour les missions, les exigences et la disponibilité.",
-      "source": "Sopra Steria · SmartRecruiters",
-      "source_key": "sr-soprasteria1",
-      "source_url": "https://jobs.smartrecruiters.com/SopraSteria1/744000162352385-stage-consultant-e-prevent-risk-cybersecurite-ile-de-france",
-      "collection_method": "public_api",
-      "pathways": [
-        "CMSI"
-      ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
-      "status": "source_present",
-      "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
-      "modified_at": "2026-11-18T16:55:52.968Z",
-      "published_at": "2026-11-18T16:55:52.968Z",
       "salary_min": null,
       "salary_max": null,
       "remote_source": null,
@@ -5913,10 +6067,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-17T08:50:48.165Z",
       "published_at": "2026-11-17T08:50:48.165Z",
       "salary_min": null,
@@ -5966,10 +6120,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-12T14:39:33.840Z",
       "published_at": "2026-11-12T14:39:33.840Z",
       "salary_min": null,
@@ -6017,10 +6171,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-10T16:34:07.897Z",
       "published_at": "2026-11-10T16:34:07.897Z",
       "salary_min": null,
@@ -6073,63 +6227,12 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-10T12:45:57.918Z",
       "published_at": "2026-11-10T12:45:57.918Z",
-      "salary_min": null,
-      "salary_max": null,
-      "remote_source": null,
-      "status_note": "Présente dans l’API publique au moment de la collecte ; disponibilité à confirmer sur la fiche recruteur."
-    },
-    {
-      "id": "sr-soprasteria1-744000160832988",
-      "title": "Stage - Chargé(e) de recrutement - Cybersécurité - Toulouse",
-      "company": "Sopra Steria",
-      "family": "Consultant cybersécurité",
-      "domain": "Consultant cybersécurité",
-      "contract": "Stage",
-      "source_contract": "Full-time ; catégorie issue de l’intitulé : Stage",
-      "duration": null,
-      "duration_evidence": null,
-      "duration_note": null,
-      "education_level": "Master 1",
-      "education_evidence": "Master 1",
-      "education_note": "Niveau explicite dans la rubrique Qualifications, sans équivalence déduite.",
-      "study_stage": null,
-      "study_stage_evidence": null,
-      "requirements_method": "public_posting_facts",
-      "locations": [
-        {
-          "city": "Colomiers",
-          "region": "Occitanie",
-          "country_code": "FR",
-          "country": "FR",
-          "country_evidence": {
-            "country": "fr"
-          }
-        }
-      ],
-      "skills": [
-        "Agile",
-        "Cybersécurité"
-      ],
-      "description": "Poste : Stage - Chargé(e) de recrutement - Cybersécurité - Toulouse. Entreprise : Sopra Steria. Localisation : Colomiers (FR). Outils et compétences repérés : Agile, Cybersécurité. Cette fiche reprend des faits structurés, pas le descriptif intégral. Consulte la fiche du recruteur pour les missions, les exigences et la disponibilité.",
-      "source": "Sopra Steria · SmartRecruiters",
-      "source_key": "sr-soprasteria1",
-      "source_url": "https://jobs.smartrecruiters.com/SopraSteria1/744000160832988-stage-charge-e-de-recrutement-cybersecurite-toulouse",
-      "collection_method": "public_api",
-      "pathways": [
-        "CMSI"
-      ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
-      "status": "source_present",
-      "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
-      "modified_at": "2026-11-10T09:48:28.906Z",
-      "published_at": "2026-11-10T09:48:28.906Z",
       "salary_min": null,
       "salary_max": null,
       "remote_source": null,
@@ -6175,10 +6278,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-09T13:15:42.574Z",
       "published_at": "2026-11-09T13:15:42.574Z",
       "salary_min": null,
@@ -6224,10 +6327,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-09T11:15:03.358Z",
       "published_at": "2026-11-09T11:15:03.358Z",
       "salary_min": null,
@@ -6279,10 +6382,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-06T15:10:27.669Z",
       "published_at": "2026-11-06T15:10:27.669Z",
       "salary_min": null,
@@ -6330,10 +6433,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-05T15:19:11.655Z",
       "published_at": "2026-11-05T15:19:11.655Z",
       "salary_min": null,
@@ -6383,10 +6486,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-05T14:25:41.695Z",
       "published_at": "2026-11-05T14:25:41.695Z",
       "salary_min": null,
@@ -6435,10 +6538,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-04T14:03:51.878Z",
       "published_at": "2026-11-04T14:03:51.878Z",
       "salary_min": null,
@@ -6488,10 +6591,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-04T09:04:41.953Z",
       "published_at": "2026-11-04T09:04:41.953Z",
       "salary_min": null,
@@ -6538,10 +6641,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-03T10:41:43.047Z",
       "published_at": "2026-11-03T10:41:43.047Z",
       "salary_min": null,
@@ -6589,10 +6692,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-29T13:48:28.794Z",
       "published_at": "2026-10-29T13:48:28.794Z",
       "salary_min": null,
@@ -6641,10 +6744,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-29T13:45:14.293Z",
       "published_at": "2026-10-29T13:45:14.293Z",
       "salary_min": null,
@@ -6694,10 +6797,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-29T13:44:43.338Z",
       "published_at": "2026-10-29T13:44:43.338Z",
       "salary_min": null,
@@ -6746,10 +6849,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-29T09:21:01.281Z",
       "published_at": "2026-10-29T09:21:01.281Z",
       "salary_min": null,
@@ -6798,10 +6901,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-28T12:11:35.245Z",
       "published_at": "2026-10-28T12:11:35.245Z",
       "salary_min": null,
@@ -6849,10 +6952,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-27T14:18:48.740Z",
       "published_at": "2026-10-27T14:18:48.740Z",
       "salary_min": null,
@@ -6902,10 +7005,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-26T10:17:15.249Z",
       "published_at": "2026-10-26T10:17:15.249Z",
       "salary_min": null,
@@ -6951,10 +7054,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-21T09:09:25.498Z",
       "published_at": "2026-10-21T09:09:25.498Z",
       "salary_min": null,
@@ -7000,10 +7103,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-20T12:15:41.302Z",
       "published_at": "2026-10-20T12:15:41.302Z",
       "salary_min": null,
@@ -7049,10 +7152,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-09-28T16:55:53.183Z",
       "published_at": "2026-09-28T16:55:53.183Z",
       "salary_min": null,
@@ -7103,10 +7206,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-09-28T08:33:10.165Z",
       "published_at": "2026-09-28T08:33:10.165Z",
       "salary_min": null,
@@ -7156,10 +7259,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-09-25T09:18:01.147Z",
       "published_at": "2026-09-25T09:18:01.147Z",
       "salary_min": null,
@@ -7208,10 +7311,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-09-16T11:06:37.696Z",
       "published_at": "2026-09-16T11:06:37.696Z",
       "salary_min": null,
@@ -7260,10 +7363,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-09-16T10:58:26.604Z",
       "published_at": "2026-09-16T10:58:26.604Z",
       "salary_min": null,
@@ -7312,10 +7415,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-09-16T10:57:41.462Z",
       "published_at": "2026-09-16T10:57:41.462Z",
       "salary_min": null,
@@ -7361,10 +7464,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-09-16T10:29:41.961Z",
       "published_at": "2026-09-16T10:29:41.961Z",
       "salary_min": null,
@@ -7412,10 +7515,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-09-16T10:06:14.323Z",
       "published_at": "2026-09-16T10:06:14.323Z",
       "salary_min": null,
@@ -7463,10 +7566,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-09-16T09:45:25.709Z",
       "published_at": "2026-09-16T09:45:25.709Z",
       "salary_min": null,
@@ -7514,10 +7617,10 @@
         "CMSI",
         "ARAMIS"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-09-16T09:36:46.152Z",
       "published_at": "2026-09-16T09:36:46.152Z",
       "salary_min": null,
@@ -7566,10 +7669,10 @@
         "CMSI",
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-09-15T14:14:31.972Z",
       "published_at": "2026-09-15T14:14:31.972Z",
       "salary_min": null,
@@ -7616,10 +7719,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-09-14T12:20:58.015Z",
       "published_at": "2026-09-14T12:20:58.015Z",
       "salary_min": null,
@@ -7666,10 +7769,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-17T10:03:33.636Z",
       "published_at": "2026-11-17T10:03:33.636Z",
       "salary_min": null,
@@ -7718,10 +7821,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-16T12:18:22.199Z",
       "published_at": "2026-11-16T12:18:22.199Z",
       "salary_min": null,
@@ -7772,10 +7875,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-09T12:13:30.818Z",
       "published_at": "2026-11-09T12:13:30.818Z",
       "salary_min": null,
@@ -7823,10 +7926,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-06T13:56:59.298Z",
       "published_at": "2026-11-06T13:56:59.298Z",
       "salary_min": null,
@@ -7871,10 +7974,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-04T14:03:20.060Z",
       "published_at": "2026-11-04T14:03:20.060Z",
       "salary_min": null,
@@ -7919,10 +8022,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-11-03T13:31:15.835Z",
       "published_at": "2026-11-03T13:31:15.835Z",
       "salary_min": null,
@@ -7970,10 +8073,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-09T18:27:01.312Z",
       "published_at": "2026-10-09T18:27:01.312Z",
       "salary_min": null,
@@ -8020,10 +8123,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-08T12:56:26.600Z",
       "published_at": "2026-10-08T12:56:26.600Z",
       "salary_min": null,
@@ -8071,10 +8174,10 @@
       "pathways": [
         "CMSI"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-10-05T08:48:18.832Z",
       "published_at": "2026-10-05T08:48:18.832Z",
       "salary_min": null,
@@ -8122,10 +8225,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-08-31T20:07:02.139Z",
       "published_at": "2026-08-31T20:07:02.139Z",
       "salary_min": null,
@@ -8176,10 +8279,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-08-06T12:57:19.253Z",
       "published_at": "2026-08-06T12:57:19.253Z",
       "salary_min": null,
@@ -8227,10 +8330,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-07-03T08:44:57.141Z",
       "published_at": "2026-07-03T08:44:57.141Z",
       "salary_min": null,
@@ -8280,10 +8383,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2026-04-09T07:33:15.772Z",
       "published_at": "2026-04-09T07:33:15.772Z",
       "salary_min": null,
@@ -8333,10 +8436,10 @@
       "pathways": [
         "ID"
       ],
-      "observed_at": "2026-11-22T12:33:47+00:00",
+      "observed_at": "2026-11-23T14:35:05+00:00",
       "status": "source_present",
       "status_origin": "public_posting_api",
-      "status_checked_at": "2026-11-22T12:33:47+00:00",
+      "status_checked_at": "2026-11-23T14:35:05+00:00",
       "modified_at": "2022-11-07T03:46:49.030Z",
       "published_at": "2022-11-07T03:46:49.030Z",
       "salary_min": null,
